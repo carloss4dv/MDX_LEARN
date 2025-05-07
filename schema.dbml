@@ -1,0 +1,673 @@
+// DBML Schema for University Data Warehouse (Based on provided .md files)
+// Target: SQLite
+// Design: Bus Architecture with Conformed Dimensions
+// Version: Final v3 (Corrected SQLite types and consistency)
+
+// --- Conformed Dimensions ---
+
+Table DimTiempo {
+  TiempoKey integer [pk] // Surrogate Key
+  Fecha text [unique, note: 'Specific date, ISO 8601 format YYYY-MM-DD']
+  Anio integer [not null]
+  Mes integer [not null]
+  Dia integer
+  Trimestre integer
+  Semestre integer
+  DiaSemana text
+  CursoAcademico text [not null, note: 'e.g., 2023/2024']
+  FechaActualizacion text [note: 'Last data load date, ISO 8601 format']
+}
+
+Table DimCentro {
+  CentroKey integer [pk] // Surrogate Key
+  CodigoCentro text [unique, not null]
+  NombreCentro text
+  TipoCentro text [note: 'Facultad, Escuela, Adscrito, IUI, etc.']
+  Campus text
+  Localidad text
+}
+
+Table DimDepartamento {
+  DepartamentoKey integer [pk] // Surrogate Key
+  CodigoDepartamento text [unique, not null]
+  NombreDepartamento text
+  CentroAdscripcionKey integer [ref: > DimCentro.CentroKey, note: 'Primary center affiliation']
+}
+
+Table DimAreaConocimiento {
+  AreaConocimientoKey integer [pk]
+  CodigoArea text [unique, not null]
+  NombreArea text
+  MacroArea text [note: 'Artes y Humanidades, Ciencias, CC Sociales y Jurídicas, CC Salud, Ingeniería y Arq.']
+}
+
+Table DimPlanEstudio {
+  PlanEstudioKey integer [pk] // Surrogate Key
+  CodigoPlan text [unique, not null]
+  NombrePlan text
+  TipoEstudio text [not null, note: 'Grado, Master, Doctorado, Licenciatura, Diplomatura, Titulo Propio, Movilidad']
+  EstudioCodigo text [note: 'Code for the broader Study (grouping Plans)']
+  EstudioNombre text [note: 'Name for the broader Study']
+  CentroKey integer [ref: > DimCentro.CentroKey, not null, note: 'Center offering the plan']
+  RamaConocimiento text [note: 'Arts & Humanities, Sciences, etc.']
+  CreditosTotales real
+  GradoExperimentalidad text [note: 'From Matricula (since 2015/16)']
+  Interuniversitario integer [note: '0/1']
+  CoordinaUnizar integer [note: '0/1']
+  MasterHabilitante integer [note: '0/1']
+  MultipleTitulacion integer [note: '0/1']
+  DuracionCursos integer [note: 'For Titulos Propios']
+  FechaInicio text [note: 'ISO 8601 format']
+  FechaExtincion text [note: 'ISO 8601 format']
+}
+
+Table DimAsignatura {
+  AsignaturaKey integer [pk] // Surrogate Key
+  CodigoAsignatura text [unique, not null]
+  NombreAsignatura text
+  ClaseAsignatura text [note: 'Formación básica, Obligatoria, Optativa, TFG, TFM, Prácticas, Especial, etc.']
+  Creditos real
+  DepartamentoEncargadoKey integer [ref: > DimDepartamento.DepartamentoKey, note: 'Primary dept responsible']
+  DocenciaExterna integer [note: '0/1']
+  OrigenVinculo integer [note: '0/1 From DocenciaPDI']
+  TipoTratamientoDocencia text [note: 'Normal, Prácticas, TFG/TFM, Departamental, Sin Docencia. From DocenciaPDI']
+}
+
+Table BridgeAsignaturaPlan {
+  AsignaturaKey integer [ref: > DimAsignatura.AsignaturaKey, not null]
+  PlanEstudioKey integer [ref: > DimPlanEstudio.PlanEstudioKey, not null]
+  pk [AsignaturaKey, PlanEstudioKey]
+}
+
+Table DimPersona {
+  PersonaKey integer [pk] // Surrogate Key
+  IdentificadorPersona text [unique, note: 'DNI/NIE/ID - Use appropriate hashing/masking for privacy']
+  NombreCompleto text
+  Sexo text
+  FechaNacimiento text [note: 'ISO 8601 format']
+  RangoEdad text [note: 'Calculated at specific time points']
+  PaisNacionalidad text
+  ResidenciaPais text
+  ResidenciaCCAA text
+  ResidenciaProvincia text
+  ResidenciaPoblacion text
+  PaisNacimiento text
+  PoblacionNacimiento text
+  NivelTitulacion text [note: 'Highest achieved? From PTGAS, RRHHidi']
+  UniversidadOrigen text [note: 'From Admision']
+  EsDoctor integer [note: '0/1 From PDI, DocenciaPDI, Grupos, RRHHidi']
+  EsEstudiante integer [note: '0/1']
+  EsPDI integer [note: '0/1']
+  EsPTGAS integer [note: '0/1']
+  EsSolicitanteAdmision integer [note: '0/1']
+  EsInvestigador integer [note: '0/1']
+  EsAutor integer [note: '0/1']
+  TieneCargo integer [note: '0/1']
+  EsBecario integer [note: '0/1']
+}
+
+Table DimPuestoTrabajo {
+  PuestoKey integer [pk]
+  CodigoPuesto text [unique]
+  NombrePuesto text [not null]
+  TipoPuesto text [note: 'PDI/PAS']
+  CategoriaPuesto text
+  NivelComplemento text
+  GrupoPuesto text
+  DedicacionPuesto text [note: 'Tiempo completo, parcial, conjunta, etc.']
+  RegimenJuridico text [note: 'Funcionario, Laboral, Atípico']
+  EsInvestigacion integer [note: '0/1 From Puesto, RRHHidi']
+  VinculadoSanitarias integer [note: '0/1']
+  CentroAdscripcionKey integer [ref: > DimCentro.CentroKey]
+  DepartamentoAdscripcionKey integer [ref: > DimDepartamento.DepartamentoKey]
+  UnidadAdscripcion text
+  EspecialidadRPT text [note: 'From PTGAS']
+}
+
+Table DimAtributosPDI {
+  AtributosPDIKey integer [pk]
+  PersonaKey integer [ref: > DimPersona.PersonaKey, unique, not null]
+  CategoriaCuerpoEscala text
+  AreaConocimientoKey integer [ref: > DimAreaConocimiento.AreaConocimientoKey]
+  DepartamentoAdscripcionKey integer [ref: > DimDepartamento.DepartamentoKey]
+  CentroAdscripcionKey integer [ref: > DimCentro.CentroKey]
+  TieneCompatibilidad integer [note: '0/1']
+  EsAsociadoSanitario integer [note: '0/1']
+  CargaDocenteSemanalHoras real
+  Dedicacion text [note: 'Tiempo completo, parcial, conjunta, etc. From DocenciaPDI']
+  EsPermanente integer [note: '0/1 Funcionario o Indefinido. From DocenciaPDI']
+  DocenciaQuinquenios integer
+  GestionTrienios integer [note: 'From DocenciaPDI, PTGAS']
+  InvestigacionSexeniosEstatales integer [note: 'From DocenciaPDI, Grupos, RRHHidi']
+  SexeniosPosibles integer [note: 'From DocenciaPDI, RRHHidi']
+  CategoriaInvestigador text [note: 'From RRHHidi']
+  ModalidadPersonal text [note: 'Carrera, Interino, Temporal, etc. From RRHHidi']
+  TesisDirigidas real [note: 'Count/Fraction. From RRHHidi']
+  TesisDirigidasInternacional real [note: 'Count/Fraction. From RRHHidi']
+  ParticipaProyecto integer [note: '0/1 From RRHHidi']
+  ProgramaPresupuestarioPuesto text [note: 'From RRHHidi']
+  EsPuestoInvestigacion integer [note: '0/1 From RRHHidi, Puesto']
+}
+
+Table DimAtributosPTGAS {
+  AtributosPTGASKey integer [pk]
+  PersonaKey integer [ref: > DimPersona.PersonaKey, unique, not null]
+  CategoriaCuerpoEscala text
+  Dedicacion text [note: 'Tiempo completo/parcial']
+  GradoComplemento text
+  GrupoLaboral text [note: 'A1, A2, C1, etc.']
+  RegimenJuridico text [note: 'Funcionario/Laboral']
+  SituacionAdministrativa text [note: 'Servicio activo, Excedencia, etc.']
+  TipoPersonalContrato text [note: 'Carrera, Interino, Indefinido, etc.']
+  TieneCompatibilidad integer [note: '0/1']
+  GestionTrienios integer
+  PuestoTrabajoKey integer [ref: > DimPuestoTrabajo.PuestoKey, note: 'Current or primary puesto']
+  TieneReduccionSindical integer [note: '0/1']
+  SindicatoNombre text
+  ReduccionSindicalHorasPorc text
+}
+
+Table DimAtributosAlumno {
+  AtributosAlumnoKey integer [pk]
+  PersonaKey integer [ref: > DimPersona.PersonaKey, unique, not null]
+  EstudioPrevioAcceso text [note: 'PAU, FP, Titulado, >25, etc.']
+  NuevoIngreso integer [note: '0/1 First time in plan/university?']
+  RangoNotaAdmision text
+  ModalidadMatricula text [note: 'Tiempo completo/parcial']
+  CursoMasAltoMatriculado integer
+  TrasladoContinuacionEstudio integer [note: '0/1']
+  CreditosSuperadosPrevios text [note: 'Range. From EstudiantesOUT, SolicitudesMovOUT']
+  CursosMatriculadosPrevios integer [note: 'From EstudiantesOUT, SolicitudesMovOUT']
+}
+
+Table DimProgramaMovilidad {
+    ProgramaMovilidadKey integer [pk] // Surrogate Key
+    CodigoPrograma text [unique]
+    NombrePrograma text // Erasmus, SICUE, America Latina, etc.
+    TipoMovilidad text // Entrada, Salida
+    Ambito text // Nacional, Internacional
+    Colectivo text [note: 'Alumnos, Docentes']
+    ProgramaInternacional integer [note: '0/1 From EstudiantesIN/OUT']
+    TipoProgramaMovilidad text [note: 'Erasmus, SICUE, Otras UE, Otras fuera UE, etc. From EstudiantesIN/OUT']
+}
+
+Table DimUniversidad {
+    UniversidadKey integer [pk]
+    NombreUniversidad text [unique, not null]
+    PaisUniversidad text
+    EsUNITA integer [note: '0/1 From Acuerdos, EstudiantesIN/OUT']
+}
+
+Table DimAcuerdoBilateral {
+    AcuerdoBilateralKey integer [pk]
+    ProgramaMovilidadKey integer [ref: > DimProgramaMovilidad.ProgramaMovilidadKey]
+    UniversidadAcuerdoKey integer [ref: > DimUniversidad.UniversidadKey]
+    CentroResponsableUnizarKey integer [ref: > DimCentro.CentroKey, note: '021 for General Scope']
+    CursoAcademicoVigencia text [not null]
+    NivelEstudiosAcuerdo text [note: 'Undergraduate, Postgraduate, etc.']
+    AreaEstudiosAcuerdo text [note: 'From EstudiantesOUT, SolicitudesMovOUT']
+    IdiomaPrincipal text
+    NivelIdiomaPrincipal text
+    IdiomaSecundario text
+    NivelIdiomaSecundario text
+    MesesOfertadosPlaza integer
+}
+
+Table DimSolicitudAdmision {
+    SolicitudAdmisionKey integer [pk]
+    PersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+    PlanEstudioSolicitadoKey integer [ref: > DimPlanEstudio.PlanEstudioKey, not null]
+    CursoAcademicoSolicitud text [not null]
+    Convocatoria text [note: 'Ordinaria/Extraordinaria']
+    TipoAcceso text [note: 'Preinscripcion/MatriculaDirecta/AccesoCiclos']
+    CupoAdjudicacion text [note: 'General, Reserva Discap, Titulados, >25, etc.']
+    EstudioPrevio text [note: 'PAU, FP, Titulado, etc.']
+    OrdenPreferencia integer [note: '1-10']
+    RangoCalificacionAdmision text [note: '5-6, ..., 13-14']
+    EstadoSolicitud text [note: 'Admitida, ListaEspera, Desactivada, etc.']
+    TipoProcedimientoReclamacion text [note: 'Normal/Recurso']
+    PrelacionConvoNotaCorte text [note: 'J/S, Obsolete after 2017/18']
+}
+
+Table DimCargo {
+  CargoKey integer [pk]
+  NombreCargo text [unique, not null]
+  TipoCargo text [note: 'Vicerrector, Decano, Director Dept, etc.']
+  ImporteTeoricoComplemento real
+  ReduccionHorasPorcentaje text
+  Remunerado integer [note: '0/1']
+}
+
+Table DimTipoDocencia {
+  TipoDocenciaKey integer [pk]
+  NombreTipoDocencia text [unique, not null, note: 'Clases magistrales, Resolución problemas, Prácticas Lab, etc.']
+}
+
+Table DimResponsabilidadDocente {
+  ResponsabilidadKey integer [pk]
+  NombreResponsabilidad text [unique, not null, note: 'Coordinar docencia, Impartir docencia, Dirigir']
+}
+
+Table DimGrupoInvestigacion {
+  GrupoInvKey integer [pk]
+  CodigoGrupo text [unique]
+  NombreGrupo text [not null]
+  TipoGrupo text [note: 'Emergente, Consolidado, C.I.A., Excelente']
+  GestionadoPorUnizar integer [note: '0/1']
+  InvestigadorPrincipalPersonaKey integer [ref: > DimPersona.PersonaKey]
+  CentroIPKey integer [ref: > DimCentro.CentroKey]
+  DepartamentoIPKey integer [ref: > DimDepartamento.DepartamentoKey]
+  InstitutoIPKey integer [ref: > DimCentro.CentroKey, note: 'Assuming IUI are in DimCentro']
+  MacroareaIP text
+  AreaIPKey integer [ref: > DimAreaConocimiento.AreaConocimientoKey]
+}
+
+Table BridgeInvestigadorGrupo {
+  InvestigadorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  GrupoInvKey integer [ref: > DimGrupoInvestigacion.GrupoInvKey, not null]
+  TipoMiembroGrupo text [note: 'Investigador Principal, Colaborador, Becario, Externo']
+  FechaInicio text [note: 'ISO 8601 format']
+  FechaFin text [note: 'ISO 8601 format']
+  pk [InvestigadorPersonaKey, GrupoInvKey, FechaInicio] // For SCD Type 2 on membership
+}
+
+Table DimRevista {
+  RevistaKey integer [pk]
+  NombreRevista text [not null]
+  ISSN text [unique]
+}
+
+Table DimMateriaJCR {
+  MateriaKey integer [pk]
+  NombreMateria text [unique, not null]
+}
+
+Table DimEstudioPropio {
+  EstudioPropioKey integer [pk]
+  CodigoEstudioPropio text [unique]
+  NombreEstudioPropio text [not null]
+  TipoEstudioPropio text [note: 'Máster Propio, Experto, Diploma Especialización, etc.']
+  RamaConocimiento text
+  Modalidad text [note: 'Presencial, Semipresencial, Online']
+  DuracionCursos integer
+  Edicion integer
+  OrganoGestionKey integer [ref: > DimCentro.CentroKey]
+  OrganoProponenteKey integer [ref: > DimCentro.CentroKey]
+}
+
+Table DimTipoEntidad {
+  TipoEntidadKey integer [pk]
+  NombreTipoEntidad text [unique, not null, note: 'Empresa, Universidad, Unidad de Investigación, etc.']
+}
+
+Table DimPublicacion {
+  PublicacionKey integer [pk]
+  TipoPublicacion text [not null, note: 'Articulo, Libro, Capitulo']
+  Titulo text
+  DOI text [unique]
+  AnioPublicacion integer
+  Idioma text
+  EsArticuloAbierto integer [note: '0/1 For Articulo']
+  TipoArticulo text [note: 'Científico, Revisión, Editorial, etc. For Articulo']
+  RevistaKey integer [ref: > DimRevista.RevistaKey, note: 'For Articulo']
+  ISBN text [note: 'For Libro/Capitulo']
+  Editorial text [note: 'For Libro/Capitulo']
+}
+
+Table BridgeAutorPublicacion {
+  AutorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  PublicacionKey integer [ref: > DimPublicacion.PublicacionKey, not null]
+  OrdenAutor integer
+  EsCorrespondencia integer [note: '0/1']
+  pk [AutorPersonaKey, PublicacionKey]
+}
+
+Table DimCongreso {
+  CongresoKey integer [pk]
+  NombreCongreso text [not null]
+  AnioCelebracion integer
+  PaisCongreso text
+  AmbitoGeograficoCongreso text [note: 'Autonómico, Nacional, UE, Internacional no UE']
+  CategoriaCongreso text [note: 'A+, A, B, C, No clasificado']
+}
+
+Table DimTipoActividadCongreso {
+  TipoActividadKey integer [pk]
+  NombreTipoActividad text [unique, not null, note: 'Ponencia invitada, Ponencia, Póster, Comité Organizador, Comité Científico, Otros']
+}
+
+Table BridgeAutorActividadCongreso {
+  AutorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CongresoKey integer [ref: > DimCongreso.CongresoKey, not null]
+  TipoActividadKey integer [ref: > DimTipoActividadCongreso.TipoActividadKey, not null]
+  TituloContribucion text
+  pk [AutorPersonaKey, CongresoKey, TipoActividadKey, TituloContribucion] // Added Titulo to PK for uniqueness
+}
+
+Table DimConvocatoriaProyecto {
+  ConvocatoriaKey integer [pk]
+  CodigoConvocatoria text [unique]
+  NombreConvocatoria text
+  AnioConvocatoria integer [not null]
+  Programa text
+  Subprograma text
+  LineaActuacion text
+  TipoConvocatoria text [note: 'Grupos, Proyectos I+D+I, Movilidades, RRHH, etc.']
+  TipoOportunidad text [note: 'Contrato, Convenio, Convocatoria']
+  AmbitoTerritorial text [note: 'Local, Autonómico, Nacional, Europeo, Internacional']
+  OficinaGestora text [note: 'OPE, OTRI, SGI, Externos']
+  FechaResolucion text [note: 'ISO 8601 format']
+}
+
+Table DimProyecto {
+  ProyectoKey integer [pk]
+  CodigoProyecto text [unique, not null]
+  TituloProyecto text
+  ConvocatoriaKey integer [ref: > DimConvocatoriaProyecto.ConvocatoriaKey]
+  InvestigadorPrincipalPersonaKey integer [ref: > DimPersona.PersonaKey]
+  FechaInicio text [note: 'ISO 8601 format']
+  FechaFin text [note: 'ISO 8601 format']
+}
+
+Table BridgeInvestigadorProyecto {
+  InvestigadorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  ProyectoKey integer [ref: > DimProyecto.ProyectoKey, not null]
+  Rol text [note: 'IP, Miembro Equipo, Colaborador']
+  pk [InvestigadorPersonaKey, ProyectoKey]
+}
+
+Table DimSolicitudProyecto {
+  SolicitudProyKey integer [pk]
+  ConvocatoriaKey integer [ref: > DimConvocatoriaProyecto.ConvocatoriaKey, not null]
+  SolicitantePersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  ProyectoKey integer [ref: > DimProyecto.ProyectoKey, null, note: 'Link to project if granted']
+  FechaSolicitud text [note: 'ISO 8601 format']
+  EstadoSolicitud text [note: 'Presentada, Concedida, Denegada, Alegada']
+  AlegacionPresentada integer [note: '0/1']
+}
+
+Table DimSolicitudMovilidadOUT {
+  SolicitudMovOUTKey integer [pk]
+  AlumnoPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CursoAcademicoSolicitud text [not null]
+  CentroOrigenKey integer [ref: > DimCentro.CentroKey]
+  PlanEstudioOrigenKey integer [ref: > DimPlanEstudio.PlanEstudioKey]
+  ProgramaMovilidadKey integer [ref: > DimProgramaMovilidad.ProgramaMovilidadKey]
+  UniversidadDestinoKey integer [ref: > DimUniversidad.UniversidadKey]
+  OrdenPreferencia integer
+  IdiomaContratoEstudios text
+  NivelEstudiosSolicitante text
+  AreaEstudiosSolicitada text
+  EstadoSolicitud text [note: 'Presentada, Aceptada, Rechazada, Renuncia']
+  PreferenciaAceptada integer [note: '0/1']
+  Renuncia integer [note: '0/1']
+}
+
+// --- Fact Tables ---
+
+Table FactPersonalActivo {
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null]
+  PersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  PuestoTrabajoKey integer [ref: > DimPuestoTrabajo.PuestoKey, null]
+  CentroAdscripcionKey integer [ref: > DimCentro.CentroKey]
+  DepartamentoAdscripcionKey integer [ref: > DimDepartamento.DepartamentoKey]
+  AtributosPDIKey integer [ref: > DimAtributosPDI.AtributosPDIKey, null]
+  AtributosPTGASKey integer [ref: > DimAtributosPTGAS.AtributosPTGASKey, null]
+  NumeroEfectivos integer [default: 1, not null, note: 'Count of active staff at snapshot time']
+  EsInvestigadorActivo integer [note: '0/1']
+  pk [TiempoKey, PersonaKey]
+}
+
+Table FactPuestos {
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null]
+  PuestoKey integer [ref: > DimPuestoTrabajo.PuestoKey, not null]
+  PersonaOcupanteKey integer [ref: > DimPersona.PersonaKey, null]
+  SituacionPuesto text [note: 'Ocupado por titular, Vacante Técnica, Vacante Efectiva, Fuera RPT']
+  DesempenoPuesto text [note: 'Titular, No Titular, Sin ocupante']
+  NumeroPuestos integer [default: 1, not null]
+  pk [TiempoKey, PuestoKey]
+}
+
+Table FactCargos {
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null]
+  PersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CargoKey integer [ref: > DimCargo.CargoKey, not null]
+  CentroKey integer [ref: > DimCentro.CentroKey, null]
+  DepartamentoKey integer [ref: > DimDepartamento.DepartamentoKey, null]
+  UnidadAdscripcion text
+  NumeroCargos integer [default: 1, not null]
+  pk [TiempoKey, PersonaKey, CargoKey]
+}
+
+Table FactMatricula {
+  FactMatriculaKey integer [pk] // Surrogate Key
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico']
+  PlanEstudioKey integer [ref: > DimPlanEstudio.PlanEstudioKey, not null]
+  AsignaturaKey integer [ref: > DimAsignatura.AsignaturaKey, not null]
+  AlumnoPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CentroMatriculaKey integer [ref: > DimCentro.CentroKey, not null]
+  AtributosAlumnoKey integer [ref: > DimAtributosAlumno.AtributosAlumnoKey]
+  ProgramaMovilidadEntradaKey integer [ref: > DimProgramaMovilidad.ProgramaMovilidadKey, null, note: 'Null if not incoming mobility student']
+  GrupoAsignatura text
+  NumeroVecesMatriculaAsignatura integer
+  EsMatriculado integer [default: 1, not null]
+  CreditosMatriculados real
+  EsMovilidadSalida integer [note: '0/1']
+}
+
+Table FactRendimiento {
+  FactRendimientoKey integer [pk]
+  FactMatriculaKey integer [ref: > FactMatricula.FactMatriculaKey, null, note: 'Link to enrollment event']
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico Evaluacion']
+  PlanEstudioKey integer [ref: > DimPlanEstudio.PlanEstudioKey, not null]
+  AsignaturaKey integer [ref: > DimAsignatura.AsignaturaKey, not null]
+  AlumnoPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CentroMatriculaKey integer [ref: > DimCentro.CentroKey, not null]
+  AtributosAlumnoKey integer [ref: > DimAtributosAlumno.AtributosAlumnoKey]
+  Calificacion text [note: 'Aprobado, Suspenso, NP, MH, etc.']
+  NotaNumerica real
+  RangoNotaNumerica text
+  ConvocatoriasConsumidas integer
+  TipoReconocimiento text [note: 'Reconocida, Adaptada, Convalidada']
+  CreditosEvaluados real
+  CreditosSuperados real
+  CreditosPresentados real
+  CreditosSuspendidos real
+  CreditosReconocidos real
+  EsAlumnoEvaluado integer [note: '0/1']
+  EsAlumnoSuperado integer [note: '0/1']
+  EsAlumnoPresentado integer [note: '0/1']
+  NotaMediaAdmisionAlumno real
+  MediaConvocatoriasConsumidasHastaSuperar real
+}
+
+Table FactEgresados {
+    FactEgresadosKey integer [pk]
+    AlumnoPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+    PlanEstudioKey integer [ref: > DimPlanEstudio.PlanEstudioKey, not null]
+    TiempoAccesoKey integer [ref: > DimTiempo.TiempoKey, note: 'Curso Academico Acceso']
+    TiempoEgresoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico Egreso']
+    TipoEgreso text [note: 'Graduado, Abandono, Traslado, Permanencia']
+    EsEgresado integer [default: 1, not null]
+    EsGraduado integer [note: '0/1']
+    EsAbandonoInterrupcion integer [note: '0/1']
+    EsTrasladoOtraUniversidad integer [note: '0/1']
+    DuracionEstudiosAnios real
+    NumeroCursosMatriculados integer
+    TotalCreditosMatriculados real
+}
+
+Table FactAdmision {
+  FactAdmisionKey integer [pk]
+  SolicitudAdmisionKey integer [ref: > DimSolicitudAdmision.SolicitudAdmisionKey, not null]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico Admision']
+  SolicitudesPreferencias integer [default: 1, not null]
+  NotaMediaAdmisionSolicitud real
+  EsAdmitido integer [note: '0/1']
+  EsMatriculadoNuevoIngreso integer [note: '0/1']
+}
+
+Table FactOfertaPlazas {
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico']
+  PlanEstudioKey integer [ref: > DimPlanEstudio.PlanEstudioKey, not null]
+  CupoAdjudicacion text [not null]
+  TipoAccesoOferta text [note: 'Preinscripcion/AccesoCiclos']
+  PlazasOfertadas integer
+  PlazasMatriculadasNuevoIngreso integer
+  PlazasSolicitadas integer
+  NotaCorteAdjudicacion1 real
+  NotaCorteDefinitiva1 real
+  NotaCorteAdjudicacion2 real
+  NotaCorteDefinitiva2 real
+  pk [TiempoKey, PlanEstudioKey, CupoAdjudicacion, TipoAccesoOferta]
+}
+
+Table FactDocenciaAsignatura {
+    FactDocenciaAsignaturaKey integer [pk]
+    TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico']
+    AsignaturaKey integer [ref: > DimAsignatura.AsignaturaKey, not null]
+    NumeroGruposActividadFormativa integer
+    NumeroHorasEncargo real
+}
+
+Table FactDocenciaPDI {
+  FactDocenciaPDIKey integer [pk]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico']
+  AsignaturaKey integer [ref: > DimAsignatura.AsignaturaKey, not null]
+  ProfesorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  TipoDocenciaKey integer [ref: > DimTipoDocencia.TipoDocenciaKey]
+  ResponsabilidadKey integer [ref: > DimResponsabilidadDocente.ResponsabilidadKey]
+  HorasDocenciaImpartida real
+  HorasAsignaturasEspeciales real
+}
+
+Table FactAcuerdosBilateral {
+    TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico Vigencia']
+    AcuerdoBilateralKey integer [ref: > DimAcuerdoBilateral.AcuerdoBilateralKey, not null]
+    Colectivo text [note: 'Alumnos/Docentes']
+    EntradaSalida text [note: 'IN/OUT']
+    PlazasOfertadas integer
+    PlazasAsignadasOUT integer
+    NumeroAcuerdos integer [default: 1, not null]
+    pk [TiempoKey, AcuerdoBilateralKey, Colectivo, EntradaSalida]
+}
+
+Table FactEstudiantesIN {
+  FactEstINKey integer [pk]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico Estancia']
+  AlumnoPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CentroAcogidaKey integer [ref: > DimCentro.CentroKey]
+  ProgramaMovilidadKey integer [ref: > DimProgramaMovilidad.ProgramaMovilidadKey]
+  UniversidadOrigenKey integer [ref: > DimUniversidad.UniversidadKey]
+  TotalEstudiantesIN integer [default: 1, not null]
+  DuracionEstanciaMeses real
+  CreditosMatriculadosEstancia real
+  CreditosSuperadosEstancia real
+}
+
+Table FactEstudiantesOUT {
+  FactEstOUTKey integer [pk]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico Estancia']
+  AlumnoPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CentroOrigenKey integer [ref: > DimCentro.CentroKey]
+  PlanEstudioOrigenKey integer [ref: > DimPlanEstudio.PlanEstudioKey]
+  ProgramaMovilidadKey integer [ref: > DimProgramaMovilidad.ProgramaMovilidadKey]
+  UniversidadDestinoKey integer [ref: > DimUniversidad.UniversidadKey]
+  SolicitudMovOUTKey integer [ref: > DimSolicitudMovilidadOUT.SolicitudMovOUTKey, null, note: 'Link to the specific application preference']
+  TotalEstudiantesOUT integer [default: 1, not null]
+  DuracionEstanciaMeses real
+  CreditosSuperadosEstancia real
+}
+
+Table FactSolicitudesMovilidadOUT {
+  FactSolMovOUTKey integer [pk]
+  SolicitudMovOUTKey integer [ref: > DimSolicitudMovilidadOUT.SolicitudMovOUTKey, not null]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico Solicitud']
+  TotalSolicitudesPreferencias integer [default: 1, not null]
+  TotalSolicitudesAceptadas integer [note: '0/1']
+  TotalRenuncias integer [note: '0/1']
+}
+
+Table FactGruposInvestigacion {
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Year']
+  GrupoInvKey integer [ref: > DimGrupoInvestigacion.GrupoInvKey, not null]
+  NumeroGrupos integer [default: 1, not null]
+  NumeroInvestigadoresGrupo integer
+  ImporteAnualConcedidoGrupo real
+  pk [TiempoKey, GrupoInvKey]
+}
+
+Table FactIndicesBibliometricos {
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Year']
+  RevistaKey integer [ref: > DimRevista.RevistaKey, not null]
+  MateriaKey integer [ref: > DimMateriaJCR.MateriaKey, not null]
+  FactorImpactoJCR real
+  Cuartil integer
+  Decil integer
+  pk [TiempoKey, RevistaKey, MateriaKey]
+}
+
+Table FactMatriculaEEPP {
+  FactMatriEEPPKey integer [pk]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Curso Academico']
+  AlumnoPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  EstudioPropioKey integer [ref: > DimEstudioPropio.EstudioPropioKey, not null]
+  AlumnosMatriculados integer [default: 1, not null]
+}
+
+Table FactMovilidadIDI {
+  FactMovIDIKey integer [pk]
+  InvestigadorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  TiempoInicioKey integer [ref: > DimTiempo.TiempoKey, note: 'Start Date']
+  TiempoFinKey integer [ref: > DimTiempo.TiempoKey, note: 'End Date']
+  TipoEntidadOrigenKey integer [ref: > DimTipoEntidad.TipoEntidadKey]
+  TipoMovilidadIDI text [note: 'Estancia/Vinculación']
+  MovilidadCount integer [default: 1, not null]
+  DuracionSemanas real
+  EsProrroga integer [note: '0/1']
+}
+
+Table FactProduccionPublicacion {
+  FactProdPublKey integer [pk]
+  AutorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  PublicacionKey integer [ref: > DimPublicacion.PublicacionKey, not null]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Year of Publication']
+  // Metrics could be added here
+}
+
+Table FactProduccionCongreso {
+  FactProdCongKey integer [pk]
+  AutorPersonaKey integer [ref: > DimPersona.PersonaKey, not null]
+  CongresoKey integer [ref: > DimCongreso.CongresoKey, not null]
+  TipoActividadKey integer [ref: > DimTipoActividadCongreso.TipoActividadKey, not null]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Year of Congress']
+  ActividadesCongreso integer [default: 1, not null]
+}
+
+Table FactProyectos {
+    FactProyectosKey integer [pk]
+    ProyectoKey integer [ref: > DimProyecto.ProyectoKey, not null]
+    TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Year of activity/concession']
+    EsProyectoVigente integer [note: '0/1']
+    EsProyectoNuevo integer [note: '0/1']
+    ImporteConcedido real
+    IngresosTotales real
+    IngresosIVA real
+    IngresosOverhead real
+    IngresosProyecto real
+    CostesTotalesGasto real
+    CostesIVA real
+    CostesAlProyecto real
+}
+
+Table FactSolicitudesConvocatoria {
+  FactSolConvKey integer [pk]
+  SolicitudProyKey integer [ref: > DimSolicitudProyecto.SolicitudProyKey, not null]
+  TiempoKey integer [ref: > DimTiempo.TiempoKey, not null, note: 'Year of Resolution?']
+  TotalSolicitudes integer [default: 1, not null]
+  ImporteSolicitado real
+  ImporteConcedido real
+  SolicitudesConcedidas integer [note: '0/1']
+  SolicitudesDenegadas integer [note: '0/1']
+}
+
