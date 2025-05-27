@@ -1,0 +1,11 @@
+ID_EDAD_EST,ID_EDAD_EST_NK,NOMBRE_EDAD_EST,DESCRIPCION_EDAD_EST,EDAD_MINIMA,EDAD_MAXIMA
+1,16-18,Menor de edad,Estudiantes menores de edad legal,16.0,18.0
+2,19-21,Joven,Estudiantes jóvenes (19-21 años),19.0,21.0
+3,22-25,Joven adulto,Estudiantes jóvenes adultos (22-25 años),22.0,25.0
+4,26-30,Adulto joven,Adultos jóvenes (26-30 años),26.0,30.0
+5,31-40,Adulto,Adultos (31-40 años),31.0,40.0
+6,41-50,Adulto medio,Adultos de mediana edad (41-50 años),41.0,50.0
+7,51-65,Adulto mayor,Adultos mayores (51-65 años),51.0,65.0
+8,>65,Senior,Estudiantes senior (mayores de 65 años),,
+9,NC,No consta,Edad no disponible en los sistemas,,
+10,DESC,Desconocido,Edad desconocida o no registrada,,

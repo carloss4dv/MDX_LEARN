@@ -1,0 +1,16 @@
+ID_CATEGORIA_CUERPO_ESCALA,NOMBRE_CATEGORIA_CUERPO_ESCALA,ID_CAT_CPO_ESC_DESCR,ID_CATEGORIA_CUERPO_ESCALA_NK,TIPO_CONTRATO,GRUPO_PROFESIONAL,FLG_REQUIERE_DOCTORADO,SN_REQUIERE_DOCTORADO,FLG_PUEDE_SEXENIOS,SN_PUEDE_SEXENIOS,FLG_VENIA_DOCENDI,SN_VENIA_DOCENDI,ORDEN_CATEGORIA,FECHA_CARGA
+1,Catedrático/a de Universidad,10,CATED,Funcionario,A1,1,S,1,S,1,S,1,2023-07-01
+2,Profesor/a Titular de Universidad,20,TITUL,Funcionario,A1,1,S,1,S,1,S,2,2022-09-22
+3,Profesor/a Contratado/a Doctor/a,30,CONTR,Laboral,L1,1,S,1,S,0,N,3,2023-12-24
+4,Profesor/a Ayudante Doctor/a,40,AYUDO,Laboral,L1,1,S,0,N,0,N,4,2023-04-12
+5,Profesor/a Ayudante,50,AYUDA,Laboral,L2,0,N,0,N,0,N,5,2021-02-22
+6,Profesor/a Asociado/a,60,ASOCI,Laboral,L3,0,N,0,N,0,N,6,2020-10-11
+7,Profesor/a Colaborador/a,70,COLAB,Laboral,L2,1,S,0,N,0,N,7,2023-02-24
+8,Profesor/a Emérito/a,80,EMERI,Laboral,L1,1,S,1,S,0,N,8,2020-09-10
+9,Profesor/a Visitante,90,VISIT,Laboral,L2,0,N,0,N,0,N,9,2023-07-11
+10,Profesor/a Interino/a,100,INTER,Laboral,L2,0,N,0,N,0,N,10,2021-12-10
+11,Profesor/a Sustituto/a,110,SUSTI,Laboral,L3,0,N,0,N,0,N,11,2022-03-07
+12,Personal Investigador,120,INVES,Laboral,L2,0,N,0,N,0,N,12,2021-11-13
+13,Catedrático/a de Escuela Universitaria,130,CATEU,Funcionario,A1,1,S,1,S,1,S,13,2023-12-29
+14,Profesor/a Titular de Escuela Universitaria,140,TITEU,Funcionario,A2,1,S,1,S,1,S,14,2019-10-19
+15,Otras figuras docentes,150,OTROS,Laboral,L3,0,N,0,N,0,N,15,2020-07-18

@@ -1,0 +1,101 @@
+ID_PAIS,NOMBRE_PAIS,ID_PAIS_NK,NOMBRE_NACIONALIDAD,ID_PAIS_DESCR,SN_PERTENECE_EEES,FLG_EXTRANJERO,SN_EXTRANJERO
+1,España,ESP,Española,1,S,0,N
+2,Singapur,COG,Nacional de Singapur,2,S,1,S
+3,Vietman,ISL,Nacional de Vietman,3,N,1,S
+4,Estonia,CUB,Nacional de Estonia,4,S,1,S
+5,Tailandia,SWZ,Nacional de Tailandia,5,S,1,S
+6,Bolivia,UKR,Nacional de Bolivia,6,S,1,S
+7,Argentina,AUT,Nacional de Argentina,7,S,1,S
+8,España,HTI,Nacional de España,8,S,1,S
+9,Samoa,ARG,Nacional de Samoa,9,S,1,S
+10,El Salvador,VCT,Nacional de El Salvador,10,S,1,S
+11,Maldivas,GIN,Nacional de Maldivas,11,S,1,S
+12,República Unida de Tanzanía,ITA,Nacional de República Unida de Tanzanía,12,S,1,S
+13,Congo,MCO,Nacional de Congo,13,S,1,S
+14,Italia,DEU,Nacional de Italia,14,N,1,S
+15,Israel,CAN,Nacional de Israel,15,S,1,S
+16,Letonia,BLR,Nacional de Letonia,16,N,1,S
+17,Jamaica,URY,Nacional de Jamaica,17,N,1,S
+18,Austria,ZAF,Nacional de Austria,18,S,1,S
+19,Qatar,CMR,Nacional de Qatar,19,S,1,S
+20,Benin,TGO,Nacional de Benin,20,N,1,S
+21,Serbia,VNM,Nacional de Serbia,21,N,1,S
+22,República Dominicana,FIN,Nacional de República Dominicana,22,S,1,S
+23,Suecia,GTM,Nacional de Suecia,23,N,1,S
+24,Federación de Rusia,BLZ,Nacional de Federación de Rusia,24,S,1,S
+25,Guinea,PHL,Nacional de Guinea,25,N,1,S
+26,Costa Rica,MNG,Nacional de Costa Rica,26,N,1,S
+27,Eslovaquia,SLV,Nacional de Eslovaquia,27,N,1,S
+28,Túnez,KAZ,Nacional de Túnez,28,S,1,S
+29,San Marino,ZWE,Nacional de San Marino,29,N,1,S
+30,Portugal,HND,Nacional de Portugal,30,N,1,S
+31,Mozambique,MUS,Nacional de Mozambique,31,N,1,S
+32,Togo,THA,Nacional de Togo,32,N,1,S
+33,Timor-Leste,LBR,Nacional de Timor-Leste,33,S,1,S
+34,Etiopía,AUS,Nacional de Etiopía,34,N,1,S
+35,Lituania,IRQ,Nacional de Lituania,35,S,1,S
+36,Eslovenia,TUN,Nacional de Eslovenia,36,N,1,S
+37,Sudán,SLB,Nacional de Sudán,37,S,1,S
+38,Somalia,PAK,Nacional de Somalia,38,N,1,S
+39,Ghana,HUN,Nacional de Ghana,39,S,1,S
+40,Zambia,TUV,Nacional de Zambia,40,S,1,S
+41,República Popular Democrática de Corea,MOZ,Nacional de República Popular Democrática ...,41,N,1,S
+42,Estados Unidos de América,SWE,Nacional de Estados Unidos de América,42,S,1,S
+43,Bosnia y Herzegovina,TWN,Nacional de Bosnia y Herzegovina,43,S,1,S
+44,Burkina Faso,YEM,Nacional de Burkina Faso,44,N,1,S
+45,Tayikistán,NOR,Nacional de Tayikistán,45,S,1,S
+46,Barbados,MDV,Nacional de Barbados,46,S,1,S
+47,Rwanda,PRT,Nacional de Rwanda,47,S,1,S
+48,Gabón,ATG,Nacional de Gabón,48,S,1,S
+49,Zimbabwe,BIH,Nacional de Zimbabwe,49,N,1,S
+50,Haití,NZL,Nacional de Haití,50,N,1,S
+51,Mongolia,AND,Nacional de Mongolia,51,N,1,S
+52,Países Bajos,EST,Nacional de Países Bajos,52,S,1,S
+53,Bulgaria,KGZ,Nacional de Bulgaria,53,S,1,S
+54,Comoras,MRT,Nacional de Comoras,54,N,1,S
+55,Reino Unido de Gran Bretaña e Irlanda del Norte,SMR,Nacional de Reino Unido de Gran Bretaña e ...,55,S,1,S
+56,Saint Kitts y Nevis,LIE,Nacional de Saint Kitts y Nevis,56,S,1,S
+57,Angola,MLI,Nacional de Angola,57,N,1,S
+58,Filipinas,BGR,Nacional de Filipinas,58,N,1,S
+59,República Democrática del Congo,BRA,Nacional de República Democrática del Congo,59,S,1,S
+60,Vanuatu,RUS,Nacional de Vanuatu,60,S,1,S
+61,Camerún,CHN,Nacional de Camerún,61,S,1,S
+62,República Centroafricana,DMA,Nacional de República Centroafricana,62,N,1,S
+63,Polonia,UZB,Nacional de Polonia,63,S,1,S
+64,Uzbekistán,FSM,Nacional de Uzbekistán,64,N,1,S
+65,Tuvalu,KOR,Nacional de Tuvalu,65,S,1,S
+66,Suriname,CAF,Nacional de Suriname,66,N,1,S
+67,Mauritania,SVN,Nacional de Mauritania,67,S,1,S
+68,Cabo Verde,GRC,Nacional de Cabo Verde,68,S,1,S
+69,Antigua y Barbuda,TZA,Nacional de Antigua y Barbuda,69,S,1,S
+70,Albania,BRN,Nacional de Albania,70,S,1,S
+71,Belarús,LSO,Nacional de Belarús,71,S,1,S
+72,Panamá,GNB,Nacional de Panamá,72,N,1,S
+73,Nigeria,GHA,Nacional de Nigeria,73,S,1,S
+74,Canadá,SRB,Nacional de Canadá,74,S,1,S
+75,Nauru,PRY,Nacional de Nauru,75,S,1,S
+76,Ecuador,COM,Nacional de Ecuador,76,S,1,S
+77,Jordania,NGA,Nacional de Jordania,77,S,1,S
+78,Bahamas,GNQ,Nacional de Bahamas,78,S,1,S
+79,Bangladesh,NAM,Nacional de Bangladesh,79,N,1,S
+80,Francia,ETH,Nacional de Francia,80,S,1,S
+81,Micronesia,EGY,Nacional de Micronesia,81,N,1,S
+82,Belice,PAN,Nacional de Belice,82,S,1,S
+83,Brasil,BEL,Nacional de Brasil,83,S,1,S
+84,Andorra,BWA,Nacional de Andorra,84,N,1,S
+85,Côte d'Ivoire,NER,Nacional de Côte d'Ivoire,85,S,1,S
+86,Niger,BHR,Nacional de Niger,86,N,1,S
+87,Afganistán,MWI,Nacional de Afganistán,87,N,1,S
+88,Guinea Ecuatorial,ESP,Nacional de Guinea Ecuatorial,88,S,1,S
+89,Ucrania,KEN,Nacional de Ucrania,89,N,1,S
+90,Bahrein,TTO,Nacional de Bahrein,90,S,1,S
+91,Irán,QAT,Nacional de Irán,91,S,1,S
+92,Palau,ERI,Nacional de Palau,92,S,1,S
+93,Swazilandia,CHL,Nacional de Swazilandia,93,S,1,S
+94,República Federal Democrática de Nepal,UGA,Nacional de República Federal Democrática ...,94,S,1,S
+95,San Vicente y las Granadinas,NLD,Nacional de San Vicente y las Granadinas,95,S,1,S
+96,República de Moldova,SVK,Nacional de República de Moldova,96,N,1,S
+97,Georgia,GAB,Nacional de Georgia,97,N,1,S
+98,Liechtenstein,COL,Nacional de Liechtenstein,98,N,1,S
+99,Montenegro,KWT,Nacional de Montenegro,99,S,1,S
+100,Alemania,VUT,Nacional de Alemania,100,S,1,S

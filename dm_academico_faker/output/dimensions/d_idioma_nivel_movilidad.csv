@@ -1,0 +1,21 @@
+ID_IDIOMA_NIVEL_MOVILIDAD,ID_IDIOMA_MOVILIDAD_NK,ID_NIVEL_IDIOMA_MOVILIDAD_NK,NOMBRE_IDIOMA_NIVEL_MOVILIDAD
+1,1,1,Español - A1
+2,1,2,Español - A2
+3,1,3,Español - B1
+4,1,4,Español - B2
+5,1,5,Español - C1
+6,1,6,Español - C2
+7,2,1,Inglés - A1
+8,2,2,Inglés - A2
+9,2,3,Inglés - B1
+10,2,4,Inglés - B2
+11,2,5,Inglés - C1
+12,2,6,Inglés - C2
+13,3,1,Francés - A1
+14,3,2,Francés - A2
+15,3,3,Francés - B1
+16,3,4,Francés - B2
+17,3,5,Francés - C1
+18,3,6,Francés - C2
+19,4,1,Alemán - A1
+20,4,2,Alemán - A2

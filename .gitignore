@@ -25,3 +25,5 @@ Thumbs.db
 *.temp 
 
 .venv/
+
+notebooks/.ipynb_checkpoint/

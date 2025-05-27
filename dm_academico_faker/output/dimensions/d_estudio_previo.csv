@@ -1,0 +1,11 @@
+ID_ESTUDIO_PREVIO,NOMBRE_ESTUDIO_PREVIO,FECHA_CARGA,ID_ESTUDIO_PREVIO_NK
+1,Bachillerato,2021-11-09,BACH
+2,Ciclo Formativo de Grado Superior,2021-12-15,CFGS
+3,Ciclo Formativo de Grado Medio,2023-09-01,CFGM
+4,Grado Universitario,2020-02-29,GRAD
+5,Diplomatura,2021-09-02,DIPL
+6,Licenciatura,2022-10-18,LICE
+7,Máster Universitario,2021-07-05,MAST
+8,Doctorado,2020-05-12,DOCT
+9,Título Propio,2020-06-07,TPRO
+10,Estudios extranjeros homologados,2021-11-04,EXTR

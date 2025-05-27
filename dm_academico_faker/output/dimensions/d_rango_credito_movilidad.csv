@@ -1,0 +1,8 @@
+ID_CREDITO,ID_RANGO_CREDITO,NOMBRE_RANGO_CREDITO
+10,1,Movilidad: 0 a 5 créditos
+20,2,Movilidad: 6 a 10 créditos
+30,3,Movilidad: 11 a 20 créditos
+40,4,Movilidad: 21 a 30 créditos
+50,5,Movilidad: 31 a 45 créditos
+60,6,Movilidad: 46 a 60 créditos
+70,7,Movilidad: Más de 60 créditos

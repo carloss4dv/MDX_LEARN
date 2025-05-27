@@ -1,0 +1,11 @@
+ID_TIPO_ASIGNATURA,NOMBRE_TIPO_ASIGNATURA,ID_TIPO_ASIGNATURA_DESCR,ID_TIPO_ASIGNATURA_NK,CODIGO_TIPO_ASIGNATURA,DESCRIPCION_TIPO_ASIGNATURA,FECHA_CARGA,ORDEN_VISUALIZACION,SN_FORMACION_BASICA,SN_COMPUTO_ACADEMICO,SN_PROYECTO_FIN_CARRERA,FLG_FORMACION_BASICA,FLG_COMPUTO_ACADEMICO,FLG_PROYECTO_FIN_CARRERA
+1,Básica,100,1,B,Asignatura de formación básica,2018-05-10,1,S,S,N,1,1,0
+2,Obligatoria,200,2,O,Asignatura obligatoria en el plan,2019-07-26,2,S,S,N,1,1,0
+3,Optativa,300,3,P,Asignatura de elección opcional,2022-10-21,3,N,S,N,0,1,0
+4,Prácticas Externas,400,4,E,Prácticas profesionales,2020-08-15,4,N,S,N,0,1,0
+5,Trabajo Fin de Grado,500,5,G,Trabajo final de grado,2021-11-07,5,N,S,S,0,1,1
+6,Trabajo Fin de Máster,600,6,M,Trabajo final de máster,2022-08-26,6,N,S,S,0,1,1
+7,Tesis Doctoral,700,7,D,Tesis de doctorado,2023-03-22,7,N,S,S,0,1,1
+8,Complementos de Formación,800,8,C,Complementos formativos,2018-05-17,8,N,S,N,0,1,0
+9,Créditos de Libre Elección,900,9,L,Créditos de libre elección,2023-11-20,9,N,N,N,0,0,0
+10,Técnica,1000,10,T,Asignatura de carácter técnico,2020-02-27,10,N,S,N,0,1,0

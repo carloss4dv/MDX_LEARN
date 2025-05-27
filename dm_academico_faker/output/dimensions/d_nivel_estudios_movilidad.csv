@@ -1,0 +1,9 @@
+ID_NIVEL_ESTUDIOS_MOVILIDAD,NOMBRE_NIVEL_ESTUDIOS_MOV,ID_NIVEL_ESTUDIOS_MOVILIDAD_NK
+1,Grado,GRADO
+2,Máster,MASTER
+3,Doctorado,DOCTO
+4,Grado - Primer ciclo,GRADO1
+5,Grado - Segundo ciclo,GRADO2
+6,Posgrado,POSGR
+7,Short cycle,SHORT
+8,Otros estudios,OTHER

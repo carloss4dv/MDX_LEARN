@@ -1,0 +1,11 @@
+ID_ESTADO_SOL_DOCTORADO,ID_ESTADO_SOL_DOCTORADO_NK,NOMBRE_ESTADO_SOL_DOCTORADO,DESCRIPCION_ESTADO,FLG_ESTADO_APROBADO,FLG_ESTADO_RECHAZADO,FLG_REQUIERE_ACCION,FECHA_ALTA
+1,P1,Pendiente de revisión,La solicitud ha sido registrada pero aún no se ha revisado,0,0,0,2020-10-22
+2,RE,En revisión,La solicitud está siendo revisada por la comisión académica,0,0,0,2016-07-04
+3,AD,Admitido,La solicitud ha sido aprobada y el candidato admitido,1,0,0,2019-04-21
+4,RZ,Rechazado,La solicitud ha sido rechazada por la comisión académica,0,1,0,2016-05-27
+5,DP,Documentación pendiente,Se requiere documentación adicional para continuar,0,0,1,2016-02-02
+6,DC,Documentación completa,La documentación está completa y validada,0,0,0,2016-05-20
+7,CE,Condicionado a entrevista,Admisión condicionada a superar entrevista,0,0,1,2020-10-30
+8,PA,Pendiente autorización,Pendiente de autorización por órganos superiores,0,0,0,2017-08-04
+9,MC,Matrícula completada,El estudiante ha formalizado su matrícula,1,0,0,2018-12-10
+10,CA,Cancelada,Solicitud cancelada por el solicitante,0,1,0,2020-07-31
