@@ -228,35 +228,5 @@ El proyecto incluye esquemas XML configurados para diferentes áreas de análisi
    - Planificación de recursos
    - Indicadores de calidad
 
-## Contribución
-
-### 🔄 Flujo de desarrollo
-
-1. Fork del repositorio
-2. Crear rama feature: `git checkout -b feature/nueva-funcionalidad`
-3. Commit cambios: `git commit -m 'Add nueva funcionalidad'`
-4. Push a la rama: `git push origin feature/nueva-funcionalidad`
-5. Crear Pull Request
-
-### 📝 Estándares de código
-
-- Seguir PEP 8 para Python
-- Documentar funciones con docstrings
-- Incluir tests para nuevos generadores
-- Mantener compatibilidad con Oracle XE
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## Contacto y soporte
-
-Para preguntas, sugerencias o reportar problemas:
-
-- 📧 Email: [tu-email@dominio.com]
-- 🐛 Issues: [GitHub Issues](https://github.com/tu-usuario/mdx-learn/issues)
-- 📖 Wiki: [Documentación completa](https://github.com/tu-usuario/mdx-learn/wiki)
-
----
 
 *Proyecto desarrollado como parte del Trabajo de Fin de Grado en Ingeniería Informática*
