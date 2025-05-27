@@ -1,150 +1,262 @@
-# DM Académico Faker
+# MDX LEARN - Proyecto de Aprendizaje MDX y Análisis Multidimensional
 
-Generador de datos sintéticos para un Data Mart Académico utilizando la librería Faker.
+Proyecto integral para el aprendizaje de consultas MDX, análisis multidimensional y generación de datos sintéticos para un Data Mart Académico.
 
 ## Descripción
 
-Este proyecto genera datos sintéticos para un Data Mart Académico, incluyendo tablas de dimensiones y hechos relacionados con el ámbito académico universitario. Los datos generados son ficticios pero coherentes entre sí, respetando las relaciones entre tablas.
+Este proyecto combina múltiples herramientas y enfoques para el análisis de datos académicos:
+
+1. **Generador de datos sintéticos** (`dm_academico_faker/`) - Utiliza la librería Faker para generar datos coherentes
+2. **Notebooks educativos** (`notebooks/`) - Tutoriales progresivos de MDX y análisis multidimensional  
+3. **Infraestructura Docker** - Base de datos Oracle para análisis OLAP
+4. **Scripts de automatización** - Herramientas para gestión de datos y análisis
 
 ## Estructura del proyecto
 
 ```
-dm_academico_faker/
-├── generators/
-│   ├── __init__.py
-│   ├── dimension_generators.py
-│   └── fact_generators.py
-├── utils/
-│   ├── __init__.py
-│   └── helpers.py
-├── __init__.py
-└── main.py
+MDX_LEARN/
+├── dm_academico_faker/           # Generador de datos sintéticos
+│   ├── config/                   # Configuración de conexiones
+│   │   └── connection.py
+│   ├── generators/               # Generadores especializados
+│   │   ├── dimension_generators.py
+│   │   ├── fact_generators.py
+│   │   ├── fact_generators_acuerdos.py
+│   │   ├── fact_generators_doctorado.py
+│   │   ├── fact_generators_extended.py
+│   │   ├── fact_generators_fusion.py
+│   │   ├── fact_generators_mobility.py
+│   │   └── fact_generators_priority.py
+│   ├── models/                   # Modelos de datos
+│   │   ├── dimensions.py
+│   │   └── facts.py
+│   ├── output/                   # Datos generados
+│   │   ├── dimensions/           # Tablas de dimensión (.csv)
+│   │   └── facts/                # Tablas de hechos (.csv)
+│   ├── utils/                    # Utilidades
+│   │   └── helpers.py
+│   ├── main.py                   # Script principal de generación
+│   ├── upload_to_oracle.py       # Carga de datos a Oracle
+│   └── requirements.txt          # Dependencias específicas
+├── notebooks/                    # Notebooks educativos
+│   ├── 01_introduccion_atoti.ipynb
+│   ├── 02_consultas_mdx_basicas.ipynb
+│   ├── 03_cubos_multidimensionales.ipynb
+│   ├── 04_consultas_mdx_avanzadas.ipynb
+│   └── 05_consultas_sql_analiticas.ipynb
+├── data/                         # Esquemas y configuraciones
+│   ├── Academico.xml             # Esquema OLAP académico
+│   ├── Admision.xml              # Esquema OLAP admisión
+│   ├── EstudioPropio.xml         # Esquema OLAP estudios propios
+│   ├── Movilidad.xml             # Esquema OLAP movilidad
+│   ├── dm_academico.sql          # DDL base de datos
+│   └── clean_database.sql        # Scripts de limpieza
+├── scripts/                      # Scripts de automatización
+│   ├── analyze_tables.py         # Análisis de tablas
+│   ├── import_tables.bat         # Importación automática
+│   ├── clean_database.bat        # Limpieza de BD
+│   └── unlock_account.bat        # Gestión de cuentas
+├── generators/                   # Generadores adicionales
+│   └── fact_generators_fusion.py
+├── docker-compose.yml            # Infraestructura Oracle
+├── docker-oracle-config.md       # Configuración Docker
+├── schema.dbml                   # Modelo de datos
+└── requirements.txt              # Dependencias del proyecto
 ```
 
-## Tablas generadas
+## Componentes del proyecto
 
-### Tablas de dimensión
+### 🎲 Generador de datos sintéticos (dm_academico_faker/)
 
-- D_SEXO
-- D_PAIS
-- D_TIEMPO
-- D_CURSO_ACADEMICO
-- D_CURSO_COHORTE
-- D_TIPO_ESTUDIO
-- D_RAMA_CONOCIMIENTO
-- D_CALIFICACION
-- D_CONVOCATORIA
-- D_TIPO_ACCESO
-- D_CLASE_ASIGNATURA
-- D_PERSONA
-- D_POBLACION
-- D_ASIGNATURA
-- D_PLAN_ESTUDIO
+Genera datos sintéticos coherentes para todas las tablas del Data Mart Académico:
 
-### Tablas de hechos
+**Tablas de dimensión implementadas (81 tablas):**
+- Básicas: D_SEXO, D_PAIS, D_TIEMPO, D_CURSO_ACADEMICO, D_CURSO_COHORTE
+- Académicas: D_TIPO_ESTUDIO, D_RAMA_CONOCIMIENTO, D_ESTUDIO, D_PLAN_ESTUDIO
+- Institucionales: D_CENTRO, D_CAMPUS, D_POBLACION, D_UNIVERSIDAD
+- Personas: D_PERSONA, D_CATEGORIA_CUERPO_PDI, D_DEDICACION_PROFESOR
+- Evaluación: D_CALIFICACION, D_CONVOCATORIA, D_TIPO_ACCESO
+- Movilidad: D_PROGRAMA_MOVILIDAD, D_IDIOMA_MOVILIDAD, D_ACUERDO_BILATERAL
+- Y muchas más...
 
-- F_MATRICULA
-- F_RENDIMIENTO
+**Tablas de hechos implementadas (16 tablas):**
+- F_MATRICULA - Datos de matriculación
+- F_RENDIMIENTO - Rendimiento académico
+- F_COHORTE - Seguimiento de cohortes
+- F_DOCTORADO - Programas de doctorado
+- F_EGRESADO - Datos de egresados
+- F_ESTUDIANTES_MOVILIDAD_IN/OUT - Movilidad estudiantil
+- F_OFERTA_ADMISION - Procesos de admisión
+- F_TABLA_FUSION - Datos consolidados
+- Y más...
+
+### 📚 Notebooks educativos
+
+Secuencia progresiva de aprendizaje:
+
+1. **01_introduccion_atoti.ipynb** - Fundamentos de Atoti y OLAP
+2. **02_consultas_mdx_basicas.ipynb** - Sintaxis básica MDX
+3. **03_cubos_multidimensionales.ipynb** - Construcción y análisis de cubos
+4. **04_consultas_mdx_avanzadas.ipynb** - Consultas complejas y optimización
+5. **05_consultas_sql_analiticas.ipynb** - SQL analítico vs MDX
+
+### 🐳 Infraestructura
+
+- **Oracle Database XE** en Docker para análisis OLAP
+- **Esquemas XML** para configuración de cubos
+- **Scripts automatizados** para gestión de datos
 
 ## Uso
 
-Para generar los datos, ejecutar el script principal:
+### 🚀 Inicio rápido
 
-```bash
-python -m dm_academico_faker.main
+1. **Configurar infraestructura:**
+   ```bash
+   # Levantar Oracle Database
+   docker-compose up -d
+   ```
+
+2. **Generar datos sintéticos:**
+   ```bash
+   cd dm_academico_faker
+   python main.py
+   ```
+
+3. **Cargar datos a Oracle:**
+   ```bash
+   python upload_to_oracle.py
+   ```
+
+4. **Explorar con notebooks:**
+   ```bash
+   jupyter notebook notebooks/
+   ```
+
+### 📊 Generación de datos específica
+
+Para generar solo ciertos tipos de datos:
+
+```python
+from dm_academico_faker.generators.dimension_generators import *
+from dm_academico_faker.generators.fact_generators import *
+
+# Generar solo dimensiones básicas
+d_sexo = generate_d_sexo()
+d_pais = generate_d_pais()
+
+# Generar tabla de hechos específica
+f_matricula = generate_f_matricula(d_personas, d_estudios, d_tiempo)
 ```
 
-Los datos generados se guardarán en la carpeta `output/`, separados en subcarpetas para dimensiones y hechos.
+### 🔧 Scripts de utilidad
+
+```bash
+# Limpiar base de datos
+scripts/clean_database.bat
+
+# Importar tablas específicas
+scripts/import_tables.bat
+
+# Analizar estructura de tablas
+python scripts/analyze_tables.py
+```
 
 ## Requisitos
 
-- Python 3.6+
-- pandas
-- numpy
-- faker
-- tqdm
+### Sistema base
+- Python 3.8+
+- Docker y Docker Compose
+- Jupyter Notebook
 
-## Instalación
-
+### Dependencias Python
 ```bash
 pip install -r requirements.txt
 ```
 
-## TODO
+Principales librerías:
+- **pandas** - Manipulación de datos
+- **faker** - Generación de datos sintéticos
+- **atoti** - Análisis OLAP y MDX
+- **cx_Oracle** - Conexión a Oracle Database
+- **tqdm** - Barras de progreso
 
-### Tablas de dimensión pendientes
+## Configuración avanzada
 
-- D_ACUERDO_BILATERAL
-- D_AREA_ESTUDIOS_MOVILIDAD
-- D_ARTICULO
-- D_CAMPUS
-- D_CATEGORIA_CUERPO_PDI
-- D_CENTRO
-- D_CENTRO_DESTINO
-- D_CENTRO_ESTUDIO
-- D_CENTRO_OTRA_UNIVERSIDAD
-- D_CLASE_LIQUIDACION
-- D_COLECTIVO_MOVILIDAD
-- D_CONVOCATORIA_PREINSCRIPCION
-- D_CUPO_ADJUDICACION
-- D_DEDICACION
-- D_DEDICACION_PROFESOR
-- D_DETALLE_CUPO_GENERAL
-- D_DOCTORADO_TIPO_BECA
-- D_EDAD_EST
-- D_ESTADO_ACUERDO_BILATERAL
-- D_ESTADO_ADJUDICACION
-- D_ESTADO_SOLICITUD_DOCTORADO
-- D_ESTUDIO
-- D_ESTUDIO_DESTINO
-- D_ESTUDIO_JERARQ
-- D_ESTUDIO_OTRA_UNIVERSIDAD
-- D_ESTUDIO_PROPIO
-- D_ESTUDIO_PROPIO_MODALIDAD
-- D_ESTUDIO_PROPIO_ORGANO_GEST
-- D_ESTUDIO_PROPIO_TIPO
-- D_GRUPO
-- D_IDIOMA_MOVILIDAD
-- D_IDIOMA_NIVEL_MOVILIDAD
-- D_MODALIDAD_PLAN_ESTUDIO
-- D_NACIONALIDAD
-- D_NIVEL_ESTUDIOS_MOVILIDAD
-- D_PLAN_ESTUDIO_ANO_DATOS
-- D_PLAN_ESTUDIO_ASIGNATURA
-- D_POBLACION_CENTRO
-- D_PROGRAMA_MOVILIDAD
-- D_PROYECTO_INVESTIGACION
-- D_RAMA_MACROAREA
-- D_RANGO_CREDITO
-- D_RANGO_CREDITO_MOVILIDAD
-- D_RANGO_EDAD
-- D_RANGO_NOTA_ADMISION
-- D_RANGO_NOTA_CRUE
-- D_RANGO_NOTA_EGRACONS
-- D_RANGO_NOTA_NUMERICA
-- D_TIPO_ABANDONO
-- D_TIPO_ACCESO_PREINSCRIPCION
-- D_TIPO_ASIGNATURA
-- D_TIPO_CENTRO
-- D_TIPO_DOCENCIA
-- D_TIPO_EGRESO
-- D_TIPO_PROCEDIMIENTO
-- D_TITULACION
-- D_UNIVERSIDAD
+### 🔧 Variables de entorno
 
-### Tablas de hechos pendientes
+```bash
+# Configuración Oracle
+ORACLE_USER=C##DM_ACADEMICO
+ORACLE_PASSWORD=YourPassword123
+ORACLE_HOST=localhost
+ORACLE_PORT=1521
+ORACLE_SERVICE=XEPDB1
 
-- F_COHORTE
-- F_DOCTORADO
-- F_DOCTORADO_ADMISION
-- F_EGRACONS
-- F_EGRESADO
-- F_ESTUDIANTES_MOVILIDAD_IN
-- F_ESTUDIANTES_MOVILIDAD_OUT
-- F_ESTUDIO_PROPIO_MATRICULA
-- F_OFERTA_ACUERDO_BILATERAL
-- F_OFERTA_ADMISION
-- F_SOLICITANTE_ADMISION
-- F_SOLICITUDES_MOVILIDAD
-- F_TABLA_FUSION
-- F_TABLA_FUSION_ESTCEN 
+# Configuración Atoti
+ATOTI_MAXMEMORY=4G
+ATOTI_PORT=9090
+```
+
+### 📊 Análisis de cubos OLAP
+
+El proyecto incluye esquemas XML configurados para diferentes áreas de análisis:
+
+- **Academico.xml** - Cubo principal con matriculas, rendimiento, cohortes
+- **Movilidad.xml** - Análisis de movilidad estudiantil internacional
+- **EstudioPropio.xml** - Estudios propios y formación continua
+- **Admision.xml** - Procesos de admisión y preinscripción
+
+### 🎯 Casos de uso
+
+1. **Análisis de rendimiento académico**
+   - Evolución temporal de calificaciones
+   - Análisis por rama de conocimiento
+   - Drill-down desde centro hasta asignatura
+
+2. **Seguimiento de cohortes**
+   - Tasas de abandono y permanencia
+   - Tiempo hasta graduación
+   - Análisis demográfico
+
+3. **Movilidad internacional**
+   - Flujos de estudiantes entrantes/salientes
+   - Acuerdos bilaterales más activos
+   - Distribución geográfica
+
+4. **Gestión institucional**
+   - Ocupación por centros y campus
+   - Planificación de recursos
+   - Indicadores de calidad
+
+## Contribución
+
+### 🔄 Flujo de desarrollo
+
+1. Fork del repositorio
+2. Crear rama feature: `git checkout -b feature/nueva-funcionalidad`
+3. Commit cambios: `git commit -m 'Add nueva funcionalidad'`
+4. Push a la rama: `git push origin feature/nueva-funcionalidad`
+5. Crear Pull Request
+
+### 📝 Estándares de código
+
+- Seguir PEP 8 para Python
+- Documentar funciones con docstrings
+- Incluir tests para nuevos generadores
+- Mantener compatibilidad con Oracle XE
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## Contacto y soporte
+
+Para preguntas, sugerencias o reportar problemas:
+
+- 📧 Email: [tu-email@dominio.com]
+- 🐛 Issues: [GitHub Issues](https://github.com/tu-usuario/mdx-learn/issues)
+- 📖 Wiki: [Documentación completa](https://github.com/tu-usuario/mdx-learn/wiki)
+
+---
+
+*Proyecto desarrollado como parte del Trabajo de Fin de Grado en Ingeniería Informática*
