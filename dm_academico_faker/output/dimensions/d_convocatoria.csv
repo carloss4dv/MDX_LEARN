@@ -1,0 +1,6 @@
+ID_CONVOCATORIA,NOMBRE_CONVOCATORIA,FECHA_CARGA,ID_CONVOCATORIA_NK,DESCRIPCION_CONVOCATORIA,ORDEN_CONVOCATORIA,MES_CONVOCATORIA,FECHA_INICIO,FECHA_FIN,DURACION_DIAS,ES_ORDINARIA,ES_EXTRAORDINARIA,ES_ESPECIAL,PERIODO_ACADEMICO
+1,Primera convocatoria,2020-01-22,P1,Convocatoria ordinaria del primer semestre,1,Enero,2025-01-01,2025-01-31,31,1,0,0,S1
+2,Segunda convocatoria,2021-05-03,P2,Convocatoria ordinaria del segundo semestre,2,Junio,2025-06-01,2025-06-30,30,1,0,0,S2
+3,Convocatoria extraordinaria,2021-02-13,EX,Convocatoria para recuperación de asignaturas,3,Julio,2025-07-01,2025-07-31,31,0,1,0,S2
+4,Convocatoria especial,2022-08-21,ES,Convocatoria para casos excepcionales,4,Septiembre,2025-09-01,2025-09-30,30,0,0,1,AN
+5,Convocatoria de fin de estudios,2022-03-12,FE,Convocatoria para alumnos que finalizan estudios,5,Diciembre,2025-12-01,2025-12-31,31,0,0,1,AN

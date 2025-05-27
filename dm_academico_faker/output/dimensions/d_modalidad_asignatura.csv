@@ -1,0 +1,9 @@
+ID_MODALIDAD_ASIGNATURA,ID_MODALIDAD_ASIGNATURA_NK,CODIGO_MODALIDAD,NOMBRE_MODALIDAD_ASIGNATURA,DESCRIPCION_MODALIDAD,ES_PRESENCIAL,ES_ONLINE,FECHA_CARGA
+1,1,P,Presencial,Asignatura impartida 100% presencial,1,0,2023-09-05
+2,2,S,Semipresencial,Asignatura con partes presenciales y a distancia,1,1,2023-04-30
+3,3,D,A distancia,Asignatura impartida 100% a distancia,0,1,2021-02-09
+4,4,V,Virtual,Asignatura impartida en entorno virtual,0,1,2023-06-30
+5,5,H,Híbrida,Asignatura con modalidad híbrida flexible,1,1,2022-01-10
+6,6,I,Invertida,Asignatura con metodología de aula invertida,1,0,2022-10-19
+7,7,B,Bimodal,Asignatura con doble vía de seguimiento,1,1,2023-03-15
+8,8,E,Exterior,Asignatura impartida en entidades externas,0,0,2023-06-11

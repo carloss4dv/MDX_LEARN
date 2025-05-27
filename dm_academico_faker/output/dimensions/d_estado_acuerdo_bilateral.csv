@@ -1,0 +1,6 @@
+ID_ESTADO_ACUERDO,ID_ESTADO_ACUERDO_NK,NOMBRE_ESTADO_ACUERDO
+1,ACT,Activo
+2,PEND,Pendiente de firma
+3,RENO,En renovación
+4,CADU,Caducado
+5,SUSP,Suspendido

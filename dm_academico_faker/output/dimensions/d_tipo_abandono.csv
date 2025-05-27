@@ -1,0 +1,8 @@
+ID_TIPO_ABANDONO,NOMBRE_TIPO_ABANDONO,FECHA_CARGA
+1,Abandono voluntario,2021-02-11
+2,Abandono por rendimiento académico,2020-10-18
+3,Abandono por motivos laborales,2021-10-08
+4,Abandono por motivos personales,2020-02-23
+5,Abandono por cambio de titulación,2020-04-03
+6,Abandono por traslado a otra universidad,2020-06-03
+7,Otros motivos,2021-05-22

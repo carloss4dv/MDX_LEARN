@@ -1,0 +1,810 @@
+<Schema name="ADMISION">
+<!--  (15/05/2024) [5345] DOCTORADO - Cambio del RD: RD 576/2023 -->
+<!--  (18/08/2024) [5430] Rol INTERMEDIO en Admisión, EEPP y Movilidad -->
+<!--  (27/09/2024) [5659] DOCTORADO - Rol intermedio. De momento, igual que el básico. -->
+<!--  (14/01/2025) [5773] ADMISION - Estadísticas de admisión a grados -->
+<!--  (08/04/2025) [5884] Añadir País nacionalidad extranjera S/N en todos los ámbitos -->
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Curso Academico" caption="Curso Acad&#233;mico">
+    <Hierarchy name="Curso Academico" visible="true" hasAll="true" allMemberName="Todos los cursos academicos" allMemberCaption="Todos los cursos acad&#233;micos" primaryKey="ID_CURSO_ACADEMICO" caption="Curso Acad&#233;mico" description="Curso Acad&#233;mico">
+      <Table name="D_CURSO_ACADEMICO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Curso Academico" visible="true" table="D_CURSO_ACADEMICO" column="ID_CURSO_ACADEMICO" nameColumn="NOMBRE_CURSO_ACADEMICO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Curso Acad&#233;mico" description="Curso Acad&#233;mico">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Nacionalidad">
+    <Hierarchy name="Nacionalidad" visible="true" hasAll="true">
+      <Table name="D_PAIS">
+      </Table>
+       <Level name="Extranjero" caption="Pa&#237;s Nacionalidad extranjera (S/N)" visible="true" column="FLG_EXTRANJERO" nameColumn="SN_EXTRANJERO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Pais descr" visible="true" column="ID_PAIS_DESCR" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s Nacionalidad" description="Pa&#237;s Nacionalidad">
+      </Level>
+      <Level name="Nacionalidad" visible="false" column="ID_PAIS" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s Nacionalidad" description="Pa&#237;s Nacionalidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+
+<!-- obsoleta
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Titulacion" caption="Titulaci&#243;n" description="Titulaci&#243;n">
+    <Hierarchy name="Titulacion" visible="true" hasAll="true" allMemberName="Todas las titulaciones" allMemberCaption="Todas las titulaciones" primaryKey="ID_PLAN_ESTUDIO" caption="Titulaci&#243;n" description="Titulaci&#243;n">
+      <Table name="D_ESTUDIO">
+      </Table>
+      <Level name="Tipo de titulacion desr" visible="true" column="ID_TIPO_ESTUDIO_DESCR" nameColumn="NOMBRE_TIPO_ESTUDIO" ordinalColumn="NOMBRE_TIPO_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" description="Tipo de titulacion" caption="Tipo de titulaci&#243;n">
+      </Level>
+      <Level name="Tipo de titulacion" visible="false" column="ID_TIPO_ESTUDIO" nameColumn="NOMBRE_TIPO_ESTUDIO" ordinalColumn="NOMBRE_TIPO_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de titulaci&#243;n" description="Tipo de titulaci&#243;n">
+      </Level>
+      <Level name="Titulacion" visible="true" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Titulaci&#243;n" description="Titulaci&#243;n" captionColumn="NOMBRE_PLAN_ESTUDIO">
+      </Level>
+      <!- - la siguiente es solo para el cuadro de mandos (visible=FALSE), para que el listado de planes contenga la localidad tambien
+      <Level name="Titulacion-localidad" visible="false" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO_LOCALIDAD" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Titulaci&#243;n" description="Titulaci&#243;n" captionColumn="NOMBRE_PLAN_ESTUDIO_LOCALIDAD">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Rama de conocimiento" visible="true" hasAll="true" allMemberName="Todas las ramas de conocimiento" allMemberCaption="Todas las ramas de conocimiento" primaryKey="ID_PLAN_ESTUDIO" caption="Rama de conocimiento" description="Rama de conocimiento">
+      <Table name="D_ESTUDIO">
+      </Table>
+      <Level name="Rama de conocimiento" visible="true" column="ID_RAMA_CONOCIMIENTO" nameColumn="NOMBRE_RAMA_CONOCIMIENTO" ordinalColumn="NOMBRE_RAMA_CONOCIMIENTO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rama de conocimiento" description="Rama de conocimiento">
+      </Level>
+      <Level name="Titulacion" visible="true" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Titulaci&#243;n" description="Titulaci&#243;n" captionColumn="NOMBRE_PLAN_ESTUDIO">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+-->
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Titulacion" caption="Titulaci&#243;n" description="Titulaci&#243;n">
+    <Hierarchy name="Titulacion" visible="true" hasAll="true" allMemberName="Todas las titulaciones" allMemberCaption="Todas las titulaciones" primaryKey="ID_PLAN_ESTUDIO" caption="Titulaci&#243;n" description="Titulaci&#243;n">
+      <Table name="D_ESTUDIO_JERARQ">
+      </Table>
+      <Level name="Tipo de titulacion descr" visible="true" column="ID_TIPO_ESTUDIO_DESCR" nameColumn="NOMBRE_TIPO_ESTUDIO" ordinalColumn="NOMBRE_TIPO_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" description="Tipo de titulacion" caption="Tipo de titulaci&#243;n">
+      </Level>
+      <Level name="Tipo de titulacion" visible="false" column="ID_TIPO_ESTUDIO" nameColumn="NOMBRE_TIPO_ESTUDIO" ordinalColumn="NOMBRE_TIPO_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" description="Tipo de titulacion">
+      </Level>
+      <Level name="Titulacion" visible="true" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Titulaci&#243;n" description="Titulaci&#243;n" captionColumn="NOMBRE_PLAN_ESTUDIO">
+      </Level>
+      <!-- la siguiente es solo para el cuadro de mandos (visible=FALSE), para que el listado de planes contenga la localidad tambien -->
+      <Level name="Titulacion-localidad" visible="false" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO_LOCALIDAD" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Titulaci&#243;n" description="Titulaci&#243;n" captionColumn="NOMBRE_PLAN_ESTUDIO_LOCALIDAD">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Titulacion-plan" caption="Titulaci&#243;n - Plan de Estudios" description="Plan de Estudios">
+    <Hierarchy name="Titulacion-plan" visible="true" hasAll="true" allMemberName="Todos los planes de estudios" allMemberCaption="Todos los planes de estudios" primaryKey="ID_PLAN_ESTUDIO" caption="Plan de Estudios" description="Plan de Estudios">
+      <Table name="D_PLAN_ESTUDIO">
+      </Table>
+      <Level name="Titulacion-plan" visible="true" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Plan de Estudios" description="Plan de Estudios" captionColumn="NOMBRE_PLAN_ESTUDIO">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Estudio" caption="Estudio" description="Estudio">
+    <Hierarchy name="Estudio" visible="true" hasAll="true" allMemberName="Todos los estudios" allMemberCaption="Todos los estudios" primaryKey="ID_ESTUDIO" caption="Estudio" description="Estudio">
+      <Table name="D_ESTUDIO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Estudio" visible="true" column="ID_ESTUDIO" nameColumn="NOMBRE_ESTUDIO" ordinalColumn="ORD_NOMBRE_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Estudio" description="Estudio">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tipo Estudio" caption="Tipo Estudio" description="Tipo Estudio">
+    <Hierarchy name="Tipo Estudio" visible="true" hasAll="true" allMemberName="Todos los tipos de estudio" allMemberCaption="Todos los tipos de estudio" primaryKey="ID_TIPO_ESTUDIO" caption="Tipo Estudio" description="Tipo Estudio">
+      <Table name="D_TIPO_ESTUDIO">
+      </Table>
+      <Level name="Tipo Estudio descr" visible="true" column="ID_TIPO_ESTUDIO_DESCR" nameColumn="NOMBRE_TIPO_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo Estudio" description="Tipo Estudio">
+      </Level>
+      <Level name="Tipo Estudio" visible="false" column="ID_TIPO_ESTUDIO" nameColumn="NOMBRE_TIPO_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de Estudio" description="Tipo de Estudio">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rama de Conocimiento" caption="Rama de Conocimiento" description="Rama de Conocimiento">
+    <Hierarchy name="Rama de Conocimiento" visible="true" hasAll="true" allMemberName="Todas las ramas de conocimiento" allMemberCaption="Todas las ramas de conocimiento" primaryKey="ID_RAMA_MACROAREA" caption="Rama de Conocimiento" description="Rama de Conocimiento">
+      <Table name="D_RAMA_MACROAREA" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Rama de conocimiento" visible="true" column="ID_RAMA_MACROAREA" nameColumn="NOMBRE_RAMA_MACROAREA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rama de conocimiento" description="Rama de conocimiento">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+
+<!-- obsoleta
+  <Dimension type="StandardDimension" visible="false" highCardinality="false" name="Centro" caption="Centro" description="Centro">
+    <Hierarchy name="Centro" visible="true" hasAll="true" allMemberName="Todos los centros" allMemberCaption="Todos los centros" primaryKey="ID_CENTRO" caption="Centro - Ubicaci&#243;n" description="Centro">
+      <Table name="D_CENTRO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Localidad" visible="true" column="ID_POBLACION" nameColumn="NOMBRE_POBLACION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Localidad" description="Localidad">
+      </Level>
+      <Level name="Campus" visible="true" column="ID_CAMPUS" nameColumn="NOMBRE_CAMPUS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Campus" description="Campus">
+      </Level>
+      <Level name="Centro descr" visible="true" column="ID_CENTRO_DESCR" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Centro" description="Centro">
+      </Level>
+      <Level name="Centro" visible="false" table="D_CENTRO" column="ID_CENTRO" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Tipo Centro" visible="true" hasAll="true" allMemberName="Todos los tipos" allMemberCaption="Todos los tipos" primaryKey="ID_CENTRO" caption="Centro - Tipo" description="Tipo Centro">
+      <Table name="D_CENTRO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Tipo de Centro" visible="true" column="ID_TIPO_CENTRO" nameColumn="NOMBRE_TIPO_CENTRO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de Centro" description="Tipo de Centro">
+      </Level>
+      <Level name="Centro descr" visible="true" column="ID_CENTRO_DESCR" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Centro" description="Centro">
+      </Level>
+      <Level name="Centro" visible="false" table="D_CENTRO" column="ID_CENTRO" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+-->
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Centro" caption="Centro" description="Centro">
+    <Hierarchy name="Centro" visible="true" hasAll="true" allMemberName="Todos los centros" allMemberCaption="Todos los centros" primaryKey="ID_CENTRO" caption="Centro" description="Centro">
+      <Table name="D_CENTRO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Centro descr" visible="true" column="ID_CENTRO_DESCR" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Centro" description="Centro">
+      </Level>
+      <Level name="Centro ext" visible="false" column="ID_CENTRO_DESCR" nameColumn="NOMBRE_CENTRO_EXT" ordinalColumn="NOMBRE_CENTRO_EXT" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Centro" description="Centro">
+      </Level>
+      <Level name="Centro" visible="false" table="D_CENTRO" column="ID_CENTRO" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Centro-tipo" caption="Tipo de Centro" description="Tipo de Centro">
+    <Hierarchy name="Centro-tipo" visible="true" hasAll="true" allMemberName="Todos los tipos" allMemberCaption="Todos los tipos" primaryKey="ID_TIPO_CENTRO" caption="Centro - Tipo" description="Tipo Centro">
+      <Table name="D_TIPO_CENTRO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Tipo de Centro Descr" visible="true" column="ID_TIPO_CENTRO_DESCR" nameColumn="NOMBRE_TIPO_CENTRO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de Centro" description="Tipo de Centro">
+      </Level>
+      <Level name="Tipo de Centro" visible="false" column="ID_TIPO_CENTRO" nameColumn="NOMBRE_TIPO_CENTRO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de Centro" description="Tipo de Centro">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Centro-localidad" caption="Centro - Localidad" description="Centro - Localidad">
+    <Hierarchy name="Centro-localidad" visible="true" hasAll="true" allMemberName="Todas las localidades" allMemberCaption="Todas las localidades" primaryKey="ID_POBLACION" caption="Centro - Localidad" description="Centro - Localidad">
+      <Table name="D_POBLACION_CENTRO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Localidad" visible="true" column="ID_POBLACION" nameColumn="NOMBRE_POBLACION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Localidad" description="Localidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Centro-campus" caption="Centro - Campus" description="Centro - Campus">
+    <Hierarchy name="Centro-campus" visible="true" hasAll="true" allMemberName="Todos los campus" allMemberCaption="Todos los campus" primaryKey="ID_CAMPUS" caption="Centro - Campus" description="Centro - Campus">
+      <Table name="D_CAMPUS" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Campus" visible="true" column="ID_CAMPUS" nameColumn="NOMBRE_CAMPUS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Campus" description="Campus">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Estado Solicitud Doctorado" caption="Estado de la Solicitud">
+    <Hierarchy name="Estado Solicitud Doctorado" visible="true" hasAll="true" caption="Estado de la Solicitud" description="Estado de la Solicitud">
+      <Table name="D_ESTADO_SOLICITUD_DOCTORADO">
+      </Table>
+      <Level name="Estado Solicitud Doctorado" visible="true" column="ID_ESTADO_SOL_DOCTORADO" nameColumn="NOMBRE_ESTADO_SOL_DOCTORADO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Estado de la Solicitud" description="Estado de la Solicitud">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango de Edad" caption="Rango de Edad">
+    <Hierarchy name="Rango de Edad" visible="true" hasAll="true" primaryKey="ID_EDAD_EST" caption="Rango de Edad" description="Rango de Edad">
+      <Table name="D_EDAD_EST" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Rango de Edad" visible="true" table="D_EDAD_EST" column="ID_EDAD_EST" nameColumn="NOMBRE_EDAD_EST" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rango de Edad" description="Rango de Edad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Sexo" caption="Sexo">
+    <Hierarchy name="Sexo" visible="true" hasAll="true" caption="Sexo" description="Sexo">
+      <Table name="D_SEXO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Sexo" visible="true" column="ID_SEXO" nameColumn="NOMBRE_SEXO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Sexo" description="Sexo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Poblacion" caption="Poblaci&#243;n" description="Poblaci&#243;n">
+    <Hierarchy name="Poblacion" visible="true" hasAll="true" allMemberName="Todas las poblaciones" allMemberCaption="Todas las poblaciones" primaryKey="ID_POBLACION" caption="Poblaci&#243;n" description="Poblaci&#243;n">
+      <Table name="D_POBLACION" schema="DM_ACADEMICO">
+      </Table>
+<!--
+      <Level name="Pais" visible="true" table="D_POBLACION" column="ID_PAIS" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pais" description="Pa&#237;s">
+      </Level>
+-->
+      <Level name="Comunida Autonoma" visible="true" table="D_POBLACION" column="ID_CCAA" nameColumn="NOMBRE_CCAA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Comunidad Aut&#243;noma" description="Comunidad Aut&#243;noma">
+      </Level>
+      <Level name="Provincia" visible="true" table="D_POBLACION" column="ID_PROVINCIA" nameColumn="NOMBRE_PROVINCIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Provincia" description="Provincia">
+      </Level>
+      <Level name="Poblacion" visible="true" table="D_POBLACION" column="ID_POBLACION" nameColumn="NOMBRE_POBLACION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Poblaci&#243;n" description="Poblaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Pais Resid. Familiar">
+    <Hierarchy name="Pais Resid. Familiar" visible="true" hasAll="true">
+      <Table name="D_PAIS">
+      </Table>
+      <Level name="Pais EEES" visible="true" column="SN_PERTENECE_EEES" nameColumn="SN_PERTENECE_EEES" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s Resid. Familiar EEES (S/N)" description="Pa&#237;s Resid. Familiar EEES">
+      </Level>
+      <Level name="Pais descr" visible="true" column="ID_PAIS_DESCR" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s Resid. Familiar" description="Pa&#237;s Resid. Familiar">
+      </Level>
+      <Level name="Pais" visible="false" column="ID_PAIS" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s Resid. Familiar" description="Pa&#237;s Resid. Familiar">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Convocatoria" caption="Convocatoria" description="Convocatoria">
+    <Hierarchy name="Convocatoria" visible="true" hasAll="true" primaryKey="ID_CONVOCATORIA" caption="Convocatoria" description="Convocatoria">
+      <Table name="D_CONVOCATORIA_PREINSCRIPCION" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Convocatoria" visible="true" table="D_CONVOCATORIA_PREINSCRIPCION" column="ID_CONVOCATORIA" nameColumn="NOMBRE_CONVOCATORIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Convocatoria" description="Convocatoria">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Cupo Adjudicacion" caption="Cupo Adjudicaci&#243;n" description="Cupo Adjudicaci&#243;n">
+    <Hierarchy name="Cupo Adjudicacion" visible="true" hasAll="true" primaryKey="ID_CUPO_ADJUDICACION" caption="Cupo Adjudicacion" description="Cupo Adjudicacion">
+      <Table name="D_CUPO_ADJUDICACION" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Cupo Adjudicacion" visible="true" table="D_CUPO_ADJUDICACION" column="ID_CUPO_ADJUDICACION" nameColumn="NOMBRE_CUPO_ADJUDICACION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Cupo Adjudicaci&#243;n" description="Cupo Adjudicaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Detalle Cupo General" caption="Detalle Cupo General" description="Detalle Cupo General">
+    <Hierarchy name="Detalle Cupo General" visible="true" hasAll="true" primaryKey="ID_DETALLE_CUPO_GENERAL" caption="Detalle Cupo General" description="Detalle Cupo General">
+      <Table name="D_DETALLE_CUPO_GENERAL" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Detalle Cupo General" visible="true" column="ID_DETALLE_CUPO_GENERAL" nameColumn="NOMBRE_DETALLE_CUPO_GENERAL" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Detalle Cupo General" description="Detalle Cupo General">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad" caption="Universidad" description="Universidad">
+    <Hierarchy name="Universidad" visible="true" hasAll="true" caption="Universidad" description="Universidad">
+      <Table name="D_UNIVERSIDAD" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Universidad descr" visible="true" column="ID_UNIVERSIDAD_DESCR" nameColumn="NOMBRE_UNIVERSIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Universidad">
+      </Level>
+      <Level name="Universidad" visible="false" column="ID_UNIVERSIDAD" nameColumn="NOMBRE_UNIVERSIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Universidad" description="Universidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Pais">
+    <Hierarchy name="Pais" visible="true" hasAll="true">
+      <Table name="D_PAIS">
+      </Table>
+      <Level name="Pais descr" visible="true" column="ID_PAIS_DESCR" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s" description="Pa&#237;s">
+      </Level>
+      <Level name="Pais" visible="false" column="ID_PAIS" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s" description="Pa&#237;s">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tipo Procedimiento" caption="Tipo Procedimiento" description="Tipo Procedimiento">
+    <Hierarchy name="Tipo Procedimiento" visible="true" hasAll="true" primaryKey="ID_TIPO_PROCEDIMIENTO" caption="Tipo Procedimiento" description="Tipo Procedimiento">
+      <Table name="D_TIPO_PROCEDIMIENTO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Tipo Procedimiento" visible="true" table="D_TIPO_PROCEDIMIENTO" column="ID_TIPO_PROCEDIMIENTO" nameColumn="NOMBRE_TIPO_PROCEDIMIENTO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Tipo Procedimiento" description="Tipo Procedimiento">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tipo de Acceso" caption="Tipo de Acceso" description="Tipo de Acceso">
+    <Hierarchy name="Tipo de Acceso" visible="true" hasAll="true" primaryKey="ID_TIPO_ACCESO_PREINS" caption="Tipo de Acceso" description="Tipo de Acceso">
+      <Table name="D_TIPO_ACCESO_PREINSCRIPCION" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Tipo de Acceso" visible="true" table="D_TIPO_ACCESO_PREINSCRIPCION" column="ID_TIPO_ACCESO_PREINS" nameColumn="NOMBRE_TIPO_ACCESO_PREINS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de Acceso" description="Tipo de Acceso">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango de calificacion" caption="Rango de calificaci&#243;n" description="Rango de calificaci&#243;n">
+    <Hierarchy name="Rango de calificacion" visible="true" hasAll="true" primaryKey="ID_RANGO_NOTA_ADMISION" caption="Rango de calificaci&#243;n" description="Rango de calificaci&#243;n">
+      <Table name="D_RANGO_NOTA_ADMISION" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Rango de calificacion" visible="true" table="D_RANGO_NOTA_ADMISION" column="ID_RANGO_NOTA_ADMISION" nameColumn="NOMBRE_RANGO_NOTA_ADMISION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rango de calificaci&#243;n" description="Rango de calificaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Estado adjudicacion" caption="Estado adjudicaci&#243;n" description="Estado adjudicaci&#243;n">
+    <Hierarchy name="Estado adjudicacion" visible="true" hasAll="true" primaryKey="ID_ESTADO_ADJUDICACION" caption="Estado adjudicaci&#243;n" description="Estado adjudicaci&#243;n">
+      <Table name="D_ESTADO_ADJUDICACION" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Estado adjudicacion" visible="true" table="D_ESTADO_ADJUDICACION" column="ID_ESTADO_ADJUDICACION" nameColumn="NOMBRE_ESTADO_ADJUDICACION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Estado adjudicaci&#243;n" description="Estado adjudicaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Solicitante" caption="Solicitante" description="Solicitante">
+    <Hierarchy name="Solicitante" visible="true" hasAll="true" caption="Solicitante" description="Solicitante">
+      <Table name="D_PERSONA" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="NIP" visible="true" column="ID_PERSONA" nameColumn="ID_PERSONA_NIP_NK" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="NIP" description="NIP">
+      </Level>
+      <Level name="DNI" visible="true" column="ID_PERSONA" nameColumn="DOCUMENTO_IDENTIDAD" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="DNI" description="DNI">
+      </Level>
+      <Level name="Apellidos y nombre" visible="true" column="ID_PERSONA" nameColumn="APELLIDOS_NOMBRE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Apellidos y nombre" description="Apellidos y nombre">
+      </Level>
+      <Level name="Fecha nacimiento" visible="true" column="ID_PERSONA" nameColumn="FECHA_NACIMIENTO_TXT" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Fecha nacimiento" description="Fecha de nacimiento DD/MM/YYYY">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Estudio Previo" caption="Estudio Previo" description="Estudio Previo">
+    <Hierarchy name="Estudio Previo" visible="true" hasAll="true" primaryKey="ID_ESTUDIO_PREVIO" caption="Estudio Previo" description="Estudio Previo">
+      <Table name="D_ESTUDIO_PREVIO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Estudio Previo" visible="true" table="D_ESTUDIO_PREVIO" column="ID_ESTUDIO_PREVIO" nameColumn="NOMBRE_ESTUDIO_PREVIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Estudio Previo" description="Estudio Previo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Fecha act" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n">
+    <Hierarchy name="Fecha act" visible="true" hasAll="true" allMemberName="Todas las fechas" allMemberCaption="Todas las fechas" primaryKey="ID_DIA" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n">
+      <Table name="D_TIEMPO" schema="DM_ACADEMICO">
+      </Table>
+      <Level name="Fecha act" visible="true" column="ID_DIA" nameColumn="NOMBRE_DIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" name="Dedicacion" caption="Dedicaci&#243;n" description="Dedicaci&#243;n">
+    <Hierarchy name="Dedicacion" visible="true" hasAll="true" primaryKey="ID_DEDICACION" caption="Dedicaci&#243;n">
+      <Table name="D_DEDICACION" schema="DM_ACADEMICO" alias="">
+      </Table>
+      <Level name="Dedicacion" visible="true" column="ID_DEDICACION" nameColumn="NOMBRE_DEDICACION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Dedicaci&#243;n" description="Dedicaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+
+  <Cube name="admision" caption="Admisi&#243;n" visible="true" cache="true" enabled="true">
+    <Table name="F_SOLICITANTE_ADMISION" schema="DM_ACADEMICO">
+    </Table>
+    <DimensionUsage source="Curso Academico" name="Curso Academico" caption=" CURSO ACAD&#201;MICO" visible="true" foreignKey="ID_CURSO_ACADEMICO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango de Edad" name="Rango de Edad" caption="Solicitante - Rango de Edad" visible="true" foreignKey="ID_EDAD_EST" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sexo" name="Sexo" caption="Solicitante - Sexo" visible="true" foreignKey="ID_SEXO" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Admitido" caption="Adjudicaci&#243;n - Admitido (S/N)" description="Admitido (S/N)">
+      <Hierarchy name="Admitido" visible="true" hasAll="true" caption="Admitido (S/N)" description="Admitido (S/N)">
+        <Level name="Admitido" visible="true" column="SN_ADMITIDO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Admitido (S/N)" description="Admitido">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Matric. Nuevo Ingreso" caption="Adjudicaci&#243;n - Matriculado de Nuevo Ingreso (S/N)" description="Matric. Nuevo Ingreso">
+      <Hierarchy name="Matric. Nuevo Ingreso" visible="true" hasAll="true" caption="Matric. Nuevo Ingreso (S/N)" description="Matric. Nuevo Ingreso (S/N)">
+        <Level name="Matric. Nuevo Ingreso" visible="true" column="SN_MATRICULADO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Matric. Nuevo Ingreso (S/N)" description="Matric. Nuevo Ingreso">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <DimensionUsage source="Titulacion" name="Titulacion" visible="false" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">  <!-- necesaria para el cuadro de mandos -->
+    </DimensionUsage>
+
+    <DimensionUsage source="Titulacion-plan" name="Titulacion-plan" caption="Solicitud - Titulaci&#243;n - Plan" visible="true" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo Estudio" name="Tipo Estudio" caption="Solicitud - Titulaci&#243;n - Tipo" visible="true" foreignKey="ID_TIPO_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estudio" name="Estudio" caption="Solicitud - Titulaci&#243;n - &#173;Estudio" visible="true" foreignKey="ID_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rama de Conocimiento" name="Rama de Conocimiento" caption="Solicitud - Titulaci&#243;n - Rama" visible="true" foreignKey="ID_RAMA_CONOCIMIENTO" highCardinality="false">
+    </DimensionUsage>
+
+    <DimensionUsage source="Centro" name="Centro" caption="Solicitud - Centro" visible="true" foreignKey="ID_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro-tipo" name="Centro-tipo" caption="Solicitud - Centro - Tipo" visible="true" foreignKey="ID_TIPO_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro-localidad" name="Centro-localidad" caption="Solicitud - Centro - Localidad" visible="true" foreignKey="ID_POBLACION_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro-campus" name="Centro-campus" caption="Solicitud - Centro - Campus" visible="true" foreignKey="ID_CAMPUS" highCardinality="false">
+    </DimensionUsage>
+
+    <DimensionUsage source="Nacionalidad" name="Nacionalidad" caption="Solicitante - Pa&#237;s Nacionalidad" visible="true" foreignKey="ID_PAIS_NACIONALIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Poblacion" name="Residencia Familiar" caption="Solicitante - Residencia Familiar" visible="true" foreignKey="ID_POBLACION_FAMILIAR" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Pais Resid. Familiar" name="Pais Resid. Familiar" caption="Solicitante - Residencia Familiar: Pa&#237;s" description="Solicitante - Pa&#237;s Residencia Familiar" visible="true" foreignKey="ID_PAIS_FAMILIAR" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Convocatoria" name="Convocatoria" caption="Adjudicaci&#243;n -  Convocatoria" visible="true" foreignKey="ID_CONVOCATORIA" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cupo Adjudicacion" name="Cupo Adjudicacion" caption="Solicitud - Cupo" visible="true" foreignKey="ID_CUPO_ADJUDICACION" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Detalle Cupo General" name="Detalle Cupo General" caption="Solicitud - Detalle Cupo General" description="Solicitud - Detalle Cupo General (usuarios avanzados)" visible="true" foreignKey="ID_DETALLE_CUPO_GENERAL" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad" name="Universidad de origen" caption="Solicitante - Universidad de origen" visible="true" foreignKey="ID_UNIVERSIDAD" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Orden Preferencia" caption="Solicitud - Orden de Preferencia" description="Orden Preferencia">
+      <Hierarchy name="Orden Preferencia" visible="true" hasAll="true" allMemberName="Todas las preferencias" allMemberCaption="Todas las preferencias" caption="Orden Preferencia" description="Orden Preferencia">
+        <Level name="Orden Preferencia" visible="true" column="ORDEN_PREFERENCIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Orden Preferencia" description="Orden Preferencia">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Tipo Procedimiento" name="Tipo Procedimiento" caption="Adjudicaci&#243;n -  Tipo de Procedimiento" visible="true" foreignKey="ID_TIPO_PROCEDIMIENTO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo de Acceso" name="Tipo de Acceso" caption="Adjudicaci&#243;n -  Tipo de Acceso" visible="true" foreignKey="ID_TIPO_ACCESO_PREINS" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango de calificacion" name="Rango de calificacion" caption="Solicitud - Rango de calificaci&#243;n" visible="true" foreignKey="ID_RANGO_NOTA_ADMISION" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estado adjudicacion" name="Estado adjudicacion" caption="Adjudicaci&#243;n - Estado" visible="true" foreignKey="ID_ESTADO_ADJUDICACION" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Solicitante" name="Solicitante" caption="Solicitante" description="Solicitante (usuarios avanzados)" visible="true" foreignKey="ID_PERSONA" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estudio Previo" name="Estudio Previo" caption="Solicitud - Estudio Previo" visible="true" foreignKey="ID_ESTUDIO_PREVIO" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Participa en adjudicacion" caption="Solicitud - Participa en adjudicaci&#243;n (S/N)" description="Participa en adjudicaci&#243;n (S/N) (usuarios avanzados)">
+      <Hierarchy name="Participa en adjudicacion" visible="true" hasAll="true" caption="Participa en adjudicaci&#243;n (S/N)" description="Participa en adjudicaci&#243;n (S/N)">
+        <Level name="Participa en adjudicacion" visible="true" column="SN_PARTICIPA_ADJUDICACION" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Participa en adjudicaci&#243;n (S/N)" description="Participa en adjudicaci&#243;n">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Poblacion" name="Poblacion de nacimiento" caption="Solicitante - Poblaci&#243;n de nacimiento" visible="true" foreignKey="ID_POBLACION_NACIMIENTO" highCardinality="false">
+    </DimensionUsage>
+
+    <DimensionUsage source="Fecha act" name="f_act" caption="&#173;Fecha de actualizaci&#243;n" visible="true" foreignKey="ID_FECHA_CARGA" highCardinality="false">
+    </DimensionUsage>
+
+<!--
+    <Measure name="Fecha de actualizacion" column="FECHA_CARGA" datatype="String" aggregator="max" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n" visible="false">
+    </Measure>
+-->
+    <Measure name="Solicitudes" column="ID_PREINSCRIPCION" aggregator="distinct-count" caption="Solicitudes" description="Solicitudes" visible="true">
+    </Measure>
+    <Measure name="Nota Media" column="NOTA_ADMISION" aggregator="avg" caption="Nota Media" description="Nota Media" visible="true">
+    </Measure>
+    <Measure name="Solicitantes" column="ID_PERSONA" aggregator="distinct-count" caption="Solicitantes" description="Solicitantes" visible="true">
+    </Measure>
+<!--
+    <CalculatedMember name="Fecha Actualizacion2" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n" formula="( [Measures].[Fecha de actualizacion] )" dimension="Measures" visible="true">
+    </CalculatedMember>
+-->
+
+<!--30/10/2018: parece que funciona (hay que probar más) pero es lentíiiiiiiiisima
+    <CalculatedMember name="Desviacion Estandar" formatString="#,#0.00" caption="Desviaci&#243;n Est&#225;ndar" description="Desviaci&#243;n Est&#225;ndar"
+                      formula="stddev({[Solicitante].[NIP].Members}, [Measures].[Nota Media])"
+                      dimension="Measures" visible="true">
+    </CalculatedMember>
+-->
+
+  </Cube>
+  <Cube name="oferta" caption="Oferta de Plazas" visible="true" cache="true" enabled="true">
+    <Table name="F_OFERTA_ADMISION" schema="DM_ACADEMICO">
+    </Table>
+    <DimensionUsage source="Curso Academico" name="Curso Academico" caption=" CURSO ACAD&#201;MICO" visible="true" foreignKey="ID_CURSO_ACADEMICO" highCardinality="false">
+    </DimensionUsage>
+
+    <DimensionUsage source="Titulacion" name="Titulacion" visible="false" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">  <!-- necesaria para el cuadro de mandos -->
+    </DimensionUsage>
+
+    <DimensionUsage source="Titulacion-plan" name="Titulacion-plan" caption="Titulaci&#243;n - Plan de Estudios" visible="true" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo Estudio" name="Tipo Estudio" caption="Titulaci&#243;n - Tipo de estudio" visible="true" foreignKey="ID_TIPO_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estudio" name="Estudio" caption="Titulaci&#243;n - &#173;Estudio" visible="true" foreignKey="ID_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rama de Conocimiento" name="Rama de Conocimiento" caption="Titulaci&#243;n - Rama de Conocimiento" visible="true" foreignKey="ID_RAMA_CONOCIMIENTO" highCardinality="false">
+    </DimensionUsage>
+
+    <DimensionUsage source="Centro" name="Centro" caption="Centro" visible="true" foreignKey="ID_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro-tipo" name="Centro-tipo" caption="Centro - Tipo" visible="true" foreignKey="ID_TIPO_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro-localidad" name="Centro-localidad" caption="Centro - Localidad" visible="true" foreignKey="ID_POBLACION_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro-campus" name="Centro-campus" caption="Centro - Campus" visible="true" foreignKey="ID_CAMPUS" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="ID_TIPO_ACCESO" highCardinality="false" name="Tipo de acceso" caption="Tipo de acceso" description="Tipo de acceso">
+      <Hierarchy name="Tipo de acceso" visible="true" hasAll="true" caption="Tipo de acceso" description="Tipo de acceso">
+        <Table name="D_TIPO_ACCESO" schema="DM_ACADEMICO">
+        </Table>
+        <Level name="Tipo de acceso" visible="true" table="D_TIPO_ACCESO" column="ID_TIPO_ACCESO" nameColumn="NOMBRE_TIPO_ACCESO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de acceso" description="Tipo de acceso">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Estudio Previo" name="Estudio Previo" caption="Estudio Previo" visible="true" foreignKey="ID_ESTUDIO_PREVIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cupo Adjudicacion" name="Cupo Adjudicacion" caption="Cupo de Adjudicaci&#243;n" visible="true" foreignKey="ID_CUPO_ADJUDICACION" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Prelacion convo Nota de Corte" caption="Prelaci&#243;n Convo Nota de Corte" description="Prelaci&#243;n Convo Nota de Corte">
+      <Hierarchy name="Prelacion convo Nota de Corte" visible="true" hasAll="true" caption="Prelacion convo Nota de Corte" description="Prelacion convo Nota de Corte">
+        <Level name="Prelacion convo Nota de Corte" visible="true" table="F_OFERTA_ADMISION" column="PRELA_CONVO_NOTA_DEF" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Prelacion convo Nota de Corte" description="Prelacion convo Nota de Corte">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <!-- para filtrar en el cuadro de mandos de titulaciones -->
+    <Dimension type="StandardDimension" visible="false" highCardinality="false" name="Doctorado vigente">
+      <Hierarchy name="Doctorado vigente" visible="true" hasAll="true">
+        <Level name="Doctorado vigente" visible="true" column="SN_DOCTORADO_VIGENTE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <!-- mbgracia (07/03/2023) [4739] Indicar si un estudio es interuniversitario y si coordina unizar [4931] ADMISION - Añadir las dimensiones Master Habilitante S/N y Múltiple Titulación S/N en el cubo de Oferta de admisión-->
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Multiple titulacion SN" caption="Titulaci&#243;n - M&#250;ltiple titulaci&#243;n (S/N)" description="M&#250;ltiple titulaci&#243;n (S/N)">
+      <Hierarchy name="Multiple titulacion SN" visible="true" hasAll="true" caption="M&#250;ltiple titulaci&#243;n (S/N)" description="M&#250;ltiple titulaci&#243;n (S/N)">
+        <Level name="Multiple titulacion SN" visible="true" column="SN_MULTIPLE_TITULACION" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="M&#250;ltiple titulaci&#243;n (S/N)" description="M&#250;ltiple titulaci&#243;n (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Master habilitante" caption="Titulaci&#243;n - M&#225;ster habilitante (S/N)" description="Master habilitante">
+      <Hierarchy name="Master habilitante" visible="true" hasAll="true" caption="M&#225;ster habilitante (S/N)" description="Master habilitante">
+        <Level name="Master habilitante" visible="true" column="SN_MASTER_HABILITANTE" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="M&#225;ster habilitante (S/N)" description="Master habilitante">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Interuniversitario" caption="Titulaci&#243;n - Interuniversitario (S/N)" description="Estudio interuniversitario">
+      <Hierarchy name="Estudio interuniversitario" visible="true" hasAll="true" caption="Estudio interuniversitario (S/N)" description="Estudio interuniversitario">
+        <Level name="Estudio interuniversitario" visible="true" column="SN_INTERUNIVERSITARIO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Estudio interuniversitario (S/N)" description="Estudio interuniversitario">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Interuniversitario coordina unizar" caption="Titulaci&#243;n - Interuniversitario coordina unizar (S/N)" description="Estudio interuniversitario coordinado por unizar (S/N)">
+      <Hierarchy name="Interuniversitario coordina unizar" visible="true" hasAll="true" caption="Interuniversitario coordina unizar (S/N)" description="Estudio interuniversitario coordinado por unizar (S/N)">
+        <Level name="Interuniversitario coordina unizar" visible="true" column="SN_COORDINADOR" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Interuniversitario coordina unizar (S/N)" description="Estudio interuniversitario coordinado por unizar (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <DimensionUsage source="Fecha act" name="f_act" caption="&#173;Fecha de actualizaci&#243;n" visible="true" foreignKey="ID_FECHA_CARGA" highCardinality="false">
+    </DimensionUsage>
+
+<!--
+    <Measure name="Fecha de actualizacion" column="FECHA_CARGA" datatype="String" aggregator="max" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n" visible="false">
+    </Measure>
+-->
+    <Measure name="Plazas ofertadas" column="PLAZAS_OFERTADAS" datatype="Numeric" aggregator="sum" caption="Plazas ofertadas" description="Plazas ofertadas" visible="true">
+    </Measure>
+    <Measure name="Plazas matriculadas" column="PLAZAS_ASIGNADAS" datatype="Numeric" aggregator="sum" caption="Plazas matriculadas" description="Plazas matriculadas" visible="true">
+    </Measure>
+    <Measure name="Plazas solicitadas" column="PLAZAS_SOLICITADAS" datatype="Numeric" aggregator="sum" caption="Plazas solicitadas" description="Plazas solicitadas" visible="true">
+    </Measure>
+    <Measure name="Nota corte adjudiacion 1" column="NOTA_CORTE_ADJUDICACION_1" datatype="Numeric" formatString="#0.000" aggregator="min" caption="Nota corte adjudicaci&#243;n 1" description="Nota corte adjudicaci&#243;n 1" visible="true">
+    </Measure>
+    <Measure name="Nota corte definitiva 1" column="NOTA_CORTE_DEFINITIVA_1" datatype="Numeric" formatString="#0.000" aggregator="min" caption="Nota corte definitiva 1" description="Nota corte definitiva 1" visible="true">
+    </Measure>
+    <Measure name="Nota Agregada" column="NOTA_AGREGADA" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="Nota corte adjudiacion 2" column="NOTA_CORTE_ADJUDICACION_2" datatype="Numeric" formatString="#0.000" aggregator="min" caption="Nota corte adjudicaci&#243;n 2" description="Nota corte adjudicaci&#243;n 2" visible="true">
+    </Measure>
+    <Measure name="Nota corte definitiva 2" column="NOTA_CORTE_DEFINITIVA_2" datatype="Numeric" formatString="#0.000" aggregator="min" caption="Nota corte definitiva 2" description="Nota corte definitiva 2" visible="true">
+    </Measure>
+    <CalculatedMember name="Indice ocupacion" formatString="0.00%" caption="&#205;ndice de ocupaci&#243;n" description="&#205;ndice de ocupaci&#243;n" formula="[Measures].[Plazas matriculadas]/[Measures].[Plazas ofertadas]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Oferta cubierta" caption="Oferta cubierta" description="Oferta cubierta" formula="iif(    [Measures].[Plazas ofertadas] &#62; [Measures].[Plazas matriculadas]   ,    [Measures].[Plazas matriculadas]   ,    [Measures].[Plazas ofertadas]   )" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Sobrematricula" caption="Sobrematr&#237;cula" description="Sobrematr&#237;cula" dimension="Measures" visible="false">
+      <Formula>
+        <![CDATA[iif(
+			[Measures].[Plazas matriculadas] > [Measures].[Plazas ofertadas]
+		,
+			[Measures].[Plazas matriculadas] - [Measures].[Plazas ofertadas]
+		,
+			0
+		)]]>
+      </Formula>
+    </CalculatedMember>
+    <CalculatedMember name="Oferta no cubierta" caption="Oferta no cubierta" description="Oferta no cubierta" dimension="Measures" visible="false">
+      <Formula>
+        <![CDATA[iif(
+			[Measures].[Plazas ofertadas] > [Measures].[Plazas matriculadas]
+		,
+			[Measures].[Plazas ofertadas] - [Measures].[Plazas matriculadas]
+		,
+			0
+		)]]>
+      </Formula>
+    </CalculatedMember>
+    <CalculatedMember name="Nota Media Admision" formatString="#0.000" caption="Nota Media Admisi&#243;n" description="Nota Media Admisi&#243;n" formula="[Measures].[Nota Agregada] / [Measures].[Plazas matriculadas]" dimension="Measures" visible="false">
+    </CalculatedMember>
+<!--
+    <CalculatedMember name="Fecha Actualizacion2" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n" formula="( [Measures].[Fecha de actualizacion] )" dimension="Measures" visible="true">
+    </CalculatedMember>
+-->
+  </Cube>
+
+  <Cube name="DOCTORADO_ADMISION" caption="Admisi&#243;n de Doctorado (RD576/2023)" visible="true" description="Indicadores de la Escuela de Doctorado RD576/2023" cache="true" enabled="true">
+    <Table name="F_DOCTORADO_ADMISION" schema="DM_ACADEMICO">
+    </Table>
+    <DimensionUsage source="Curso Academico" name="Curso Academico" caption=" CURSO ACAD&#201;MICO" visible="true" foreignKey="ID_CURSO_ACADEMICO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Solicitante" name="Solicitante" caption="Solicitante" description="Solicitante (usuarios avanzados)" visible="true" foreignKey="ID_ALUMNO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Nacionalidad" name="Nacionalidad" caption="Solicitante - Pa&#237;s Nacionalidad" visible="true" foreignKey="ID_PAIS_NACIONALIDAD_ALUMNO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sexo" name="Sexo Solicitante" caption="Solicitante - Sexo" visible="true" foreignKey="ID_SEXO_ALUMNO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad" name="Universidad de origen" caption="Solicitante - Universidad de origen" visible="true" foreignKey="ID_UNIVERSIDAD_ORIGEN" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estado Solicitud Doctorado" name="Estado Solicitud Doctorado" caption="Estado Solicitud" visible="true" foreignKey="ID_ESTADO_SOL_DOCTORADO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro" name="Centro" caption="Centro" visible="true" foreignKey="ID_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estudio" name="Estudio" caption="Titulaci&#243;n - &#173;Estudio" visible="true" foreignKey="ID_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Titulacion-plan" name="Titulacion-plan" caption="Titulaci&#243;n - Plan de Estudios" visible="true" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rama de Conocimiento" name="Rama de Conocimiento" caption="Titulaci&#243;n - Rama de Conocimiento" visible="true" foreignKey="ID_RAMA_CONOCIMIENTO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dedicacion" name="Dedicacion Alumno" caption="Matriculado - Dedicaci&#243;n" visible="true" foreignKey="ID_DEDICACION" highCardinality="false">
+    </DimensionUsage>
+
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Matriculado" caption="Matriculado (S/N)" description="Matriculado (S/N)">
+      <Hierarchy name="Matriculado" visible="true" hasAll="true" caption="Matriculado (S/N)" description="Matriculado (S/N)">
+        <Level name="Matriculado" visible="true" column="SN_MATRICULADO" nameColumn="SN_MATRICULADO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Matriculado (S/N)" description="Matriculado (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Nuevo Ingreso" caption="Matric. Nuevo Ingreso (S/N)" description="Matric. Nuevo Ingreso (S/N)">
+      <Hierarchy name="Nuevo Ingreso" visible="true" hasAll="true" caption="Matric. Nuevo Ingreso (S/N)" description="Matric. Nuevo Ingreso (S/N)">
+        <Level name="Nuevo Ingreso" visible="true" column="SN_NUEVO_INGRESO" nameColumn="SN_NUEVO_INGRESO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Matric. Nuevo Ingreso (S/N)" description="Matric. Nuevo Ingreso (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Complementos Formacion" caption="Complementos Formativos (S/N)" description="Complementos Formativos (S/N)">
+      <Hierarchy name="Complementos Formacion" visible="true" hasAll="true" caption="Complementos Formativos (S/N)" description="Complementos Formativos (S/N)">
+        <Level name="Complementos Formacion" visible="true" column="SN_COMPLEMENTO_FORMACION" nameColumn="SN_COMPLEMENTO_FORMACION" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Complementos Formativos (S/N)" description="Complementos Formativos (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+<!-- Creamos estas dimensiones para poder realizar las fórmulas en las medidas.
+ El cubo funciona mal a la hora de filtrar por las dimenesiones incluidas en las fórmulas -->
+    <Dimension type="StandardDimension" visible="false" highCardinality="false" name="Matriculado FLG" >
+      <Hierarchy name="Matriculado FLG" visible="true" hasAll="true" >
+        <Level name="Matriculado FLG" visible="true" column="FLG_MATRICULADO" nameColumn="FLG_MATRICULADO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="flase" highCardinality="false" name="Nuevo Ingreso FLG" >
+      <Hierarchy name="Nuevo Ingreso FLG" visible="true" hasAll="true" >
+        <Level name="Nuevo Ingreso FLG" visible="true" column="FLG_NUEVO_INGRESO" nameColumn="FLG_NUEVO_INGRESO" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="flase" highCardinality="false" name="Complementos Formacion FLG" >
+      <Hierarchy name="Complementos Formacion FLG" visible="true" hasAll="true" >
+        <Level name="Complementos Formacion FLG" visible="true" column="FLG_COMPLEMENTO_FORMACION" nameColumn="FLG_COMPLEMENTO_FORMACION" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="flase" highCardinality="false" name="Tiempo Parcial FLG" >
+      <Hierarchy name="Tiempo Parcial FLG" visible="true" hasAll="true" >
+        <Level name="Tiempo Parcial FLG" visible="true" column="FLG_TIEMPO_PARCIAL" nameColumn="FLG_TIEMPO_PARCIAL" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="flase" highCardinality="false" name="Otra Unviersidad FLG" >
+      <Hierarchy name="Otra Unviersidad FLG" visible="true" hasAll="true" >
+        <Level name="Otra Unviersidad FLG" visible="true" column="FLG_OTRA_UNIVERSIDAD" nameColumn="FLG_OTRA_UNIVERSIDAD" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="flase" highCardinality="false" name="Otra Unviersidad Denom FLG" >
+      <Hierarchy name="Otra Unviersidad Denom FLG" visible="true" hasAll="true" >
+        <Level name="Otra Unviersidad Denom FLG" visible="true" column="FLG_OTRA_UNIVERSIDAD_DENOM" nameColumn="FLG_OTRA_UNIVERSIDAD_DENOM" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <DimensionUsage source="Fecha act" name="f_act" caption="&#173;Fecha de actualizaci&#243;n" visible="true" foreignKey="ID_FECHA_CARGA" highCardinality="false">
+    </DimensionUsage>
+
+    <Measure name="Numero de Solicitudes" column="ID_SOLICITUD_NK"  aggregator="distinct-count" caption="N&#250;mero de Solicitudes" visible="true">
+    </Measure>
+    <Measure name="Numero de Solicitantes" column="ID_ALUMNO" aggregator="distinct-count" caption="N&#250;mero de Solicitantes" visible="true">
+    </Measure>
+
+    <CalculatedMember name="Alumnos Matriculados" caption="Alumnos Matriculados" formula="([Measures].[Numero de Solicitantes],[Matriculado FLG].[1])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Alumnos Nuevo Ingreso" caption="Alumnos Nuevo Ingreso" formula="([Measures].[Numero de Solicitantes],[Nuevo Ingreso FLG].[1])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Alumnos Complementos Formativos" caption="Alumnos Complementos Formativos" formula="([Measures].[Alumnos Nuevo Ingreso],[Complementos Formacion FLG].[1])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Alumnos Tiempo Parcial" caption="Alumnos Tiempo Parcial" formula="([Measures].[Alumnos Nuevo Ingreso],[Tiempo Parcial FLG].[1])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Alumnos Otra Universidad" caption="Alumnos Otra Universidad" formula="([Measures].[Alumnos Nuevo Ingreso],[Otra Unviersidad FLG].[1])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Denom Alumnos Otra Universidad" caption="Denom Alumnos Otra Universidad" formula="([Measures].[Alumnos Nuevo Ingreso],[Otra Unviersidad Denom FLG].[1])" dimension="Measures" visible="false">
+    </CalculatedMember>
+
+    <CalculatedMember name="Porcentaje Alumnos Complementos Formativos" caption="&#37; Alumnos con Compl. Formativos" formatString="#,#0.00%" formula="([Measures].[Alumnos Complementos Formativos]/[Measures].[Alumnos Nuevo Ingreso])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Porcentaje Alumnos Tiempo Parcial" caption="&#37; Alumnos a Tiempo Parcial" formatString="#,#0.00%" formula="([Measures].[Alumnos Tiempo Parcial]/[Measures].[Alumnos Nuevo Ingreso])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Porcentaje Alumnos Otra Universidad" caption="&#37; Alumnos procedentes de otra Universidad" formatString="#,#0.00%" formula="[Measures].[Alumnos Otra Universidad]/[Measures].[Denom Alumnos Otra Universidad]" dimension="Measures" visible="true">
+    </CalculatedMember>
+
+  </Cube>
+
+
+
+  <Role name="Admin">
+    <SchemaGrant access="all">
+    </SchemaGrant>
+  </Role>
+  <Role name="Authenticated">
+    <SchemaGrant access="none">
+    </SchemaGrant>
+  </Role>
+  <Role name="ACAD_UDATUZ_BASICO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="admision" access="all">
+        <HierarchyGrant hierarchy="[Solicitante]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Detalle Cupo General]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Participa en adjudicacion]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="oferta" access="all">
+      </CubeGrant>
+      <CubeGrant cube="DOCTORADO_ADMISION" access="none">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="ACAD_UDATUZ_INTERMEDIO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="admision" access="all">
+        <HierarchyGrant hierarchy="[Solicitante]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="oferta" access="all">
+      </CubeGrant>
+      <CubeGrant cube="DOCTORADO_ADMISION" access="none">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>      
+  <Role name="ACAD_UDATUZ_AVANZADO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="admision" access="all">
+      </CubeGrant>
+      <CubeGrant cube="oferta" access="all">
+      </CubeGrant>
+      <CubeGrant cube="DOCTORADO_ADMISION" access="none">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="GRAL_UDATUZ">
+    <SchemaGrant access="none">
+      <CubeGrant cube="admision" access="all">
+        <HierarchyGrant hierarchy="[Solicitante]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Detalle Cupo General]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Participa en adjudicacion]" access="none">
+        </HierarchyGrant>        
+      </CubeGrant>
+      <CubeGrant cube="oferta" access="all">
+      </CubeGrant>
+      <CubeGrant cube="DOCTORADO_ADMISION" access="none">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+
+    <Role name="DOCTO_UDATUZ_AVANZADO">
+      <SchemaGrant access="none">
+        <CubeGrant cube="admision" access="none">
+        </CubeGrant>
+        <CubeGrant cube="oferta" access="none">
+        </CubeGrant>
+        <CubeGrant cube="DOCTORADO_ADMISION" access="all">
+        </CubeGrant>
+      </SchemaGrant>
+    </Role>
+    <Role name="DOCTO_UDATUZ_INTERMEDIO">
+      <SchemaGrant access="none">
+        <CubeGrant cube="admision" access="none">
+        </CubeGrant>
+        <CubeGrant cube="oferta" access="none">
+        </CubeGrant>
+        <CubeGrant cube="DOCTORADO_ADMISION" access="all">
+          <HierarchyGrant hierarchy="[Solicitante]" access="none">
+          </HierarchyGrant>
+        </CubeGrant>
+      </SchemaGrant>
+    </Role>
+    <Role name="DOCTO_UDATUZ_BASICO">
+      <SchemaGrant access="none">
+        <CubeGrant cube="admision" access="none">
+        </CubeGrant>
+        <CubeGrant cube="oferta" access="none">
+        </CubeGrant>
+        <CubeGrant cube="DOCTORADO_ADMISION" access="all">
+          <HierarchyGrant hierarchy="[Solicitante]" access="none">
+          </HierarchyGrant>
+        </CubeGrant>
+      </SchemaGrant>
+    </Role>
+
+
+</Schema>

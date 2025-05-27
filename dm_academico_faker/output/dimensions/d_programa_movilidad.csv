@@ -1,0 +1,11 @@
+ID_PROGRAMA_MOVILIDAD,NOMBRE_PROGRAMA_MOVILIDAD,COD_PROGRAMA_INT,ID_TIPO_PROGRAMA_MOVILIDAD,NOMBRE_TIPO_PROGRAMA_MOV,ID_PROGRAMA_MOVILIDAD_NK,SN_PROGRAMA_INTERNACIONAL
+1,Erasmus+ Estudios,ERAS+,1,Programa Erasmus+,10,S
+2,Erasmus+ Prácticas,ERASP,1,Programa Erasmus+,20,S
+3,Sistema de Intercambio entre Centros Universitarios Españoles,SICUE,3,Programa de Movilidad Nacional SICUE,30,N
+4,Programa América Latina,AMERL,4,Programa de Cooperación Internacional,40,S
+5,Programa EEUU-Canadá,USACDN,4,Programa de Cooperación Internacional,50,S
+6,Programa Asia,ASIA,4,Programa de Cooperación Internacional,60,S
+7,International Student Exchange Program,ISEP,2,Programa de Intercambio Bilateral,70,S
+8,Council on International Educational Exchange,CIEE,2,Programa de Intercambio Bilateral,80,S
+9,Programa Europeo No Erasmus,EUROP,2,Programa de Intercambio Bilateral,90,S
+10,Programa Iberoamérica Santander,IBERO,5,Programa de Movilidad Iberoamericana,100,S

@@ -1,0 +1,11 @@
+ID_NIVEL_IDIOMA,ID_NIVEL_IDIOMA_NK,NOMBRE_NIVEL_IDIOMA,DESCRIPCION_NIVEL_IDIOMA,EQUIVALENCIA_SISTEMA_MCER,ORDEN_NIVEL_IDIOMA,FECHA_CARGA
+1,A1,Acceso,Básico - Acceso,Principiante,1,2022-09-18
+2,A2,Plataforma,Básico - Plataforma,Elemental,2,2023-08-03
+3,B1,Intermedio,Intermedio - Umbral,Intermedio,3,2020-07-24
+4,B2,Intermedio alto,Intermedio - Avanzado,Intermedio alto,4,2022-10-09
+5,C1,Dominio eficaz,Competente - Dominio,Avanzado,5,2020-02-08
+6,C2,Maestría,Competente - Maestría,Proficiencia,6,2020-11-27
+7,N1,Nativo,Lengua materna,Nativo,7,2022-10-02
+8,NC,No consta,Sin nivel definido,No especificado,8,2021-08-17
+9,NA,No aplica,No requiere nivel,No aplica,9,2023-05-06
+10,XX,Otros,Otro sistema de certificación,Otros,10,2023-11-27

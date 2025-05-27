@@ -1,0 +1,11 @@
+ID_RANGO_NOTA_EGRACONS,ID_RANGO_NOTA_EGRACONS_NK,NOMBRE_RANGO_NOTA_EGRACONS,NOTA_REFERENCIA,LIMITE_SUPERIOR,LIMITE_INFERIOR,DESCRIPCION_EGRACONS,EQUIVALENCIA_ECTS,EQUIVALENCIA_ESP,CODIGO_TIPO_EGRACONS,FECHA_CARGA,ORDEN_VISUALIZACION,ES_APROBADO,SN_APROBADO
+1,A,Excelente,9.0,10.0,8.8,Resultados excepcionales,"A+,A",Sobresaliente,BEST_10P,2022-11-04,1,1,S
+2,B,Muy Bueno,8.0,8.8,7.5,Resultados superiores a la media,"B+,B",Notable alto,BEST_25P,2021-05-04,2,1,S
+3,C,Bueno,7.0,7.5,6.5,Trabajo sólido por encima de la media,"C+,C",Notable,BEST_35P,2020-12-18,3,1,S
+4,D,Satisfactorio,6.0,6.5,5.5,Trabajo aceptable,"D+,D",Aprobado alto,BEST_65P,2021-05-10,4,1,S
+5,E,Suficiente,5.0,5.5,5.0,Cumple con los requisitos mínimos,E,Aprobado,BEST_90P,2021-12-11,5,1,S
+6,FX,Suspenso (FX),4.0,4.9,3.0,Se requiere trabajo adicional,FX,Suspenso alto,FAIL_FX,2021-11-21,6,0,N
+7,F,Suspenso (F),2.5,2.9,0.0,Se requiere considerable trabajo adicional,F,Suspenso,FAIL_F,2022-09-16,7,0,N
+8,NP,No Presentado,0.0,0.0,0.0,No presentado a evaluación,-,No Presentado,NP,2022-01-03,8,0,N
+9,MH,Matrícula Honor,10.0,10.0,10.0,Reconocimiento especial de excelencia,A+,Matrícula de Honor,MH,2023-05-02,9,1,S
+10,PC,Pendiente Calif.,,,,Calificación pendiente de emitir,-,Pendiente,PC,2020-06-25,10,0,N

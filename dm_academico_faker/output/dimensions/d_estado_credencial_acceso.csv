@@ -1,0 +1,8 @@
+ID_ESTADO_CREDENCIAL_ACCESO,ID_ESTADO_CREDENCIAL_ACCESO_NK,NOMBRE_ESTADO_CREDENCIAL_ACCESO,DESCRIPCION_ESTADO_CREDENCIAL,SN_ESTADO_CREDENCIAL_VALIDO,ID_ESTADO_CREDENCIAL_ACCESO_DESCR
+1,PEND,Pendiente de validación,La credencial ha sido recibida pero está pendiente de validación,N,1
+2,VALI,Validada,La credencial ha sido validada correctamente,S,2
+3,RECH,Rechazada,La credencial ha sido rechazada por no cumplir requisitos,N,3
+4,PROV,Provisional,La credencial ha sido validada provisionalmente,S,4
+5,FALT,Faltan documentos,No se puede validar porque faltan documentos,N,5
+6,EXPI,Expirada,La credencial ha expirado y ya no es válida,N,6
+7,ANUL,Anulada,La credencial ha sido anulada por la autoridad competente,N,7

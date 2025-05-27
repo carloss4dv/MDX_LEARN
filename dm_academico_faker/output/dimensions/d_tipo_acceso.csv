@@ -1,0 +1,16 @@
+ID_TIPO_ACCESO,NOMBRE_TIPO_ACCESO,FECHA_CARGA,ID_TIPO_ACCESO_NK
+1,Prueba de Acceso a la Universidad,2022-04-22,PAU
+2,Formación Profesional,2022-12-30,FP
+3,Titulados Universitarios,2020-10-21,TIT
+4,Mayores de 25 años,2021-09-24,M25
+5,Mayores de 40 años,2021-03-15,M40
+6,Mayores de 45 años,2023-05-30,M45
+7,Deportistas de alto nivel,2021-11-11,DEP
+8,Personas con discapacidad,2020-04-27,DIS
+9,Estudios extranjeros,2020-06-13,INT
+10,Traslado de expediente,2022-02-07,TRA
+11,Cambio de universidad,2022-04-21,CAM
+12,Adaptación de plan de estudios,2023-07-29,ADA
+13,Estudios superiores extranjeros,2023-03-09,ESE
+14,Otros,2021-04-24,OTR
+15,No informado,2022-12-19,NOI

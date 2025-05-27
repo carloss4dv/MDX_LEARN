@@ -1,0 +1,9 @@
+ID_TIPO_CENTRO,NOMBRE_TIPO_CENTRO,ID_TIPO_CENTRO_DESCR,ID_TIPO_CENTRO_NK,DESCRIPCION_TIPO_CENTRO,ORDEN_TIPO_CENTRO,FLG_DOCENCIA,SN_DOCENCIA,FLG_TITULACION_OFICIAL,SN_TITULACION_OFICIAL,FECHA_CARGA
+1,Facultad,100,FAC,Centro universitario dedicado a la docencia e investigación,1,1,S,1,S,2019-11-10
+2,Escuela,200,ESC,Centro universitario dedicado a estudios técnicos o profesionales,2,1,S,1,S,2019-04-05
+3,Escuela Técnica Superior,300,ETSUP,Centro universitario especializado en formación técnica avanzada,3,1,S,1,S,2018-01-08
+4,Escuela Universitaria,400,ETUNI,Centro universitario de estudios técnicos de primer ciclo,4,1,S,1,S,2021-10-28
+5,Instituto Universitario,500,INST,Centro dedicado principalmente a la investigación,5,1,S,0,N,2018-08-14
+6,Centro Adscrito,600,CENT,Centro no perteneciente a la universidad pero con convenio,6,0,N,1,S,2023-10-07
+7,Fundación Universitaria,700,FUND,Entidad sin ánimo de lucro vinculada a la universidad,7,0,N,0,N,2023-12-13
+8,Otro tipo de centro,800,OTRO,Otros centros universitarios no clasificados previamente,8,0,N,0,N,2021-07-08

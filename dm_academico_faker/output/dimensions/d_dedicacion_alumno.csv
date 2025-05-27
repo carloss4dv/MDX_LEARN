@@ -1,0 +1,6 @@
+ID_DEDICACION_ALUMNO,ID_DEDICACION_ALUMNO_NK,NOMBRE_DEDICACION_ALUMNO,DESCRIPCION_DEDICACION,CREDITOS_MINIMOS,CREDITOS_MAXIMOS,FLG_DEFECTO,FECHA_CARGA
+1,TC,Tiempo completo,Dedicación a tiempo completo,45,90,1,2019-01-04
+2,TP,Tiempo parcial,Dedicación a tiempo parcial,24,45,0,2021-06-24
+3,RM,Reducción por motivos laborales,Dedicación reducida por motivos laborales,18,30,0,2020-07-20
+4,RF,Reducción por motivos familiares,Dedicación reducida por motivos familiares,18,30,0,2023-02-13
+5,RD,Reducción por discapacidad,Dedicación reducida por discapacidad,12,30,0,2018-05-02

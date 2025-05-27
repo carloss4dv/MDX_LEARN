@@ -1,0 +1,894 @@
+<Schema name="MOVILIDAD DE ESTUDIANTES" description="Movilidad de estudiantes">
+<!-- [5346] MOVILIDAD - Marcar las movilidades UNITA -->
+<!-- (15/01/2025) [5777] ACADEMICO - Marcar las universidades UNITA y UNITA GEMINAE. Modificaciones en la tabla UNIVERSIDAD -->
+<!-- (19/03/2025) [5855] MOVILIDAD - País nacionalidad en vez de Nacionalidad -->
+<!-- (07/04/2025) [5885] MOVILIDAD - Titulación con más créditos matriculados Estudiantes IN -->
+<!-- (08/04/2025) [5884] Añadir País nacionalidad extranjera S/N en todos los ámbitos -->
+<!-- (24/04/2025) [5885] MOVILIDAD - Titulación con más créditos matriculados Estudiantes IN -->
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Curso Academico" caption="Curso Acad&#233;mico" description="Curso Acad&#233;mico">
+    <Hierarchy name="Curso Academico" visible="true" hasAll="true" allMemberName="Todos los cursos academicos" allMemberCaption="Todos los cursos acad&#233;micos" primaryKey="ID_CURSO_ACADEMICO" caption="Curso Acad&#233;mico" description="Curso Acad&#233;mico">
+      <Table name="D_CURSO_ACADEMICO">
+      </Table>
+      <Level name="Curso Academico" visible="true" table="D_CURSO_ACADEMICO" column="ID_CURSO_ACADEMICO" nameColumn="NOMBRE_CURSO_ACADEMICO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Curso Acad&#233;mico" description="Curso Acad&#233;mico">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tipo de Acceso" caption="Tipo de Acceso" description="Tipo de Acceso">
+    <Hierarchy name="Tipo de Acceso" visible="true" hasAll="true" allMemberName="Todos los tipos de acceso" allMemberCaption="Todos los tipos de acceso" primaryKey="ID_TIPO_ACCESO" caption="Tipo de Acceso" description="Tipo de Acceso">
+      <Table name="D_TIPO_ACCESO">
+      </Table>
+      <Level name="Tipo de acceso" visible="true" column="ID_TIPO_ACCESO" nameColumn="NOMBRE_TIPO_ACCESO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de Acceso" description="Tipo de Acceso">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Alumno - Pais Nacionalidad" caption="Alumno - Pa&#237;s Nacionalidad" description="Alumno - Pa&#237;s Nacionalidad">
+    <Hierarchy name="Alumno - Pais Nacionalidad" visible="true" hasAll="true" allMemberName="Todos los paises" allMemberCaption="Todos los pa&#237;ses" primaryKey="ID_PAIS" caption="Alumno - Pa&#237;s Nacionalidad" description="Alumno - Pa&#237;s Nacionalidad">
+    <Table name="D_PAIS">
+    </Table>
+    <Level name="Extranjero" caption="Pa&#237;s Nacionalidad extranjera (S/N)" visible="true" column="FLG_EXTRANJERO" nameColumn="SN_EXTRANJERO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+    </Level>
+    <Level name="Pais descr" visible="true" column="ID_PAIS_DESCR" nameColumn="NOMBRE_PAIS" ordinalColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s Nacionalidad">
+    </Level>
+    <Level name="Pais" visible="false" column="ID_PAIS" nameColumn="NOMBRE_PAIS"  ordinalColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s">
+    </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Estudio" caption="Estudio" description="Estudio">
+    <Hierarchy name="Estudio" visible="true" hasAll="true" allMemberName="Todos los estudios" allMemberCaption="Todos los estudios" primaryKey="ID_ESTUDIO" caption="Estudio" description="Estudio">
+      <Table name="D_ESTUDIO_MOVILIDAD">
+      </Table>
+      <Level name="Estudio" visible="true" column="ID_ESTUDIO" nameColumn="NOMBRE_ESTUDIO" ordinalColumn="ORD_NOMBRE_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Estudio" description="Estudio">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Centro" caption="Centro" description="Centro">
+    <Hierarchy name="Centro" visible="true" hasAll="true" allMemberName="Todos los centros" allMemberCaption="Todos los centros" primaryKey="ID_CENTRO" caption="Centro" description="Centro">
+      <Table name="D_CENTRO">
+      </Table>
+      <Level name="Centro descr" visible="true" column="ID_CENTRO_DESCR" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Centro" description="Centro">
+      </Level>
+      <Level name="Centro" visible="false" table="D_CENTRO" column="ID_CENTRO" nameColumn="NOMBRE_CENTRO" ordinalColumn="NOMBRE_CENTRO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Alumno - Rango de Edad" caption="Alumno - Rango de Edad" description="Alumno - Rango de Edad">
+    <Hierarchy name="Alumno - Rango de Edad" visible="true" hasAll="true" allMemberName="Todos los rangos de edad" allMemberCaption="Todos los rangos de edad" primaryKey="ID_EDAD_EST" caption="Alumno - Rango de Edad" description="Alumno - Rango de Edad">
+      <Table name="D_EDAD_EST">
+      </Table>
+      <Level name="Rango de Edad" visible="true" table="D_EDAD_EST" column="ID_EDAD_EST" nameColumn="NOMBRE_EDAD_EST" ordinalColumn="NOMBRE_EDAD_EST" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rango de Edad" description="Rango de Edad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Alumno - Sexo" caption="Alumno - Sexo" description="Alumno - Sexo">
+    <Hierarchy name="Alumno - Sexo" visible="true" hasAll="true" allMemberName="Todos los sexos" allMemberCaption="Todos los sexos" primaryKey="ID_SEXO" caption="Alumno - Sexo" description="Alumno - Sexo">
+      <Table name="D_SEXO">
+      </Table>
+      <Level name="Sexo" visible="true" column="ID_SEXO" nameColumn="NOMBRE_SEXO" ordinalColumn="NOMBRE_SEXO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Sexo" description="Sexo">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango Nota de Admision" caption="Rango de Nota de Admisi&#243;n" description="Rango de Nota de Admisi&#243;n">
+    <Hierarchy name="Rango Nota de Admision" visible="true" hasAll="true" allMemberName="Todos los rangos de notas" allMemberCaption="Todos los rangos de notas" primaryKey="ID_RANGO_NOTA_ADMISION" caption="Rango de Nota de Admision" description="Rango de Nota de Admisi&#243;n">
+      <Table name="D_RANGO_NOTA_ADMISION">
+      </Table>
+      <Level name="Rango Nota de Admision" visible="true" column="ID_RANGO_NOTA_ADMISION" nameColumn="NOMBRE_RANGO_NOTA_ADMISION" ordinalColumn="NOMBRE_RANGO_NOTA_ADMISION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rango de Nota de Admisi&#243;n" description="Rango de Nota de Admisi&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango Nota Numerica" caption="Rango de Nota Num&#233;rica" description="Rango de Nota Numerica">
+    <Hierarchy name="Rango Nota Numerica" visible="true" hasAll="true" allMemberName="Todos los rangos de notas numericas" allMemberCaption="Todos los rangos de notas num&#233;ricas" primaryKey="ID_RANGO_NOTA_NUMERICA" caption="Rango de Nota Num&#233;rica" description="Rango de Nota Numerica">
+      <Table name="D_RANGO_NOTA_NUMERICA">
+      </Table>
+      <Level name="Rango Nota Numerica" visible="true" column="ID_RANGO_NOTA_NUMERICA" nameColumn="NOMBRE_RANGO_NOTA_NUMERICA" ordinalColumn="NOMBRE_RANGO_NOTA_NUMERICA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rango de Nota Num&#233;rica" description="Rango de Nota Numerica">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <!-- rango de créditos de 50 en 50 -->
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango Creditos Superados Previos">
+    <Hierarchy name="Rango Creditos Superados Previos" visible="true" hasAll="true" allMemberName="Todos los creditos superados" allMemberCaption="Todos los cr&#233;ditos superados" primaryKey="ID_RANGO_CREDITO">
+      <Table name="D_RANGO_CREDITO">
+      </Table>
+      <Level name="Rango Creditos Superados Previos" visible="true" column="ID_RANGO_CREDITO" nameColumn="NOMBRE_RANGO_CREDITO" ordinalColumn="NOMBRE_RANGO_CREDITO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rango Cr&#233;ditos Superados Previos" description="Rango Cr&#233;ditos Superados Previos">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <!-- rango de créditos de 20 en 20 . Hacen falta varias porque cada una tiene sus propias captions... -->
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango Creditos Superados">
+    <Hierarchy name="Rango Creditos Superados" visible="true" hasAll="true" allMemberName="Todos los centros" allMemberCaption="Todos los centros" primaryKey="ID_CREDITO">
+      <Table name="D_RANGO_CREDITO_MOVILIDAD">
+      </Table>
+      <Level name="nombre rango creditos" visible="true" column="ID_RANGO_CREDITO" nameColumn="NOMBRE_RANGO_CREDITO" ordinalColumn="ID_RANGO_CREDITO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Rango Cr&#233;ditos Superados" description="Rango Cr&#233;ditos Superados">
+      </Level>
+      <Level name="rango creditos" visible="false" column="ID_CREDITO" nameColumn="ID_CREDITO" ordinalColumn="ID_CREDITO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero Creditos Superados" description="N&#250;mero Creditos Superados">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango Creditos Superados 2">  <!-- identica a la anterior pero visibilizando todos niveles de jerarquia -->
+    <Hierarchy name="Rango Creditos Superados 2" visible="true" hasAll="true" allMemberName="Todos los centros" allMemberCaption="Todos los centros" primaryKey="ID_CREDITO">
+      <Table name="D_RANGO_CREDITO_MOVILIDAD">
+      </Table>
+      <Level name="nombre rango creditos" visible="true" column="ID_RANGO_CREDITO" nameColumn="NOMBRE_RANGO_CREDITO" ordinalColumn="ID_RANGO_CREDITO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Rango Cr&#233;ditos Superados" description="Rango Cr&#233;ditos Superados">
+      </Level>
+      <Level name="rango creditos" visible="true" column="ID_CREDITO" nameColumn="ID_CREDITO" ordinalColumn="ID_CREDITO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero Creditos Superados" description="N&#250;mero Creditos Superados">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rango Creditos Matriculados">
+    <Hierarchy name="Rango Creditos Matriculados" visible="true" hasAll="true" allMemberName="Todos los centros" allMemberCaption="Todos los centros" primaryKey="ID_CREDITO">
+      <Table name="D_RANGO_CREDITO_MOVILIDAD">
+      </Table>
+      <Level name="nombre rango creditos" visible="true" column="ID_RANGO_CREDITO" nameColumn="NOMBRE_RANGO_CREDITO" ordinalColumn="ID_RANGO_CREDITO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Rango Cr&#233;ditos Matriculados" description="Rango Cr&#233;ditos Matriculados">
+      </Level>
+      <Level name="rango creditos" visible="true" column="ID_CREDITO" nameColumn="ID_CREDITO" ordinalColumn="ID_CREDITO" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="N&#250;mero Creditos Matriculados" description="N&#250;mero Creditos Matriculados">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Creditos Matriculados" caption="Cr&#233;ditos matriculados" description="Cr&#233;ditos matriculados">
+    <Hierarchy name="Creditos Matriculados" visible="true" hasAll="true" allMemberName="Todos los creditos matriculados" allMemberCaption="Todos los cr&#233;ditos matriculados" primaryKey="ID_RANGO_CREDITO" caption="Cr&#233;ditos matriculados">
+      <Table name="D_RANGO_CREDITO">
+      </Table>
+      <Level name="Creditos Matriculados" visible="true" column="ID_RANGO_CREDITO" nameColumn="NOMBRE_RANGO_CREDITO" ordinalColumn="NOMBRE_RANGO_CREDITO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Cr&#233;ditos matriculados" description="Cr&#233;ditos matriculados (incluyendo reconocidos)">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Alumno" description="Alumno">
+    <Hierarchy name="Alumno" visible="true" hasAll="true" allMemberName="Todos los alumnos" allMemberCaption="Todos los alumnos" primaryKey="ID_PERSONA" caption="Alumno" description="Alumno">
+      <Table name="D_PERSONA">
+      </Table>
+      <Level name="NIP" visible="true" column="ID_PERSONA" nameColumn="ID_PERSONA_NIP_NK" ordinalColumn="ID_PERSONA_NIP_NK" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Alumno - NIP" description="NIP">
+      </Level>
+      <Level name="Apellidos y Nombre" visible="true" column="ID_PERSONA" nameColumn="APELLIDOS_NOMBRE" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Alumno - Nombre" description="Alumno-Nombre">
+      </Level>
+      <Level name="Fecha nacimiento" visible="true" column="ID_PERSONA" nameColumn="FECHA_NACIMIENTO_TXT" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Alumno - Fecha nacimiento" description="Fecha de nacimiento DD/MM/YYYY">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tipo Estudio" caption="Tipo de Estudio" description="Tipo de Estudio">
+    <Hierarchy name="Tipo Estudio" visible="true" hasAll="true" primaryKey="ID_TIPO_ESTUDIO" caption="Tipo de Estudio" description="Tipo de Estudio">
+      <Table name="D_TIPO_ESTUDIO">
+      </Table>
+      <Level name="Tipo Estudio" visible="true" column="ID_TIPO_ESTUDIO" nameColumn="NOMBRE_TIPO_ESTUDIO" ordinalColumn="NOMBRE_TIPO_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de Estudio" description="Tipo de Estudio">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Programa Movilidad">
+    <Hierarchy name="Programa Movilidad" visible="true" hasAll="true" primaryKey="ID_PROGRAMA_MOVILIDAD" caption="Programa de movilidad">
+      <Table name="D_PROGRAMA_MOVILIDAD">
+      </Table>
+      <Level name="Programa Internacional SN" visible="true" column="SN_PROGRAMA_INTERNACIONAL" nameColumn="SN_PROGRAMA_INTERNACIONAL" ordinalColumn="SN_PROGRAMA_INTERNACIONAL" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Programa Internacional (S/N)">
+      </Level>
+      <Level name="Tipo Programa Movilidad" visible="true" column="ID_TIPO_PROGRAMA_MOVILIDAD" nameColumn="NOMBRE_TIPO_PROGRAMA_MOV" ordinalColumn="NOMBRE_TIPO_PROGRAMA_MOV" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Tipo de programa de movilidad">
+      </Level>
+      <Level name="Programa Movilidad" visible="true" column="ID_PROGRAMA_MOVILIDAD" nameColumn="NOMBRE_PROGRAMA_MOVILIDAD" ordinalColumn="NOMBRE_PROGRAMA_MOVILIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Programa de movilidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <!-- 12/12/2017: rompemos la jerarquia
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad">
+    <Hierarchy name="Universidad" visible="true" hasAll="true">
+      <Table name="D_UNIVERSIDAD">
+      </Table>
+      <Level name="Pais" visible="true" column="ID_PAIS_DESCR" nameColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s">
+      </Level>
+      <Level name="Universidad descr" visible="true" column="ID_UNIVERSIDAD_DESCR" nameColumn="NOMBRE_UNIVERSIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Universidad">
+      </Level>
+      <Level name="Universidad" visible="false" column="ID_UNIVERSIDAD" nameColumn="NOMBRE_UNIVERSIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Universidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+-->
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad">
+  <Hierarchy name="Universidad" visible="true" hasAll="true">
+    <Table name="D_UNIVERSIDAD">
+    </Table>
+    <Level name="Universidad descr" visible="true" column="ID_UNIVERSIDAD_DESCR" nameColumn="NOMBRE_UNIVERSIDAD" ordinalColumn="NOMBRE_UNIVERSIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Universidad">
+    </Level>
+    <Level name="Universidad" visible="false" column="ID_UNIVERSIDAD" nameColumn="NOMBRE_UNIVERSIDAD" ordinalColumn="NOMBRE_UNIVERSIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Universidad">
+    </Level>
+  </Hierarchy>
+</Dimension>  
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad UNITA">
+  <Hierarchy name="Universidad UNITA" visible="true" hasAll="true">
+    <Table name="D_UNIVERSIDAD">
+    </Table>
+    <Level name="Universidad UNITA descr" visible="true" column="SN_UNIVERSIDAD_UNITA" nameColumn="SN_UNIVERSIDAD_UNITA" levelType="Regular" hideMemberIf="Never" caption="Universidad UNITA (S/N)">
+    </Level>
+    <Level name="Universidad UNITA" visible="false" column="ID_UNIVERSIDAD" nameColumn="SN_UNIVERSIDAD_UNITA" levelType="Regular" hideMemberIf="Never" caption="Universidad UNITA (S/N)">
+    </Level>
+  </Hierarchy>
+</Dimension>  
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad UNITA GEMINAE">  
+  <Hierarchy name="Universidad UNITA GEMINAE" visible="true" hasAll="true">
+    <Table name="D_UNIVERSIDAD">
+    </Table>
+    <Level name="Universidad UNITA GEMINAE descr" visible="true" column="SN_UNIVERSIDAD_UNITA_GEMINAE" nameColumn="SN_UNIVERSIDAD_UNITA_GEMINAE" levelType="Regular" hideMemberIf="Never" caption="Universidad UNITA GEMINAE (S/N)">
+    </Level>
+    <Level name="Universidad UNITA GEMINAE" visible="false" column="ID_UNIVERSIDAD" nameColumn="SN_UNIVERSIDAD_UNITA_GEMINAE" levelType="Regular" hideMemberIf="Never" caption="Universidad UNITA GEMINAE (S/N)">
+    </Level>
+  </Hierarchy>
+</Dimension>
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad origen UNITA">
+  <Hierarchy name="Universidad origen UNITA" visible="true" hasAll="true">
+    <Table name="D_UNIVERSIDAD">
+    </Table>
+    <Level name="Universidad origen UNITA descr" visible="true" column="SN_UNIVERSIDAD_UNITA" nameColumn="SN_UNIVERSIDAD_UNITA" levelType="Regular" hideMemberIf="Never" caption="Universidad origen UNITA (S/N)">
+    </Level>
+    <Level name="Universidad origen UNITA" visible="false" column="ID_UNIVERSIDAD" nameColumn="SN_UNIVERSIDAD_UNITA" levelType="Regular" hideMemberIf="Never" caption="Universidad origen UNITA (S/N)">
+    </Level>
+  </Hierarchy>
+</Dimension>  
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad origen UNITA GEMINAE">  
+  <Hierarchy name="Universidad origen UNITA GEMINAE" visible="true" hasAll="true">
+    <Table name="D_UNIVERSIDAD">
+    </Table>
+    <Level name="Universidad origen UNITA GEMINAE descr" visible="true" column="SN_UNIVERSIDAD_UNITA_GEMINAE" nameColumn="SN_UNIVERSIDAD_UNITA_GEMINAE" levelType="Regular" hideMemberIf="Never" caption="Universidad origen UNITA GEMINAE (S/N)">
+    </Level>
+    <Level name="Universidad origen UNITA GEMINAE" visible="false" column="ID_UNIVERSIDAD" nameColumn="SN_UNIVERSIDAD_UNITA_GEMINAE" levelType="Regular" hideMemberIf="Never" caption="Universidad origen UNITA GEMINAE (S/N)">
+    </Level>
+  </Hierarchy>
+</Dimension>
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad destino UNITA">
+  <Hierarchy name="Universidad destino UNITA" visible="true" hasAll="true">
+    <Table name="D_UNIVERSIDAD">
+    </Table>
+    <Level name="Universidad destino UNITA descr" visible="true" column="SN_UNIVERSIDAD_UNITA" nameColumn="SN_UNIVERSIDAD_UNITA" levelType="Regular" hideMemberIf="Never" caption="Universidad destino UNITA (S/N)">
+    </Level>
+    <Level name="Universidad destino UNITA" visible="false" column="ID_UNIVERSIDAD" nameColumn="SN_UNIVERSIDAD_UNITA" levelType="Regular" hideMemberIf="Never" caption="Universidad destino UNITA (S/N)">
+    </Level>
+  </Hierarchy>
+</Dimension>  
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Universidad destino UNITA GEMINAE">  
+  <Hierarchy name="Universidad destino UNITA GEMINAE" visible="true" hasAll="true">
+    <Table name="D_UNIVERSIDAD">
+    </Table>
+    <Level name="Universidad destino UNITA GEMINAE descr" visible="true" column="SN_UNIVERSIDAD_UNITA_GEMINAE" nameColumn="SN_UNIVERSIDAD_UNITA_GEMINAE" levelType="Regular" hideMemberIf="Never" caption="Universidad destino UNITA GEMINAE (S/N)">
+    </Level>
+    <Level name="Universidad destino UNITA GEMINAE" visible="false" column="ID_UNIVERSIDAD" nameColumn="SN_UNIVERSIDAD_UNITA_GEMINAE" levelType="Regular" hideMemberIf="Never" caption="Universidad destino UNITA GEMINAE (S/N)">
+    </Level>
+  </Hierarchy>
+</Dimension>
+<Dimension type="StandardDimension" visible="true" highCardinality="false" name="Pais" caption="Pa&#237;s" description="Pa&#237;s">
+  <Hierarchy name="Pais" visible="true" hasAll="true">
+    <Table name="D_PAIS">
+    </Table>
+    <Level name="Pais descr" visible="true" column="ID_PAIS_DESCR" nameColumn="NOMBRE_PAIS" ordinalColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s">
+    </Level>
+    <Level name="Pais" visible="false" column="ID_PAIS" nameColumn="NOMBRE_PAIS"  ordinalColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Pa&#237;s">
+    </Level>
+  </Hierarchy>
+</Dimension>
+
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Area Estudios Movilidad" caption="&#193;rea de estudios movilidad">
+    <Hierarchy name="Area Estudios Movilidad" visible="true" hasAll="true" primaryKey="ID_AREA_ESTUDIOS_MOVILIDAD" caption="&#193;rea de estudios movilidad">
+      <Table name="D_AREA_ESTUDIOS_MOVILIDAD">
+      </Table>
+      <Level name="Area Estudios Movilidad" visible="true" column="ID_AREA_ESTUDIOS_MOVILIDAD" nameColumn="NOMBRE_AREA_ESTUDIOS_MOV"  ordinalColumn="NOMBRE_AREA_ESTUDIOS_MOV" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="&#193;rea de estudios movilidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Nivel Estudios Movilidad">
+    <Hierarchy name="Nivel Estudios Movilidad" visible="true" hasAll="true">
+      <Table name="D_NIVEL_ESTUDIOS_MOVILIDAD">
+      </Table>
+      <Level name="Nivel Estudios Movilidad" visible="true" column="ID_NIVEL_ESTUDIOS_MOVILIDAD" nameColumn="NOMBRE_NIVEL_ESTUDIOS_MOV"  ordinalColumn="NOMBRE_NIVEL_ESTUDIOS_MOV" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Nivel de estudios movilidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Colectivo Movilidad" description="Colectivos de la movilidad">
+    <Hierarchy name="Colectivo Movilidad" visible="true" hasAll="true">
+      <Table name="D_COLECTIVO_MOVILIDAD">
+      </Table>
+      <Level name="Colectivo Movilidad" visible="true" column="ID_COLECTIVO_MOVILIDAD" nameColumn="NOMBRE_COLECTIVO_MOVILIDAD"  ordinalColumn="NOMBRE_COLECTIVO_MOVILIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Colectivo de movilidad">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Acuerdo Bilateral" description="Acuerdo Bilateral">
+    <Hierarchy name="Acuerdo Bilateral" visible="true" hasAll="true">
+      <Table name="D_ACUERDO_BILATERAL">
+      </Table>
+      <Level name="Acuerdo Bilateral descr" visible="true" column="ID_ACUERDO_BILATERAL_DESCR" nameColumn="NOMBRE_ACUERDO_BILATERAL" ordinalColumn="NOMBRE_ACUERDO_BILATERAL" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Acuerdo Bilateral">
+      </Level>
+      <Level name="Acuerdo Bilateral" visible="false" column="ID_ACUERDO_BILATERAL" nameColumn="NOMBRE_ACUERDO_BILATERAL" ordinalColumn="NOMBRE_ACUERDO_BILATERAL" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Acuerdo Bilateral">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Tutor">
+    <Hierarchy name="Tutor" visible="true" hasAll="true" primaryKey="ID_PERSONA">
+      <Table name="D_PERSONA">
+      </Table>
+      <Level name="NIP" visible="true" column="ID_PERSONA" nameColumn="ID_PERSONA_NIP_NK" ordinalColumn="ID_PERSONA_NIP_NK" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="NIP Tutor">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Idioma" caption="Idioma" description="Idioma">
+    <Hierarchy name="Idioma" visible="true" hasAll="true" primaryKey="ID_IDIOMA_MOVILIDAD" caption="Idioma" description="Idioma">
+      <Table name="D_IDIOMA_MOVILIDAD">
+      </Table>
+      <Level name="Idioma" visible="true" column="ID_IDIOMA_MOVILIDAD" nameColumn="NOMBRE_IDIOMA_MOVILIDAD" ordinalColumn="NOMBRE_IDIOMA_MOVILIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Idioma" description="Idioma">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Alumno - Residencia Familiar">
+    <Hierarchy name="Alumno - Residencia Familiar" visible="true" hasAll="true" primaryKey="ID_POBLACION" caption="Residencia familiar">
+      <Table name="D_POBLACION">
+      </Table>
+      <Level name="Pais" visible="true" column="ID_PAIS" nameColumn="NOMBRE_PAIS"  ordinalColumn="NOMBRE_PAIS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Comunidad Autonoma" visible="true" column="ID_CCAA" nameColumn="NOMBRE_CCAA"  ordinalColumn="NOMBRE_CCAA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Comunidad Aut&#243;noma" description="Comunidad Aut&#243;noma">
+      </Level>
+      <Level name="Provincia" visible="true" column="ID_PROVINCIA" nameColumn="NOMBRE_PROVINCIA"  ordinalColumn="NOMBRE_PROVINCIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Poblacion" visible="true" column="ID_POBLACION" nameColumn="NOMBRE_POBLACION"  ordinalColumn="NOMBRE_POBLACION" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Poblaci&#243;n" description="Poblaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Idioma - Nivel Principal" caption="Idioma - Nivel Principal" description="Idioma - Nivel Principal">
+    <Hierarchy name="Idioma - Nivel Principal" visible="true" hasAll="true" primaryKey="ID_IDIOMA_NIVEL_MOVILIDAD" caption="Idioma - Nivel Principal" description="Idioma - Nivel Principal">
+      <Table name="D_IDIOMA_NIVEL_MOVILIDAD">
+      </Table>
+      <Level name="Idioma - Nivel Principal" visible="true" column="ID_IDIOMA_NIVEL_MOVILIDAD" nameColumn="NOMBRE_IDIOMA_NIVEL_MOVILIDAD"  ordinalColumn="NOMBRE_IDIOMA_NIVEL_MOVILIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Idioma - Nivel Principal" description="Idioma - Nivel Principal">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Idioma - Nivel Secundario" caption="Idioma - Nivel Secundario" description="Idioma - Nivel Secundario">
+    <Hierarchy name="Idioma - Nivel Secundario" visible="true" hasAll="true" primaryKey="ID_IDIOMA_NIVEL_MOVILIDAD" caption="Idioma - Nivel Secundario" description="Idioma - Nivel Secundario">
+      <Table name="D_IDIOMA_NIVEL_MOVILIDAD">
+      </Table>
+      <Level name="Idioma - Nivel Secundario" visible="true" column="ID_IDIOMA_NIVEL_MOVILIDAD" nameColumn="NOMBRE_IDIOMA_NIVEL_MOVILIDAD"  ordinalColumn="NOMBRE_IDIOMA_NIVEL_MOVILIDAD" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Idioma - Nivel Secundario" description="Idioma - Nivel Secundario">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Rama Conocimiento" caption="Rama de Conocimiento" description="Rama de Conocimiento">
+    <Hierarchy name="Rama Conocimiento" visible="true" hasAll="true" allMemberName="Todas las ramas de conocimiento" allMemberCaption="Todas las ramas de conocimiento" primaryKey="ID_RAMA_MACROAREA" caption="Rama de Conocimiento" description="Rama de Conocimiento">
+      <Table name="D_RAMA_MACROAREA">
+      </Table>
+      <Level name="Rama Conocimiento" visible="true" column="ID_RAMA_MACROAREA" nameColumn="NOMBRE_RAMA_MACROAREA" ordinalColumn="NOMBRE_RAMA_MACROAREA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Rama de Conocimiento" description="Rama de Conocimiento">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Plan Estudio" caption="Plan de Estudio" description="Plan de Estudio">
+    <Hierarchy name="Plan Estudio" visible="true" hasAll="true" allMemberName="Todos los planes de estudio" allMemberCaption="Todos los planes de estudio" primaryKey="ID_PLAN_ESTUDIO" caption="Plan de Estudio" description="Plan de Estudio">
+      <Table name="D_PLAN_ESTUDIO">
+      </Table>
+      <Level name="Plan Estudio" visible="true" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Plan de Estudio" description="Plan de Estudio">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Fecha act" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n">
+    <Hierarchy name="Fecha act" visible="true" hasAll="true" allMemberName="Todas las fechas" allMemberCaption="Todas las fechas" primaryKey="ID_DIA" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n">
+      <Table name="D_TIEMPO">
+      </Table>
+      <Level name="Fecha act" visible="true" column="ID_DIA" nameColumn="NOMBRE_DIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Fecha de actualizaci&#243;n" description="Fecha de actualizaci&#243;n">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+
+
+  <Cube name="ESTUDIANTES IN" caption="Estudiantes IN" visible="true" description="Movilidad de Estudiantes IN" cache="true" enabled="true">
+    <Table name="F_ESTUDIANTES_MOVILIDAD_IN">
+    </Table>
+    <DimensionUsage source="Curso Academico" name="Curso Academico" caption=" CURSO ACAD&#201;MICO" visible="true" foreignKey="ID_CURSO_ACADEMICO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno" name="Alumno" caption="Alumno" description="Alumno (usuarios avanzados)" visible="true" foreignKey="ID_ALUMNO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro" name="Centro" caption="Centro de Acogida" visible="true" foreignKey="ID_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro" name="Centro Imparticion" caption="Centro de Asignatura" visible="true" foreignKey="ID_CENTRO_IMPARTICION" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estudio" name="Titulacion - Estudio" caption="Titulaci&#243;n - Estudio" visible="true" foreignKey="ID_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo Estudio" name="Titulacion - Tipo Estudio" caption="Titulaci&#243;n - Tipo de Estudio" visible="true" foreignKey="ID_TIPO_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Programa Movilidad" name="Movilidad - Programa Movilidad" caption="Movilidad - Programa de Movilidad" visible="true" foreignKey="ID_PROGRAMA_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad" name="Movilidad - Universidad Origen" caption="Movilidad - &#173;Universidad de Origen" visible="true" foreignKey="ID_UNIVERSIDAD_ORIGEN" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad origen UNITA" name="Universidad origen UNITA SN" caption="Movilidad - &#173;Universidad de Origen UNITA (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_ORIGEN" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad origen UNITA GEMINAE" name="Universidad origen UNITA GEMINAE SN" caption="Movilidad - &#173;Universidad de Origen UNITA GEMINAE (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_ORIGEN" highCardinality="false" description="Universidad de Origen UNITA GEMINAE (S/N) (usuarios avanzados)">
+    </DimensionUsage>
+
+    <DimensionUsage source="Pais" name="Movilidad - Universidad Origen Pais" caption="Movilidad - &#173;&#173;Pa&#237;s de Univ. Origen" visible="true" foreignKey="ID_PAIS_UNIVERSIDAD_ORIGEN" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Sexo" name="Alumno - Sexo" caption="Alumno - Sexo" visible="true" foreignKey="ID_SEXO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Pais Nacionalidad" name="Alumno - Pais Nacionalidad" caption="Alumno - Pa&#237;s Nacionalidad" visible="true" foreignKey="ID_PAIS_NACIONALIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Rango de Edad" name="Alumno - Rango de Edad" caption="Alumno - Rango de Edad" visible="true" foreignKey="ID_EDAD_EST" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango Creditos Superados 2" name="Expediente - Rango Creditos Superados" caption="Expediente - Cr&#233;d. Superados" description="Cr&#233;ditos superados por rango" visible="true" foreignKey="CREDITOS_SUPERA_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango Creditos Matriculados" name="Expediente - Rango Creditos Matriculados" caption="Expediente - Cr&#233;d. Matriculados" description="Cr&#233;ditos Matriculados por rango" visible="true" foreignKey="CREDITOS_MATRICULADOS" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tutor" name="Movilidad - Tutor" caption="Movilidad - Tutor" description="Movilidad - Tutor (usuarios avanzados)" visible="true" foreignKey="ID_TUTOR" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Plan Estudio" name="Titulacion - Plan Estudio" caption="Titulaci&#243;n - Plan de Estudio" visible="true" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Plan Estudio Max" foreignKey="ID_PLAN_ESTUDIO_MAX" caption="Titulaci&#243;n - Plan de Estudio max" description="Plan de Estudio con el m&#225;ximo de cr&#233;ditos (usuarios avanzados)">
+      <Hierarchy name="Plan Estudio Max" visible="true" hasAll="true" allMemberName="Todos los planes de estudio" allMemberCaption="Todos los planes de estudio" primaryKey="ID_PLAN_ESTUDIO" caption="Plan de Estudio max" description="Plan de Estudio max">
+        <Table name="D_PLAN_ESTUDIO">
+        </Table>
+        <Level name="Plan Estudio Max" visible="true" column="ID_PLAN_ESTUDIO" nameColumn="NOMBRE_PLAN_ESTUDIO" ordinalColumn="ORD_NOMBRE_PLAN_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Plan de Estudio max" description="Plan de Estudio max">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Estudio Max" foreignKey="ID_ESTUDIO_MAX" caption="Titulaci&#243;n - Estudio max" description="Estudio con el m&#225;ximo de cr&#233;ditos (usuarios avanzados)">
+      <Hierarchy name="Estudio Max" visible="true" hasAll="true" allMemberName="Todos los estudios" allMemberCaption="Todos los estudios" primaryKey="ID_ESTUDIO" caption="Estudio max" description="Estudio max">
+        <Table name="D_ESTUDIO_MOVILIDAD">
+        </Table>
+        <Level name="Estudio Max" visible="true" column="ID_ESTUDIO" nameColumn="NOMBRE_ESTUDIO" ordinalColumn="ORD_NOMBRE_ESTUDIO" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Estudio max" description="Estudio max">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    
+    <DimensionUsage source="Rama Conocimiento" name="Titulacion - Rama Conocimiento" caption="Titulaci&#243;n - Rama de Conocimiento" visible="true" foreignKey="ID_RAMA_CONOCIMIENTO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fecha act" name="f_act" caption="&#173;Fecha de actualizaci&#243;n" visible="true" foreignKey="ID_FECHA_CARGA" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Total Estudiantes IN" aggregator="distinct-count" caption="Total de Estudiantes IN" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[F_ESTUDIANTES_MOVILIDAD_IN.ID_PROGRAMA_MOVILIDAD || ' - ' ||
+F_ESTUDIANTES_MOVILIDAD_IN.ID_EXPEDIENTE_ACADEMICO]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure name="Duracion Media Estancia" column="DURACION_ESTANCIA" aggregator="avg" caption="Duraci&#243;n media de la estancia (meses)" description="Duraci&#243;n media de las estancias (en meses)" visible="true">
+    </Measure>
+    <Measure name="Creditos Matriculados" column="CREDITOS_MATRICULADOS" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="Creditos Superados" column="CREDITOS_SUPERA_DESTINO" aggregator="sum" visible="false">
+    </Measure>
+    <CalculatedMember name="Tasa Rendimiento" formatString="#,#0.0%" caption="Tasa de rendimiento"
+      description="Relaci&#243;n porcentual entre los cr&#233;ditos matriculados y los cr&#233;ditos superados por el estudiante durante su estancia"
+      formula="iif([Measures].[Creditos Matriculados]&#62;0, ([Measures].[Creditos Superados]/[Measures].[Creditos Matriculados]), null)"
+      dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+
+
+  <Cube name="ESTUDIANTES OUT" caption="Estudiantes OUT" visible="true" description="Movilidad de Estudiantes OUT" cache="true" enabled="true">
+    <Table name="F_ESTUDIANTES_MOVILIDAD_OUT">
+    </Table>
+    <DimensionUsage source="Curso Academico" name="Curso Academico" caption=" CURSO ACAD&#201;MICO" visible="true" foreignKey="ID_CURSO_ACADEMICO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno" name="Alumno" caption="Alumno" description="Alumno (usuarios avanzados)" visible="true" foreignKey="ID_ALUMNO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro" name="Centro" caption="Centro" visible="true" foreignKey="ID_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estudio" name="Titulacion - Estudio" caption="Titulaci&#243;n - Estudio" visible="true" foreignKey="ID_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo Estudio" name="Titulacion - Tipo Estudio" caption="Titulaci&#243;n - Tipo de Estudio" visible="true" foreignKey="ID_TIPO_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Programa Movilidad" name="Movilidad - Programa Movilidad" caption="Movilidad - Programa de Movilidad" visible="true" foreignKey="ID_PROGRAMA_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad" name="Movilidad - Universidad Destino" caption="Movilidad - &#173;Universidad de Destino" visible="true" foreignKey="ID_UNIVERSIDAD_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad destino UNITA" name="Universidad destino UNITA SN" caption="Movilidad - &#173;Universidad de Destino UNITA (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad destino UNITA GEMINAE" name="Universidad destino UNITA GEMINAE SN" caption="Movilidad - &#173;Universidad de Destino UNITA GEMINAE (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_DESTINO" highCardinality="false" description="Universidad de destino UNITA GEMINAE (S/N) (usuarios avanzados)">
+    </DimensionUsage>
+
+    <DimensionUsage source="Pais" name="Movilidad - Universidad Destino Pais" caption="Movilidad - &#173;&#173;Pa&#237;s de Univ. Destino" visible="true" foreignKey="ID_PAIS_UNIVERSIDAD_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Sexo" name="Alumno - Sexo" caption="Alumno - Sexo" visible="true" foreignKey="ID_SEXO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Rango de Edad" name="Alumno - Rango de Edad" caption="Alumno - Rango de Edad" visible="true" foreignKey="ID_EDAD_EST" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo de Acceso" name="Acceso - Tipo Acceso" caption="Acceso - Tipo de Acceso al Estudio" description="Acceso - Tipo de Acceso al Estudio (usuarios avanzados)" visible="true" foreignKey="ID_TIPO_ACCESO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango Creditos Superados" name="Expediente - Rango Creditos Superados" caption="Expediente - Cr&#233;d. Superados" description="Cr&#233;ditos superados por rango" visible="true" foreignKey="CREDITOS_SUPERA_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango Creditos Superados Previos" name="Expediente - Rango Creditos Superados Previos" caption="Expediente - Cr&#233;d. Superados Previos" visible="true" foreignKey="ID_RANGO_CRED_SUPERADOS_PREVIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango Nota de Admision" name="Acceso - Nota Admision" caption="Acceso - Rango Nota de Admisi&#243;n" description="Acceso - Rango Nota de Admisi&#243;n (usuarios avanzados)" visible="true" foreignKey="ID_RANGO_NOTA_ADMISION" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="false" highCardinality="false" name="FLG Acceso Directo Movilidad">
+      <Hierarchy name="Acceso Directo" visible="true" hasAll="true">
+        <Level name="Acceso Directo" visible="true" column="FLG_NUM_ACCESO_DIRECTO_MOVI" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Movilidad - Acceso Directo Movilidad" caption="Movilidad - Acceso Directo a la Movilidad (S/N)" description="Movilidad - Acceso Directo a la Movilidad (S/N) (usuarios avanzados)" >
+      <Hierarchy name="Movilidad - Acceso Directo Movilidad" visible="true" hasAll="true" caption="Movilidad - Acceso Directo a la Movilidad (S/N)">
+        <Level name="Acceso Directo Movilidad" visible="true" column="FLG_ACCESO_DIRECTO_MOVILIDAD" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Acceso Directo a la Movilidad (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Expediente - Cursos Matriculados" caption="Expediente - Cursos Matriculados" description="Cursos Matriculados">
+      <Hierarchy name="Expediente - Cursos Matriculados" visible="true" hasAll="true" caption="Expediente - Cursos Matriculados">
+        <Level name="Cursos Matriculados" visible="true" column="ANOS_CURSADOS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Cursos Matriculados">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Area Estudios Movilidad" name="Movilidad - Area Estudios" caption="Movilidad - &#193;rea de Estudios" visible="true" foreignKey="ID_AREA_ESTUDIOS_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Nivel Estudios Movilidad" name="Movilidad - Nivel Estudios" caption="Movilidad - Nivel de Estudios" visible="true" foreignKey="ID_NIVEL_ESTUDIOS_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Movilidad - Orden Preferencia" caption="Movilidad - Orden de Preferencia">
+      <Hierarchy name="Movilidad - Orden Preferencia" visible="true" hasAll="true" caption="Movilidad - Orden de preferencia">
+        <Level name="Orden Preferencia" visible="true" column="ORDEN_PREFERENCIA" nameColumn="ORDEN_PREFERENCIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Orden de preferencia">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Alumno - Pais Nacionalidad" name="Alumno - Pais Nacionalidad" caption="Alumno - Pa&#237;s Nacionalidad" visible="true" foreignKey="ID_PAIS_NACIONALIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tutor" name="Movilidad - Tutor" caption="Movilidad - Tutor" description="Movilidad - Tutor (usuarios avanzados)" visible="true" foreignKey="ID_TUTOR" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Residencia Familiar" name="Alumno - Residencia Familiar" caption="Alumno - Residencia Familiar" visible="true" foreignKey="ID_POBLACION_FAMILIAR" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Plan Estudio" name="Titulacion - Plan Estudio" caption="Titulaci&#243;n - Plan de Estudio" visible="true" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rama Conocimiento" name="Titulaci&#243;n - Rama Conocimiento" caption="Titulaci&#243;n - Rama de Conocimiento" visible="true" foreignKey="ID_RAMA_CONOCIMIENTO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fecha act" name="f_act" caption="&#173;Fecha de actualizaci&#243;n" visible="true" foreignKey="ID_FECHA_CARGA" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Total Estudiantes OUT" aggregator="distinct-count" caption="Total de Estudiantes OUT" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[F_ESTUDIANTES_MOVILIDAD_OUT.ID_PROGRAMA_MOVILIDAD || '-' || F_ESTUDIANTES_MOVILIDAD_OUT.ID_EXPEDIENTE_ACADEMICO]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+
+    <Measure name="Duracion Media" column="DURACION_ESTANCIA" aggregator="avg"  visible="false">
+    </Measure>
+    <CalculatedMember name="Duracion Media Estancia" caption="Duraci&#243;n media de las estancias (meses)" description="Duraci&#243;n media de las estancias (en meses)" formula="([Measures].[Duracion Media],[FLG Acceso Directo Movilidad].[0])" dimension="Measures" visible="true">
+    </CalculatedMember>
+
+
+  </Cube>
+
+
+  <Cube name="ACUERDOS BILATERALES" caption="Acuerdos Bilaterales" visible="true" description="An&#225;lisis de la oferta realizada en los acuerdos de movilidad" cache="true" enabled="true">
+    <Table name="F_OFERTA_ACUERDO_BILATERAL">
+    </Table>
+    <DimensionUsage source="Curso Academico" name="Curso Academico" caption=" CURSO ACAD&#201;MICO" visible="true" foreignKey="ID_CURSO_ACADEMICO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Area Estudios Movilidad" name="Area Estudios" caption=" &#193;rea de Estudios" visible="true" foreignKey="ID_AREA_ESTUDIOS_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Nivel Estudios Movilidad" name="Nivel Estudio" caption="Nivel de Estudios" visible="true" foreignKey="ID_NIVEL_ESTUDIOS_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad" name="Universidad Acuerdo" caption="&#173;Universidad del Acuerdo" visible="true" foreignKey="ID_UNIVERSIDAD_ACUERDO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad UNITA" name="Universidad UNITA SN" caption="&#173;Universidad del Acuerdo UNITA (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_ACUERDO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad UNITA GEMINAE" name="Universidad UNITA GEMINAE SN" caption="&#173;Universidad del Acuerdo UNITA GEMINAE (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_ACUERDO" highCardinality="false" description="Universidad UNITA GEMINAE (S/N) (usuarios avanzados)">
+    </DimensionUsage>
+    <DimensionUsage source="Pais" name="Universidad Acuerdo Pais" caption="&#173;&#173;Pa&#237;s de la Univ. del Acuerdo" visible="true" foreignKey="ID_PAIS_UNIVERSIDAD_ACUERDO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Programa Movilidad" name="Programa Movilidad" caption="Programa de Movilidad" visible="true" foreignKey="ID_PROGRAMA_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+<!--
+    <DimensionUsage source="Colectivo Movilidad" name="Colectivo Movilidad" caption="Colectivo del Acuerdo" visible="true" foreignKey="ID_COLECTIVO_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+-->
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Colectivo de la Oferta" caption="Colectivo">
+      <Hierarchy name="Colectivo de la Oferta" visible="true" hasAll="true" caption="Colectivo">
+        <Level name="Colectivo de la Oferta" visible="true" column="COLECTIVO_OFERTA" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Colectivo">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <DimensionUsage source="Acuerdo Bilateral" name="Acuerdo Bilateral" caption="Acuerdo Bilateral" description="Acuerdo Bilateral (usuarios avanzados)" visible="true" foreignKey="ID_ACUERDO_BILATERAL" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="IN_OUT" caption="Entrada o Salida (IN/OUT)" description="Entrada o Salida (IN/OUT)">
+      <Hierarchy name="IN_OUT" visible="true" hasAll="true" caption="Entrada o Salida (IN/OUT)" description="Entrada o Salida (IN/OUT)">
+        <Level name="IN_OUT" visible="true" column="IN_OUT" nameColumn="IN_OUT" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Entrada o Salida (IN/OUT)" description="Entrada o Salida (IN/OUT)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Duracion Estancia Alumnos" caption="Meses Ofertados por Plaza">
+      <Hierarchy name="Duracion Estancia Alumnos" visible="true" hasAll="true" caption="Meses Ofertados por Plaza">
+        <Level name="Duracion Estancia Alumnos" visible="true" column="DURACION_ESTANCIA_ALUMNOS" ordinalColumn="DURACION_ESTANCIA_ALUMNOS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Meses Ofertados por Plaza">
+          <KeyExpression>
+            <SQL dialect="generic">
+              <![CDATA[CASE
+                    WHEN DURACION_ESTANCIA_ALUMNOS = 0 THEN 'No informado'
+                    ELSE LPAD(TO_CHAR(DURACION_ESTANCIA_ALUMNOS), 2)
+                END]]>
+            </SQL>
+          </KeyExpression>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Idioma - Nivel Principal" name="Idioma - Nivel Principal" caption="Idioma - Nivel Principal" visible="true" foreignKey="ID_IDIOMA_NIVEL_PRINCIPAL" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Idioma - Nivel Secundario" name="Idioma - Nivel Secundario" caption="Idioma - Nivel Secundario" visible="true" foreignKey="ID_IDIOMA_NIVEL_SECUNDARIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro" name="Centro" caption="Centro Responsable" visible="true" foreignKey="ID_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fecha act" name="f_act" caption="&#173;&#173;&#173;Fecha de actualizaci&#243;n" visible="true" foreignKey="ID_FECHA_CARGA" highCardinality="false">
+    </DimensionUsage>
+
+    <Dimension type="StandardDimension" visible="false" highCardinality="false" name="OFERTA ALUMNOS FLG" >
+      <Hierarchy name="OFERTA ALUMNOS FLG" visible="true" hasAll="true" >
+        <Level name="OFERTA DOCENTES FLG" visible="true" column="FLG_OFERTA_ALUMNOS" nameColumn="FLG_OFERTA_ALUMNOS" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="false" highCardinality="false" name="OFERTA DOCENTES FLG" >
+      <Hierarchy name="OFERTA DOCENTES FLG" visible="true" hasAll="true" >
+        <Level name="OFERTA DOCENTES FLG" visible="true" column="FLG_OFERTA_DOCENTES" nameColumn="FLG_OFERTA_DOCENTES" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="false" highCardinality="false" name="FLG Plaza Ficticia" >
+      <Hierarchy name="FLG Plaza Ficticia" visible="true" hasAll="true" >
+        <Level name="FLG Plaza Ficticia" visible="true" column="FLG_PLAZA_FICTICIA" nameColumn="FLG_PLAZA_FICTICIA" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <DimensionUsage source="Alumno" name="Alumno" caption="Alumno" description="Alumno (usuarios avanzados)" visible="true" foreignKey="ID_ALUMNO" highCardinality="false">
+    </DimensionUsage>
+
+    <Measure name="Alumnos OUT" column="ID_ALUMNO_NIP_NK" aggregator="distinct-count" visible="false">
+    </Measure>
+    <Measure name="Num Plazas" column="COD_PLAZA_OFERTADA" aggregator="distinct-count" visible="false">
+    </Measure>
+    <Measure name="Num Acuerdos" column="ID_ACUERDO_BILATERAL" aggregator="distinct-count" visible="false">
+    </Measure>
+
+    <CalculatedMember name="Plazas Ofertadas REALES" formula="([Measures].[Num Plazas],[FLG Plaza Ficticia].[0])" dimension="Measures" visible="false">
+    </CalculatedMember>
+
+    <CalculatedMember name="Plazas Ofertadas Alumnos" formula="([Measures].[Plazas Ofertadas REALES],[OFERTA ALUMNOS FLG].[1])" dimension="Measures" caption="Plazas ofertadas para alumnos" description="Plazas ofertadas para alumnos" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Plazas Asignadas Alumnos OUT" formula="([Measures].[Alumnos OUT],[OFERTA ALUMNOS FLG].[1])" dimension="Measures" caption="Plazas asignadas a los alumnos OUT" description="Plazas asignadas a los alumnos OUT" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Plazas Ofertadas Docentes" formula="([Measures].[Plazas Ofertadas REALES],[OFERTA DOCENTES FLG].[1])" dimension="Measures" caption="Plazas ofertadas a docentes" description="Plazas ofertadas a docentes" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Numero Acuerdos" formula="([Measures].[Num Acuerdos],[FLG Plaza Ficticia].[0])" dimension="Measures" caption="N&#250;mero de acuerdos bilaterales" description="N&#250;mero total de acuerdos bilaterales que tiene formalizados la universidad" visible="true">
+    </CalculatedMember>
+  </Cube>
+
+
+  <Cube name="SOLICITUD MOVILIDAD" caption="Solicitudes de Movilidad OUT" visible="true" description="An&#225;lisis de la gesti&#243;n de las solicitudes de movilidad de salida" cache="true" enabled="true">
+    <Table name="F_SOLICITUDES_MOVILIDAD">
+    </Table>
+    <DimensionUsage source="Curso Academico" name="Curso Academico" caption=" CURSO ACAD&#201;MICO" visible="true" foreignKey="ID_CURSO_ACADEMICO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno" name="Alumno" caption="Alumno" description="Alumno (usuarios avanzados)" visible="true" foreignKey="ID_ALUMNO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Pais Nacionalidad" name="Alumno - Pais Nacionalidad" caption="Alumno - Pa&#237;s Nacionalidad" visible="true" foreignKey="ID_PAIS_NACIONALIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Estudio" name="Titulacion - Estudio" caption="Titulaci&#243;n - Estudio" visible="true" foreignKey="ID_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo Estudio" name="Titulacion - Tipo Estudio" caption="Titulaci&#243;n - Tipo de Estudio" visible="true" foreignKey="ID_TIPO_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Centro" name="Centro" caption="Centro" visible="true" foreignKey="ID_CENTRO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tipo de Acceso" name="Acceso - Tipo Acceso" caption="Acceso - Tipo de Acceso al Estudio" description="Acceso - Tipo de Acceso al Estudio (usuarios avanzados)" visible="true" foreignKey="ID_TIPO_ACCESO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad" name="Movilidad - Universidad Destino" caption="Movilidad - &#173;Universidad Destino" visible="true" foreignKey="ID_UNIVERSIDAD_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad destino UNITA" name="Universidad destino UNITA SN" caption="Movilidad - &#173;Universidad de Destino UNITA (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Universidad destino UNITA GEMINAE" name="Universidad destino UNITA GEMINAE SN" caption="Movilidad - &#173;Universidad de Destino UNITA GEMINAE (S/N)" visible="true" foreignKey="ID_UNIVERSIDAD_DESTINO" highCardinality="false" description="Universidad de destino UNITA GEMINAE (S/N) (usuarios avanzados)">
+    </DimensionUsage>
+
+    <DimensionUsage source="Pais" name="Movilidad - Universidad Destino Pais" caption="Movilidad - &#173;Pa&#237;s de la Univ. Destino" visible="true" foreignKey="ID_PAIS_UNIVERSIDAD_DESTINO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Programa Movilidad" name="Movilidad - Programa Movilidad" caption="Movilidad - Programa de Movilidad" visible="true" foreignKey="ID_PROGRAMA_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Area Estudios Movilidad" name="Movilidad - Area Estudios" caption="Movilidad - &#193;rea de Estudios" visible="true" foreignKey="ID_AREA_ESTUDIOS_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Nivel Estudios Movilidad" name="Movilidad - Nivel Estudios" caption="Movilidad - Nivel de Estudios" visible="true" foreignKey="ID_NIVEL_ESTUDIOS_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango Nota de Admision" name="Acceso - Nota Admision" caption="Acceso - Rango Nota de Admisi&#243;n" description="Acceso - Rango Nota de Admisi&#243;n (usuarios avanzados)" visible="true" foreignKey="ID_RANGO_NOTA_ADMISION" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rango Creditos Superados Previos" name="Expediente - Rango Creditos Superados Previos" caption="Expediente - Cr&#233;d. Superados Previos" visible="true" foreignKey="ID_RANGO_CRED_SUPERADOS_PREVIO" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Movilidad - Orden Preferencia" caption="Movilidad - Orden de Preferencia">
+      <Hierarchy name="Movilidad - Orden Preferencia" visible="true" hasAll="true" caption="Movilidad - Orden de preferencia">
+        <Level name="Orden Preferencia" visible="true" column="ORDEN_PREFERENCIA" nameColumn="ORDEN_PREFERENCIA" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Orden de preferencia">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Movilidad - Preferencia Aceptada" caption="Movilidad - Preferencia Aceptada (S/N)">
+      <Hierarchy name="Movilidad - Preferencia Aceptada" visible="true" hasAll="true" caption="Movilidad - Preferencia Aceptada (S/N)">
+        <Level name="Preferencia Aceptada" visible="true" column="FLG_ACEPTADA" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Preferencia aceptada (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Movilidad - Renuncia" caption="Movilidad - Renuncia (S/N)">
+      <Hierarchy name="Movilidad - Renuncia" visible="true" hasAll="true" caption="Movilidad - Renuncia (S/N)">
+        <Level name="Renuncia" visible="true" column="FLG_RENUNCIA" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Renuncia (S/N)">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Expediente - Cursos Matriculados" caption="Expediente - Cursos Matriculados">
+      <Hierarchy name="Expediente - Cursos Matriculados" visible="true" hasAll="true" caption="Expediente - Cursos Matriculados">
+        <Level name="Cursos Matriculados" visible="true" column="ANOS_CURSADOS" type="Numeric" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Cursos matriculados">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Alumno - Sexo" name="Alumno - Sexo" caption="Alumno - Sexo" visible="true" foreignKey="ID_SEXO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Rango de Edad" name="Alumno - Rango de edad" caption="Alumno - Rango de Edad" visible="true" foreignKey="ID_EDAD_EST" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Idioma" name="Movilidad - Idioma" caption="Movilidad - Idioma" visible="true" foreignKey="ID_IDIOMA_MOVILIDAD" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Alumno - Residencia Familiar" name="Alumno - Residencia Familiar" caption="Alumno - Residencia Familiar" visible="true" foreignKey="ID_POBLACION_FAMILIAR" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Plan Estudio" name="Titulacion - Plan Estudio" caption="Titulaci&#243;n - Plan de Estudio" visible="true" foreignKey="ID_PLAN_ESTUDIO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Rama Conocimiento" name="Titulacion - Rama Conocimiento" caption="Titulaci&#243;n - Rama de Conocimiento" visible="true" foreignKey="ID_RAMA_CONOCIMIENTO" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Fecha act" name="f_act" caption="&#173;Fecha de actualizaci&#243;n" visible="true" foreignKey="ID_FECHA_CARGA" highCardinality="false">
+    </DimensionUsage>
+
+    <Measure name="Total Solicitudes" column="ID_SOLICITUD_MOVILIDAD_NK" aggregator="distinct count" caption="Total solicitudes" visible="true">
+    </Measure>
+    <Measure name="Total Solicitudes Aceptadas" column="ACEPTADA" aggregator="sum" caption="Total solicitudes aceptadas" visible="true">
+    </Measure>
+    <Measure name="Total Renuncia" column="RENUNCIA" aggregator="sum" caption="Total renuncias" visible="true">
+    </Measure>
+
+  </Cube>
+
+
+  <Role name="Admin">
+    <SchemaGrant access="all">
+    </SchemaGrant>
+  </Role>
+  <Role name="Authenticated">
+    <SchemaGrant access="none">
+    </SchemaGrant>
+  </Role>
+  <Role name="ACAD_UDATUZ_BASICO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="ESTUDIANTES IN" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Tutor]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad origen UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Plan Estudio Max]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Estudio Max]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="ESTUDIANTES OUT" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Acceso Directo Movilidad]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Tutor]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Tipo Acceso]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Nota Admision]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad destino UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="ACUERDOS BILATERALES" access="all">
+        <HierarchyGrant hierarchy="[Acuerdo Bilateral]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="SOLICITUD MOVILIDAD" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Tipo Acceso]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Nota Admision]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad destino UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="ACAD_UDATUZ_INTERMEDIO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="ESTUDIANTES IN" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Tutor]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="ESTUDIANTES OUT" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Tutor]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="ACUERDOS BILATERALES" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="SOLICITUD MOVILIDAD" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="ACAD_UDATUZ_AVANZADO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="ESTUDIANTES IN" access="all">
+      </CubeGrant>
+      <CubeGrant cube="ESTUDIANTES OUT" access="all">
+      </CubeGrant>
+      <CubeGrant cube="ACUERDOS BILATERALES" access="all">
+      </CubeGrant>
+      <CubeGrant cube="SOLICITUD MOVILIDAD" access="all">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="RANKING_UDATUZ_BASICO">
+    <SchemaGrant access="none">
+      <CubeGrant cube="ESTUDIANTES IN" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="ESTUDIANTES OUT" access="none">
+      </CubeGrant>
+      <CubeGrant cube="ACUERDOS BILATERALES" access="none">
+      </CubeGrant>
+      <CubeGrant cube="SOLICITUD MOVILIDAD" access="none">
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+  <Role name="GRAL_UDATUZ">
+    <SchemaGrant access="none">
+      <CubeGrant cube="ESTUDIANTES IN" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Tutor]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad origen UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Plan Estudio Max]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Estudio Max]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="ESTUDIANTES OUT" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Acceso Directo Movilidad]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Movilidad - Tutor]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Tipo Acceso]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Nota Admision]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad destino UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="ACUERDOS BILATERALES" access="all">
+        <HierarchyGrant hierarchy="[Acuerdo Bilateral]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+      <CubeGrant cube="SOLICITUD MOVILIDAD" access="all">
+        <HierarchyGrant hierarchy="[Alumno]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Tipo Acceso]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Acceso - Nota Admision]" access="none">
+        </HierarchyGrant>
+        <HierarchyGrant hierarchy="[Universidad destino UNITA GEMINAE SN]" access="none">
+        </HierarchyGrant>
+      </CubeGrant>
+    </SchemaGrant>
+  </Role>
+</Schema>

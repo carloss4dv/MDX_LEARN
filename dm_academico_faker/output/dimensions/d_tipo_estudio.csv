@@ -1,0 +1,11 @@
+ID_TIPO_ESTUDIO,NOMBRE_TIPO_ESTUDIO,ID_TIPO_ESTUDIO_NK,ID_TIPO_ESTUDIO_DESCR,ORD_TIPO_ESTUDIO,DESCRIPCION_TIPO_ESTUDIO,NIVEL_ISCED,FLG_OFICIAL,FLG_PLAN_ANTIGUO,FECHA_CARGA
+1,Grado,1,1,GRADO,Estudios oficiales de primer ciclo universitario (240 ECTS),6,1,0,2016-12-04
+2,Máster Universitario,2,2,MÁSTER UNIVERSITARIO,Estudios oficiales de segundo ciclo universitario (60-120 ECTS),7,1,0,2020-12-29
+3,Doctorado,3,3,DOCTORADO,Estudios oficiales de tercer ciclo universitario,8,1,0,2019-02-19
+4,Título Propio,4,4,TÍTULO PROPIO,Enseñanzas propias de la universidad,7,0,0,2018-01-01
+5,Curso de Adaptación,5,5,CURSO DE ADAPTACIÓN,Curso de adaptación a Grado,6,1,0,2015-04-08
+6,Diplomatura,6,6,DIPLOMATURA,Estudios oficiales de primer ciclo (plan antiguo),5,1,1,2019-10-01
+7,Licenciatura,7,7,LICENCIATURA,Estudios oficiales de primer y segundo ciclo (plan antiguo),6,1,1,2019-04-23
+8,Ingeniería,8,8,INGENIERÍA,Estudios oficiales técnicos superiores (plan antiguo),6,1,1,2020-12-18
+9,Ingeniería Técnica,9,9,INGENIERÍA TÉCNICA,Estudios oficiales técnicos de primer ciclo (plan antiguo),5,1,1,2018-04-15
+10,Arquitectura,10,10,ARQUITECTURA,Estudios oficiales de arquitectura (plan antiguo),6,1,1,2019-05-26
