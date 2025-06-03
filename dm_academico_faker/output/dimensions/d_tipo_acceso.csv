@@ -1,16 +1,16 @@
-ID_TIPO_ACCESO,NOMBRE_TIPO_ACCESO,FECHA_CARGA,ID_TIPO_ACCESO_NK
-1,Prueba de Acceso a la Universidad,2022-04-22,PAU
-2,Formación Profesional,2022-12-30,FP
-3,Titulados Universitarios,2020-10-21,TIT
-4,Mayores de 25 años,2021-09-24,M25
-5,Mayores de 40 años,2021-03-15,M40
-6,Mayores de 45 años,2023-05-30,M45
-7,Deportistas de alto nivel,2021-11-11,DEP
-8,Personas con discapacidad,2020-04-27,DIS
-9,Estudios extranjeros,2020-06-13,INT
-10,Traslado de expediente,2022-02-07,TRA
-11,Cambio de universidad,2022-04-21,CAM
-12,Adaptación de plan de estudios,2023-07-29,ADA
-13,Estudios superiores extranjeros,2023-03-09,ESE
-14,Otros,2021-04-24,OTR
-15,No informado,2022-12-19,NOI
+ID_TIPO_ACCESO,NOMBRE_TIPO_ACCESO,FECHA_CARGA
+1,Prueba de Acceso a la Universidad,2021-04-21
+2,Formación Profesional,2022-10-31
+3,Titulados Universitarios,2023-05-17
+4,Mayores de 25 años,2020-02-24
+5,Mayores de 40 años,2023-02-23
+6,Mayores de 45 años,2021-02-11
+7,Deportistas de alto nivel,2023-08-23
+8,Personas con discapacidad,2023-12-07
+9,Estudios extranjeros,2023-01-21
+10,Traslado de expediente,2022-05-09
+11,Cambio de universidad,2021-03-27
+12,Adaptación de plan de estudios,2022-07-08
+13,Estudios superiores extranjeros,2023-04-21
+14,Otros,2021-07-23
+15,No informado,2020-01-14

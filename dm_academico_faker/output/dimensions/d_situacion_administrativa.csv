@@ -1,11 +1,11 @@
 ID_SITUACION_ADMINISTRATIVA,ID_SITUACION_ADMINISTRATIVA_NK,NOMBRE_SITUACION_ADVA,DESCRIPCION_SITUACION,FECHA_CARGA,FLG_ACTIVO,SN_ACTIVO
-1,ACT,Servicio activo,Situación de servicio activo normal,2023-02-16,1,S
-2,EXC,Excedencia,Excedencia voluntaria,2022-07-11,0,N
-3,EXCF,Excedencia forzosa,Excedencia forzosa,2022-11-04,0,N
-4,EXCS,Excedencia por servicios,Excedencia por servicios especiales,2021-06-14,0,N
-5,EXCFC,Excedencia familiar,Excedencia por cuidado de familiares,2023-05-22,0,N
-6,EXCHI,Excedencia hijos,Excedencia por cuidado de hijos,2023-09-02,0,N
-7,SUS,Suspensión,Suspensión de funciones,2023-02-11,0,N
-8,COM,Comisión servicios,En comisión de servicios,2022-06-04,0,N
-9,JUB,Jubilación,Jubilación,2023-09-27,0,N
-10,BAJ,Baja,Baja temporal,2020-11-28,0,N
+1,ACT,Servicio activo,Situación de servicio activo normal,2022-08-30,1,S
+2,EXC,Excedencia,Excedencia voluntaria,2022-07-10,0,N
+3,EXCF,Excedencia forzosa,Excedencia forzosa,2021-06-14,0,N
+4,EXCS,Excedencia por servicios,Excedencia por servicios especiales,2021-05-21,0,N
+5,EXCFC,Excedencia familiar,Excedencia por cuidado de familiares,2023-07-29,0,N
+6,EXCHI,Excedencia hijos,Excedencia por cuidado de hijos,2021-07-21,0,N
+7,SUS,Suspensión,Suspensión de funciones,2022-12-03,0,N
+8,COM,Comisión servicios,En comisión de servicios,2022-09-19,0,N
+9,JUB,Jubilación,Jubilación,2023-07-07,0,N
+10,BAJ,Baja,Baja temporal,2021-05-04,0,N

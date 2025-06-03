@@ -1,6 +1,6 @@
 ID_TIPO_RECONOCIMIENTO,NOMBRE_TIPO_RECONOCIMIENTO,FECHA_CARGA,ID_TIPO_RECONOCIMIENTO_NK
-1,Reconocimiento académico,2023-06-14,A
-2,Reconocimiento profesional,2023-08-28,P
-3,Reconocimiento por experiencia laboral,2020-11-21,E
-4,Reconocimiento por título propio,2020-01-13,T
-5,Otros reconocimientos,2022-02-08,O
+1,Reconocimiento académico,2020-11-29,A
+2,Reconocimiento profesional,2022-01-28,P
+3,Reconocimiento por experiencia laboral,2021-12-28,E
+4,Reconocimiento por título propio,2021-03-05,T
+5,Otros reconocimientos,2023-10-04,O

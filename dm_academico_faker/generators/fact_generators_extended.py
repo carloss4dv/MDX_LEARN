@@ -1,5 +1,9 @@
 """
-Extensión de los generadores de tablas de hechos para incluir campos faltantes
+Generadores extendidos de tablas de hechos principales
+
+Este módulo contiene versiones extendidas de los generadores principales:
+- extended_generate_f_matricula
+- extended_generate_f_rendimiento
 """
 
 import pandas as pd
@@ -8,7 +12,7 @@ from tqdm import tqdm
 import random
 import datetime
 from faker import Faker
-from utils.helpers import generate_random_date
+from .date_helpers import generate_random_date
 from generators.fact_generators import generate_f_matricula, generate_f_rendimiento
 
 # Inicializar Faker con locale español

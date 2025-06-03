@@ -1,501 +1,501 @@
 ID_ASIGNATURA,NOMBRE_ASIGNATURA,ID_ASIGNATURA_NK
-1,Sistemas,1
-2,Química Inorgánica Aplicada,2
-3,Semántica para Científicos,3
-4,Botánica Aplicada para Ingenieros,4
-5,Literatura Básica,5
-6,Electromagnetismo Avanzada,6
-7,Zoología Teórica,7
-8,Microeconomía II,8
-9,Arqueología para Ingenieros,9
-10,Historia Moderna Básica,10
-11,Historia Medieval Básica Experimental,11
-12,Fisicoquímica,12
-13,Derecho Laboral Aplicada,13
-14,Derecho Penal Fundamental,14
-15,Historia Moderna Avanzada,15
-16,Derecho Mercantil,16
-17,Zoología Especial,17
-18,Patología Avanzada,18
-19,Derecho Administrativo Especial,19
-20,Cuántica,20
-21,Química Orgánica Fundamental Experimental,21
-22,Derecho Penal para Científicos,22
-23,Historia Antigua,23
-24,Semántica Básica Computacional,24
-25,Semántica,25
-26,Mecánica,26
-27,Redes Aplicada,27
-28,Semántica I,28
-29,Derecho Civil Avanzada,29
-30,Cirugía Básica,30
-31,Contabilidad Especial,31
-32,Redes III,32
-33,Termodinámica General,33
-34,Programación,34
-35,Contabilidad General,35
-36,Ecología Fundamental Experimental,36
-37,Derecho Penal,37
-38,Bioquímica II para Científicos,38
-39,Óptica,39
-40,Arqueología Teórica,40
-41,Programación,41
-42,Derecho Administrativo Experimental,42
-43,Electromagnetismo I,43
-44,Contabilidad Fundamental,44
-45,Microbiología Fundamental para Científicos,45
-46,Cirugía General Teórica,46
-47,Gramática Avanzada,47
-48,Redes III,48
-49,Botánica para Científicos,49
-50,Contabilidad Especial,50
-51,Historia Moderna,51
-52,Microbiología,52
-53,Microeconomía General,53
-54,Química Inorgánica General,54
-55,Bioquímica,55
-56,Semántica Básica,56
-57,Gramática III para Científicos,57
-58,Botánica Básica,58
-59,Farmacología,59
-60,Análisis Computacional,60
-61,Zoología Avanzada para Ingenieros,61
-62,Mecánica Básica,62
-63,Historia Moderna Aplicada para Ingenieros,63
-64,Mecánica,64
-65,Fonética Computacional,65
-66,Derecho Civil para Científicos,66
-67,Derecho Laboral para Científicos,67
-68,Historia Antigua Especial Experimental,68
-69,Genética Práctica,69
-70,Semántica,70
-71,Zoología Avanzada,71
-72,Bases de Datos III,72
-73,Microbiología para Ingenieros,73
-74,Análisis III,74
-75,Macroeconomía,75
-76,Patología I para Ingenieros,76
-77,Microeconomía III Experimental,77
-78,Bioquímica Aplicada Experimental,78
-79,Química Orgánica III,79
-80,Botánica Básica,80
-81,Fonética,81
-82,Contabilidad Fundamental,82
-83,Mecánica Básica,83
-84,Gramática Fundamental Experimental,84
-85,Mecánica Avanzada,85
-86,Macroeconomía General,86
-87,Fisicoquímica III Teórica,87
-88,Genética II,88
-89,Lingüística para Científicos,89
-90,Cálculo,90
-91,Análisis Especial,91
-92,Semántica Aplicada,92
-93,Fisicoquímica Avanzada,93
-94,Historia Antigua Aplicada,94
-95,Fonética I Teórica,95
-96,Microbiología,96
-97,Botánica II para Ingenieros,97
-98,Fisicoquímica Avanzada,98
-99,Fisiología II,99
-100,Patología General para Ingenieros,100
-101,Electromagnetismo III,101
-102,Semántica Aplicada,102
-103,Gramática General,103
-104,Marketing,104
-105,Derecho Mercantil Especial,105
-106,Historia Contemporánea,106
-107,Microbiología,107
-108,Botánica Aplicada,108
-109,Estadística III,109
-110,Programación Básica,110
-111,Marketing,111
-112,Botánica Avanzada,112
-113,Sistemas II,113
-114,Patología Experimental,114
-115,Programación General,115
-116,Derecho Civil I,116
-117,Derecho Civil Fundamental,117
-118,Fisiología III,118
-119,Geometría Fundamental para Ingenieros,119
-120,Analítica,120
-121,Termodinámica,121
-122,Análisis Fundamental,122
-123,Derecho Penal Avanzada,123
-124,Historia Contemporánea Fundamental,124
-125,Química Inorgánica Computacional,125
-126,Anatomía,126
-127,Contabilidad,127
-128,Estadística,128
-129,Arqueología,129
-130,Química Inorgánica II,130
-131,Programación,131
-132,Termodinámica,132
-133,Sistemas Avanzada,133
-134,Literatura,134
-135,Microbiología III Práctica,135
-136,Geometría I,136
+1,Fisicoquímica II Experimental,1
+2,Genética I,2
+3,Microeconomía Práctica,3
+4,Fisiología Especial,4
+5,Fisicoquímica I,5
+6,Derecho Civil,6
+7,Estadística,7
+8,Botánica Experimental,8
+9,Historia Antigua Básica,9
+10,Programación Fundamental Experimental,10
+11,Finanzas II,11
+12,Literatura I,12
+13,Derecho Penal,13
+14,Finanzas Aplicada Experimental,14
+15,Zoología,15
+16,Anatomía,16
+17,Historia Moderna Avanzada,17
+18,Historia Moderna II para Científicos,18
+19,Microbiología Computacional,19
+20,Mecánica General Teórica,20
+21,Estadística para Ingenieros,21
+22,Derecho Laboral II,22
+23,Historia Antigua I,23
+24,Cálculo Computacional,24
+25,Algoritmos II para Ingenieros,25
+26,Bases de Datos III,26
+27,Sistemas para Ingenieros,27
+28,Cuántica Especial para Ingenieros,28
+29,Derecho Laboral,29
+30,Termodinámica para Ingenieros,30
+31,Cirugía Especial,31
+32,Derecho Mercantil General,32
+33,Óptica Teórica,33
+34,Fisicoquímica Aplicada Experimental,34
+35,Fonética Aplicada,35
+36,Derecho Administrativo,36
+37,Química Orgánica I Experimental,37
+38,Gramática III para Ingenieros,38
+39,Química Inorgánica Práctica,39
+40,Cálculo General Computacional,40
+41,Electromagnetismo,41
+42,Marketing Teórica,42
+43,Fisiología Especial,43
+44,Gramática,44
+45,Cálculo Especial,45
+46,Estadística III,46
+47,Microeconomía Aplicada para Ingenieros,47
+48,Cálculo II Teórica,48
+49,Macroeconomía General Teórica,49
+50,Sistemas III,50
+51,Derecho Laboral Fundamental,51
+52,Patología,52
+53,Óptica III,53
+54,Mecánica General Teórica,54
+55,Cálculo Avanzada Práctica,55
+56,Anatomía II,56
+57,Bioquímica II,57
+58,Finanzas,58
+59,Sistemas,59
+60,Álgebra III Experimental,60
+61,Historia Contemporánea Especial,61
+62,Fisiología,62
+63,Estadística,63
+64,Programación III Práctica,64
+65,Algoritmos Aplicada Teórica,65
+66,Farmacología III,66
+67,Farmacología,67
+68,Química Inorgánica Fundamental,68
+69,Genética,69
+70,Derecho Mercantil I,70
+71,Macroeconomía Especial,71
+72,Química Orgánica,72
+73,Botánica General,73
+74,Historia Contemporánea Fundamental,74
+75,Derecho Penal III,75
+76,Historia Antigua,76
+77,Bioquímica II,77
+78,Sistemas Avanzada,78
+79,Lingüística General Teórica,79
+80,Arqueología II,80
+81,Derecho Civil III para Ingenieros,81
+82,Historia Medieval Avanzada,82
+83,Química Inorgánica,83
+84,Derecho Penal Básica,84
+85,Macroeconomía,85
+86,Gramática I,86
+87,Cirugía General,87
+88,Electromagnetismo II,88
+89,Algoritmos Fundamental Computacional,89
+90,Derecho Administrativo Especial,90
+91,Cálculo,91
+92,Farmacología Computacional,92
+93,Química Orgánica Aplicada para Ingenieros,93
+94,Contabilidad II para Científicos,94
+95,Termodinámica Aplicada,95
+96,Ecología Especial,96
+97,Analítica Aplicada para Ingenieros,97
+98,Literatura Experimental,98
+99,Cuántica Avanzada,99
+100,Química Orgánica,100
+101,Microeconomía Teórica,101
+102,Derecho Civil Especial,102
+103,Farmacología Teórica,103
+104,Gramática Básica Práctica,104
+105,Sistemas,105
+106,Fisiología Avanzada,106
+107,Ecología I Experimental,107
+108,Electromagnetismo Básica,108
+109,Patología Básica Experimental,109
+110,Derecho Administrativo Básica,110
+111,Semántica Fundamental,111
+112,Marketing Básica,112
+113,Redes Práctica,113
+114,Contabilidad Práctica,114
+115,Zoología para Ingenieros,115
+116,Farmacología I,116
+117,Historia Moderna,117
+118,Derecho Civil Avanzada Computacional,118
+119,Fisicoquímica Aplicada,119
+120,Gramática Fundamental para Científicos,120
+121,Botánica Fundamental para Científicos,121
+122,Macroeconomía,122
+123,Ecología Básica,123
+124,Patología I,124
+125,Cirugía Avanzada,125
+126,Lingüística Básica,126
+127,Derecho Civil Avanzada,127
+128,Finanzas Especial para Científicos,128
+129,Microeconomía III,129
+130,Macroeconomía,130
+131,Cuántica II,131
+132,Cuántica General,132
+133,Historia Contemporánea,133
+134,Macroeconomía Fundamental para Científicos,134
+135,Álgebra Aplicada,135
+136,Zoología,136
 137,Zoología,137
-138,Patología,138
-139,Álgebra Aplicada,139
-140,Programación Experimental,140
-141,Analítica Aplicada Experimental,141
-142,Cirugía,142
-143,Arqueología Avanzada,143
-144,Gramática III,144
-145,Estadística Básica,145
-146,Fisicoquímica,146
-147,Ecología I Teórica,147
-148,Zoología Práctica,148
-149,Mecánica Avanzada,149
-150,Derecho Penal Básica,150
-151,Patología III,151
-152,Cirugía III,152
-153,Microbiología III,153
-154,Fisiología II,154
-155,Termodinámica I,155
-156,Finanzas Básica,156
-157,Electromagnetismo,157
-158,Cirugía,158
-159,Fisicoquímica,159
-160,Macroeconomía Fundamental,160
-161,Farmacología General,161
-162,Historia Contemporánea,162
-163,Geometría Básica,163
-164,Derecho Penal Avanzada para Ingenieros,164
-165,Óptica Aplicada,165
-166,Historia Medieval General Práctica,166
-167,Finanzas Fundamental Teórica,167
-168,Análisis,168
-169,Cálculo I,169
-170,Fonética I,170
-171,Bioquímica Básica Experimental,171
-172,Óptica Práctica,172
-173,Literatura II,173
-174,Lingüística,174
-175,Literatura I,175
-176,Óptica Avanzada Experimental,176
-177,Sistemas III,177
-178,Programación,178
-179,Macroeconomía Fundamental,179
-180,Fisiología III,180
-181,Marketing III para Científicos,181
-182,Mecánica Especial,182
-183,Zoología,183
-184,Química Orgánica Especial,184
-185,Historia Contemporánea Especial,185
-186,Química Inorgánica General,186
-187,Historia Antigua Fundamental,187
-188,Microbiología Avanzada para Ingenieros,188
-189,Electromagnetismo,189
-190,Mecánica Básica Computacional,190
-191,Programación para Científicos,191
-192,Microbiología Fundamental,192
-193,Óptica I,193
-194,Sistemas II Experimental,194
-195,Lingüística,195
-196,Genética Avanzada,196
-197,Anatomía Práctica,197
-198,Lingüística Básica,198
-199,Derecho Mercantil Aplicada,199
-200,Cuántica Especial,200
-201,Historia Medieval Básica,201
-202,Química Orgánica,202
-203,Bases de Datos General para Ingenieros,203
-204,Contabilidad I,204
-205,Bioquímica,205
-206,Microbiología II Práctica,206
-207,Contabilidad I,207
-208,Electromagnetismo Especial,208
-209,Historia Antigua Especial,209
-210,Gramática I Teórica,210
-211,Microbiología Fundamental,211
-212,Cálculo Aplicada,212
-213,Bases de Datos,213
-214,Derecho Mercantil General,214
-215,Cuántica Computacional,215
-216,Macroeconomía,216
-217,Bioquímica Avanzada Teórica,217
-218,Zoología para Científicos,218
-219,Redes Fundamental para Científicos,219
-220,Bioquímica Fundamental Computacional,220
-221,Microeconomía Fundamental,221
-222,Electromagnetismo Fundamental,222
-223,Programación II,223
-224,Finanzas Básica,224
-225,Análisis Avanzada,225
-226,Microeconomía,226
-227,Finanzas III,227
-228,Botánica,228
-229,Lingüística,229
-230,Contabilidad Computacional,230
-231,Fisiología,231
-232,Marketing Especial,232
-233,Álgebra General,233
-234,Cuántica Especial,234
-235,Patología Fundamental para Ingenieros,235
-236,Arqueología Práctica,236
-237,Historia Antigua Especial,237
-238,Historia Medieval Básica,238
-239,Finanzas Computacional,239
-240,Finanzas II,240
-241,Finanzas Aplicada,241
-242,Cirugía,242
-243,Sistemas Básica,243
-244,Fonética Avanzada,244
-245,Literatura Aplicada,245
-246,Fisicoquímica Aplicada Teórica,246
-247,Química Inorgánica Especial,247
-248,Algoritmos II,248
-249,Historia Medieval II,249
-250,Farmacología I,250
-251,Bases de Datos I para Científicos,251
-252,Óptica Especial,252
-253,Química Inorgánica Básica,253
-254,Derecho Administrativo Fundamental,254
-255,Derecho Penal Fundamental,255
-256,Álgebra Aplicada para Ingenieros,256
-257,Botánica Experimental,257
-258,Finanzas Avanzada,258
-259,Óptica,259
-260,Finanzas Práctica,260
-261,Electromagnetismo,261
-262,Óptica III para Ingenieros,262
-263,Óptica General Teórica,263
-264,Óptica Especial,264
-265,Derecho Administrativo,265
-266,Análisis Fundamental Computacional,266
-267,Derecho Mercantil I,267
-268,Farmacología Especial,268
-269,Bases de Datos Básica,269
-270,Arqueología para Ingenieros,270
-271,Analítica II,271
-272,Semántica Aplicada,272
-273,Lingüística Especial,273
-274,Patología Básica Computacional,274
-275,Mecánica Básica,275
-276,Patología,276
-277,Cuántica Práctica,277
-278,Anatomía,278
-279,Lingüística III,279
-280,Patología,280
-281,Algoritmos,281
-282,Óptica Avanzada,282
-283,Historia Medieval Aplicada para Ingenieros,283
-284,Cuántica Especial,284
-285,Derecho Laboral,285
-286,Electromagnetismo I Práctica,286
-287,Botánica,287
-288,Historia Moderna Fundamental para Científicos,288
-289,Derecho Laboral General,289
-290,Estadística Aplicada,290
-291,Lingüística,291
-292,Finanzas Básica,292
-293,Contabilidad,293
-294,Farmacología Avanzada,294
-295,Fisiología III,295
-296,Marketing,296
-297,Programación Especial,297
-298,Microeconomía I,298
-299,Análisis Práctica,299
-300,Fisicoquímica II para Ingenieros,300
-301,Fisiología III para Ingenieros,301
-302,Termodinámica,302
-303,Redes General,303
-304,Contabilidad,304
-305,Geometría Básica Computacional,305
-306,Óptica para Científicos,306
-307,Farmacología,307
-308,Cuántica II,308
-309,Historia Moderna,309
-310,Patología Especial,310
-311,Mecánica Básica,311
-312,Termodinámica Fundamental,312
-313,Historia Contemporánea II Teórica,313
-314,Química Orgánica Especial,314
-315,Algoritmos Aplicada Práctica,315
-316,Ecología Práctica,316
-317,Sistemas II Experimental,317
-318,Zoología,318
-319,Derecho Penal,319
-320,Sistemas Especial Práctica,320
-321,Química Inorgánica,321
-322,Fisiología Fundamental,322
-323,Ecología Especial para Ingenieros,323
-324,Estadística para Ingenieros,324
-325,Derecho Civil,325
-326,Fonética Fundamental para Científicos,326
-327,Fisiología III,327
-328,Historia Antigua I para Científicos,328
-329,Mecánica,329
-330,Botánica II,330
-331,Programación Avanzada para Ingenieros,331
-332,Analítica General Computacional,332
-333,Algoritmos Avanzada,333
-334,Análisis,334
-335,Zoología Aplicada,335
-336,Literatura I para Científicos,336
-337,Algoritmos Especial,337
-338,Programación Práctica,338
-339,Patología Especial Práctica,339
-340,Electromagnetismo,340
-341,Historia Contemporánea,341
-342,Análisis,342
-343,Sistemas Avanzada,343
-344,Química Orgánica Aplicada Teórica,344
-345,Literatura Avanzada,345
-346,Botánica Práctica,346
-347,Historia Contemporánea,347
-348,Álgebra General,348
-349,Genética Especial para Ingenieros,349
-350,Programación I,350
-351,Arqueología Práctica,351
-352,Arqueología Aplicada,352
-353,Química Orgánica General,353
-354,Analítica Especial,354
-355,Geometría Experimental,355
-356,Óptica Avanzada,356
-357,Contabilidad,357
-358,Anatomía,358
-359,Historia Contemporánea Avanzada Computacional,359
-360,Fisiología III,360
-361,Cirugía Fundamental,361
-362,Historia Medieval Básica para Ingenieros,362
-363,Derecho Penal,363
-364,Fisicoquímica I Experimental,364
-365,Álgebra Fundamental para Ingenieros,365
-366,Derecho Mercantil II Experimental,366
-367,Historia Medieval Práctica,367
-368,Derecho Penal,368
-369,Programación Especial,369
-370,Cirugía,370
-371,Óptica Práctica,371
-372,Historia Antigua Aplicada,372
-373,Lingüística Práctica,373
-374,Cirugía II,374
-375,Patología Aplicada,375
-376,Álgebra I,376
-377,Contabilidad,377
-378,Algoritmos Aplicada,378
-379,Fisicoquímica,379
-380,Fisiología Aplicada Computacional,380
-381,Microbiología II,381
-382,Contabilidad II,382
-383,Arqueología Básica,383
-384,Arqueología II,384
-385,Analítica,385
-386,Termodinámica III,386
-387,Botánica Avanzada,387
-388,Lingüística Teórica,388
-389,Óptica I,389
-390,Zoología para Científicos,390
-391,Gramática Aplicada,391
-392,Arqueología Fundamental,392
-393,Historia Contemporánea Básica,393
-394,Termodinámica,394
-395,Botánica,395
-396,Cuántica Básica para Científicos,396
-397,Electromagnetismo,397
-398,Marketing,398
-399,Electromagnetismo Aplicada,399
-400,Microeconomía III,400
-401,Gramática,401
-402,Historia Medieval III para Ingenieros,402
-403,Semántica Especial Computacional,403
-404,Fisiología Especial Computacional,404
-405,Redes Fundamental,405
-406,Sistemas,406
-407,Analítica Avanzada,407
-408,Cirugía Computacional,408
-409,Química Orgánica Práctica,409
-410,Algoritmos Fundamental,410
-411,Estadística General Computacional,411
-412,Derecho Administrativo,412
-413,Ecología Especial,413
-414,Derecho Laboral Experimental,414
-415,Derecho Penal III,415
-416,Bioquímica Aplicada para Ingenieros,416
-417,Farmacología,417
-418,Ecología,418
-419,Fisiología Computacional,419
-420,Fonética Teórica,420
-421,Ecología I,421
-422,Cálculo Práctica,422
-423,Historia Antigua General para Científicos,423
-424,Historia Medieval Experimental,424
-425,Algoritmos General,425
-426,Ecología Aplicada Teórica,426
-427,Anatomía I,427
-428,Termodinámica Aplicada,428
-429,Mecánica,429
-430,Macroeconomía,430
-431,Algoritmos,431
-432,Algoritmos Aplicada,432
-433,Genética II,433
-434,Semántica III,434
-435,Gramática Aplicada,435
-436,Mecánica,436
-437,Fisicoquímica Fundamental Teórica,437
-438,Lingüística II para Científicos,438
-439,Geometría III,439
-440,Arqueología III Práctica,440
-441,Botánica III,441
-442,Electromagnetismo II,442
-443,Derecho Civil Experimental,443
-444,Cálculo Teórica,444
-445,Anatomía I para Ingenieros,445
-446,Botánica Avanzada Teórica,446
-447,Química Inorgánica III,447
-448,Microbiología Fundamental,448
-449,Fisiología I,449
-450,Literatura III Teórica,450
-451,Álgebra Especial Computacional,451
-452,Fisiología III Computacional,452
-453,Derecho Laboral,453
-454,Sistemas,454
-455,Óptica Fundamental Práctica,455
-456,Álgebra Básica,456
-457,Arqueología Especial,457
-458,Fisicoquímica General para Científicos,458
-459,Redes I,459
-460,Historia Antigua II,460
-461,Bases de Datos II,461
-462,Mecánica Avanzada,462
-463,Farmacología Práctica,463
-464,Historia Moderna Básica Práctica,464
-465,Derecho Administrativo General,465
-466,Arqueología para Ingenieros,466
-467,Sistemas III,467
-468,Álgebra Especial Práctica,468
-469,Cálculo III,469
-470,Microbiología Fundamental Experimental,470
-471,Historia Medieval,471
-472,Gramática Fundamental Teórica,472
-473,Álgebra II Experimental,473
-474,Historia Moderna I,474
-475,Cálculo Básica Práctica,475
-476,Óptica General,476
-477,Historia Antigua Fundamental,477
-478,Semántica III,478
-479,Lingüística General,479
-480,Patología I,480
-481,Análisis Computacional,481
-482,Anatomía General,482
-483,Redes Aplicada,483
-484,Cálculo,484
-485,Anatomía Básica,485
-486,Sistemas,486
-487,Geometría Fundamental,487
-488,Derecho Administrativo,488
-489,Estadística II,489
-490,Historia Antigua Especial,490
-491,Gramática,491
-492,Derecho Penal II Teórica,492
-493,Bioquímica,493
-494,Farmacología II,494
-495,Anatomía Fundamental,495
-496,Historia Contemporánea Práctica,496
-497,Microbiología Fundamental,497
-498,Microeconomía Fundamental,498
-499,Arqueología,499
-500,Literatura Especial,500
+138,Ecología Aplicada,138
+139,Derecho Penal Aplicada para Científicos,139
+140,Óptica,140
+141,Electromagnetismo III,141
+142,Sistemas General Práctica,142
+143,Microbiología I,143
+144,Programación,144
+145,Historia Contemporánea,145
+146,Electromagnetismo Básica,146
+147,Derecho Civil III,147
+148,Derecho Civil Básica,148
+149,Programación Básica,149
+150,Literatura III,150
+151,Análisis Especial,151
+152,Microeconomía,152
+153,Algoritmos II,153
+154,Lingüística Básica,154
+155,Analítica Especial,155
+156,Álgebra Básica Computacional,156
+157,Finanzas I,157
+158,Cálculo Aplicada,158
+159,Arqueología Computacional,159
+160,Microeconomía,160
+161,Historia Moderna Especial,161
+162,Derecho Penal,162
+163,Cálculo Experimental,163
+164,Farmacología,164
+165,Marketing,165
+166,Óptica General,166
+167,Historia Antigua,167
+168,Análisis Avanzada,168
+169,Marketing II Experimental,169
+170,Analítica General,170
+171,Cuántica I,171
+172,Cuántica III para Ingenieros,172
+173,Historia Moderna para Ingenieros,173
+174,Literatura Avanzada,174
+175,Redes II,175
+176,Historia Contemporánea I para Ingenieros,176
+177,Derecho Laboral,177
+178,Algoritmos Fundamental,178
+179,Literatura Aplicada,179
+180,Macroeconomía Aplicada Teórica,180
+181,Cirugía Especial,181
+182,Programación Aplicada,182
+183,Contabilidad II,183
+184,Cálculo General para Ingenieros,184
+185,Microbiología,185
+186,Derecho Penal Aplicada para Ingenieros,186
+187,Derecho Civil II Experimental,187
+188,Arqueología Especial,188
+189,Análisis General,189
+190,Farmacología III Práctica,190
+191,Fisiología General,191
+192,Cirugía General,192
+193,Derecho Mercantil Básica Experimental,193
+194,Contabilidad General,194
+195,Cirugía Computacional,195
+196,Literatura,196
+197,Genética III,197
+198,Semántica II,198
+199,Marketing General,199
+200,Gramática I,200
+201,Lingüística,201
+202,Cálculo Computacional,202
+203,Zoología Básica,203
+204,Fisicoquímica para Ingenieros,204
+205,Cirugía Fundamental Experimental,205
+206,Fisicoquímica Básica Práctica,206
+207,Geometría Aplicada Teórica,207
+208,Álgebra Especial,208
+209,Bioquímica Avanzada,209
+210,Bioquímica II para Científicos,210
+211,Cuántica,211
+212,Microbiología,212
+213,Botánica III para Ingenieros,213
+214,Termodinámica Básica Experimental,214
+215,Cirugía Aplicada Teórica,215
+216,Química Inorgánica III Experimental,216
+217,Semántica Avanzada,217
+218,Contabilidad Fundamental,218
+219,Arqueología I para Ingenieros,219
+220,Finanzas,220
+221,Fisiología Aplicada,221
+222,Derecho Civil Básica,222
+223,Análisis Fundamental,223
+224,Historia Contemporánea para Científicos,224
+225,Marketing,225
+226,Semántica,226
+227,Analítica General,227
+228,Bases de Datos para Ingenieros,228
+229,Programación Teórica,229
+230,Algoritmos General Experimental,230
+231,Historia Contemporánea II,231
+232,Lingüística I,232
+233,Sistemas Básica,233
+234,Anatomía Experimental,234
+235,Derecho Civil III,235
+236,Derecho Mercantil,236
+237,Genética Fundamental,237
+238,Mecánica,238
+239,Derecho Mercantil Avanzada,239
+240,Microeconomía Fundamental,240
+241,Electromagnetismo,241
+242,Zoología,242
+243,Anatomía Fundamental Experimental,243
+244,Lingüística,244
+245,Bases de Datos Aplicada,245
+246,Microeconomía Básica,246
+247,Anatomía Especial,247
+248,Marketing III,248
+249,Cirugía General,249
+250,Mecánica General Computacional,250
+251,Microeconomía Especial,251
+252,Historia Contemporánea Fundamental,252
+253,Bases de Datos Básica,253
+254,Cuántica Práctica,254
+255,Programación I Teórica,255
+256,Farmacología I,256
+257,Gramática Especial Práctica,257
+258,Termodinámica Básica para Científicos,258
+259,Arqueología Fundamental,259
+260,Cálculo III Teórica,260
+261,Óptica,261
+262,Fisiología Aplicada,262
+263,Cálculo Básica,263
+264,Microeconomía,264
+265,Finanzas I,265
+266,Estadística Práctica,266
+267,Genética General,267
+268,Derecho Administrativo II Teórica,268
+269,Ecología General,269
+270,Contabilidad I,270
+271,Literatura Fundamental,271
+272,Zoología,272
+273,Anatomía Aplicada,273
+274,Redes III,274
+275,Derecho Civil,275
+276,Fisiología,276
+277,Fisiología,277
+278,Cuántica I,278
+279,Botánica,279
+280,Historia Contemporánea Teórica,280
+281,Cuántica Fundamental,281
+282,Zoología Especial,282
+283,Cirugía,283
+284,Mecánica,284
+285,Fonética III,285
+286,Arqueología Fundamental Teórica,286
+287,Programación Fundamental,287
+288,Geometría I,288
+289,Fonética Experimental,289
+290,Marketing II Experimental,290
+291,Termodinámica II,291
+292,Microbiología Avanzada,292
+293,Álgebra I,293
+294,Derecho Penal Aplicada,294
+295,Bases de Datos Básica,295
+296,Fonética General,296
+297,Analítica III,297
+298,Marketing Básica,298
+299,Patología III,299
+300,Bases de Datos III,300
+301,Bases de Datos Fundamental Teórica,301
+302,Cálculo II,302
+303,Óptica II,303
+304,Zoología General,304
+305,Derecho Mercantil I,305
+306,Óptica Fundamental,306
+307,Zoología,307
+308,Literatura Aplicada,308
+309,Química Orgánica Básica,309
+310,Derecho Administrativo Avanzada,310
+311,Lingüística II,311
+312,Gramática Aplicada,312
+313,Contabilidad Experimental,313
+314,Derecho Mercantil,314
+315,Lingüística Aplicada,315
+316,Algoritmos Básica Práctica,316
+317,Historia Contemporánea Aplicada Experimental,317
+318,Arqueología Básica,318
+319,Redes Avanzada Computacional,319
+320,Derecho Administrativo Básica,320
+321,Bioquímica,321
+322,Macroeconomía Aplicada,322
+323,Microeconomía Avanzada,323
+324,Historia Medieval,324
+325,Zoología Teórica,325
+326,Microeconomía II,326
+327,Arqueología para Ingenieros,327
+328,Historia Moderna Básica,328
+329,Historia Medieval Básica Experimental,329
+330,Fisicoquímica,330
+331,Derecho Laboral Aplicada,331
+332,Derecho Penal Fundamental,332
+333,Historia Moderna Avanzada,333
+334,Derecho Mercantil,334
+335,Zoología Especial,335
+336,Patología Avanzada,336
+337,Derecho Administrativo Especial,337
+338,Cuántica,338
+339,Química Orgánica Fundamental Experimental,339
+340,Derecho Penal para Científicos,340
+341,Historia Antigua,341
+342,Semántica Básica Computacional,342
+343,Semántica,343
+344,Mecánica,344
+345,Redes Aplicada,345
+346,Semántica I,346
+347,Derecho Civil Avanzada,347
+348,Cirugía Básica,348
+349,Contabilidad Especial,349
+350,Redes III,350
+351,Termodinámica General,351
+352,Programación,352
+353,Contabilidad General,353
+354,Ecología Fundamental Experimental,354
+355,Derecho Penal,355
+356,Bioquímica II para Científicos,356
+357,Óptica,357
+358,Arqueología Teórica,358
+359,Programación,359
+360,Derecho Administrativo Experimental,360
+361,Electromagnetismo I,361
+362,Contabilidad Fundamental,362
+363,Microbiología Fundamental para Científicos,363
+364,Cirugía General Teórica,364
+365,Gramática Avanzada,365
+366,Redes III,366
+367,Botánica para Científicos,367
+368,Contabilidad Especial,368
+369,Historia Moderna,369
+370,Microbiología,370
+371,Microeconomía General,371
+372,Química Inorgánica General,372
+373,Bioquímica,373
+374,Semántica Básica,374
+375,Gramática III para Científicos,375
+376,Botánica Básica,376
+377,Farmacología,377
+378,Análisis Computacional,378
+379,Zoología Avanzada para Ingenieros,379
+380,Mecánica Básica,380
+381,Historia Moderna Aplicada para Ingenieros,381
+382,Mecánica,382
+383,Fonética Computacional,383
+384,Derecho Civil para Científicos,384
+385,Derecho Laboral para Científicos,385
+386,Historia Antigua Especial Experimental,386
+387,Genética Práctica,387
+388,Semántica,388
+389,Zoología Avanzada,389
+390,Bases de Datos III,390
+391,Microbiología para Ingenieros,391
+392,Análisis III,392
+393,Macroeconomía,393
+394,Patología I para Ingenieros,394
+395,Microeconomía III Experimental,395
+396,Bioquímica Aplicada Experimental,396
+397,Química Orgánica III,397
+398,Botánica Básica,398
+399,Fonética,399
+400,Contabilidad Fundamental,400
+401,Mecánica Básica,401
+402,Gramática Fundamental Experimental,402
+403,Mecánica Avanzada,403
+404,Macroeconomía General,404
+405,Fisicoquímica III Teórica,405
+406,Genética II,406
+407,Lingüística para Científicos,407
+408,Cálculo,408
+409,Análisis Especial,409
+410,Semántica Aplicada,410
+411,Fisicoquímica Avanzada,411
+412,Historia Antigua Aplicada,412
+413,Fonética I Teórica,413
+414,Microbiología,414
+415,Botánica II para Ingenieros,415
+416,Fisicoquímica Avanzada,416
+417,Fisiología II,417
+418,Patología General para Ingenieros,418
+419,Electromagnetismo III,419
+420,Semántica Aplicada,420
+421,Gramática General,421
+422,Marketing,422
+423,Derecho Mercantil Especial,423
+424,Historia Contemporánea,424
+425,Microbiología,425
+426,Botánica Aplicada,426
+427,Estadística III,427
+428,Programación Básica,428
+429,Marketing,429
+430,Botánica Avanzada,430
+431,Sistemas II,431
+432,Patología Experimental,432
+433,Programación General,433
+434,Derecho Civil I,434
+435,Derecho Civil Fundamental,435
+436,Fisiología III,436
+437,Geometría Fundamental para Ingenieros,437
+438,Analítica,438
+439,Termodinámica,439
+440,Análisis Fundamental,440
+441,Derecho Penal Avanzada,441
+442,Historia Contemporánea Fundamental,442
+443,Química Inorgánica Computacional,443
+444,Anatomía,444
+445,Contabilidad,445
+446,Estadística,446
+447,Arqueología,447
+448,Química Inorgánica II,448
+449,Programación,449
+450,Termodinámica,450
+451,Sistemas Avanzada,451
+452,Literatura,452
+453,Microbiología III Práctica,453
+454,Geometría I,454
+455,Zoología,455
+456,Patología,456
+457,Álgebra Aplicada,457
+458,Programación Experimental,458
+459,Analítica Aplicada Experimental,459
+460,Cirugía,460
+461,Arqueología Avanzada,461
+462,Gramática III,462
+463,Estadística Básica,463
+464,Fisicoquímica,464
+465,Ecología I Teórica,465
+466,Zoología Práctica,466
+467,Mecánica Avanzada,467
+468,Derecho Penal Básica,468
+469,Patología III,469
+470,Cirugía III,470
+471,Microbiología III,471
+472,Fisiología II,472
+473,Termodinámica I,473
+474,Finanzas Básica,474
+475,Electromagnetismo,475
+476,Cirugía,476
+477,Fisicoquímica,477
+478,Macroeconomía Fundamental,478
+479,Farmacología General,479
+480,Historia Contemporánea,480
+481,Geometría Básica,481
+482,Derecho Penal Avanzada para Ingenieros,482
+483,Óptica Aplicada,483
+484,Historia Medieval General Práctica,484
+485,Finanzas Fundamental Teórica,485
+486,Análisis,486
+487,Cálculo I,487
+488,Fonética I,488
+489,Bioquímica Básica Experimental,489
+490,Óptica Práctica,490
+491,Literatura II,491
+492,Lingüística,492
+493,Literatura I,493
+494,Óptica Avanzada Experimental,494
+495,Sistemas III,495
+496,Programación,496
+497,Macroeconomía Fundamental,497
+498,Fisiología III,498
+499,Marketing III para Científicos,499
+500,Mecánica Especial,500

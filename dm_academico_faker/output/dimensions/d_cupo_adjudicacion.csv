@@ -1,7 +1,7 @@
 ID_CUPO_ADJUDICACION,NOMBRE_CUPO_ADJUDICACION,FECHA_CARGA,ID_CUPO_ADJUDICACION_NK
-1,Cupo general,2021-04-18,GRAL
-2,Mayores de 25 años,2023-03-14,M25A
-3,Mayores de 40 años,2021-05-15,M40A
-4,Mayores de 45 años,2021-02-15,M45A
-5,Discapacidad,2020-01-21,DISC
-6,Deportistas alto nivel,2020-02-25,DALT
+1,Cupo general,2021-06-30,GRAL
+2,Mayores de 25 años,2023-12-08,M25A
+3,Mayores de 40 años,2023-10-31,M40A
+4,Mayores de 45 años,2023-08-20,M45A
+5,Discapacidad,2020-05-26,DISC
+6,Deportistas alto nivel,2023-06-01,DALT

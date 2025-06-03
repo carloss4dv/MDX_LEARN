@@ -1,51 +1,51 @@
 ID_ESTUDIO_OTRA_UNIVERSIDAD,NOMBRE_ESTUDIO_OTRA_UNIVERSIDA,ID_ESTUDIO_OTRA_UNIV_DESCR,ID_ESTUDIO_OTRA_UNIVERSIDAD_NK
-1,Laurea in Computer Science,100,EXT001B
-2,Diploma in Business Administration,200,EXT002E
-3,Laurea in Humanities,300,EXT003B
-4,Máster en Psychology,400,EXT004C
-5,Licenciatura en Law,500,EXT005D
-6,Licenciatura en Humanities,600,EXT006B
-7,Doktor der Biology,700,EXT007C
-8,Bachelor of Economics,800,EXT008C
-9,Grado en Philosophy,900,EXT009D
-10,Master in Arts,1000,EXT010B
-11,Máster en Architecture,1100,EXT011B
-12,Licenciatura en Linguistics,1200,EXT012A
-13,Licenciatura en Business Administration,1300,EXT013E
-14,Diploma in Philosophy,1400,EXT014C
-15,Bachelor of Biology,1500,EXT015A
-16,Laurea in Psychology,1600,EXT016A
-17,Licenciatura en Humanities,1700,EXT017B
-18,Licenciatura en Law,1800,EXT018A
-19,Bachelor of History,1900,EXT019E
-20,Licenciatura en Business Administration,2000,EXT020E
-21,Laurea in Chemistry,2100,EXT021D
-22,Master in Medicine,2200,EXT022B
-23,Licenciatura en Chemistry,2300,EXT023B
-24,Doktor der Business Administration,2400,EXT024C
-25,Master in History,2500,EXT025D
-26,Licenciatura en Economics,2600,EXT026D
-27,Laurea in Mathematics,2700,EXT027D
-28,Diploma in Medicine,2800,EXT028D
-29,Mestrado em Chemistry,2900,EXT029E
-30,Doktor der Chemistry,3000,EXT030B
-31,Mestrado em Arts,3100,EXT031D
-32,Diploma in Science,3200,EXT032C
-33,Doktor der Linguistics,3300,EXT033B
-34,Licence en Medicine,3400,EXT034C
-35,Diploma in Biology,3500,EXT035C
-36,Mestrado em Computer Science,3600,EXT036D
-37,Licence en Political Science,3700,EXT037D
-38,Laurea in Architecture,3800,EXT038B
-39,Mestrado em Engineering,3900,EXT039B
-40,Licenciatura en Arts,4000,EXT040A
-41,Licence en Mathematics,4100,EXT041D
-42,Diploma in Chemistry,4200,EXT042D
-43,Máster en Physics,4300,EXT043D
-44,Master in History,4400,EXT044A
-45,Diploma in Humanities,4500,EXT045A
-46,Diploma in History,4600,EXT046B
-47,Licenciatura en Chemistry,4700,EXT047C
-48,Máster en Philosophy,4800,EXT048D
-49,Máster en Humanities,4900,EXT049D
-50,Diploma in Business Administration,5000,EXT050B
+1,Laurea in Engineering,100,EXT001D
+2,Master in Computer Science,200,EXT002B
+3,Master in Political Science,300,EXT003B
+4,Diploma in Business Administration,400,EXT004A
+5,Bachelor of Engineering,500,EXT005A
+6,Licenciatura en Computer Science,600,EXT006D
+7,Mestrado em Linguistics,700,EXT007D
+8,Diploma in Humanities,800,EXT008B
+9,Bachelor of Economics,900,EXT009B
+10,Grado en Economics,1000,EXT010C
+11,Licence en Medicine,1100,EXT011A
+12,Mestrado em Arts,1200,EXT012A
+13,Laurea in Architecture,1300,EXT013E
+14,Master in Science,1400,EXT014D
+15,Máster en Science,1500,EXT015D
+16,Bachelor of Business Administration,1600,EXT016A
+17,Doktor der Philosophy,1700,EXT017A
+18,Licence en History,1800,EXT018E
+19,Master in Psychology,1900,EXT019A
+20,Licenciatura en Political Science,2000,EXT020A
+21,Máster en Architecture,2100,EXT021E
+22,Diploma in Business Administration,2200,EXT022D
+23,Licenciatura en Law,2300,EXT023A
+24,Bachelor of Engineering,2400,EXT024C
+25,Mestrado em Chemistry,2500,EXT025C
+26,Doktor der Humanities,2600,EXT026D
+27,Licence en Mathematics,2700,EXT027A
+28,Máster en Linguistics,2800,EXT028D
+29,Mestrado em Business Administration,2900,EXT029C
+30,Bachelor of Mathematics,3000,EXT030D
+31,Máster en Computer Science,3100,EXT031A
+32,Doktor der Humanities,3200,EXT032A
+33,Licenciatura en Economics,3300,EXT033E
+34,Diploma in Computer Science,3400,EXT034C
+35,Laurea in Linguistics,3500,EXT035B
+36,Mestrado em Physics,3600,EXT036A
+37,Diploma in Economics,3700,EXT037C
+38,Laurea in Business Administration,3800,EXT038C
+39,Licenciatura en Medicine,3900,EXT039D
+40,Máster en Chemistry,4000,EXT040A
+41,Master in Science,4100,EXT041D
+42,Mestrado em Chemistry,4200,EXT042C
+43,Diploma in Social Sciences,4300,EXT043B
+44,Master in Philosophy,4400,EXT044A
+45,Máster en Chemistry,4500,EXT045E
+46,Licence en Architecture,4600,EXT046D
+47,Grado en Humanities,4700,EXT047B
+48,Mestrado em Law,4800,EXT048A
+49,Diploma in Engineering,4900,EXT049C
+50,Máster en History,5000,EXT050A

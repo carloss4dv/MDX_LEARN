@@ -1,6 +1,6 @@
-ID_MODALIDAD_PLAN_ESTUDIO,NOMBRE_MODALIDAD_PLAN,ID_MODALIDAD_PLAN_ESTUDIO_NK,DESCRIPCION_MODALIDAD,ORDEN_VISUALIZACION,FECHA_CARGA,ES_PRESENCIAL,SN_PRESENCIAL,ES_VIRTUAL,SN_VIRTUAL
-1,Presencial,PRE,Modalidad con asistencia física obligatoria,1,2021-11-23,1,S,0,N
-2,Semipresencial,SEM,Modalidad mixta presencial y virtual,2,2020-02-25,1,S,1,S
-3,Virtual,VIR,Modalidad completamente virtual,3,2023-04-06,0,N,1,S
-4,A distancia,DIS,Modalidad sin presencialidad ni sincronía,4,2023-01-18,0,N,0,N
-5,Híbrida,HYB,Modalidad con elección de formato,5,2021-02-15,1,S,1,S
+ID_MODALIDAD_PLAN_ESTUDIO,NOMBRE_MODALIDAD_PLAN,ID_MODALIDAD_PLAN_ESTUDIO_NK
+1,Presencial,PRE
+2,Semipresencial,SEM
+3,Virtual,VIR
+4,A distancia,DIS
+5,Híbrida,HYB

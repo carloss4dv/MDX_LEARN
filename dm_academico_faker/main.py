@@ -7,7 +7,6 @@ from generators.dimension_generators import (
     generate_d_curso_academico,
     generate_d_curso_cohorte,
     generate_d_tipo_estudio,
-    generate_d_rama_conocimiento,
     generate_d_calificacion,
     generate_d_convocatoria,
     generate_d_tipo_acceso,
@@ -31,7 +30,6 @@ from generators.dimension_generators import (
     generate_d_rango_nota_egracons,
     generate_d_estudio_previo,
     generate_d_nacionalidad,
-    generate_d_dedicacion_alumno,
     generate_d_categoria_cuerpo_pdi,
     generate_d_tipo_asignatura,
     generate_d_tipo_centro,
@@ -76,14 +74,11 @@ from generators.dimension_generators import (
     generate_d_estudio_propio,
     generate_d_rango_credito_movilidad,
     generate_d_convocatoria_preinscripcion,
-    generate_d_estado_credencial_acceso,
     generate_d_territorio,
     generate_d_nivel_idioma,
     generate_d_situacion_administrativa,
     generate_d_tipo_contrato,
-    generate_d_modalidad_asignatura,
     generate_d_periodo_lectivo,
-    generate_d_area_conocimiento
 )
 from generators.fact_generators import (
     generate_f_matricula,
@@ -164,9 +159,6 @@ def main():
     d_tipo_estudio = generate_d_tipo_estudio()
     save_dataframe(d_tipo_estudio, 'd_tipo_estudio')
     
-    d_rama_conocimiento = generate_d_rama_conocimiento()
-    save_dataframe(d_rama_conocimiento, 'd_rama_conocimiento')
-    
     d_calificacion = generate_d_calificacion()
     save_dataframe(d_calificacion, 'd_calificacion')
     
@@ -239,9 +231,6 @@ def main():
     d_dedicacion_profesor = generate_d_dedicacion_profesor()
     save_dataframe(d_dedicacion_profesor, 'd_dedicacion_profesor')
     
-    d_dedicacion_alumno = generate_d_dedicacion_alumno()
-    save_dataframe(d_dedicacion_alumno, 'd_dedicacion_alumno')
-    
     d_categoria_cuerpo_pdi = generate_d_categoria_cuerpo_pdi()
     save_dataframe(d_categoria_cuerpo_pdi, 'd_categoria_cuerpo_pdi')
     
@@ -304,10 +293,6 @@ def main():
     save_dataframe(d_estado_solicitud_doctorado, 'd_estado_solicitud_doctorado')
     
     # Nuevas dimensiones básicas (2023)
-    d_estado_credencial_acceso = generate_d_estado_credencial_acceso()
-    save_dataframe(d_estado_credencial_acceso, 'd_estado_credencial_acceso')
-    
-    # Generar las tablas que faltaban según las trazas
     d_nivel_idioma = generate_d_nivel_idioma()
     save_dataframe(d_nivel_idioma, 'd_nivel_idioma')
     
@@ -318,14 +303,8 @@ def main():
     save_dataframe(d_tipo_contrato, 'd_tipo_contrato')
     
     # Nuevas dimensiones implementadas (2024)
-    d_modalidad_asignatura = generate_d_modalidad_asignatura()
-    save_dataframe(d_modalidad_asignatura, 'd_modalidad_asignatura')
-    
     d_periodo_lectivo = generate_d_periodo_lectivo()
     save_dataframe(d_periodo_lectivo, 'd_periodo_lectivo')
-    
-    d_area_conocimiento = generate_d_area_conocimiento()
-    save_dataframe(d_area_conocimiento, 'd_area_conocimiento')
     
     # Dimensiones con dependencias
     d_poblacion = generate_d_poblacion(n=500, paises_df=d_pais)
@@ -364,7 +343,7 @@ def main():
     d_centro_estudio = generate_d_centro_estudio(n=100, universidad_df=d_universidad, centro_df=d_centro, plan_estudio_df=d_plan_estudio)
     save_dataframe(d_centro_estudio, 'd_centro_estudio')
     
-    d_estudio_jerarq = generate_d_estudio_jerarq(n=100, plan_estudio_df=d_plan_estudio, estudio_df=d_estudio, tipo_estudio_df=d_tipo_estudio, rama_conocimiento_df=d_rama_conocimiento)
+    d_estudio_jerarq = generate_d_estudio_jerarq(n=100, plan_estudio_df=d_plan_estudio, estudio_df=d_estudio, tipo_estudio_df=d_tipo_estudio, rama_conocimiento_df=d_rama_macroarea)
     save_dataframe(d_estudio_jerarq, 'd_estudio_jerarq')
     
     d_estudio_destino = generate_d_estudio_destino(n=50)
@@ -401,8 +380,6 @@ def main():
     d_convocatoria_preinscripcion = generate_d_convocatoria_preinscripcion(n=5, convocatoria_df=d_convocatoria)
     save_dataframe(d_convocatoria_preinscripcion, 'd_convocatoria_preinscripcion')
     
-    d_territorio = generate_d_territorio(n=100, paises_df=d_pais)
-    save_dataframe(d_territorio, 'd_territorio')
     
     # Generar tablas de hechos
     print("\nGenerando tablas de hechos...")
@@ -415,7 +392,6 @@ def main():
         'd_curso_academico': d_curso_academico,
         'd_curso_cohorte': d_curso_cohorte,
         'd_tipo_estudio': d_tipo_estudio,
-        'd_rama_conocimiento': d_rama_conocimiento,
         'd_calificacion': d_calificacion,
         'd_convocatoria': d_convocatoria,
         'd_tipo_acceso': d_tipo_acceso,
@@ -443,7 +419,6 @@ def main():
         'd_edad_est': d_edad_est,
         'd_dedicacion': d_dedicacion,
         'd_dedicacion_profesor': d_dedicacion_profesor,
-        'd_dedicacion_alumno': d_dedicacion_alumno,
         'd_categoria_cuerpo_pdi': d_categoria_cuerpo_pdi,
         'd_tipo_asignatura': d_tipo_asignatura,
         'd_tipo_centro': d_tipo_centro,
@@ -471,6 +446,7 @@ def main():
         'd_acuerdo_bilateral': d_acuerdo_bilateral,
         'd_proyecto_investigacion': d_proyecto_investigacion,
         'd_rama_macroarea': d_rama_macroarea,
+        'd_rama_conocimiento': d_rama_macroarea,
         'd_detalle_cupo_general': d_detalle_cupo_general,
         'd_clase_liquidacion': d_clase_liquidacion,
         'd_estudio_propio_tipo': d_estudio_propio_tipo,
@@ -483,14 +459,10 @@ def main():
         'd_estudio_propio': d_estudio_propio,
         'd_rango_credito_movilidad': d_rango_credito_movilidad,
         'd_convocatoria_preinscripcion': d_convocatoria_preinscripcion,
-        'd_estado_credencial_acceso': d_estado_credencial_acceso,
         'd_nivel_idioma': d_nivel_idioma,
         'd_situacion_administrativa': d_situacion_administrativa,
         'd_tipo_contrato': d_tipo_contrato,
-        'd_territorio': d_territorio,
-        'd_modalidad_asignatura': d_modalidad_asignatura,
-        'd_periodo_lectivo': d_periodo_lectivo,
-        'd_area_conocimiento': d_area_conocimiento
+        'd_periodo_lectivo': d_periodo_lectivo
     }
     
     # Generar F_MATRICULA con un número reducido para pruebas
@@ -644,7 +616,6 @@ if __name__ == "__main__":
 # - D_POBLACION_CENTRO (2 atributos)
 # - D_PROGRAMA_MOVILIDAD (7 atributos)
 # - D_PROYECTO_INVESTIGACION (2 atributos)
-# - D_RAMA_CONOCIMIENTO (1 atributo)
 # - D_RAMA_MACROAREA (5 atributos)
 # - D_RANGO_CREDITO (4 atributos)
 # - D_RANGO_CREDITO_MOVILIDAD (3 atributos)
@@ -658,7 +629,6 @@ if __name__ == "__main__":
 # - D_TIPO_ABANDONO (3 atributos)
 # - D_TIPO_ACCESO (3 atributos)
 # - D_TIPO_ACCESO_PREINSCRIPCION (3 atributos)
-# - D_TIPO_ASIGNATURA (4 atributos)
 # - D_TIPO_CENTRO (3 atributos)
 # - D_TIPO_DOCENCIA (3 atributos)
 # - D_TIPO_EGRESO (3 atributos)

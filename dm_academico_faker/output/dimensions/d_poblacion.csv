@@ -1,501 +1,501 @@
 ID_POBLACION,NOMBRE_POBLACION,ID_PROVINCIA,NOMBRE_PROVINCIA,ID_CCAA,NOMBRE_CCAA,ID_PAIS,NOMBRE_PAIS,FECHA_CARGA
-1,Jaén,1632,Álava,1070,País Vasco,8,España,2021-11-22
-2,Badajoz,1632,Álava,1070,País Vasco,8,España,2022-04-24
-3,Jaén,1632,Álava,1070,País Vasco,8,España,2020-07-04
-4,Ourense,1632,Álava,1070,País Vasco,8,España,2020-08-06
-5,Tarragona,1710,Albacete,1306,Castilla-La Mancha,8,España,2020-01-11
-6,Albacete,1710,Albacete,1306,Castilla-La Mancha,8,España,2020-05-12
-7,Cuenca,1710,Albacete,1306,Castilla-La Mancha,8,España,2022-07-05
-8,Ourense,1710,Albacete,1306,Castilla-La Mancha,8,España,2021-09-14
-9,Pontevedra,1579,Alicante,1698,Comunidad Valenciana,8,España,2021-03-06
-10,Girona,1579,Alicante,1698,Comunidad Valenciana,8,España,2020-10-28
-11,Pontevedra,1579,Alicante,1698,Comunidad Valenciana,8,España,2023-10-22
-12,Ceuta,1579,Alicante,1698,Comunidad Valenciana,8,España,2021-08-30
-13,Salamanca,1597,Almería,1146,Andalucía,8,España,2021-08-21
-14,Soria,1597,Almería,1146,Andalucía,8,España,2022-08-09
-15,Santa Cruz de Tenerife,1597,Almería,1146,Andalucía,8,España,2020-08-29
-16,Santa Cruz de Tenerife,1597,Almería,1146,Andalucía,8,España,2022-11-18
-17,Granada,1161,Asturias,1075,Principado de Asturias,8,España,2023-06-19
-18,Alicante,1161,Asturias,1075,Principado de Asturias,8,España,2022-11-14
-19,Toledo,1161,Asturias,1075,Principado de Asturias,8,España,2022-08-28
-20,Ávila,1161,Asturias,1075,Principado de Asturias,8,España,2022-04-13
-21,Guadalajara,1873,Ávila,1494,Castilla y León,8,España,2020-04-13
-22,Cádiz,1873,Ávila,1494,Castilla y León,8,España,2022-10-10
-23,Barcelona,1873,Ávila,1494,Castilla y León,8,España,2022-01-27
-24,Melilla,1873,Ávila,1494,Castilla y León,8,España,2023-05-01
-25,Cáceres,1579,Badajoz,1885,Extremadura,8,España,2020-10-24
-26,Lugo,1579,Badajoz,1885,Extremadura,8,España,2023-05-25
-27,Valencia,1579,Badajoz,1885,Extremadura,8,España,2021-10-26
-28,Zaragoza,1579,Badajoz,1885,Extremadura,8,España,2022-04-21
-29,Lleida,1194,Barcelona,1635,Cataluña,8,España,2022-11-25
-30,Burgos,1194,Barcelona,1635,Cataluña,8,España,2021-11-04
-31,Soria,1194,Barcelona,1635,Cataluña,8,España,2020-05-26
-32,Zaragoza,1194,Barcelona,1635,Cataluña,8,España,2023-01-19
-33,Ávila,1373,Burgos,1749,Castilla y León,8,España,2021-02-10
-34,Álava,1373,Burgos,1749,Castilla y León,8,España,2022-12-14
-35,Murcia,1373,Burgos,1749,Castilla y León,8,España,2021-04-05
-36,Lleida,1373,Burgos,1749,Castilla y León,8,España,2022-09-17
-37,Soria,1935,Cáceres,1279,Extremadura,8,España,2021-05-30
-38,Palencia,1935,Cáceres,1279,Extremadura,8,España,2023-05-24
-39,Santa Cruz de Tenerife,1935,Cáceres,1279,Extremadura,8,España,2022-02-15
-40,Badajoz,1935,Cáceres,1279,Extremadura,8,España,2020-03-25
-41,Lugo,1989,Cádiz,1231,Andalucía,8,España,2023-09-12
-42,Salamanca,1989,Cádiz,1231,Andalucía,8,España,2020-07-01
-43,Salamanca,1989,Cádiz,1231,Andalucía,8,España,2022-09-04
-44,Segovia,1989,Cádiz,1231,Andalucía,8,España,2023-06-22
-45,Santa Cruz de Tenerife,1766,Cantabria,1688,Cantabria,8,España,2022-10-13
-46,Tarragona,1766,Cantabria,1688,Cantabria,8,España,2022-02-22
-47,Segovia,1766,Cantabria,1688,Cantabria,8,España,2021-08-01
-48,Baleares,1766,Cantabria,1688,Cantabria,8,España,2022-10-08
-49,Alicante,1663,Castellón,1064,Comunidad Valenciana,8,España,2023-12-10
-50,Granada,1663,Castellón,1064,Comunidad Valenciana,8,España,2023-02-05
-51,Baleares,1663,Castellón,1064,Comunidad Valenciana,8,España,2020-01-10
-52,Ciudad,1663,Castellón,1064,Comunidad Valenciana,8,España,2023-02-04
-53,Jaén,1240,Ciudad Real,1908,Castilla-La Mancha,8,España,2021-07-15
-54,Huesca,1240,Ciudad Real,1908,Castilla-La Mancha,8,España,2022-11-24
-55,Palencia,1240,Ciudad Real,1908,Castilla-La Mancha,8,España,2023-10-24
-56,La Rioja,1240,Ciudad Real,1908,Castilla-La Mancha,8,España,2021-07-21
-57,Madrid,1101,Córdoba,1853,Andalucía,8,España,2023-10-14
-58,Cuenca,1101,Córdoba,1853,Andalucía,8,España,2022-01-23
-59,Tarragona,1101,Córdoba,1853,Andalucía,8,España,2022-04-15
-60,Castellón,1101,Córdoba,1853,Andalucía,8,España,2023-04-28
-61,León,1371,Cuenca,1101,Castilla-La Mancha,8,España,2022-09-29
-62,Huesca,1371,Cuenca,1101,Castilla-La Mancha,8,España,2022-01-13
-63,Soria,1371,Cuenca,1101,Castilla-La Mancha,8,España,2022-04-04
-64,Murcia,1371,Cuenca,1101,Castilla-La Mancha,8,España,2023-02-22
-65,Almería,1217,Gerona,1657,Cataluña,8,España,2020-01-26
-66,Cuenca,1217,Gerona,1657,Cataluña,8,España,2022-04-05
-67,Baleares,1217,Gerona,1657,Cataluña,8,España,2021-02-27
-68,Ávila,1217,Gerona,1657,Cataluña,8,España,2021-10-07
-69,Segovia,1832,Granada,1890,Andalucía,8,España,2021-06-25
-70,Almería,1832,Granada,1890,Andalucía,8,España,2021-10-01
-71,Ciudad,1832,Granada,1890,Andalucía,8,España,2022-03-05
-72,Zamora,1832,Granada,1890,Andalucía,8,España,2022-03-04
-73,Asturias,1676,Guadalajara,1887,Castilla-La Mancha,8,España,2020-03-01
-74,Palencia,1676,Guadalajara,1887,Castilla-La Mancha,8,España,2022-04-19
-75,Ceuta,1676,Guadalajara,1887,Castilla-La Mancha,8,España,2022-01-06
-76,Vizcaya,1676,Guadalajara,1887,Castilla-La Mancha,8,España,2022-01-05
-77,Zamora,1759,Guipúzcoa,1431,País Vasco,8,España,2020-12-03
-78,Cuenca,1759,Guipúzcoa,1431,País Vasco,8,España,2023-08-25
-79,Barcelona,1759,Guipúzcoa,1431,País Vasco,8,España,2022-09-19
-80,Zaragoza,1759,Guipúzcoa,1431,País Vasco,8,España,2020-08-17
-81,Baleares,1226,Huelva,1968,Andalucía,8,España,2020-12-26
-82,Barcelona,1226,Huelva,1968,Andalucía,8,España,2022-08-21
-83,Huelva,1226,Huelva,1968,Andalucía,8,España,2020-01-16
-84,Palencia,1226,Huelva,1968,Andalucía,8,España,2023-07-22
-85,Albacete,1110,Huesca,1502,Aragón,8,España,2023-02-03
-86,Córdoba,1110,Huesca,1502,Aragón,8,España,2022-10-05
-87,Barcelona,1110,Huesca,1502,Aragón,8,España,2020-03-09
-88,Melilla,1110,Huesca,1502,Aragón,8,España,2022-07-20
-89,Valencia,1543,Islas Baleares,1301,Islas Baleares,8,España,2023-09-20
-90,Lugo,1543,Islas Baleares,1301,Islas Baleares,8,España,2023-02-26
-91,Vizcaya,1543,Islas Baleares,1301,Islas Baleares,8,España,2020-11-21
-92,Málaga,1543,Islas Baleares,1301,Islas Baleares,8,España,2021-07-15
-93,León,1909,Jaén,1233,Andalucía,8,España,2023-06-27
-94,Salamanca,1909,Jaén,1233,Andalucía,8,España,2023-07-14
-95,Toledo,1909,Jaén,1233,Andalucía,8,España,2020-06-14
-96,Lleida,1909,Jaén,1233,Andalucía,8,España,2022-11-09
-97,Almería,1383,La Coruña,1976,Galicia,8,España,2021-11-30
-98,La Coruña,1383,La Coruña,1976,Galicia,8,España,2023-02-03
-99,Soria,1383,La Coruña,1976,Galicia,8,España,2020-02-14
-100,Madrid,1383,La Coruña,1976,Galicia,8,España,2020-12-24
-101,Asturias,1381,La Rioja,1831,La Rioja,8,España,2021-09-02
-102,Guadalajara,1381,La Rioja,1831,La Rioja,8,España,2022-11-04
-103,Asturias,1381,La Rioja,1831,La Rioja,8,España,2023-06-28
-104,Cuenca,1381,La Rioja,1831,La Rioja,8,España,2023-12-02
-105,Jaén,1991,Las Palmas,1294,Canarias,8,España,2022-06-04
-106,Lleida,1991,Las Palmas,1294,Canarias,8,España,2021-03-22
-107,Badajoz,1991,Las Palmas,1294,Canarias,8,España,2023-04-28
-108,Segovia,1991,Las Palmas,1294,Canarias,8,España,2020-06-28
-109,Las Palmas,1569,León,1376,Castilla y León,8,España,2020-05-19
-110,Ceuta,1569,León,1376,Castilla y León,8,España,2021-07-28
-111,Guipúzcoa,1569,León,1376,Castilla y León,8,España,2020-10-30
-112,La Coruña,1569,León,1376,Castilla y León,8,España,2022-01-06
-113,Toledo,1279,Lérida,1719,Cataluña,8,España,2022-06-12
-114,Guadalajara,1279,Lérida,1719,Cataluña,8,España,2020-03-28
-115,Guadalajara,1279,Lérida,1719,Cataluña,8,España,2021-10-22
-116,Huesca,1279,Lérida,1719,Cataluña,8,España,2023-02-05
-117,Soria,1758,Lugo,1648,Galicia,8,España,2020-02-24
-118,Asturias,1758,Lugo,1648,Galicia,8,España,2021-07-14
-119,Ávila,1758,Lugo,1648,Galicia,8,España,2023-06-06
-120,Las Palmas,1758,Lugo,1648,Galicia,8,España,2022-05-24
-121,Valencia,1332,Madrid,1795,Comunidad de Madrid,8,España,2020-01-05
-122,Zaragoza,1332,Madrid,1795,Comunidad de Madrid,8,España,2021-10-02
-123,Navarra,1332,Madrid,1795,Comunidad de Madrid,8,España,2020-05-15
-124,Palencia,1332,Madrid,1795,Comunidad de Madrid,8,España,2023-08-20
-125,Sevilla,1452,Málaga,1424,Andalucía,8,España,2022-04-25
-126,La Rioja,1452,Málaga,1424,Andalucía,8,España,2020-06-14
-127,Sevilla,1452,Málaga,1424,Andalucía,8,España,2020-05-22
-128,Toledo,1452,Málaga,1424,Andalucía,8,España,2023-09-22
-129,Girona,1315,Murcia,1046,Región de Murcia,8,España,2021-07-20
-130,Huelva,1315,Murcia,1046,Región de Murcia,8,España,2020-01-07
-131,Ourense,1315,Murcia,1046,Región de Murcia,8,España,2022-04-25
-132,Burgos,1315,Murcia,1046,Región de Murcia,8,España,2021-05-10
-133,Ceuta,1335,Navarra,1122,Comunidad Foral de Navarra,8,España,2020-08-24
-134,Huelva,1335,Navarra,1122,Comunidad Foral de Navarra,8,España,2023-03-05
-135,Baleares,1335,Navarra,1122,Comunidad Foral de Navarra,8,España,2023-09-23
-136,Ourense,1335,Navarra,1122,Comunidad Foral de Navarra,8,España,2021-09-18
-137,Zaragoza,1853,Orense,1684,Galicia,8,España,2022-02-13
-138,Navarra,1853,Orense,1684,Galicia,8,España,2020-07-01
-139,Pontevedra,1853,Orense,1684,Galicia,8,España,2023-02-28
-140,Albacete,1853,Orense,1684,Galicia,8,España,2022-10-14
-141,Cuenca,1587,Palencia,1414,Castilla y León,8,España,2023-05-04
-142,Guipúzcoa,1587,Palencia,1414,Castilla y León,8,España,2023-01-31
-143,Álava,1587,Palencia,1414,Castilla y León,8,España,2022-03-26
-144,Burgos,1587,Palencia,1414,Castilla y León,8,España,2023-12-30
-145,Asturias,1370,Pontevedra,1090,Galicia,8,España,2023-02-08
-146,Valencia,1370,Pontevedra,1090,Galicia,8,España,2023-10-13
-147,Ávila,1370,Pontevedra,1090,Galicia,8,España,2020-07-28
-148,Jaén,1370,Pontevedra,1090,Galicia,8,España,2022-12-11
-149,Lleida,1226,Salamanca,1341,Castilla y León,8,España,2021-02-17
-150,Cáceres,1226,Salamanca,1341,Castilla y León,8,España,2020-09-17
-151,Granada,1226,Salamanca,1341,Castilla y León,8,España,2021-06-12
-152,Vizcaya,1226,Salamanca,1341,Castilla y León,8,España,2021-04-04
-153,Almería,1149,Santa Cruz de Tenerife,1262,Canarias,8,España,2021-03-20
-154,Cáceres,1149,Santa Cruz de Tenerife,1262,Canarias,8,España,2021-11-03
-155,Soria,1149,Santa Cruz de Tenerife,1262,Canarias,8,España,2021-11-16
-156,Cuenca,1149,Santa Cruz de Tenerife,1262,Canarias,8,España,2023-10-25
-157,Sevilla,1593,Segovia,1459,Castilla y León,8,España,2022-11-11
-158,Madrid,1593,Segovia,1459,Castilla y León,8,España,2021-08-03
-159,La Rioja,1593,Segovia,1459,Castilla y León,8,España,2023-08-21
-160,Castellón,1593,Segovia,1459,Castilla y León,8,España,2022-05-19
-161,Huelva,1057,Sevilla,1360,Andalucía,8,España,2020-05-15
-162,Baleares,1057,Sevilla,1360,Andalucía,8,España,2023-01-02
-163,Soria,1057,Sevilla,1360,Andalucía,8,España,2022-05-03
-164,Melilla,1057,Sevilla,1360,Andalucía,8,España,2020-10-20
-165,Alicante,1519,Soria,1393,Castilla y León,8,España,2023-10-18
-166,La Coruña,1519,Soria,1393,Castilla y León,8,España,2020-08-30
-167,Álava,1519,Soria,1393,Castilla y León,8,España,2021-06-20
-168,Granada,1519,Soria,1393,Castilla y León,8,España,2023-09-05
-169,Vizcaya,1980,Tarragona,1063,Cataluña,8,España,2023-02-26
-170,Valladolid,1980,Tarragona,1063,Cataluña,8,España,2022-12-03
-171,Girona,1980,Tarragona,1063,Cataluña,8,España,2021-01-08
-172,Baleares,1980,Tarragona,1063,Cataluña,8,España,2023-08-17
-173,Madrid,1535,Teruel,1624,Aragón,8,España,2021-06-12
-174,Cádiz,1535,Teruel,1624,Aragón,8,España,2022-07-14
-175,Jaén,1535,Teruel,1624,Aragón,8,España,2022-11-20
-176,Málaga,1535,Teruel,1624,Aragón,8,España,2020-11-21
-177,Asturias,1342,Toledo,1067,Castilla-La Mancha,8,España,2022-02-18
-178,Valencia,1342,Toledo,1067,Castilla-La Mancha,8,España,2023-05-09
-179,Las Palmas,1342,Toledo,1067,Castilla-La Mancha,8,España,2021-06-03
-180,Lleida,1342,Toledo,1067,Castilla-La Mancha,8,España,2021-06-10
-181,Guadalajara,1990,Valencia,1671,Comunidad Valenciana,8,España,2023-03-20
-182,Ourense,1990,Valencia,1671,Comunidad Valenciana,8,España,2020-05-18
-183,Teruel,1990,Valencia,1671,Comunidad Valenciana,8,España,2023-11-26
-184,Girona,1990,Valencia,1671,Comunidad Valenciana,8,España,2022-03-22
-185,La Coruña,1719,Valladolid,1848,Castilla y León,8,España,2020-11-22
-186,Guadalajara,1719,Valladolid,1848,Castilla y León,8,España,2023-09-12
-187,Zaragoza,1719,Valladolid,1848,Castilla y León,8,España,2020-06-10
-188,Tarragona,1719,Valladolid,1848,Castilla y León,8,España,2021-04-11
-189,Ávila,1970,Vizcaya,1784,País Vasco,8,España,2023-04-08
-190,Badajoz,1970,Vizcaya,1784,País Vasco,8,España,2021-03-03
-191,Las Palmas,1970,Vizcaya,1784,País Vasco,8,España,2022-02-17
-192,Melilla,1970,Vizcaya,1784,País Vasco,8,España,2020-11-11
-193,La Coruña,1897,Zamora,1784,Castilla y León,8,España,2021-10-13
-194,Valencia,1897,Zamora,1784,Castilla y León,8,España,2021-03-06
-195,Ceuta,1897,Zamora,1784,Castilla y León,8,España,2021-12-15
-196,Vizcaya,1897,Zamora,1784,Castilla y León,8,España,2020-07-12
-197,Asturias,1692,Zaragoza,1736,Aragón,8,España,2021-08-20
-198,Melilla,1692,Zaragoza,1736,Aragón,8,España,2022-12-26
-199,Vizcaya,1692,Zaragoza,1736,Aragón,8,España,2023-04-18
-200,Huelva,1692,Zaragoza,1736,Aragón,8,España,2021-05-31
-201,Ciudad,1828,Ceuta,1803,Ceuta,8,España,2023-04-12
-202,Burgos,1828,Ceuta,1803,Ceuta,8,España,2023-08-25
-203,Cantabria,1828,Ceuta,1803,Ceuta,8,España,2022-07-17
-204,Pontevedra,1828,Ceuta,1803,Ceuta,8,España,2023-03-27
-205,Valladolid,1204,Melilla,1820,Melilla,8,España,2021-05-02
-206,Cádiz,1204,Melilla,1820,Melilla,8,España,2023-06-18
-207,Lleida,1204,Melilla,1820,Melilla,8,España,2020-12-28
-208,Soria,1204,Melilla,1820,Melilla,8,España,2020-05-03
-209,Santa Cruz de Tenerife,1164,Provincia de Alemania,1279,Región de Alemania,99,Alemania,2023-09-05
-210,Burgos,1093,Provincia de Filipinas,1969,Región de Filipinas,57,Filipinas,2021-08-29
-211,Asturias,1952,Provincia de Rwanda,1027,Región de Rwanda,46,Rwanda,2023-01-13
-212,León,1382,Provincia de Mauritania,1241,Región de Mauritania,66,Mauritania,2023-02-12
-213,Zamora,1028,Provincia de Mozambique,1326,Región de Mozambique,30,Mozambique,2020-12-21
-214,Palencia,1810,Provincia de Tayikistán,1149,Región de Tayikistán,44,Tayikistán,2021-01-10
-215,Huelva,1712,Provincia de Polonia,1851,Región de Polonia,62,Polonia,2021-12-16
-216,Granada,1630,Provincia de Vanuatu,1005,Región de Vanuatu,59,Vanuatu,2020-01-09
-217,León,1855,Provincia de Portugal,1153,Región de Portugal,29,Portugal,2023-02-25
-218,Almería,1243,Provincia de Ghana,1308,Región de Ghana,38,Ghana,2020-01-08
-219,Girona,1654,Provincia de Saint Kitts y Nevis,1812,Región de Saint Kitts y Nevis,55,Saint Kitts y Nevis,2023-02-04
-220,Segovia,1611,Provincia de Suriname,1548,Región de Suriname,65,Suriname,2020-11-17
-221,Salamanca,1247,Provincia de Ecuador,1735,Región de Ecuador,75,Ecuador,2021-05-14
-222,Lleida,1629,Provincia de Singapur,1361,Región de Singapur,1,Singapur,2021-10-14
-223,León,1680,Provincia de Costa Rica,1684,Región de Costa Rica,25,Costa Rica,2020-09-12
-224,Guadalajara,1976,Provincia de Maldivas,1538,Región de Maldivas,10,Maldivas,2020-07-28
-225,Málaga,1044,Provincia de Polonia,1650,Región de Polonia,62,Polonia,2023-06-09
-226,Almería,1016,Provincia de Liechtenstein,1365,Región de Liechtenstein,97,Liechtenstein,2020-06-08
-227,Badajoz,1672,Provincia de República de Moldova,1643,Región de República de Moldova,95,República de Moldova,2020-10-24
-228,Teruel,1340,Provincia de Montenegro,1136,Región de Montenegro,98,Montenegro,2020-06-18
-229,Málaga,1833,Provincia de Barbados,1658,Región de Barbados,45,Barbados,2021-11-15
-230,Alicante,1490,Provincia de Palau,1646,Región de Palau,91,Palau,2021-03-03
-231,Teruel,1794,Provincia de República Federal Democrática de N...,1966,Región de República Federal Democrática de Nepal,93,República Federal Democrática de Nepal,2023-01-10
-232,León,1044,Provincia de Túnez,1810,Región de Túnez,27,Túnez,2021-01-11
-233,Huesca,1527,Provincia de Estados Unidos de América,1407,Región de Estados Unidos de América,41,Estados Unidos de América,2023-05-02
-234,Girona,1662,Provincia de Montenegro,1195,Región de Montenegro,98,Montenegro,2022-06-28
-235,La Rioja,1886,Provincia de Samoa,1671,Región de Samoa,7,Samoa,2022-05-04
-236,Soria,1447,Provincia de Haití,1910,Región de Haití,49,Haití,2023-12-15
-237,Zamora,1347,Provincia de Países Bajos,1997,Región de Países Bajos,51,Países Bajos,2021-08-23
-238,Asturias,1376,Provincia de Suriname,1946,Región de Suriname,65,Suriname,2022-02-24
-239,Badajoz,1080,Provincia de Angola,1440,Región de Angola,56,Angola,2021-09-10
-240,Girona,1105,Provincia de Burkina Faso,1081,Región de Burkina Faso,43,Burkina Faso,2022-11-10
-241,Toledo,1456,Provincia de Estados Unidos de América,1617,Región de Estados Unidos de América,41,Estados Unidos de América,2023-03-23
-242,Guipúzcoa,1359,Provincia de República Democrática del Congo,1457,Región de República Democrática del Congo,58,República Democrática del Congo,2020-12-28
-243,Palencia,1629,Provincia de Gabón,1445,Región de Gabón,47,Gabón,2022-11-26
-244,Huelva,1076,Provincia de El Salvador,1687,Región de El Salvador,9,El Salvador,2023-06-17
-245,Segovia,1695,Provincia de Liechtenstein,1163,Región de Liechtenstein,97,Liechtenstein,2020-03-28
-246,Barcelona,1694,Provincia de Francia,1800,Región de Francia,79,Francia,2023-01-05
-247,Granada,1241,Provincia de Maldivas,1797,Región de Maldivas,10,Maldivas,2022-06-13
-248,Segovia,1033,Provincia de Nauru,1619,Región de Nauru,74,Nauru,2021-11-15
-249,Barcelona,1380,Provincia de Haití,1454,Región de Haití,49,Haití,2020-10-05
-250,Segovia,1375,Provincia de Albania,1407,Región de Albania,69,Albania,2022-11-09
-251,Málaga,1983,Provincia de Etiopía,1116,Región de Etiopía,33,Etiopía,2020-12-06
-252,Albacete,1530,Provincia de Suriname,1396,Región de Suriname,65,Suriname,2020-05-25
-253,Granada,1720,Provincia de Eslovenia,1456,Región de Eslovenia,35,Eslovenia,2021-10-10
-254,Castellón,1938,Provincia de Irán,1502,Región de Irán,90,Irán,2021-02-05
-255,Vizcaya,1462,Provincia de República Unida de Tanzanía,1176,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2023-02-26
-256,Cantabria,1990,Provincia de Bahrein,1865,Región de Bahrein,89,Bahrein,2022-11-12
-257,Barcelona,1066,Provincia de Swazilandia,1563,Región de Swazilandia,92,Swazilandia,2022-05-28
-258,Asturias,1728,Provincia de Suecia,1726,Región de Suecia,22,Suecia,2021-06-17
-259,Zamora,1124,Provincia de Mozambique,1205,Región de Mozambique,30,Mozambique,2021-04-26
-260,Málaga,1026,Provincia de Suriname,1369,Región de Suriname,65,Suriname,2022-08-26
-261,Sevilla,1132,Provincia de Nigeria,1626,Región de Nigeria,72,Nigeria,2020-02-10
-262,Vizcaya,1734,Provincia de Bulgaria,1736,Región de Bulgaria,52,Bulgaria,2023-09-14
-263,Pontevedra,1419,Provincia de País desconocido,1843,Región de País desconocido,100,País desconocido,2020-03-11
-264,Burgos,1075,Provincia de Côte d'Ivoire,1460,Región de Côte d'Ivoire,84,Côte d'Ivoire,2023-11-17
-265,Cádiz,1131,Provincia de Rwanda,1899,Región de Rwanda,46,Rwanda,2021-03-14
-266,Toledo,1932,Provincia de Mauritania,1889,Región de Mauritania,66,Mauritania,2020-02-17
-267,Alicante,1311,Provincia de República Dominicana,1168,Región de República Dominicana,21,República Dominicana,2021-06-30
-268,Huesca,1230,Provincia de Swazilandia,1354,Región de Swazilandia,92,Swazilandia,2022-02-09
-269,León,1650,Provincia de Túnez,1979,Región de Túnez,27,Túnez,2022-03-21
-270,Valladolid,1629,Provincia de República Popular Democrática de C...,1546,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2020-09-21
-271,Ceuta,1606,Provincia de Federación de Rusia,1964,Región de Federación de Rusia,23,Federación de Rusia,2021-03-22
-272,Granada,1737,Provincia de Belice,1923,Región de Belice,81,Belice,2022-10-02
-273,Cantabria,1083,Provincia de Tailandia,1046,Región de Tailandia,4,Tailandia,2022-11-07
-274,Soria,1585,Provincia de País desconocido,1426,Región de País desconocido,100,País desconocido,2020-08-29
-275,Lleida,1558,Provincia de Brasil,1296,Región de Brasil,82,Brasil,2022-08-08
-276,Vizcaya,1415,Provincia de Bahrein,1304,Región de Bahrein,89,Bahrein,2023-02-23
-277,Málaga,1161,Provincia de El Salvador,1450,Región de El Salvador,9,El Salvador,2023-08-15
-278,Cáceres,1348,Provincia de San Marino,1621,Región de San Marino,28,San Marino,2021-06-28
-279,Zaragoza,1326,Provincia de República Federal Democrática de N...,1751,Región de República Federal Democrática de Nepal,93,República Federal Democrática de Nepal,2022-07-05
-280,Córdoba,1379,Provincia de Alemania,1527,Región de Alemania,99,Alemania,2020-06-08
-281,Segovia,1125,Provincia de República Centroafricana,1273,Región de República Centroafricana,61,República Centroafricana,2023-04-05
-282,Huesca,1051,Provincia de Israel,1297,Región de Israel,14,Israel,2023-10-14
-283,Teruel,1985,Provincia de Etiopía,1886,Región de Etiopía,33,Etiopía,2021-06-30
-284,Girona,1738,Provincia de Ecuador,1320,Región de Ecuador,75,Ecuador,2021-03-16
-285,Valladolid,1478,Provincia de Cabo Verde,1510,Región de Cabo Verde,67,Cabo Verde,2022-08-01
-286,Cuenca,1967,Provincia de Italia,1402,Región de Italia,13,Italia,2023-04-07
-287,Málaga,1361,Provincia de Jordania,1049,Región de Jordania,76,Jordania,2020-05-16
-288,Las Palmas,1903,Provincia de Bangladesh,1863,Región de Bangladesh,78,Bangladesh,2023-05-18
-289,Ceuta,1867,Provincia de Vietman,1110,Región de Vietman,2,Vietman,2023-03-29
-290,Huelva,1744,Provincia de Eslovenia,1374,Región de Eslovenia,35,Eslovenia,2023-06-02
-291,La Rioja,1052,Provincia de Comoras,1583,Región de Comoras,53,Comoras,2021-06-18
-292,La Coruña,1075,Provincia de Ghana,1395,Región de Ghana,38,Ghana,2023-09-09
-293,Ciudad,1696,Provincia de Belice,1625,Región de Belice,81,Belice,2020-03-04
-294,Ávila,1382,Provincia de Bulgaria,1813,Región de Bulgaria,52,Bulgaria,2022-09-12
-295,Ceuta,1147,Provincia de Montenegro,1203,Región de Montenegro,98,Montenegro,2023-09-02
-296,Guadalajara,1039,Provincia de Argentina,1140,Región de Argentina,6,Argentina,2022-08-17
-297,Teruel,1152,Provincia de Camerún,1620,Región de Camerún,60,Camerún,2021-06-30
-298,Zamora,1326,Provincia de Micronesia,1166,Región de Micronesia,80,Micronesia,2023-10-24
-299,Barcelona,1607,Provincia de República Popular Democrática de C...,1344,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2023-12-19
-300,Girona,1486,Provincia de República Popular Democrática de C...,1835,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2020-06-11
-301,Tarragona,1112,Provincia de Ucrania,1426,Región de Ucrania,88,Ucrania,2022-12-28
-302,Valladolid,1644,Provincia de Irán,1027,Región de Irán,90,Irán,2023-05-31
-303,León,1801,Provincia de Niger,1995,Región de Niger,85,Niger,2021-12-02
-304,Ávila,1491,Provincia de Jordania,1174,Región de Jordania,76,Jordania,2023-03-27
-305,Córdoba,1248,Provincia de Bahrein,1032,Región de Bahrein,89,Bahrein,2020-04-01
-306,Burgos,1321,Provincia de República Democrática del Congo,1428,Región de República Democrática del Congo,58,República Democrática del Congo,2021-07-23
-307,Baleares,1420,Provincia de San Marino,1513,Región de San Marino,28,San Marino,2023-12-24
-308,Ciudad,1722,Provincia de El Salvador,1141,Región de El Salvador,9,El Salvador,2021-09-11
-309,Baleares,1489,Provincia de Afganistán,1538,Región de Afganistán,86,Afganistán,2023-06-06
-310,Ciudad,1934,Provincia de Camerún,1545,Región de Camerún,60,Camerún,2022-09-12
-311,Santa Cruz de Tenerife,1790,Provincia de Ucrania,1888,Región de Ucrania,88,Ucrania,2022-10-16
-312,Asturias,1980,Provincia de Eslovaquia,1252,Región de Eslovaquia,26,Eslovaquia,2022-09-10
-313,Madrid,1964,Provincia de Mozambique,1996,Región de Mozambique,30,Mozambique,2022-05-23
-314,Santa Cruz de Tenerife,1706,Provincia de San Marino,1721,Región de San Marino,28,San Marino,2023-06-16
-315,Teruel,1573,Provincia de Rwanda,1956,Región de Rwanda,46,Rwanda,2022-05-04
-316,Girona,1692,Provincia de Ecuador,1556,Región de Ecuador,75,Ecuador,2023-07-27
-317,Álava,1977,Provincia de Rwanda,1791,Región de Rwanda,46,Rwanda,2021-05-02
-318,Ciudad,1978,Provincia de Ghana,1731,Región de Ghana,38,Ghana,2020-06-30
-319,Cádiz,1671,Provincia de República Democrática del Congo,1262,Región de República Democrática del Congo,58,República Democrática del Congo,2023-04-07
-320,Melilla,1277,Provincia de Belarús,1955,Región de Belarús,70,Belarús,2022-03-04
-321,Asturias,1758,Provincia de Micronesia,1600,Región de Micronesia,80,Micronesia,2021-04-02
-322,Jaén,1926,Provincia de Guinea Ecuatorial,1543,Región de Guinea Ecuatorial,87,Guinea Ecuatorial,2021-11-08
-323,Alicante,1102,Provincia de Samoa,1423,Región de Samoa,7,Samoa,2022-12-16
-324,Huesca,1697,Provincia de Israel,1789,Región de Israel,14,Israel,2021-01-31
-325,Valencia,1951,Provincia de Nigeria,1161,Región de Nigeria,72,Nigeria,2023-11-30
-326,Huelva,1488,Provincia de Polonia,1666,Región de Polonia,62,Polonia,2021-05-11
-327,Huelva,1661,Provincia de Ghana,1060,Región de Ghana,38,Ghana,2020-11-19
-328,Toledo,1547,Provincia de Togo,1756,Región de Togo,31,Togo,2020-03-14
-329,Vizcaya,1956,Provincia de Guinea,1941,Región de Guinea,24,Guinea,2020-07-26
-330,Barcelona,1190,Provincia de Suriname,1959,Región de Suriname,65,Suriname,2022-01-01
-331,Huelva,1581,Provincia de República Popular Democrática de C...,1617,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2020-06-10
-332,Segovia,1656,Provincia de Camerún,1556,Región de Camerún,60,Camerún,2023-03-28
-333,Vizcaya,1479,Provincia de Mauritania,1279,Región de Mauritania,66,Mauritania,2021-02-11
-334,Tarragona,1748,Provincia de Suecia,1469,Región de Suecia,22,Suecia,2022-12-06
-335,Santa Cruz de Tenerife,1754,Provincia de Vietman,1345,Región de Vietman,2,Vietman,2022-10-22
-336,Zaragoza,1197,Provincia de Montenegro,1179,Región de Montenegro,98,Montenegro,2023-07-17
-337,Asturias,1088,Provincia de Burkina Faso,1410,Región de Burkina Faso,43,Burkina Faso,2020-03-05
-338,Alicante,1331,Provincia de Uzbekistán,1958,Región de Uzbekistán,63,Uzbekistán,2021-01-09
-339,Cantabria,1241,Provincia de Países Bajos,1457,Región de Países Bajos,51,Países Bajos,2022-06-10
-340,Zamora,1740,Provincia de Jordania,1586,Región de Jordania,76,Jordania,2020-05-21
-341,Alicante,1709,Provincia de Zimbabwe,1241,Región de Zimbabwe,48,Zimbabwe,2020-11-04
-342,Granada,1314,Provincia de República Centroafricana,1163,Región de República Centroafricana,61,República Centroafricana,2023-11-17
-343,Murcia,1788,Provincia de Swazilandia,1318,Región de Swazilandia,92,Swazilandia,2020-11-30
-344,Córdoba,1376,Provincia de Zambia,1629,Región de Zambia,39,Zambia,2021-04-05
-345,Valladolid,1156,Provincia de Uzbekistán,1465,Región de Uzbekistán,63,Uzbekistán,2022-07-23
-346,Girona,1934,Provincia de Nigeria,1482,Región de Nigeria,72,Nigeria,2021-04-22
-347,Vizcaya,1610,Provincia de Montenegro,1894,Región de Montenegro,98,Montenegro,2020-09-15
-348,Segovia,1720,Provincia de Albania,1370,Región de Albania,69,Albania,2020-10-04
-349,Cuenca,1848,Provincia de El Salvador,1560,Región de El Salvador,9,El Salvador,2021-10-18
-350,Zaragoza,1168,Provincia de República Dominicana,1335,Región de República Dominicana,21,República Dominicana,2023-02-22
-351,Las Palmas,1734,Provincia de San Marino,1597,Región de San Marino,28,San Marino,2023-02-17
-352,Valencia,1828,Provincia de Vanuatu,1056,Región de Vanuatu,59,Vanuatu,2023-03-17
-353,Jaén,1467,Provincia de Saint Kitts y Nevis,1577,Región de Saint Kitts y Nevis,55,Saint Kitts y Nevis,2020-09-15
-354,Cádiz,1826,Provincia de Ucrania,1315,Región de Ucrania,88,Ucrania,2020-07-09
-355,Tarragona,1763,Provincia de Singapur,1223,Región de Singapur,1,Singapur,2020-01-14
-356,Huesca,1717,Provincia de Rwanda,1065,Región de Rwanda,46,Rwanda,2020-02-16
-357,Zaragoza,1293,Provincia de Bolivia,1418,Región de Bolivia,5,Bolivia,2021-03-25
-358,Toledo,1746,Provincia de Côte d'Ivoire,1661,Región de Côte d'Ivoire,84,Côte d'Ivoire,2023-06-29
-359,Ávila,1459,Provincia de Mongolia,1890,Región de Mongolia,50,Mongolia,2023-07-03
-360,Pontevedra,1987,Provincia de Bahrein,1677,Región de Bahrein,89,Bahrein,2021-11-28
-361,Murcia,1121,Provincia de Rwanda,1182,Región de Rwanda,46,Rwanda,2023-09-05
-362,Guadalajara,1228,Provincia de República de Moldova,1854,Región de República de Moldova,95,República de Moldova,2020-01-10
-363,Ávila,1689,Provincia de República Centroafricana,1736,Región de República Centroafricana,61,República Centroafricana,2023-09-13
-364,Sevilla,1253,Provincia de Togo,1471,Región de Togo,31,Togo,2022-03-09
-365,Granada,1959,Provincia de Eslovaquia,1896,Región de Eslovaquia,26,Eslovaquia,2020-01-26
-366,Pontevedra,1429,Provincia de Afganistán,1629,Región de Afganistán,86,Afganistán,2020-04-07
-367,Cáceres,1103,Provincia de Maldivas,1608,Región de Maldivas,10,Maldivas,2020-08-20
-368,Huelva,1720,Provincia de Ucrania,1893,Región de Ucrania,88,Ucrania,2020-04-24
-369,Alicante,1411,Provincia de Argentina,1449,Región de Argentina,6,Argentina,2021-09-07
-370,Salamanca,1884,Provincia de Montenegro,1794,Región de Montenegro,98,Montenegro,2020-03-17
-371,Cuenca,1239,Provincia de Zambia,1835,Región de Zambia,39,Zambia,2022-10-20
-372,Asturias,1688,Provincia de País desconocido,1838,Región de País desconocido,100,País desconocido,2022-04-10
-373,Huesca,1676,Provincia de Serbia,1533,Región de Serbia,20,Serbia,2021-07-10
-374,Albacete,1062,Provincia de Somalia,1570,Región de Somalia,37,Somalia,2021-11-22
-375,Pontevedra,1569,Provincia de Angola,1507,Región de Angola,56,Angola,2020-06-21
-376,Alicante,1390,Provincia de Guinea Ecuatorial,1804,Región de Guinea Ecuatorial,87,Guinea Ecuatorial,2022-12-14
-377,Asturias,1152,Provincia de Reino Unido de Gran Bretaña e Irla...,1307,Región de Reino Unido de Gran Bretaña e Irlanda...,54,Reino Unido de Gran Bretaña e Irlanda del Norte,2023-03-25
-378,Vizcaya,1484,Provincia de Belarús,1246,Región de Belarús,70,Belarús,2021-05-28
-379,Huesca,1147,Provincia de Swazilandia,1825,Región de Swazilandia,92,Swazilandia,2023-01-18
-380,Ourense,1991,Provincia de Reino Unido de Gran Bretaña e Irla...,1426,Región de Reino Unido de Gran Bretaña e Irlanda...,54,Reino Unido de Gran Bretaña e Irlanda del Norte,2021-07-08
-381,Pontevedra,1208,Provincia de Lituania,1338,Región de Lituania,34,Lituania,2020-08-28
-382,Soria,1094,Provincia de Haití,1548,Región de Haití,49,Haití,2021-01-09
-383,Huesca,1689,Provincia de Mongolia,1619,Región de Mongolia,50,Mongolia,2020-02-07
-384,León,1601,Provincia de Alemania,1741,Región de Alemania,99,Alemania,2021-08-07
-385,Ourense,1310,Provincia de Tayikistán,1979,Región de Tayikistán,44,Tayikistán,2020-04-30
-386,Melilla,1985,Provincia de Eslovaquia,1759,Región de Eslovaquia,26,Eslovaquia,2020-12-25
-387,La Coruña,1936,Provincia de Uzbekistán,1248,Región de Uzbekistán,63,Uzbekistán,2021-07-30
-388,Segovia,1565,Provincia de Timor-Leste,1329,Región de Timor-Leste,32,Timor-Leste,2022-07-15
-389,Ciudad,1664,Provincia de Belarús,1367,Región de Belarús,70,Belarús,2022-05-12
-390,Albacete,1903,Provincia de Cabo Verde,1509,Región de Cabo Verde,67,Cabo Verde,2023-02-26
-391,Madrid,1480,Provincia de San Vicente y las Granadinas,1779,Región de San Vicente y las Granadinas,94,San Vicente y las Granadinas,2022-04-12
-392,Navarra,1423,Provincia de Bosnia y Herzegovina,1046,Región de Bosnia y Herzegovina,42,Bosnia y Herzegovina,2021-12-05
-393,Córdoba,1267,Provincia de Estonia,1566,Región de Estonia,3,Estonia,2023-05-05
-394,Teruel,1337,Provincia de Túnez,1235,Región de Túnez,27,Túnez,2023-10-27
-395,Castellón,1511,Provincia de Etiopía,1563,Región de Etiopía,33,Etiopía,2022-05-25
-396,Tarragona,1989,Provincia de Tuvalu,1740,Región de Tuvalu,64,Tuvalu,2023-08-06
-397,Cantabria,1814,Provincia de República de Moldova,1360,Región de República de Moldova,95,República de Moldova,2021-03-24
-398,Barcelona,1500,Provincia de Panamá,1188,Región de Panamá,71,Panamá,2020-09-02
-399,León,1967,Provincia de República Unida de Tanzanía,1837,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2020-01-14
-400,Teruel,1862,Provincia de Benin,1645,Región de Benin,19,Benin,2021-02-23
-401,Ávila,1009,Provincia de República Dominicana,1223,Región de República Dominicana,21,República Dominicana,2023-06-02
-402,Sevilla,1653,Provincia de Belice,1682,Región de Belice,81,Belice,2023-11-16
-403,Teruel,1006,Provincia de Estonia,1544,Región de Estonia,3,Estonia,2023-01-01
-404,Navarra,1739,Provincia de Albania,1281,Región de Albania,69,Albania,2022-01-17
-405,Granada,1690,Provincia de Palau,1440,Región de Palau,91,Palau,2021-02-04
-406,Teruel,1152,Provincia de Albania,1246,Región de Albania,69,Albania,2021-10-17
-407,Zamora,1834,Provincia de Lituania,1362,Región de Lituania,34,Lituania,2022-07-03
-408,Málaga,1982,Provincia de Haití,1415,Región de Haití,49,Haití,2023-10-08
-409,Baleares,1231,Provincia de Palau,1307,Región de Palau,91,Palau,2020-11-28
-410,Zamora,1777,Provincia de Niger,1032,Región de Niger,85,Niger,2020-07-13
-411,Ciudad,1565,Provincia de Mongolia,1487,Región de Mongolia,50,Mongolia,2020-11-01
-412,Albacete,1175,Provincia de Palau,1084,Región de Palau,91,Palau,2023-07-21
-413,Navarra,1579,Provincia de Tayikistán,1878,Región de Tayikistán,44,Tayikistán,2020-09-30
-414,Lleida,1235,Provincia de Argentina,1216,Región de Argentina,6,Argentina,2023-05-02
-415,Salamanca,1700,Provincia de República Unida de Tanzanía,1947,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2022-09-19
-416,Asturias,1033,Provincia de Afganistán,1183,Región de Afganistán,86,Afganistán,2022-01-31
-417,La Coruña,1601,Provincia de San Marino,1147,Región de San Marino,28,San Marino,2023-02-10
-418,Melilla,1577,Provincia de Suecia,1246,Región de Suecia,22,Suecia,2023-11-29
-419,Vizcaya,1339,Provincia de Panamá,1393,Región de Panamá,71,Panamá,2021-12-24
-420,Ourense,1512,Provincia de Congo,1763,Región de Congo,12,Congo,2022-01-04
-421,Barcelona,1237,Provincia de Filipinas,1858,Región de Filipinas,57,Filipinas,2020-06-20
-422,Segovia,1628,Provincia de País desconocido,1977,Región de País desconocido,100,País desconocido,2023-06-01
-423,León,1279,Provincia de Andorra,1802,Región de Andorra,83,Andorra,2023-08-08
-424,Soria,1566,Provincia de Gabón,1963,Región de Gabón,47,Gabón,2023-07-06
-425,Barcelona,1599,Provincia de Bahrein,1676,Región de Bahrein,89,Bahrein,2023-02-25
-426,Vizcaya,1302,Provincia de Belice,1817,Región de Belice,81,Belice,2021-12-03
-427,Las Palmas,1274,Provincia de Congo,1157,Región de Congo,12,Congo,2023-12-26
-428,Baleares,1157,Provincia de Andorra,1757,Región de Andorra,83,Andorra,2023-06-12
-429,Granada,1093,Provincia de Letonia,1005,Región de Letonia,15,Letonia,2022-08-12
-430,Cáceres,1276,Provincia de Alemania,1104,Región de Alemania,99,Alemania,2021-02-06
-431,Teruel,1459,Provincia de Filipinas,1570,Región de Filipinas,57,Filipinas,2023-02-01
-432,Huelva,1362,Provincia de Italia,1567,Región de Italia,13,Italia,2020-10-20
-433,Ávila,1884,Provincia de Burkina Faso,1394,Región de Burkina Faso,43,Burkina Faso,2020-05-14
-434,Cantabria,1797,Provincia de Países Bajos,1086,Región de Países Bajos,51,Países Bajos,2021-10-17
-435,Barcelona,1701,Provincia de Federación de Rusia,1389,Región de Federación de Rusia,23,Federación de Rusia,2021-03-09
-436,Salamanca,1274,Provincia de República Popular Democrática de C...,1504,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2021-02-06
-437,Málaga,1282,Provincia de Filipinas,1431,Región de Filipinas,57,Filipinas,2022-08-26
-438,Palencia,1369,Provincia de República Unida de Tanzanía,1257,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2021-12-21
-439,Cáceres,1608,Provincia de Suriname,1631,Región de Suriname,65,Suriname,2021-08-04
-440,Ourense,1311,Provincia de Benin,1006,Región de Benin,19,Benin,2023-06-27
-441,Albacete,1389,Provincia de Belice,1823,Región de Belice,81,Belice,2022-08-11
-442,Alicante,1835,Provincia de Filipinas,1843,Región de Filipinas,57,Filipinas,2021-05-11
-443,Segovia,1970,Provincia de Francia,1711,Región de Francia,79,Francia,2021-08-11
-444,Vizcaya,1987,Provincia de Guinea,1407,Región de Guinea,24,Guinea,2022-05-24
-445,Salamanca,1648,Provincia de Irán,1502,Región de Irán,90,Irán,2021-06-13
-446,Madrid,1836,Provincia de Somalia,1804,Región de Somalia,37,Somalia,2023-06-04
-447,Segovia,1204,Provincia de Nauru,1606,Región de Nauru,74,Nauru,2021-11-25
-448,Lugo,1027,Provincia de Nigeria,1975,Región de Nigeria,72,Nigeria,2023-12-07
-449,Zaragoza,1816,Provincia de República Democrática del Congo,1298,Región de República Democrática del Congo,58,República Democrática del Congo,2020-07-22
-450,Granada,1142,Provincia de Suriname,1648,Región de Suriname,65,Suriname,2022-04-09
-451,Asturias,1157,Provincia de Afganistán,1732,Región de Afganistán,86,Afganistán,2023-07-03
-452,Cáceres,1612,Provincia de Vanuatu,1490,Región de Vanuatu,59,Vanuatu,2023-09-17
-453,La Rioja,1428,Provincia de Irán,1556,Región de Irán,90,Irán,2020-06-23
-454,Lleida,1608,Provincia de Belarús,1653,Región de Belarús,70,Belarús,2020-02-25
-455,Guipúzcoa,1673,Provincia de Etiopía,1680,Región de Etiopía,33,Etiopía,2022-03-21
-456,Guadalajara,1045,Provincia de Micronesia,1576,Región de Micronesia,80,Micronesia,2023-06-26
-457,Toledo,1108,Provincia de Filipinas,1010,Región de Filipinas,57,Filipinas,2020-05-08
-458,La Coruña,1764,Provincia de Cabo Verde,1531,Región de Cabo Verde,67,Cabo Verde,2021-08-12
-459,Valladolid,1474,Provincia de Bulgaria,1790,Región de Bulgaria,52,Bulgaria,2021-06-01
-460,Málaga,1107,Provincia de Uzbekistán,1302,Región de Uzbekistán,63,Uzbekistán,2023-02-04
-461,Guadalajara,1145,Provincia de República de Moldova,1356,Región de República de Moldova,95,República de Moldova,2022-06-15
-462,Lleida,1533,Provincia de San Marino,1494,Región de San Marino,28,San Marino,2022-08-04
-463,Cuenca,1739,Provincia de República Democrática del Congo,1713,Región de República Democrática del Congo,58,República Democrática del Congo,2023-06-03
-464,Ciudad,1045,Provincia de República Popular Democrática de C...,1829,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2020-01-28
-465,Badajoz,1663,Provincia de Barbados,1111,Región de Barbados,45,Barbados,2021-12-08
-466,Girona,1178,Provincia de Antigua y Barbuda,1565,Región de Antigua y Barbuda,68,Antigua y Barbuda,2021-06-18
-467,Salamanca,1981,Provincia de Angola,1473,Región de Angola,56,Angola,2021-07-21
-468,Ciudad,1190,Provincia de Costa Rica,1655,Región de Costa Rica,25,Costa Rica,2023-07-01
-469,Guadalajara,1628,Provincia de Georgia,1904,Región de Georgia,96,Georgia,2021-08-19
-470,Cantabria,1398,Provincia de Angola,1004,Región de Angola,56,Angola,2021-04-09
-471,Madrid,1720,Provincia de Montenegro,1828,Región de Montenegro,98,Montenegro,2020-10-04
-472,Madrid,1191,Provincia de Belarús,1374,Región de Belarús,70,Belarús,2022-04-15
-473,Madrid,1268,Provincia de Jamaica,1686,Región de Jamaica,16,Jamaica,2023-09-21
-474,Ávila,1611,Provincia de Bosnia y Herzegovina,1397,Región de Bosnia y Herzegovina,42,Bosnia y Herzegovina,2023-10-04
-475,Málaga,1360,Provincia de Rwanda,1865,Región de Rwanda,46,Rwanda,2023-10-06
-476,Ciudad,1722,Provincia de Ucrania,1819,Región de Ucrania,88,Ucrania,2022-10-19
-477,Palencia,1688,Provincia de Congo,1137,Región de Congo,12,Congo,2022-02-08
-478,Almería,1119,Provincia de Estados Unidos de América,1187,Región de Estados Unidos de América,41,Estados Unidos de América,2022-12-05
-479,Girona,1397,Provincia de Cabo Verde,1428,Región de Cabo Verde,67,Cabo Verde,2021-10-13
-480,Pontevedra,1190,Provincia de Angola,1498,Región de Angola,56,Angola,2021-09-06
-481,Girona,1295,Provincia de Tuvalu,1143,Región de Tuvalu,64,Tuvalu,2021-06-27
-482,Badajoz,1634,Provincia de Vanuatu,1054,Región de Vanuatu,59,Vanuatu,2022-01-16
-483,Barcelona,1199,Provincia de Benin,1834,Región de Benin,19,Benin,2023-09-17
-484,Toledo,1506,Provincia de Niger,1418,Región de Niger,85,Niger,2023-07-23
-485,Valladolid,1500,Provincia de República Democrática del Congo,1171,Región de República Democrática del Congo,58,República Democrática del Congo,2020-10-01
-486,Huesca,1225,Provincia de Alemania,1299,Región de Alemania,99,Alemania,2020-05-08
-487,La Coruña,1295,Provincia de Belarús,1172,Región de Belarús,70,Belarús,2023-10-24
-488,Ourense,1784,Provincia de País desconocido,1507,Región de País desconocido,100,País desconocido,2020-10-04
-489,Huesca,1793,Provincia de Sudán,1556,Región de Sudán,36,Sudán,2022-09-27
-490,Asturias,1042,Provincia de Montenegro,1778,Región de Montenegro,98,Montenegro,2023-09-07
-491,Málaga,1104,Provincia de Angola,1753,Región de Angola,56,Angola,2021-05-28
-492,Valladolid,1460,Provincia de Bolivia,1269,Región de Bolivia,5,Bolivia,2022-02-15
-493,Salamanca,1794,Provincia de Austria,1831,Región de Austria,17,Austria,2021-04-26
-494,Barcelona,1602,Provincia de Georgia,1705,Región de Georgia,96,Georgia,2022-12-20
-495,La Coruña,1438,Provincia de Brasil,1169,Región de Brasil,82,Brasil,2021-04-27
-496,Zamora,1824,Provincia de San Marino,1060,Región de San Marino,28,San Marino,2022-09-09
-497,Navarra,1551,Provincia de Bangladesh,1172,Región de Bangladesh,78,Bangladesh,2022-12-10
-498,Valladolid,1586,Provincia de Zambia,1273,Región de Zambia,39,Zambia,2020-03-31
-499,Cantabria,1804,Provincia de Montenegro,1421,Región de Montenegro,98,Montenegro,2020-05-28
-500,Málaga,1129,Provincia de Niger,1718,Región de Niger,85,Niger,2021-04-05
+1,Guipúzcoa,1063,Álava,1211,País Vasco,8,España,2022-05-10
+2,Segovia,1063,Álava,1211,País Vasco,8,España,2022-03-08
+3,Guipúzcoa,1063,Álava,1211,País Vasco,8,España,2023-04-11
+4,Guadalajara,1063,Álava,1211,País Vasco,8,España,2023-11-25
+5,Murcia,1020,Albacete,1877,Castilla-La Mancha,8,España,2023-03-25
+6,Salamanca,1020,Albacete,1877,Castilla-La Mancha,8,España,2022-02-18
+7,Ciudad,1020,Albacete,1877,Castilla-La Mancha,8,España,2022-09-03
+8,Ceuta,1020,Albacete,1877,Castilla-La Mancha,8,España,2020-01-13
+9,Las Palmas,1965,Alicante,1360,Comunidad Valenciana,8,España,2021-09-03
+10,Valladolid,1965,Alicante,1360,Comunidad Valenciana,8,España,2022-03-09
+11,León,1965,Alicante,1360,Comunidad Valenciana,8,España,2022-05-08
+12,Tarragona,1965,Alicante,1360,Comunidad Valenciana,8,España,2023-01-07
+13,Albacete,1765,Almería,1752,Andalucía,8,España,2023-01-23
+14,Guadalajara,1765,Almería,1752,Andalucía,8,España,2023-05-20
+15,Girona,1765,Almería,1752,Andalucía,8,España,2021-03-27
+16,Huesca,1765,Almería,1752,Andalucía,8,España,2022-09-26
+17,Burgos,1224,Asturias,1279,Principado de Asturias,8,España,2022-06-11
+18,Melilla,1224,Asturias,1279,Principado de Asturias,8,España,2022-09-21
+19,Ourense,1224,Asturias,1279,Principado de Asturias,8,España,2020-02-29
+20,Cáceres,1224,Asturias,1279,Principado de Asturias,8,España,2022-03-07
+21,Ávila,1344,Ávila,1684,Castilla y León,8,España,2023-10-22
+22,Salamanca,1344,Ávila,1684,Castilla y León,8,España,2022-04-08
+23,Madrid,1344,Ávila,1684,Castilla y León,8,España,2020-12-04
+24,Ceuta,1344,Ávila,1684,Castilla y León,8,España,2022-08-15
+25,Santa Cruz de Tenerife,1941,Badajoz,1130,Extremadura,8,España,2023-06-28
+26,Lleida,1941,Badajoz,1130,Extremadura,8,España,2022-12-29
+27,Sevilla,1941,Badajoz,1130,Extremadura,8,España,2020-02-25
+28,Zaragoza,1941,Badajoz,1130,Extremadura,8,España,2022-03-17
+29,Girona,1606,Barcelona,1577,Cataluña,8,España,2023-09-19
+30,Asturias,1606,Barcelona,1577,Cataluña,8,España,2020-02-25
+31,Huelva,1606,Barcelona,1577,Cataluña,8,España,2020-06-20
+32,Santa Cruz de Tenerife,1606,Barcelona,1577,Cataluña,8,España,2023-08-09
+33,Tarragona,1438,Burgos,1138,Castilla y León,8,España,2022-08-03
+34,Lleida,1438,Burgos,1138,Castilla y León,8,España,2021-01-07
+35,Cantabria,1438,Burgos,1138,Castilla y León,8,España,2020-04-12
+36,Lugo,1438,Burgos,1138,Castilla y León,8,España,2021-06-16
+37,Ciudad,1388,Cáceres,1335,Extremadura,8,España,2021-03-09
+38,Ourense,1388,Cáceres,1335,Extremadura,8,España,2022-07-20
+39,Ourense,1388,Cáceres,1335,Extremadura,8,España,2021-10-31
+40,Tarragona,1388,Cáceres,1335,Extremadura,8,España,2021-11-22
+41,Albacete,1779,Cádiz,1900,Andalucía,8,España,2022-02-15
+42,Cuenca,1779,Cádiz,1900,Andalucía,8,España,2021-07-23
+43,Ourense,1779,Cádiz,1900,Andalucía,8,España,2022-05-13
+44,Pontevedra,1779,Cádiz,1900,Andalucía,8,España,2021-05-31
+45,Girona,1854,Cantabria,1083,Cantabria,8,España,2022-08-21
+46,Pontevedra,1854,Cantabria,1083,Cantabria,8,España,2020-02-09
+47,Ceuta,1854,Cantabria,1083,Cantabria,8,España,2023-01-09
+48,Salamanca,1854,Cantabria,1083,Cantabria,8,España,2020-04-16
+49,Soria,1974,Castellón,1358,Comunidad Valenciana,8,España,2021-04-04
+50,Santa Cruz de Tenerife,1974,Castellón,1358,Comunidad Valenciana,8,España,2023-08-24
+51,Santa Cruz de Tenerife,1974,Castellón,1358,Comunidad Valenciana,8,España,2020-05-20
+52,Granada,1974,Castellón,1358,Comunidad Valenciana,8,España,2023-08-27
+53,Alicante,1041,Ciudad Real,1772,Castilla-La Mancha,8,España,2020-03-04
+54,Toledo,1041,Ciudad Real,1772,Castilla-La Mancha,8,España,2021-05-21
+55,Ávila,1041,Ciudad Real,1772,Castilla-La Mancha,8,España,2021-02-12
+56,Guadalajara,1041,Ciudad Real,1772,Castilla-La Mancha,8,España,2020-02-11
+57,Cádiz,1636,Córdoba,1156,Andalucía,8,España,2021-05-03
+58,Barcelona,1636,Córdoba,1156,Andalucía,8,España,2020-09-15
+59,Melilla,1636,Córdoba,1156,Andalucía,8,España,2022-08-27
+60,Cáceres,1636,Córdoba,1156,Andalucía,8,España,2023-10-03
+61,Lugo,1117,Cuenca,1577,Castilla-La Mancha,8,España,2021-03-22
+62,Valencia,1117,Cuenca,1577,Castilla-La Mancha,8,España,2022-08-10
+63,Zaragoza,1117,Cuenca,1577,Castilla-La Mancha,8,España,2023-12-03
+64,Lleida,1117,Cuenca,1577,Castilla-La Mancha,8,España,2021-06-08
+65,Burgos,1785,Gerona,1377,Cataluña,8,España,2020-12-09
+66,Soria,1785,Gerona,1377,Cataluña,8,España,2023-05-25
+67,Zaragoza,1785,Gerona,1377,Cataluña,8,España,2023-05-28
+68,Ávila,1785,Gerona,1377,Cataluña,8,España,2020-08-22
+69,Álava,1796,Granada,1838,Andalucía,8,España,2020-12-01
+70,Murcia,1796,Granada,1838,Andalucía,8,España,2021-09-29
+71,Lleida,1796,Granada,1838,Andalucía,8,España,2020-08-09
+72,Soria,1796,Granada,1838,Andalucía,8,España,2023-03-31
+73,Palencia,1026,Guadalajara,1951,Castilla-La Mancha,8,España,2021-09-30
+74,Santa Cruz de Tenerife,1026,Guadalajara,1951,Castilla-La Mancha,8,España,2023-03-25
+75,Badajoz,1026,Guadalajara,1951,Castilla-La Mancha,8,España,2023-10-19
+76,Lugo,1026,Guadalajara,1951,Castilla-La Mancha,8,España,2022-02-07
+77,Salamanca,1406,Guipúzcoa,1964,País Vasco,8,España,2021-02-10
+78,Salamanca,1406,Guipúzcoa,1964,País Vasco,8,España,2020-06-04
+79,Segovia,1406,Guipúzcoa,1964,País Vasco,8,España,2023-04-27
+80,Santa Cruz de Tenerife,1406,Guipúzcoa,1964,País Vasco,8,España,2023-11-15
+81,Tarragona,1850,Huelva,1642,Andalucía,8,España,2021-05-12
+82,Segovia,1850,Huelva,1642,Andalucía,8,España,2020-07-27
+83,Baleares,1850,Huelva,1642,Andalucía,8,España,2023-11-28
+84,Alicante,1850,Huelva,1642,Andalucía,8,España,2021-09-09
+85,Granada,1870,Huesca,1700,Aragón,8,España,2023-05-14
+86,Baleares,1870,Huesca,1700,Aragón,8,España,2020-09-04
+87,Ciudad,1870,Huesca,1700,Aragón,8,España,2023-03-05
+88,Jaén,1870,Huesca,1700,Aragón,8,España,2020-03-25
+89,Huesca,1355,Islas Baleares,1545,Islas Baleares,8,España,2022-05-27
+90,Palencia,1355,Islas Baleares,1545,Islas Baleares,8,España,2023-09-16
+91,La Rioja,1355,Islas Baleares,1545,Islas Baleares,8,España,2022-01-28
+92,Madrid,1355,Islas Baleares,1545,Islas Baleares,8,España,2020-05-21
+93,Cuenca,1518,Jaén,1663,Andalucía,8,España,2021-11-29
+94,Tarragona,1518,Jaén,1663,Andalucía,8,España,2020-01-26
+95,Castellón,1518,Jaén,1663,Andalucía,8,España,2022-05-10
+96,León,1518,Jaén,1663,Andalucía,8,España,2022-09-30
+97,Huesca,1108,La Coruña,1443,Galicia,8,España,2022-01-11
+98,Soria,1108,La Coruña,1443,Galicia,8,España,2023-07-25
+99,Murcia,1108,La Coruña,1443,Galicia,8,España,2022-07-30
+100,Almería,1108,La Coruña,1443,Galicia,8,España,2023-12-19
+101,Cuenca,1156,La Rioja,1445,La Rioja,8,España,2020-12-26
+102,Baleares,1156,La Rioja,1445,La Rioja,8,España,2022-12-04
+103,Ávila,1156,La Rioja,1445,La Rioja,8,España,2023-08-25
+104,Segovia,1156,La Rioja,1445,La Rioja,8,España,2021-07-07
+105,Almería,1630,Las Palmas,1827,Canarias,8,España,2023-01-07
+106,Ciudad,1630,Las Palmas,1827,Canarias,8,España,2022-09-17
+107,Zamora,1630,Las Palmas,1827,Canarias,8,España,2022-08-10
+108,Asturias,1630,Las Palmas,1827,Canarias,8,España,2022-06-11
+109,Palencia,1845,León,1748,Castilla y León,8,España,2023-04-28
+110,Ceuta,1845,León,1748,Castilla y León,8,España,2021-07-03
+111,Vizcaya,1845,León,1748,Castilla y León,8,España,2021-10-22
+112,Zamora,1845,León,1748,Castilla y León,8,España,2021-05-17
+113,Cuenca,1850,Lérida,1957,Cataluña,8,España,2020-06-26
+114,Barcelona,1850,Lérida,1957,Cataluña,8,España,2021-07-25
+115,Zaragoza,1850,Lérida,1957,Cataluña,8,España,2022-07-12
+116,Baleares,1850,Lérida,1957,Cataluña,8,España,2021-05-14
+117,Barcelona,1768,Lugo,1475,Galicia,8,España,2023-03-13
+118,Huelva,1768,Lugo,1475,Galicia,8,España,2023-06-03
+119,Palencia,1768,Lugo,1475,Galicia,8,España,2023-09-30
+120,Albacete,1768,Lugo,1475,Galicia,8,España,2022-02-15
+121,Córdoba,1344,Madrid,1029,Comunidad de Madrid,8,España,2022-10-09
+122,Barcelona,1344,Madrid,1029,Comunidad de Madrid,8,España,2021-10-27
+123,Melilla,1344,Madrid,1029,Comunidad de Madrid,8,España,2021-01-07
+124,Valencia,1344,Madrid,1029,Comunidad de Madrid,8,España,2022-09-25
+125,Lugo,1217,Málaga,1363,Andalucía,8,España,2021-06-13
+126,Vizcaya,1217,Málaga,1363,Andalucía,8,España,2021-11-28
+127,Málaga,1217,Málaga,1363,Andalucía,8,España,2021-07-26
+128,León,1217,Málaga,1363,Andalucía,8,España,2023-05-05
+129,Salamanca,1718,Murcia,1901,Región de Murcia,8,España,2021-07-19
+130,Toledo,1718,Murcia,1901,Región de Murcia,8,España,2023-02-12
+131,Lleida,1718,Murcia,1901,Región de Murcia,8,España,2020-01-21
+132,Almería,1718,Murcia,1901,Región de Murcia,8,España,2022-11-24
+133,La Coruña,1970,Navarra,1195,Comunidad Foral de Navarra,8,España,2020-06-24
+134,Soria,1970,Navarra,1195,Comunidad Foral de Navarra,8,España,2021-05-09
+135,Madrid,1970,Navarra,1195,Comunidad Foral de Navarra,8,España,2022-04-12
+136,Asturias,1970,Navarra,1195,Comunidad Foral de Navarra,8,España,2022-09-27
+137,Guadalajara,1568,Orense,1776,Galicia,8,España,2021-05-07
+138,Asturias,1568,Orense,1776,Galicia,8,España,2023-11-15
+139,Cuenca,1568,Orense,1776,Galicia,8,España,2022-09-02
+140,Jaén,1568,Orense,1776,Galicia,8,España,2023-08-15
+141,Lleida,1728,Palencia,1502,Castilla y León,8,España,2022-07-06
+142,Badajoz,1728,Palencia,1502,Castilla y León,8,España,2020-02-05
+143,Segovia,1728,Palencia,1502,Castilla y León,8,España,2020-07-09
+144,Las Palmas,1728,Palencia,1502,Castilla y León,8,España,2021-08-25
+145,Ceuta,1226,Pontevedra,1414,Galicia,8,España,2023-11-17
+146,Guipúzcoa,1226,Pontevedra,1414,Galicia,8,España,2021-05-13
+147,La Coruña,1226,Pontevedra,1414,Galicia,8,España,2021-09-19
+148,Toledo,1226,Pontevedra,1414,Galicia,8,España,2023-09-21
+149,Guadalajara,1595,Salamanca,1377,Castilla y León,8,España,2022-08-27
+150,Guadalajara,1595,Salamanca,1377,Castilla y León,8,España,2023-02-07
+151,Huesca,1595,Salamanca,1377,Castilla y León,8,España,2022-12-23
+152,Soria,1595,Salamanca,1377,Castilla y León,8,España,2021-12-05
+153,Asturias,1435,Santa Cruz de Tenerife,1763,Canarias,8,España,2023-02-01
+154,Ávila,1435,Santa Cruz de Tenerife,1763,Canarias,8,España,2021-11-08
+155,Las Palmas,1435,Santa Cruz de Tenerife,1763,Canarias,8,España,2021-12-21
+156,Valencia,1435,Santa Cruz de Tenerife,1763,Canarias,8,España,2023-12-10
+157,Zaragoza,1464,Segovia,1277,Castilla y León,8,España,2021-09-19
+158,Navarra,1464,Segovia,1277,Castilla y León,8,España,2021-05-29
+159,Palencia,1464,Segovia,1277,Castilla y León,8,España,2021-04-17
+160,Sevilla,1464,Segovia,1277,Castilla y León,8,España,2020-09-04
+161,La Rioja,1738,Sevilla,1197,Andalucía,8,España,2021-10-08
+162,Sevilla,1738,Sevilla,1197,Andalucía,8,España,2020-09-01
+163,Toledo,1738,Sevilla,1197,Andalucía,8,España,2023-01-02
+164,Girona,1738,Sevilla,1197,Andalucía,8,España,2023-11-14
+165,Huelva,1189,Soria,1196,Castilla y León,8,España,2021-03-19
+166,Ourense,1189,Soria,1196,Castilla y León,8,España,2022-09-18
+167,Burgos,1189,Soria,1196,Castilla y León,8,España,2021-07-20
+168,Ceuta,1189,Soria,1196,Castilla y León,8,España,2023-04-22
+169,Huelva,1778,Tarragona,1537,Cataluña,8,España,2023-05-07
+170,Baleares,1778,Tarragona,1537,Cataluña,8,España,2021-08-02
+171,Ourense,1778,Tarragona,1537,Cataluña,8,España,2020-07-24
+172,Zaragoza,1778,Tarragona,1537,Cataluña,8,España,2021-02-01
+173,Navarra,1303,Teruel,1232,Aragón,8,España,2022-01-09
+174,Pontevedra,1303,Teruel,1232,Aragón,8,España,2021-01-02
+175,Albacete,1303,Teruel,1232,Aragón,8,España,2021-09-11
+176,Cuenca,1303,Teruel,1232,Aragón,8,España,2020-01-29
+177,Guipúzcoa,1725,Toledo,1546,Castilla-La Mancha,8,España,2020-09-16
+178,Álava,1725,Toledo,1546,Castilla-La Mancha,8,España,2021-07-15
+179,Burgos,1725,Toledo,1546,Castilla-La Mancha,8,España,2020-04-03
+180,Asturias,1725,Toledo,1546,Castilla-La Mancha,8,España,2020-04-21
+181,Valencia,1566,Valencia,1299,Comunidad Valenciana,8,España,2023-11-29
+182,Ávila,1566,Valencia,1299,Comunidad Valenciana,8,España,2020-09-15
+183,Jaén,1566,Valencia,1299,Comunidad Valenciana,8,España,2023-07-30
+184,Lleida,1566,Valencia,1299,Comunidad Valenciana,8,España,2022-10-02
+185,Cáceres,1105,Valladolid,1893,Castilla y León,8,España,2020-01-26
+186,Granada,1105,Valladolid,1893,Castilla y León,8,España,2023-03-21
+187,Vizcaya,1105,Valladolid,1893,Castilla y León,8,España,2021-08-05
+188,Almería,1105,Valladolid,1893,Castilla y León,8,España,2022-08-19
+189,Cáceres,1490,Vizcaya,1451,País Vasco,8,España,2021-11-28
+190,Soria,1490,Vizcaya,1451,País Vasco,8,España,2021-01-12
+191,Cuenca,1490,Vizcaya,1451,País Vasco,8,España,2020-04-15
+192,Sevilla,1490,Vizcaya,1451,País Vasco,8,España,2021-06-01
+193,Madrid,1963,Zamora,1882,Castilla y León,8,España,2022-09-05
+194,La Rioja,1963,Zamora,1882,Castilla y León,8,España,2020-08-21
+195,Castellón,1963,Zamora,1882,Castilla y León,8,España,2020-05-13
+196,Huelva,1963,Zamora,1882,Castilla y León,8,España,2022-03-31
+197,Baleares,1503,Zaragoza,1075,Aragón,8,España,2023-03-27
+198,Soria,1503,Zaragoza,1075,Aragón,8,España,2023-07-13
+199,Melilla,1503,Zaragoza,1075,Aragón,8,España,2023-11-06
+200,Alicante,1503,Zaragoza,1075,Aragón,8,España,2020-04-19
+201,La Coruña,1155,Ceuta,1152,Ceuta,8,España,2023-02-26
+202,Álava,1155,Ceuta,1152,Ceuta,8,España,2021-09-14
+203,Granada,1155,Ceuta,1152,Ceuta,8,España,2020-06-23
+204,Vizcaya,1155,Ceuta,1152,Ceuta,8,España,2021-05-23
+205,Valladolid,1121,Melilla,1571,Melilla,8,España,2022-05-02
+206,Girona,1121,Melilla,1571,Melilla,8,España,2023-05-26
+207,Baleares,1121,Melilla,1571,Melilla,8,España,2023-05-05
+208,Madrid,1121,Melilla,1571,Melilla,8,España,2023-06-20
+209,Cádiz,1794,Provincia de Mozambique,1535,Región de Mozambique,30,Mozambique,2022-02-18
+210,Jaén,1930,Provincia de Vanuatu,1453,Región de Vanuatu,59,Vanuatu,2021-08-31
+211,Málaga,1439,Provincia de Bahamas,1312,Región de Bahamas,77,Bahamas,2023-03-10
+212,Asturias,1061,Provincia de Belice,1624,Región de Belice,81,Belice,2020-07-22
+213,Valencia,1212,Provincia de Alemania,1640,Región de Alemania,99,Alemania,2021-03-08
+214,Las Palmas,1676,Provincia de Eslovenia,1083,Región de Eslovenia,35,Eslovenia,2020-11-17
+215,Lleida,1177,Provincia de Timor-Leste,1565,Región de Timor-Leste,32,Timor-Leste,2020-06-02
+216,Guadalajara,1002,Provincia de Suecia,1418,Región de Suecia,22,Suecia,2022-07-11
+217,Ourense,1608,Provincia de Irán,1481,Región de Irán,90,Irán,2021-08-19
+218,Teruel,1237,Provincia de Bolivia,1295,Región de Bolivia,5,Bolivia,2023-12-18
+219,Girona,1719,Provincia de Ghana,1880,Región de Ghana,38,Ghana,2022-07-18
+220,La Coruña,1703,Provincia de República Unid...,1239,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2021-06-25
+221,Guadalajara,1603,Provincia de Brasil,1677,Región de Brasil,82,Brasil,2021-02-09
+222,Zaragoza,1117,Provincia de Angola,1557,Región de Angola,56,Angola,2021-04-05
+223,Tarragona,1152,Provincia de Côte d'Ivoire,1930,Región de Côte d'Ivoire,84,Côte d'Ivoire,2021-06-28
+224,Ávila,1073,Provincia de Serbia,1061,Región de Serbia,20,Serbia,2020-12-05
+225,Badajoz,1609,Provincia de Estados Unidos...,1766,Región de Estados Unidos de América,41,Estados Unidos de América,2023-03-11
+226,Las Palmas,1449,Provincia de Ghana,1127,Región de Ghana,38,Ghana,2022-08-17
+227,Melilla,1311,Provincia de Irán,1716,Región de Irán,90,Irán,2022-04-04
+228,La Coruña,1512,Provincia de Sudán,1552,Región de Sudán,36,Sudán,2022-10-08
+229,Valencia,1082,Provincia de República Demo...,1612,Región de República Democrática del Congo,58,República Democrática del Congo,2020-03-22
+230,Ceuta,1752,Provincia de Filipinas,1330,Región de Filipinas,57,Filipinas,2023-05-21
+231,Vizcaya,1026,Provincia de Lituania,1093,Región de Lituania,34,Lituania,2021-04-13
+232,Asturias,1856,Provincia de Ucrania,1881,Región de Ucrania,88,Ucrania,2023-03-24
+233,Melilla,1973,Provincia de Bahamas,1021,Región de Bahamas,77,Bahamas,2023-10-08
+234,Vizcaya,1590,Provincia de Sudán,1041,Región de Sudán,36,Sudán,2020-12-24
+235,Huelva,1531,Provincia de Polonia,1667,Región de Polonia,62,Polonia,2022-06-24
+236,Ciudad,1185,Provincia de Somalia,1599,Región de Somalia,37,Somalia,2022-06-11
+237,Burgos,1833,Provincia de Andorra,1503,Región de Andorra,83,Andorra,2020-07-05
+238,Cantabria,1356,Provincia de Polonia,1418,Región de Polonia,62,Polonia,2021-11-13
+239,Pontevedra,1686,Provincia de Burkina Faso,1107,Región de Burkina Faso,43,Burkina Faso,2020-11-25
+240,Valladolid,1421,Provincia de Tayikistán,1710,Región de Tayikistán,44,Tayikistán,2022-10-11
+241,Cádiz,1678,Provincia de Ghana,1967,Región de Ghana,38,Ghana,2022-03-31
+242,Lleida,1563,Provincia de Alemania,1037,Región de Alemania,99,Alemania,2022-07-20
+243,Soria,1322,Provincia de Italia,1258,Región de Italia,13,Italia,2021-10-24
+244,Santa Cruz de Tenerife,1993,Provincia de Jamaica,1791,Región de Jamaica,16,Jamaica,2022-04-07
+245,Burgos,1844,Provincia de Cabo Verde,1001,Región de Cabo Verde,67,Cabo Verde,2023-09-08
+246,Asturias,1473,Provincia de Panamá,1423,Región de Panamá,71,Panamá,2020-04-21
+247,León,1530,Provincia de Eslovaquia,1370,Región de Eslovaquia,26,Eslovaquia,2023-06-29
+248,Zamora,1510,Provincia de Montenegro,1640,Región de Montenegro,98,Montenegro,2022-06-24
+249,Palencia,1052,Provincia de Alemania,1208,Región de Alemania,99,Alemania,2021-06-30
+250,Huelva,1134,Provincia de Nigeria,1949,Región de Nigeria,72,Nigeria,2021-08-12
+251,Granada,1901,Provincia de República Demo...,1715,Región de República Democrática del Congo,58,República Democrática del Congo,2022-09-19
+252,León,1029,Provincia de Austria,1996,Región de Austria,17,Austria,2023-07-14
+253,Almería,1818,Provincia de Francia,1245,Región de Francia,79,Francia,2023-12-24
+254,Girona,1318,Provincia de Suecia,1564,Región de Suecia,22,Suecia,2020-01-29
+255,Segovia,1417,Provincia de Nigeria,1095,Región de Nigeria,72,Nigeria,2021-04-05
+256,Salamanca,1472,Provincia de Jamaica,1969,Región de Jamaica,16,Jamaica,2020-08-28
+257,Lleida,1852,Provincia de Côte d'Ivoire,1157,Región de Côte d'Ivoire,84,Côte d'Ivoire,2022-10-17
+258,León,1298,Provincia de República Fede...,1521,Región de República Federal Democrática de Nepal,93,República Federal Democrática de Nepal,2023-12-15
+259,Guadalajara,1425,Provincia de Sudán,1854,Región de Sudán,36,Sudán,2022-09-15
+260,Málaga,1249,Provincia de Polonia,1467,Región de Polonia,62,Polonia,2023-02-02
+261,Almería,1392,Provincia de Serbia,1195,Región de Serbia,20,Serbia,2023-05-12
+262,Badajoz,1764,Provincia de Cabo Verde,1900,Región de Cabo Verde,67,Cabo Verde,2020-10-06
+263,Teruel,1282,Provincia de Maldivas,1791,Región de Maldivas,10,Maldivas,2022-04-29
+264,Málaga,1956,Provincia de Barbados,1806,Región de Barbados,45,Barbados,2022-11-05
+265,Alicante,1840,Provincia de Sudán,1002,Región de Sudán,36,Sudán,2021-08-02
+266,Teruel,1305,Provincia de San Vicente y ...,1857,Región de San Vicente y las Granadinas,94,San Vicente y las Granadinas,2023-04-17
+267,León,1675,Provincia de Jordania,1501,Región de Jordania,76,Jordania,2020-10-31
+268,Huesca,1551,Provincia de Vanuatu,1495,Región de Vanuatu,59,Vanuatu,2021-12-07
+269,Girona,1565,Provincia de Tayikistán,1781,Región de Tayikistán,44,Tayikistán,2023-01-17
+270,La Rioja,1466,Provincia de Mongolia,1955,Región de Mongolia,50,Mongolia,2021-10-21
+271,Soria,1714,Provincia de Eslovaquia,1244,Región de Eslovaquia,26,Eslovaquia,2023-03-17
+272,Zamora,1239,Provincia de Países Bajos,1876,Región de Países Bajos,51,Países Bajos,2022-04-21
+273,Asturias,1325,Provincia de Argentina,1762,Región de Argentina,6,Argentina,2022-08-26
+274,Badajoz,1935,Provincia de Swazilandia,1830,Región de Swazilandia,92,Swazilandia,2022-02-19
+275,Girona,1679,Provincia de Países Bajos,1811,Región de Países Bajos,51,Países Bajos,2023-08-28
+276,Toledo,1507,Provincia de República Domi...,1987,Región de República Dominicana,21,República Dominicana,2020-03-16
+277,Guipúzcoa,1514,Provincia de Qatar,1988,Región de Qatar,18,Qatar,2023-04-23
+278,Palencia,1890,Provincia de Tayikistán,1102,Región de Tayikistán,44,Tayikistán,2022-06-20
+279,Huelva,1538,Provincia de Israel,1932,Región de Israel,14,Israel,2022-07-24
+280,Segovia,1739,Provincia de Vietman,1147,Región de Vietman,2,Vietman,2022-04-19
+281,Barcelona,1993,Provincia de Niger,1158,Región de Niger,85,Niger,2020-06-02
+282,Granada,1800,Provincia de Polonia,1992,Región de Polonia,62,Polonia,2021-06-26
+283,Segovia,1638,Provincia de Barbados,1709,Región de Barbados,45,Barbados,2022-03-25
+284,Barcelona,1082,Provincia de Niger,1872,Región de Niger,85,Niger,2021-11-03
+285,Segovia,1879,Provincia de Ucrania,1546,Región de Ucrania,88,Ucrania,2022-02-17
+286,Málaga,1641,Provincia de Bosnia y Herze...,1735,Región de Bosnia y Herzegovina,42,Bosnia y Herzegovina,2022-09-26
+287,Albacete,1036,Provincia de Panamá,1632,Región de Panamá,71,Panamá,2020-05-20
+288,Granada,1646,Provincia de Timor-Leste,1700,Región de Timor-Leste,32,Timor-Leste,2021-08-11
+289,Castellón,1764,Provincia de Togo,1092,Región de Togo,31,Togo,2022-06-07
+290,Vizcaya,1778,Provincia de Israel,1648,Región de Israel,14,Israel,2023-12-12
+291,Cantabria,1454,Provincia de Israel,1170,Región de Israel,14,Israel,2023-11-22
+292,Barcelona,1925,Provincia de República Popu...,1029,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2020-04-04
+293,Asturias,1815,Provincia de Burkina Faso,1057,Región de Burkina Faso,43,Burkina Faso,2021-08-23
+294,Zamora,1383,Provincia de Gabón,1441,Región de Gabón,47,Gabón,2020-10-25
+295,Málaga,1543,Provincia de Etiopía,1421,Región de Etiopía,33,Etiopía,2023-03-05
+296,Sevilla,1811,Provincia de Bahrein,1184,Región de Bahrein,89,Bahrein,2020-12-14
+297,Vizcaya,1080,Provincia de Guinea,1624,Región de Guinea,24,Guinea,2022-02-22
+298,Pontevedra,1699,Provincia de Belice,1246,Región de Belice,81,Belice,2022-10-16
+299,Burgos,1146,Provincia de Jordania,1237,Región de Jordania,76,Jordania,2022-08-02
+300,Cádiz,1260,Provincia de Andorra,1470,Región de Andorra,83,Andorra,2021-06-06
+301,Toledo,1009,Provincia de Guinea Ecuatorial,1920,Región de Guinea Ecuatorial,87,Guinea Ecuatorial,2022-08-10
+302,Alicante,1693,Provincia de Ghana,1559,Región de Ghana,38,Ghana,2020-11-19
+303,Huesca,1452,Provincia de República Unid...,1967,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2021-12-08
+304,León,1306,Provincia de Bahamas,1654,Región de Bahamas,77,Bahamas,2022-05-18
+305,Valladolid,1256,Provincia de Irán,1467,Región de Irán,90,Irán,2021-09-10
+306,Ceuta,1393,Provincia de Túnez,1873,Región de Túnez,27,Túnez,2022-09-16
+307,Granada,1242,Provincia de Letonia,1390,Región de Letonia,15,Letonia,2023-03-17
+308,Cantabria,1588,Provincia de Gabón,1302,Región de Gabón,47,Gabón,2023-12-03
+309,Soria,1022,Provincia de Zambia,1849,Región de Zambia,39,Zambia,2023-09-10
+310,Lleida,1281,Provincia de Bulgaria,1008,Región de Bulgaria,52,Bulgaria,2023-03-05
+311,Vizcaya,1796,Provincia de Bahrein,1762,Región de Bahrein,89,Bahrein,2020-04-10
+312,Málaga,1763,Provincia de Francia,1508,Región de Francia,79,Francia,2021-08-09
+313,Cáceres,1621,Provincia de Togo,1821,Región de Togo,31,Togo,2021-12-22
+314,Zaragoza,1651,Provincia de Mozambique,1194,Región de Mozambique,30,Mozambique,2023-06-25
+315,Córdoba,1694,Provincia de Lituania,1773,Región de Lituania,34,Lituania,2023-09-12
+316,Segovia,1858,Provincia de Bahrein,1140,Región de Bahrein,89,Bahrein,2023-07-10
+317,Huesca,1925,Provincia de Israel,1642,Región de Israel,14,Israel,2023-08-16
+318,Teruel,1316,Provincia de Argentina,1807,Región de Argentina,6,Argentina,2022-06-21
+319,Girona,1593,Provincia de Bolivia,1373,Región de Bolivia,5,Bolivia,2020-09-26
+320,Valladolid,1931,Provincia de Italia,1302,Región de Italia,13,Italia,2021-10-31
+321,Cuenca,1425,Provincia de Liechtenstein,1179,Región de Liechtenstein,97,Liechtenstein,2021-02-15
+322,Málaga,1805,Provincia de Qatar,1552,Región de Qatar,18,Qatar,2022-01-19
+323,Las Palmas,1513,Provincia de Albania,1935,Región de Albania,69,Albania,2021-07-12
+324,Ceuta,1263,Provincia de Federación de ...,1935,Región de Federación de Rusia,23,Federación de Rusia,2022-09-13
+325,Huelva,1764,Provincia de Zambia,1891,Región de Zambia,39,Zambia,2021-11-24
+326,La Rioja,1479,Provincia de Jamaica,1986,Región de Jamaica,16,Jamaica,2020-06-03
+327,La Coruña,1772,Provincia de Serbia,1989,Región de Serbia,20,Serbia,2021-04-07
+328,Ciudad,1741,Provincia de Ucrania,1690,Región de Ucrania,88,Ucrania,2022-03-24
+329,Ávila,1374,Provincia de Canadá,1092,Región de Canadá,73,Canadá,2022-03-19
+330,Ceuta,1270,Provincia de Vietman,1549,Región de Vietman,2,Vietman,2020-09-10
+331,Guadalajara,1377,Provincia de Camerún,1688,Región de Camerún,60,Camerún,2023-10-08
+332,Teruel,1598,Provincia de Eslovenia,1390,Región de Eslovenia,35,Eslovenia,2023-07-31
+333,Zamora,1110,Provincia de Haití,1691,Región de Haití,49,Haití,2021-04-23
+334,Barcelona,1025,Provincia de Polonia,1634,Región de Polonia,62,Polonia,2023-02-23
+335,Girona,1937,Provincia de Burkina Faso,1624,Región de Burkina Faso,43,Burkina Faso,2021-03-29
+336,Tarragona,1064,Provincia de Côte d'Ivoire,1650,Región de Côte d'Ivoire,84,Côte d'Ivoire,2022-08-08
+337,Valladolid,1309,Provincia de Palau,1664,Región de Palau,91,Palau,2022-04-16
+338,León,1143,Provincia de Jamaica,1046,Región de Jamaica,16,Jamaica,2020-03-17
+339,Ávila,1504,Provincia de República Popu...,1118,Región de República Popular Democrática de Corea,40,República Popular Democrática de Corea,2020-07-18
+340,Córdoba,1908,Provincia de Timor-Leste,1550,Región de Timor-Leste,32,Timor-Leste,2020-10-04
+341,Burgos,1464,Provincia de Países Bajos,1379,Región de Países Bajos,51,Países Bajos,2023-10-05
+342,Baleares,1713,Provincia de Liechtenstein,1968,Región de Liechtenstein,97,Liechtenstein,2023-01-11
+343,Ciudad,1601,Provincia de Saint Kitts y ...,1760,Región de Saint Kitts y Nevis,55,Saint Kitts y Nevis,2020-11-12
+344,Baleares,1670,Provincia de Saint Kitts y ...,1101,Región de Saint Kitts y Nevis,55,Saint Kitts y Nevis,2022-09-29
+345,Ciudad,1417,Provincia de Micronesia,1961,Región de Micronesia,80,Micronesia,2021-07-26
+346,Santa Cruz de Tenerife,1706,Provincia de Bolivia,1379,Región de Bolivia,5,Bolivia,2021-03-20
+347,Asturias,1455,Provincia de República Demo...,1973,Región de República Democrática del Congo,58,República Democrática del Congo,2021-04-28
+348,Madrid,1101,Provincia de Zimbabwe,1702,Región de Zimbabwe,48,Zimbabwe,2022-01-22
+349,Santa Cruz de Tenerife,1923,Provincia de Panamá,1660,Región de Panamá,71,Panamá,2022-01-04
+350,Teruel,1407,Provincia de El Salvador,1282,Región de El Salvador,9,El Salvador,2021-01-23
+351,Girona,1971,Provincia de Austria,1868,Región de Austria,17,Austria,2022-07-20
+352,Álava,1678,Provincia de Italia,1217,Región de Italia,13,Italia,2023-08-07
+353,Ciudad,1611,Provincia de Andorra,1994,Región de Andorra,83,Andorra,2020-02-13
+354,Cádiz,1805,Provincia de Samoa,1341,Región de Samoa,7,Samoa,2021-05-13
+355,Melilla,1805,Provincia de Qatar,1578,Región de Qatar,18,Qatar,2021-02-24
+356,Asturias,1849,Provincia de Maldivas,1783,Región de Maldivas,10,Maldivas,2023-02-09
+357,Jaén,1600,Provincia de San Marino,1221,Región de San Marino,28,San Marino,2021-04-22
+358,Alicante,1792,Provincia de Tayikistán,1151,Región de Tayikistán,44,Tayikistán,2023-05-05
+359,Huesca,1283,Provincia de Singapur,1879,Región de Singapur,1,Singapur,2020-10-23
+360,Valencia,1553,Provincia de Qatar,1256,Región de Qatar,18,Qatar,2020-12-23
+361,Huelva,1676,Provincia de Jamaica,1887,Región de Jamaica,16,Jamaica,2020-02-22
+362,Huelva,1015,Provincia de Qatar,1366,Región de Qatar,18,Qatar,2021-05-02
+363,Toledo,1331,Provincia de Bahamas,1016,Región de Bahamas,77,Bahamas,2020-12-22
+364,Vizcaya,1053,Provincia de Eslovenia,1129,Región de Eslovenia,35,Eslovenia,2022-05-12
+365,Barcelona,1116,Provincia de Albania,1763,Región de Albania,69,Albania,2020-05-10
+366,Huelva,1459,Provincia de Polonia,1796,Región de Polonia,62,Polonia,2022-01-11
+367,Segovia,1607,Provincia de Cabo Verde,1111,Región de Cabo Verde,67,Cabo Verde,2022-07-14
+368,Vizcaya,1226,Provincia de Mauritania,1968,Región de Mauritania,66,Mauritania,2023-06-13
+369,Tarragona,1744,Provincia de Argentina,1802,Región de Argentina,6,Argentina,2023-09-11
+370,Santa Cruz de Tenerife,1308,Provincia de Antigua y Barbuda,1469,Región de Antigua y Barbuda,68,Antigua y Barbuda,2023-08-10
+371,Zaragoza,1062,Provincia de Tailandia,1490,Región de Tailandia,4,Tailandia,2022-04-02
+372,Asturias,1702,Provincia de Angola,1110,Región de Angola,56,Angola,2022-10-01
+373,Alicante,1931,Provincia de República Fede...,1454,Región de República Federal Democrática de Nepal,93,República Federal Democrática de Nepal,2020-05-30
+374,Cantabria,1329,Provincia de Congo,1622,Región de Congo,12,Congo,2020-10-30
+375,Zamora,1129,Provincia de Maldivas,1281,Región de Maldivas,10,Maldivas,2023-07-02
+376,Alicante,1599,Provincia de Andorra,1561,Región de Andorra,83,Andorra,2023-12-29
+377,Granada,1390,Provincia de Burkina Faso,1611,Región de Burkina Faso,43,Burkina Faso,2022-12-22
+378,Murcia,1464,Provincia de Zambia,1517,Región de Zambia,39,Zambia,2023-05-24
+379,Córdoba,1101,Provincia de Filipinas,1812,Región de Filipinas,57,Filipinas,2023-12-08
+380,Valladolid,1873,Provincia de Jamaica,1670,Región de Jamaica,16,Jamaica,2023-08-26
+381,Girona,1564,Provincia de País desconocido,1738,Región de País desconocido,100,País desconocido,2021-03-16
+382,Vizcaya,1462,Provincia de Filipinas,1909,Región de Filipinas,57,Filipinas,2021-04-12
+383,Segovia,1347,Provincia de Reino Unido de...,1847,Región de Reino Unido de Gran Bretaña e Irlanda...,54,Reino Unido de Gran Bretaña e Irlanda del ...,2022-07-17
+384,Cuenca,1425,Provincia de Comoras,1747,Región de Comoras,53,Comoras,2020-07-13
+385,Zaragoza,1437,Provincia de Bosnia y Herze...,1320,Región de Bosnia y Herzegovina,42,Bosnia y Herzegovina,2023-09-24
+386,Las Palmas,1383,Provincia de Lituania,1976,Región de Lituania,34,Lituania,2020-11-08
+387,Valencia,1945,Provincia de Bahrein,1485,Región de Bahrein,89,Bahrein,2020-05-17
+388,Jaén,1851,Provincia de Italia,1087,Región de Italia,13,Italia,2020-07-09
+389,Cádiz,1098,Provincia de Filipinas,1762,Región de Filipinas,57,Filipinas,2022-02-02
+390,Tarragona,1569,Provincia de Qatar,1061,Región de Qatar,18,Qatar,2023-04-16
+391,Huesca,1575,Provincia de Canadá,1337,Región de Canadá,73,Canadá,2023-10-04
+392,Zaragoza,1420,Provincia de Austria,1362,Región de Austria,17,Austria,2023-09-24
+393,Toledo,1433,Provincia de Montenegro,1888,Región de Montenegro,98,Montenegro,2020-04-15
+394,Ávila,1614,Provincia de Ghana,1319,Región de Ghana,38,Ghana,2021-12-21
+395,Pontevedra,1591,Provincia de Letonia,1519,Región de Letonia,15,Letonia,2021-03-11
+396,Murcia,1672,Provincia de República Domi...,1493,Región de República Dominicana,21,República Dominicana,2021-04-04
+397,Guadalajara,1358,Provincia de Letonia,1865,Región de Letonia,15,Letonia,2023-02-13
+398,Ávila,1117,Provincia de Haití,1780,Región de Haití,49,Haití,2021-07-24
+399,Sevilla,1231,Provincia de Ecuador,1826,Región de Ecuador,75,Ecuador,2022-05-28
+400,Granada,1997,Provincia de Canadá,1785,Región de Canadá,73,Canadá,2023-06-27
+401,Pontevedra,1691,Provincia de Micronesia,1658,Región de Micronesia,80,Micronesia,2023-02-14
+402,Cáceres,1623,Provincia de Tailandia,1951,Región de Tailandia,4,Tailandia,2023-09-09
+403,Huelva,1273,Provincia de Irán,1029,Región de Irán,90,Irán,2021-01-04
+404,Alicante,1719,Provincia de Sudán,1780,Región de Sudán,36,Sudán,2021-09-24
+405,Salamanca,1359,Provincia de Barbados,1006,Región de Barbados,45,Barbados,2021-01-06
+406,Cuenca,1579,Provincia de Serbia,1673,Región de Serbia,20,Serbia,2022-03-31
+407,Asturias,1145,Provincia de Maldivas,1758,Región de Maldivas,10,Maldivas,2023-07-20
+408,Huesca,1093,Provincia de Tailandia,1764,Región de Tailandia,4,Tailandia,2022-12-22
+409,Albacete,1385,Provincia de Portugal,1429,Región de Portugal,29,Portugal,2022-07-18
+410,Pontevedra,1161,Provincia de Barbados,1378,Región de Barbados,45,Barbados,2021-09-30
+411,Alicante,1332,Provincia de San Vicente y ...,1795,Región de San Vicente y las Granadinas,94,San Vicente y las Granadinas,2023-03-08
+412,Asturias,1086,Provincia de Bangladesh,1904,Región de Bangladesh,78,Bangladesh,2020-04-17
+413,Vizcaya,1161,Provincia de República Domi...,1772,Región de República Dominicana,21,República Dominicana,2023-06-19
+414,Huesca,1690,Provincia de Samoa,1083,Región de Samoa,7,Samoa,2021-07-11
+415,Ourense,1677,Provincia de República Demo...,1434,Región de República Democrática del Congo,58,República Democrática del Congo,2022-09-21
+416,Pontevedra,1452,Provincia de Francia,1424,Región de Francia,79,Francia,2021-07-13
+417,Soria,1773,Provincia de Portugal,1524,Región de Portugal,29,Portugal,2020-08-21
+418,Huesca,1440,Provincia de Rwanda,1113,Región de Rwanda,46,Rwanda,2021-08-03
+419,León,1694,Provincia de Ucrania,1607,Región de Ucrania,88,Ucrania,2022-09-23
+420,Ourense,1683,Provincia de Albania,1315,Región de Albania,69,Albania,2020-04-03
+421,Melilla,1404,Provincia de Mozambique,1613,Región de Mozambique,30,Mozambique,2020-04-22
+422,La Coruña,1209,Provincia de Singapur,1308,Región de Singapur,1,Singapur,2021-03-08
+423,Segovia,1140,Provincia de País desconocido,1782,Región de País desconocido,100,País desconocido,2021-06-07
+424,Ciudad,1335,Provincia de Zambia,1122,Región de Zambia,39,Zambia,2020-01-16
+425,Albacete,1764,Provincia de Suriname,1440,Región de Suriname,65,Suriname,2020-12-25
+426,Madrid,1389,Provincia de Qatar,1545,Región de Qatar,18,Qatar,2023-12-12
+427,Navarra,1512,Provincia de Togo,1572,Región de Togo,31,Togo,2023-09-30
+428,Córdoba,1073,Provincia de Gabón,1406,Región de Gabón,47,Gabón,2020-03-27
+429,Teruel,1019,Provincia de Filipinas,1470,Región de Filipinas,57,Filipinas,2020-06-08
+430,Castellón,1589,Provincia de Bosnia y Herze...,1439,Región de Bosnia y Herzegovina,42,Bosnia y Herzegovina,2023-03-20
+431,Tarragona,1726,Provincia de Comoras,1655,Región de Comoras,53,Comoras,2022-05-05
+432,Cantabria,1117,Provincia de Zambia,1414,Región de Zambia,39,Zambia,2020-02-12
+433,Barcelona,1175,Provincia de Burkina Faso,1820,Región de Burkina Faso,43,Burkina Faso,2023-06-19
+434,León,1851,Provincia de Camerún,1706,Región de Camerún,60,Camerún,2022-01-11
+435,Teruel,1447,Provincia de Italia,1864,Región de Italia,13,Italia,2020-08-04
+436,Ávila,1446,Provincia de Etiopía,1603,Región de Etiopía,33,Etiopía,2022-03-31
+437,Sevilla,1080,Provincia de Albania,1405,Región de Albania,69,Albania,2021-09-27
+438,Teruel,1347,Provincia de Liechtenstein,1226,Región de Liechtenstein,97,Liechtenstein,2021-11-13
+439,Navarra,1078,Provincia de Federación de ...,1522,Región de Federación de Rusia,23,Federación de Rusia,2023-07-20
+440,Granada,1543,Provincia de Jamaica,1522,Región de Jamaica,16,Jamaica,2021-02-01
+441,Teruel,1359,Provincia de Rwanda,1744,Región de Rwanda,46,Rwanda,2023-08-14
+442,Zamora,1241,Provincia de Serbia,1105,Región de Serbia,20,Serbia,2020-10-26
+443,Málaga,1202,Provincia de Lituania,1177,Región de Lituania,34,Lituania,2023-05-18
+444,Baleares,1778,Provincia de República Domi...,1777,Región de República Dominicana,21,República Dominicana,2023-09-04
+445,Zamora,1181,Provincia de República Unid...,1974,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2023-07-10
+446,Ciudad,1475,Provincia de Suriname,1772,Región de Suriname,65,Suriname,2023-02-28
+447,Albacete,1593,Provincia de Alemania,1459,Región de Alemania,99,Alemania,2023-10-26
+448,Navarra,1658,Provincia de Nauru,1650,Región de Nauru,74,Nauru,2023-07-03
+449,Lleida,1884,Provincia de Burkina Faso,1994,Región de Burkina Faso,43,Burkina Faso,2023-07-08
+450,Salamanca,1154,Provincia de Bosnia y Herze...,1450,Región de Bosnia y Herzegovina,42,Bosnia y Herzegovina,2020-05-19
+451,Asturias,1452,Provincia de Polonia,1646,Región de Polonia,62,Polonia,2021-09-12
+452,La Coruña,1605,Provincia de Somalia,1057,Región de Somalia,37,Somalia,2021-12-21
+453,Melilla,1075,Provincia de Mauritania,1317,Región de Mauritania,66,Mauritania,2022-08-03
+454,Vizcaya,1038,Provincia de Vanuatu,1058,Región de Vanuatu,59,Vanuatu,2022-01-25
+455,Ourense,1078,Provincia de Ghana,1660,Región de Ghana,38,Ghana,2020-07-03
+456,Barcelona,1608,Provincia de Micronesia,1519,Región de Micronesia,80,Micronesia,2022-02-26
+457,Segovia,1594,Provincia de República Cent...,1567,Región de República Centroafricana,61,República Centroafricana,2020-03-25
+458,León,1930,Provincia de Vanuatu,1829,Región de Vanuatu,59,Vanuatu,2023-03-16
+459,Soria,1192,Provincia de Niger,1329,Región de Niger,85,Niger,2023-05-24
+460,Barcelona,1513,Provincia de Polonia,1154,Región de Polonia,62,Polonia,2020-05-06
+461,Vizcaya,1105,Provincia de Vanuatu,1830,Región de Vanuatu,59,Vanuatu,2021-12-04
+462,Las Palmas,1086,Provincia de República Fede...,1516,Región de República Federal Democrática de Nepal,93,República Federal Democrática de Nepal,2023-08-16
+463,Baleares,1040,Provincia de Guinea,1253,Región de Guinea,24,Guinea,2023-12-20
+464,Granada,1449,Provincia de República Demo...,1536,Región de República Democrática del Congo,58,República Democrática del Congo,2022-12-06
+465,Cáceres,1162,Provincia de Micronesia,1372,Región de Micronesia,80,Micronesia,2022-02-02
+466,Teruel,1396,Provincia de Ghana,1418,Región de Ghana,38,Ghana,2021-11-23
+467,Huelva,1612,Provincia de Ucrania,1053,Región de Ucrania,88,Ucrania,2023-07-16
+468,Ávila,1342,Provincia de Côte d'Ivoire,1067,Región de Côte d'Ivoire,84,Côte d'Ivoire,2021-11-06
+469,Cantabria,1571,Provincia de Israel,1694,Región de Israel,14,Israel,2022-03-02
+470,Barcelona,1258,Provincia de Ghana,1741,Región de Ghana,38,Ghana,2023-09-06
+471,Salamanca,1894,Provincia de Francia,1153,Región de Francia,79,Francia,2021-11-13
+472,Málaga,1596,Provincia de Congo,1679,Región de Congo,12,Congo,2020-10-16
+473,Palencia,1317,Provincia de Rwanda,1990,Región de Rwanda,46,Rwanda,2023-09-05
+474,Cáceres,1678,Provincia de Palau,1401,Región de Palau,91,Palau,2020-09-21
+475,Ourense,1725,Provincia de Bangladesh,1960,Región de Bangladesh,78,Bangladesh,2020-06-22
+476,Albacete,1572,Provincia de Estados Unidos...,1385,Región de Estados Unidos de América,41,Estados Unidos de América,2023-08-10
+477,Alicante,1832,Provincia de Tayikistán,1130,Región de Tayikistán,44,Tayikistán,2023-10-04
+478,Segovia,1848,Provincia de Palau,1969,Región de Palau,91,Palau,2023-11-04
+479,Vizcaya,1095,Provincia de Albania,1661,Región de Albania,69,Albania,2023-10-05
+480,Salamanca,1520,Provincia de Angola,1370,Región de Angola,56,Angola,2020-02-07
+481,Madrid,1316,Provincia de Zimbabwe,1184,Región de Zimbabwe,48,Zimbabwe,2021-03-14
+482,Segovia,1970,Provincia de Barbados,1784,Región de Barbados,45,Barbados,2022-09-22
+483,Lugo,1231,Provincia de Eslovaquia,1140,Región de Eslovaquia,26,Eslovaquia,2020-11-13
+484,Zaragoza,1302,Provincia de República Unid...,1864,Región de República Unida de Tanzanía,11,República Unida de Tanzanía,2020-07-26
+485,Granada,1789,Provincia de Mauritania,1552,Región de Mauritania,66,Mauritania,2022-12-14
+486,Asturias,1677,Provincia de Bolivia,1344,Región de Bolivia,5,Bolivia,2023-06-19
+487,Cáceres,1611,Provincia de Qatar,1385,Región de Qatar,18,Qatar,2020-11-11
+488,La Rioja,1185,Provincia de Suecia,1851,Región de Suecia,22,Suecia,2023-11-19
+489,Lleida,1639,Provincia de País desconocido,1828,Región de País desconocido,100,País desconocido,2020-12-05
+490,Guipúzcoa,1448,Provincia de San Vicente y ...,1044,Región de San Vicente y las Granadinas,94,San Vicente y las Granadinas,2022-04-21
+491,Guadalajara,1692,Provincia de Zimbabwe,1736,Región de Zimbabwe,48,Zimbabwe,2021-05-01
+492,Toledo,1625,Provincia de República Demo...,1291,Región de República Democrática del Congo,58,República Democrática del Congo,2022-07-08
+493,La Coruña,1546,Provincia de Togo,1244,Región de Togo,31,Togo,2021-09-25
+494,Valladolid,1925,Provincia de Polonia,1855,Región de Polonia,62,Polonia,2021-02-01
+495,Málaga,1694,Provincia de Haití,1969,Región de Haití,49,Haití,2023-03-14
+496,Guadalajara,1472,Provincia de República Demo...,1787,Región de República Democrática del Congo,58,República Democrática del Congo,2021-07-31
+497,Lleida,1514,Provincia de Mongolia,1540,Región de Mongolia,50,Mongolia,2022-05-07
+498,Cuenca,1836,Provincia de Suecia,1204,Región de Suecia,22,Suecia,2023-05-23
+499,Ciudad,1893,Provincia de Benin,1256,Región de Benin,19,Benin,2020-04-16
+500,Badajoz,1492,Provincia de Côte d'Ivoire,1895,Región de Côte d'Ivoire,84,Côte d'Ivoire,2022-01-30

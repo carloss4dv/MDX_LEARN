@@ -1,16 +1,16 @@
-ID_TIPO_ACCESO_PREINS,NOMBRE_TIPO_ACCESO_PREINS,FECHA_CARGA,ID_TIPO_ACCESO_PREINS_NK
-1,Prueba de Acceso Universitaria,2023-10-13,1PAU
-2,Formación Profesional,2022-04-05,2FP
-3,Titulados Universitarios,2023-02-25,3TIT
-4,Mayores de 25 años,2020-02-05,4M25
-5,Mayores de 45 años,2021-11-14,5M45
-6,Sistemas educativos extranjeros,2020-07-13,6EXT
-7,Deportistas de alto nivel,2023-09-09,7DEP
-8,Estudiantes con discapacidad,2020-11-24,8DIS
-9,Credencial UNED,2020-11-29,9CRE
-10,Traslado de expediente,2022-11-11,10TR
-11,Convalidación parcial,2020-05-14,11CV
-12,Víctimas violencia,2021-08-01,12VM
-13,Familia numerosa especial,2022-09-25,13FA
-14,Reconocimiento profesional,2021-09-30,14RP
-15,Otros,2020-11-10,15OT
+ID_TIPO_ACCESO_PREINS,NOMBRE_TIPO_ACCESO_PREINS,FECHA_CARGA
+1,Prueba de Acceso Universitaria,2020-11-22
+2,Formación Profesional,2023-11-30
+3,Titulados Universitarios,2022-05-15
+4,Mayores de 25 años,2021-11-27
+5,Mayores de 45 años,2021-07-23
+6,Sistemas educativos extranjeros,2020-11-14
+7,Deportistas de alto nivel,2021-03-16
+8,Estudiantes con discapacidad,2021-11-20
+9,Credencial UNED,2020-07-28
+10,Traslado de expediente,2020-07-08
+11,Convalidación parcial,2022-02-17
+12,Víctimas violencia,2020-07-17
+13,Familia numerosa especial,2022-01-05
+14,Reconocimiento profesional,2021-12-05
+15,Otros,2023-05-21

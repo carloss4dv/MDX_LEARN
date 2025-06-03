@@ -1,51 +1,51 @@
 ID_TITULACION,NOMBRE_TITULACION,ID_TIPO_TITULACION,NOMBRE_TIPO_TITULACION,FECHA_CARGA
-1,Grado en Ciencias Políticas,1,Grado,2023-10-24
-2,Máster Universitario en Arquitectura,2,Máster Universitario,2022-06-20
-3,Diplomatura de Física,5,Diplomatura,2023-05-18
-4,Arquitectura de Biología,9,Arquitectura,2021-02-19
-5,Ingeniería de Medicina,7,Ingeniería,2021-02-24
-6,Grado en Geología,1,Grado,2021-05-06
-7,Grado en Biología,1,Grado,2022-10-04
-8,Ingeniería de Ingeniería Agrónoma,7,Ingeniería,2021-09-19
-9,Ingeniería Técnica de Matemáticas,8,Ingeniería Técnica,2023-06-19
-10,Arquitectura de Ingeniería Química,9,Arquitectura,2022-12-28
-11,Título Propio en Nutrición y Dietética,4,Título Propio,2023-04-06
-12,Ingeniería Técnica de Medicina,8,Ingeniería Técnica,2020-04-07
-13,Diplomatura de Ingeniería Agrónoma,5,Diplomatura,2020-10-05
-14,Grado en Historia del Arte,1,Grado,2021-03-16
-15,Ingeniería Técnica de Filosofía,8,Ingeniería Técnica,2020-06-03
-16,Máster Universitario en Ingeniería Industrial,2,Máster Universitario,2020-03-17
-17,Licenciatura de Estadística,6,Licenciatura,2023-07-22
-18,Grado en Arquitectura,1,Grado,2023-06-10
-19,Máster Universitario en Ingeniería de Telecomunicaciones,2,Máster Universitario,2020-04-18
-20,Licenciatura de Psicología,6,Licenciatura,2023-07-25
-21,Diplomatura de Ingeniería Química,5,Diplomatura,2023-12-16
-22,Máster Universitario en Bellas Artes,2,Máster Universitario,2022-05-27
-23,Arquitectura de Fisioterapia,9,Arquitectura,2022-09-03
-24,Grado en Nutrición y Dietética,1,Grado,2021-03-31
-25,Máster Universitario en Química,2,Máster Universitario,2022-12-05
-26,Ingeniería de Arquitectura,7,Ingeniería,2023-09-15
-27,Grado en Filología Hispánica,1,Grado,2023-12-26
-28,Doctorado en Biotecnología,3,Doctorado,2022-11-04
-29,Licenciatura de Filosofía,6,Licenciatura,2023-11-12
-30,Diplomatura de Veterinaria,5,Diplomatura,2021-01-28
-31,Máster Universitario en Filología Hispánica,2,Máster Universitario,2022-08-25
-32,Máster Universitario en Odontología,2,Máster Universitario,2022-12-14
-33,Ingeniería Técnica de Estadística,8,Ingeniería Técnica,2021-10-18
-34,Diplomatura de Administración de Empresas,5,Diplomatura,2021-07-12
-35,Máster Universitario en Historia del Arte,2,Máster Universitario,2021-12-01
-36,Máster Universitario en Ciencias Políticas,2,Máster Universitario,2021-08-12
-37,Licenciatura de Farmacia,6,Licenciatura,2021-01-19
-38,Ingeniería de Psicología,7,Ingeniería,2022-06-04
-39,Título Propio en Economía,4,Título Propio,2022-05-17
-40,Grado en Periodismo,1,Grado,2020-10-09
-41,Ingeniería Técnica de Ingeniería Industrial,8,Ingeniería Técnica,2020-11-09
-42,Doctorado en Música,3,Doctorado,2023-07-02
-43,Arquitectura Técnica de Química,10,Arquitectura Técnica,2022-05-21
-44,Doctorado en Historia del Arte,3,Doctorado,2020-10-27
-45,Ingeniería de Ingeniería Industrial,7,Ingeniería,2020-12-30
-46,Máster Universitario en Derecho,2,Máster Universitario,2023-10-21
-47,Licenciatura de Arquitectura,6,Licenciatura,2023-08-06
-48,Diplomatura de Historia,5,Diplomatura,2023-12-28
-49,Ingeniería Técnica de Ingeniería Química,8,Ingeniería Técnica,2020-01-12
-50,Ingeniería Técnica de Bellas Artes,8,Ingeniería Técnica,2020-10-29
+1,Doctorado en Odontología,3,Doctorado,2020-04-15
+2,Título Propio en Traducción e Interpretación,4,Título Propio,2023-03-29
+3,Ingeniería Técnica de Ingeniería Química,8,Ingeniería Técnica,2022-05-28
+4,Título Propio en Educación,4,Título Propio,2020-09-20
+5,Título Propio en Nutrición y Dietética,4,Título Propio,2023-07-27
+6,Arquitectura Técnica de Ciencias Políticas,10,Arquitectura Técnica,2022-03-10
+7,Licenciatura de Biotecnología,6,Licenciatura,2020-12-21
+8,Doctorado en Farmacia,3,Doctorado,2022-04-05
+9,Grado en Química,1,Grado,2021-10-13
+10,Arquitectura de Derecho,9,Arquitectura,2022-11-25
+11,Ingeniería Técnica de Nutrición y Dietética,8,Ingeniería Técnica,2020-11-20
+12,Arquitectura Técnica de Ingeniería Informática,10,Arquitectura Técnica,2022-06-14
+13,Licenciatura de Veterinaria,6,Licenciatura,2021-04-18
+14,Ingeniería de Arquitectura,7,Ingeniería,2020-07-22
+15,Arquitectura de Historia del Arte,9,Arquitectura,2023-12-25
+16,Ingeniería Técnica de Derecho,8,Ingeniería Técnica,2020-09-15
+17,Título Propio en Ingeniería Informática,4,Título Propio,2022-10-29
+18,Ingeniería de Geología,7,Ingeniería,2020-08-30
+19,Arquitectura Técnica de Estadística,10,Arquitectura Técnica,2023-07-17
+20,Ingeniería de Ingeniería Química,7,Ingeniería,2023-03-27
+21,Arquitectura Técnica de Estudios Ingleses,10,Arquitectura Técnica,2022-03-13
+22,Título Propio en Odontología,4,Título Propio,2023-07-08
+23,Máster Universitario en Fisioterapia,2,Máster Universitario,2021-06-16
+24,Licenciatura de Sociología,6,Licenciatura,2023-02-06
+25,Máster Universitario en Veterinaria,2,Máster Universitario,2020-11-21
+26,Ingeniería de Psicología,7,Ingeniería,2021-10-22
+27,Licenciatura de Filosofía,6,Licenciatura,2021-02-21
+28,Máster Universitario en Medicina,2,Máster Universitario,2020-07-09
+29,Doctorado en Ingeniería Industrial,3,Doctorado,2020-07-10
+30,Arquitectura de Periodismo,9,Arquitectura,2020-02-22
+31,Diplomatura de Ingeniería Informática,5,Diplomatura,2022-06-14
+32,Ingeniería Técnica de Fisioterapia,8,Ingeniería Técnica,2020-01-24
+33,Licenciatura de Estadística,6,Licenciatura,2023-07-11
+34,Arquitectura de Administración de Empresas,9,Arquitectura,2023-04-30
+35,Título Propio en Física,4,Título Propio,2020-11-09
+36,Grado en Economía,1,Grado,2020-02-26
+37,Máster Universitario en Odontología,2,Máster Universitario,2023-06-19
+38,Ingeniería de Estudios Ingleses,7,Ingeniería,2023-12-20
+39,Máster Universitario en Ingeniería Agrónoma,2,Máster Universitario,2023-01-18
+40,Arquitectura de Educación,9,Arquitectura,2020-06-10
+41,Grado en Educación,1,Grado,2023-03-17
+42,Máster Universitario en Arquitectura,2,Máster Universitario,2022-02-22
+43,Ingeniería Técnica de Farmacia,8,Ingeniería Técnica,2020-02-21
+44,Ingeniería de Química,7,Ingeniería,2020-09-24
+45,Grado en Arquitectura,1,Grado,2022-07-18
+46,Ingeniería de Ingeniería de Telecomunicaciones,7,Ingeniería,2023-07-23
+47,Licenciatura de Ciencias Ambientales,6,Licenciatura,2023-07-17
+48,Ingeniería de Economía,7,Ingeniería,2022-01-03
+49,Ingeniería Técnica de Estudios Ingleses,8,Ingeniería Técnica,2021-01-17
+50,Licenciatura de Ingeniería de Telecomunicaciones,6,Licenciatura,2021-05-05

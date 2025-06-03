@@ -79,7 +79,7 @@ def generate_f_tabla_fusion(n=100, dimension_dfs=None):
             'DURACION_PONDERADA': duracion_ponderada,
             'BASE_PONDERACION_DURACION': base_ponderacion_duracion,
             'ALUMNOS_MATRICULADOS': alumnos_matriculados,
-            'ALUMNOS_MATRICULADOS_NING': alumnos_matriculados_ning
+            'ALUMNOS_MATRICULADOS_NING': random.randint(0, 100),
         }
         
         data.append(registro)

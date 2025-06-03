@@ -1,4 +1,4 @@
-import cx_Oracle
+
 import pandas as pd
 from tqdm import tqdm
 import random
@@ -39,42 +39,6 @@ def insert_dataframe_to_oracle(connection, df, table_name, batch_size=1000):
     cursor.close()
     print(f"Total de {rows_inserted} registros insertados en {table_name}")
     return rows_inserted
-
-def get_table_columns(connection, table_name):
-    """
-    Obtiene la lista de columnas de una tabla
-    
-    Args:
-        connection: Conexión a Oracle
-        table_name: Nombre de la tabla
-    
-    Returns:
-        list: Lista de columnas de la tabla
-    """
-    cursor = connection.cursor()
-    cursor.execute(f"SELECT column_name, data_type, data_length FROM user_tab_columns WHERE table_name = '{table_name}' ORDER BY column_id")
-    columns = cursor.fetchall()
-    cursor.close()
-    return columns
-
-def clean_table(connection, table_name):
-    """
-    Elimina todos los registros de una tabla
-    
-    Args:
-        connection: Conexión a Oracle
-        table_name: Nombre de la tabla
-    """
-    cursor = connection.cursor()
-    try:
-        cursor.execute(f"DELETE FROM {table_name}")
-        connection.commit()
-        print(f"Tabla {table_name} limpiada con éxito")
-    except cx_Oracle.DatabaseError as e:
-        error, = e.args
-        print(f"Error al limpiar la tabla {table_name}: {error.message}")
-    finally:
-        cursor.close()
 
 def generate_random_string(length=10):
     """
