@@ -288,7 +288,7 @@ pip install -r requirements.txt
 
 #### 2. Error: "JayDeBeApi no está instalado"
 ```bash
-pip install JayDeBeApi>=1.2.3
+pip install JayDeBeApi>=1.5.0
 ```
 
 #### 3. Error: "Driver JDBC no encontrado"
