@@ -7,7 +7,7 @@ Este directorio contiene los drivers JDBC necesarios para conectar con diferente
 ### Oracle Database
 - **ojdbc8.jar** - Driver JDBC para Oracle (Java 8+)
 - **ojdbc11.jar** - Driver JDBC para Oracle (Java 11+)
-
+- **ojdbc17.jar** - Driver JDBC para Oracle (Java 17+) (Recomendado para Oracle 21c)
 ### PostgreSQL  
 - **postgresql-42.5.0.jar** - Driver JDBC para PostgreSQL
 
