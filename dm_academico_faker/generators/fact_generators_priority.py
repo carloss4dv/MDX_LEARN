@@ -1,10 +1,20 @@
+"""
+Generadores de tablas de hechos prioritarias del Data Mart Académico
+
+Este módulo contiene funciones para generar datos de hechos esenciales como:
+- F_OFERTA_ADMISION
+- F_SOLICITANTE_ADMISION  
+- F_EGRESADO
+- F_COHORTE
+"""
+
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
 import random
 import datetime
 from faker import Faker
-from utils.helpers import generate_random_date
+from .date_helpers import generate_random_date
 
 # Inicializar Faker con locale español
 fake = Faker('es_ES')
@@ -127,7 +137,7 @@ def generate_f_oferta_admision(n=500, dimension_dfs=None):
             'ID_CAMPUS': centro.get('ID_CAMPUS', random.randint(1, 5)),
             'ID_POBLACION_CENTRO': poblacion_centro['ID_POBLACION'],
             'ID_ESTUDIO': estudio['ID_ESTUDIO'],
-            'ID_RAMA_CONOCIMIENTO': rama['ID_RAMA_CONOCIMIENTO'],
+            'ID_RAMA_CONOCIMIENTO': rama['ID_RAMA_MACROAREA'],
             'ORDEN_BOE_PLAN': orden_boe_plan,
             'SN_DOCTORADO_VIGENTE': sn_doctorado_vigente,
             'ID_PERSONA_NIP_COORD_NK': coordinador['ID_PERSONA_NIP_NK'],
@@ -307,7 +317,7 @@ def generate_f_solicitante_admision(n=1000, dimension_dfs=None):
             'ID_POBLACION_CENTRO': poblacion_centro['ID_POBLACION'],
             'ID_TIPO_ESTUDIO': tipo_estudio['ID_TIPO_ESTUDIO'],
             'ID_ESTUDIO': estudio['ID_ESTUDIO'],
-            'ID_RAMA_CONOCIMIENTO': rama['ID_RAMA_CONOCIMIENTO'],
+            'ID_RAMA_CONOCIMIENTO': rama['ID_RAMA_MACROAREA'],
             'ID_DETALLE_CUPO_GENERAL': detalle_cupo['ID_DETALLE_CUPO_GENERAL'],
             'ID_DETALLE_CUPO_GENERAL_NK': detalle_cupo.get('ID_DETALLE_CUPO_GENERAL_NK', ''),
             'ID_PAIS_FAMILIAR': pais_familiar['ID_PAIS'],
@@ -403,46 +413,47 @@ def generate_f_egresado(n=700, dimension_dfs=None):
         edad = random.randint(20, 65)
         edad_est = random.choice(d_edad_est.to_dict('records'))
         
-        # Datos académicos
-        cursos_matriculados = random.randint(3, 8)
-        curso_mas_alto_matriculado = random.randint(1, 6)
-        cursos_extra_graduacion = random.randint(0, 2)
-        duracion = cursos_matriculados
-        duracion_real = duracion * 365 + random.randint(-30, 30)  # Aproximado en días
-        
-        # Créditos
-        creditos_necesarios = random.randint(180, 360)
-        creditos_matriculados = creditos_necesarios + random.randint(0, 60)
-        creditos_superados = random.randint(creditos_necesarios - 30, creditos_matriculados)
-        creditos_reconocidos = random.randint(0, 60)
-        
-        # Calificación final
-        calificacion_final = round(random.uniform(5.0, 10.0), 2)
-        
-        # Flags de egreso
+        # Flags de egreso - definir primero antes de usar
         graduado = random.choice([0, 1])
         traslado = 0 if graduado == 1 else random.choice([0, 1])
         abandono_generico = 0 if (graduado == 1 or traslado == 1) else random.choice([0, 1])
         abandono_oficial = abandono_generico * random.choice([0, 1])
         
+        # Generar datos numéricos para egresados - evitar NaN
+        cursos_matriculados = random.randint(1, 8)
+        curso_mas_alto_matriculado = random.randint(1, min(cursos_matriculados, 6))
+        cursos_extra_graduacion = max(0, cursos_matriculados - 4) if graduado == 1 else 0.0
+        duracion = random.randint(3, 8)
+        duracion_real = float(duracion + random.uniform(-0.5, 1.5))
+        
+        # Créditos - asegurar valores float válidos
+        creditos_necesarios = float(random.randint(180, 360))
+        creditos_matriculados = creditos_necesarios + float(random.randint(0, 60))
+        creditos_superados = float(random.randint(int(creditos_necesarios - 60) if graduado == 0 else int(creditos_necesarios), int(creditos_matriculados)))
+        creditos_reconocidos = float(random.randint(0, 30))
+        
+        # Calificación final - evitar NaN
+        calificacion_final = float(round(random.uniform(5.0, 10.0), 3)) if graduado == 1 else 0.0
+        
         # Flags adicionales
-        flg_solicitud_titulo = 1 if graduado == 1 else 0
-        flg_abandono_inicial = 1 if abandono_generico == 1 and cursos_matriculados <= 2 else 0
-        flg_graduado_en_tiempo = 1 if graduado == 1 and duracion <= 5 else 0
+        flg_solicitud_titulo = random.choice([0, 1])
+        flg_abandono_inicial = random.choice([0, 1])
+        flg_calculo_tasa = random.choice([0, 1])
+        flg_graduado_en_tiempo = 1 if graduado == 1 and cursos_matriculados <= 4 else 0
         flg_plan_oficial = random.choice([0, 1])
         flg_duracion_media = random.choice([0, 1])
         flg_multiple_titulacion = random.choice([0, 1])
         flg_movilidad_in = random.choice([0, 1])
         
-        # Fechas
-        fecha_solicitud_titulo = int(generate_random_date(int(curso['ID_CURSO_ACADEMICO_NK']), int(curso['ID_CURSO_ACADEMICO_NK']) + 1).replace('-', '')) if flg_solicitud_titulo == 1 else None
-        fecha_egreso = int(generate_random_date(int(curso['ID_CURSO_ACADEMICO_NK']), int(curso['ID_CURSO_ACADEMICO_NK']) + 1).replace('-', ''))
+        # Fechas - usar objetos date directos
+        fecha_solicitud_titulo = int(datetime.date(2020 + random.randint(0, 3), random.randint(1, 12), random.randint(1, 28)).strftime('%Y%m%d'))
+        fecha_egreso = int(datetime.date(2020 + random.randint(0, 3), random.randint(1, 12), random.randint(1, 28)).strftime('%Y%m%d'))
         
         # Datos de orden BOE
-        orden_boe_plan = f"BOE-A-{random.randint(2010, 2022)}-{random.randint(1000, 9999)}"
+        orden_boe_plan = f"BOE-{random.randint(100, 999)}-{random.randint(2010, 2023)}"[:16]
         
         # Flags doctorado y movilidad
-        sn_doctorado_vigente = 'S' if tipo_estudio['ID_TIPO_ESTUDIO'] == 5 else 'N'
+        sn_doctorado_vigente = random.choice(['S', 'N'])
         sn_movilidad_out_internacional = random.choice(['S', 'N'])
         sn_movilidad_out_nacional = random.choice(['S', 'N'])
         sn_unita = random.choice(['S', 'N'])
@@ -486,7 +497,7 @@ def generate_f_egresado(n=700, dimension_dfs=None):
             'SN_ABANDONO_INICIAL': 'S' if flg_abandono_inicial == 1 else 'N',
             'FLG_SOLICITUD_TITULO': flg_solicitud_titulo,
             'FLG_ABANDONO_INICIAL': flg_abandono_inicial,
-            'FLG_CALCULO_TASA': random.choice([0, 1]),
+            'FLG_CALCULO_TASA': flg_calculo_tasa,
             'FLG_GRADUADO_EN_TIEMPO': flg_graduado_en_tiempo,
             'FECHA_CARGA': generate_random_date(2020, 2023),
             'SN_GRADUADO_EN_TIEMPO': 'S' if flg_graduado_en_tiempo == 1 else 'N',
@@ -514,7 +525,7 @@ def generate_f_egresado(n=700, dimension_dfs=None):
             'ID_TIPO_CENTRO_ORI': centro_origen.get('ID_TIPO_CENTRO', random.randint(1, 3)),
             'ID_CAMPUS_CENTRO_ORI': centro_origen.get('ID_CAMPUS', random.randint(1, 5)),
             'ID_POBLACION_CENTRO_ORI': poblacion_centro_origen['ID_POBLACION'],
-            'ID_RAMA_CONOCIMIENTO': random.choice(d_rama['ID_RAMA_CONOCIMIENTO'].tolist()),
+            'ID_RAMA_CONOCIMIENTO': random.choice(d_rama['ID_RAMA_MACROAREA'].tolist()),
             'ID_PERSONA_NIP_NK': persona['ID_PERSONA_NIP_NK'],
             'ORDEN_BOE_PLAN': orden_boe_plan,
             'SN_DOCTORADO_VIGENTE': sn_doctorado_vigente,
@@ -626,7 +637,7 @@ def generate_f_cohorte(n=600, dimension_dfs=None):
         abandono_oficial = abandono_generico * random.choice([0, 1])
         
         # Fechas para cálculos
-        fecha_actual = datetime.datetime.now().strftime('%Y-%m-%d')
+        fecha_actual = datetime.datetime.now().date()
         
         # Asignar cursos posteriores si hay disponibles
         if cursos_posteriores:
@@ -637,22 +648,22 @@ def generate_f_cohorte(n=600, dimension_dfs=None):
             if traslado == 1:
                 curso_traslado = random.choice(cursos_posteriores)
         
-        # Datos de rendimiento académico
-        creditos_necesarios = random.randint(180, 360)
-        creditos_matriculados = creditos_necesarios + random.randint(0, 60)
-        creditos_superados = random.randint(creditos_necesarios - 60 if graduado == 0 else creditos_necesarios, creditos_matriculados)
-        creditos_presentados = creditos_superados + random.randint(0, 30)
+        # Datos de rendimiento académico - evitar NaN
+        creditos_necesarios = float(random.randint(180, 360))
+        creditos_matriculados = creditos_necesarios + float(random.randint(0, 60))
+        creditos_superados = float(random.randint(int(creditos_necesarios - 60) if graduado == 0 else int(creditos_necesarios), int(creditos_matriculados)))
+        creditos_presentados = creditos_superados + float(random.randint(0, 30))
         creditos_suspendidos = creditos_presentados - creditos_superados
-        creditos_reconocidos = random.randint(0, 30)
-        creditos_transferidos = random.randint(0, 20)
+        creditos_reconocidos = float(random.randint(0, 30))
+        creditos_transferidos = float(random.randint(0, 20))
         
         # Indicadores de rendimiento
         cursos_matriculados = random.randint(1, 6)
         curso_mas_alto_matriculado = random.randint(1, 6)
         cursos_extra_graduacion = max(0, cursos_matriculados - 4) if graduado == 1 else 0
         
-        # Calificación final (solo para graduados)
-        calificacion_final = round(random.uniform(5.0, 10.0), 2) if graduado == 1 else None
+        # Calificación final (solo para graduados) - evitar NaN
+        calificacion_final = round(random.uniform(5.0, 10.0), 2) if graduado == 1 else 0.0
         
         # Flags booleanos
         flg_nuevo_ingreso = random.choice([0, 1])
@@ -670,14 +681,14 @@ def generate_f_cohorte(n=600, dimension_dfs=None):
         flg_c_idoneidad = random.choice([0, 1])
         flg_c_graduacion = random.choice([0, 1])
         
-        # Fechas para cálculos
-        fe_c_abandonoini = generate_random_date(2020, 2023) if flg_c_abandonoini == 1 else None
-        fe_c_abandono = generate_random_date(2020, 2023) if flg_c_abandono == 1 else None
-        fe_c_idoneidad = generate_random_date(2020, 2023) if flg_c_idoneidad == 1 else None
-        fe_c_graduacion = generate_random_date(2020, 2023) if flg_c_graduacion == 1 else None
+        # Fechas para cálculos - usar objetos date directos
+        fe_c_abandonoini = datetime.date(2020 + random.randint(0, 3), random.randint(1, 12), random.randint(1, 28)) if flg_c_abandonoini == 1 else None
+        fe_c_abandono = datetime.date(2020 + random.randint(0, 3), random.randint(1, 12), random.randint(1, 28)) if flg_c_abandono == 1 else None
+        fe_c_idoneidad = datetime.date(2020 + random.randint(0, 3), random.randint(1, 12), random.randint(1, 28)) if flg_c_idoneidad == 1 else None
+        fe_c_graduacion = datetime.date(2020 + random.randint(0, 3), random.randint(1, 12), random.randint(1, 28)) if flg_c_graduacion == 1 else None
         
         # Nota de admisión
-        nota_admision = round(random.uniform(5, 14), 2)
+        nota_admision = round(random.uniform(5.0, 14.0), 2)
         
         # Flags adicionales para titulación múltiple
         flg_multiple_titulacion = random.choice([0, 1])
@@ -695,10 +706,10 @@ def generate_f_cohorte(n=600, dimension_dfs=None):
             'ID_SEXO': sexo['ID_SEXO'],
             'ID_RANGO_CREDITOS_MATRICULADOS': random.randint(1, 5),
             'ID_RANGO_CREDITOS_SUPERADOS': random.randint(1, 5),
-            'ID_CURSO_ACAD_GRADUACION': curso_graduacion,
-            'ID_CURSO_ACAD_ABANDONO': curso_abandono,
-            'ID_CURSO_ACAD_TRASLADO': curso_traslado,
-            'ID_RANGO_CALIFICACION_FINAL': random.randint(1, 5) if graduado == 1 else None,
+            'ID_CURSO_ACAD_GRADUACION': curso_graduacion or 0,
+            'ID_CURSO_ACAD_ABANDONO': curso_abandono or 0,
+            'ID_CURSO_ACAD_TRASLADO': curso_traslado or 0,
+            'ID_RANGO_CALIFICACION_FINAL': random.randint(1, 5) if graduado == 1 else 0,
             'ID_TIPO_ABANDONO': tipo_abandono['ID_TIPO_ABANDONO'],
             'EDAD_INGRESO': edad_ingreso,
             'DURACION': random.randint(1, 8),
@@ -715,7 +726,7 @@ def generate_f_cohorte(n=600, dimension_dfs=None):
             'FLG_NUEVO_INGRESO': flg_nuevo_ingreso,
             'FLG_ABANDONO_INICIAL': flg_abandono_inicial,
             'FLG_GRADUADO_EN_TIEMPO': flg_graduado_en_tiempo,
-            'FECHA_CARGA': generate_random_date(2020, 2023),
+            'FECHA_CARGA': datetime.date.today(),
             'SN_GRADUADO_EN_TIEMPO': 'S' if flg_graduado_en_tiempo == 1 else 'N',
             'NOTA_ADMISION': nota_admision,
             'ABANDONO_GENERICO': abandono_generico,
@@ -730,11 +741,11 @@ def generate_f_cohorte(n=600, dimension_dfs=None):
             'ID_ESTUDIO': estudio['ID_PLAN_ESTUDIO'],  # Usando el mismo ID que el plan
             'ID_CENTRO_INICIO': centro_inicio['ID_CENTRO'],
             'FLG_TRASLADO_MISMO_ESTUDIO': flg_traslado_mismo_estudio,
-            'ID_FECHA_CARGA': int(generate_random_date(2020, 2023).replace('-', '')),
+            'ID_FECHA_CARGA': int(datetime.date.today().strftime('%Y%m%d')),
             'ID_TIPO_ESTUDIO': tipo_estudio['ID_TIPO_ESTUDIO'],
             'ID_TIPO_CENTRO': tipo_centro['ID_TIPO_CENTRO'],
             'ID_CAMPUS_CENTRO': campus_centro['ID_CAMPUS'],
-            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_CONOCIMIENTO'],
+            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_MACROAREA'],
             'ID_POBLACION_CENTRO': poblacion_centro['ID_POBLACION'],
             'ID_PERSONA_NIP_NK': persona['ID_PERSONA_NIP_NK'],
             'CURSOS_MATRICULADOS': cursos_matriculados,
@@ -759,7 +770,7 @@ def generate_f_cohorte(n=600, dimension_dfs=None):
             'FE_C_ABANDONO': fe_c_abandono,
             'FE_C_IDONEIDAD': fe_c_idoneidad,
             'FE_C_GRADUACION': fe_c_graduacion,
-            'FECHA_ACTUAL': fecha_actual
+            'FECHA_ACTUAL': generate_random_date(2020, 2023),
         })
     
     return pd.DataFrame(data) 

@@ -1,16 +1,16 @@
 ID_RAMA_MACROAREA,NOMBRE_RAMA_MACROAREA,ID_RAMA_CONOCIMIENTO_NK,ID_MACROAREA_NK,ID_MACROAREA_AREA_NK
-1,Salud - Especialidad 1,H,C,C3
-2,Ciencias - Especialidad 2,E,D,D2
-3,Ciencias - Especialidad 3,G,D,D2
-4,Ciencias Sociales - Especialidad 4,A,B,B3
-5,Ciencias Sociales - Especialidad 5,E,A,A4
-6,Ciencias - Especialidad 6,I,D,D4
-7,Ciencias Sociales - Especialidad 7,G,D,D8
-8,Ingeniería - Especialidad 8,J,D,D5
-9,Ciencias Sociales - Especialidad 9,J,A,A2
-10,Artes - Especialidad 10,D,C,C2
-11,Artes - Especialidad 11,D,B,B9
-12,Ciencias - Especialidad 12,C,A,A7
-13,Salud - Especialidad 13,J,D,D5
-14,Ciencias - Especialidad 14,D,C,C5
-15,Salud - Especialidad 15,B,B,B5
+1,Salud - Especialidad 1,G,B,B5
+2,Salud - Especialidad 2,I,A,A5
+3,Ingeniería - Especialidad 3,D,D,D6
+4,Salud - Especialidad 4,H,D,D4
+5,Ciencias Sociales - Especialidad 5,H,B,B2
+6,Ingeniería - Especialidad 6,I,E,E6
+7,Ciencias - Especialidad 7,D,C,C4
+8,Artes - Especialidad 8,C,A,A1
+9,Artes - Especialidad 9,H,E,E2
+10,Salud - Especialidad 10,G,E,E4
+11,Salud - Especialidad 11,H,D,D4
+12,Artes - Especialidad 12,A,A,A7
+13,Artes - Especialidad 13,C,E,E8
+14,Ciencias - Especialidad 14,I,B,B2
+15,Salud - Especialidad 15,C,D,D9

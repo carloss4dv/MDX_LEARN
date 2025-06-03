@@ -11,22 +11,107 @@ Este proyecto combina múltiples herramientas y enfoques para el análisis de da
 3. **Infraestructura Docker** - Base de datos Oracle para análisis OLAP
 4. **Scripts de automatización** - Herramientas para gestión de datos y análisis
 
+## 🚀 Inicio Rápido
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/carloss4dv/MDX_LEARN.git
+cd MDX_LEARN
+```
+
+### 2. Instalar dependencias
+
+```bash
+# Dependencias esenciales
+pip install -r requirements.txt
+
+# Para carga de datos con JDBC (recomendado)
+pip install JayDeBeApi>=1.2.3
+
+# Para Oracle con cliente nativo (opcional)
+pip install cx_Oracle>=8.3.0
+
+# Para PostgreSQL (opcional)
+pip install psycopg2-binary>=2.9.0
+```
+
+### 3. Configurar infraestructura de base de datos
+
+#### Opción A: Oracle con Docker (recomendado)
+```bash
+# Levantar Oracle Database
+docker-compose up -d
+```
+
+#### Opción B: PostgreSQL local
+```bash
+# Configurar PostgreSQL según sus preferencias
+# Ver sección "Configuración de PostgreSQL" más abajo
+```
+
+### 4. Configurar variables de entorno
+
+Crear archivo `.env` en `dm_academico_faker/`:
+
+```env
+# Para Oracle Database
+ORACLE_HOST=localhost
+ORACLE_PORT=1521
+ORACLE_SERVICE=XEPDB1
+ORACLE_USER=C##DM_ACADEMICO
+ORACLE_PASSWORD=YourPassword123
+
+# Para PostgreSQL (opcional)
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=dm_academico
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+```
+
+### 5. Descargar drivers JDBC (método recomendado)
+
+```bash
+cd dm_academico_faker
+python download_jdbc_drivers.py
+```
+
+### 6. Generar y cargar datos
+
+```bash
+# Generar datos sintéticos
+python main.py
+
+# Cargar a Oracle usando JDBC (recomendado)
+python upload_to_db.py --db oracle
+
+# O cargar a PostgreSQL
+python upload_to_db.py --db postgresql
+
+# O usar método tradicional con cx_Oracle
+python upload_to_oracle.py
+```
+
+### 7. Explorar con notebooks
+
+```bash
+# Desde el directorio raíz
+jupyter notebook notebooks/
+```
+
 ## Estructura del proyecto
 
 ```
 MDX_LEARN/
 ├── dm_academico_faker/           # Generador de datos sintéticos
 │   ├── config/                   # Configuración de conexiones
-│   │   └── connection.py
+│   │   ├── connection.py
+│   │   └── database.ini          # ⭐ Configuración multi-BD
 │   ├── generators/               # Generadores especializados
 │   │   ├── dimension_generators.py
 │   │   ├── fact_generators.py
-│   │   ├── fact_generators_acuerdos.py
-│   │   ├── fact_generators_doctorado.py
-│   │   ├── fact_generators_extended.py
-│   │   ├── fact_generators_fusion.py
-│   │   ├── fact_generators_mobility.py
-│   │   └── fact_generators_priority.py
+│   │   └── [otros generadores...]
 │   ├── models/                   # Modelos de datos
 │   │   ├── dimensions.py
 │   │   └── facts.py
@@ -35,9 +120,16 @@ MDX_LEARN/
 │   │   └── facts/                # Tablas de hechos (.csv)
 │   ├── utils/                    # Utilidades
 │   │   └── helpers.py
+│   ├── lib/                      # ⭐ Drivers JDBC
+│   │   ├── README.md
+│   │   ├── ojdbc8.jar           # Driver Oracle
+│   │   └── postgresql-42.5.0.jar # Driver PostgreSQL
 │   ├── main.py                   # Script principal de generación
-│   ├── upload_to_oracle.py       # Carga de datos a Oracle
-│   └── requirements.txt          # Dependencias específicas
+│   ├── upload_to_db.py          # ⭐ Carga JDBC (Oracle/PostgreSQL)
+│   ├── upload_to_oracle.py      # Carga tradicional Oracle
+│   ├── download_jdbc_drivers.py # ⭐ Descarga automática drivers
+│   ├── requirements.txt          # Dependencias específicas
+│   └── README_UPLOAD.md         # ⭐ Guía completa de carga
 ├── notebooks/                    # Notebooks educativos
 │   ├── 01_introduccion_atoti.ipynb
 │   ├── 02_consultas_mdx_basicas.ipynb
@@ -52,17 +144,55 @@ MDX_LEARN/
 │   ├── dm_academico.sql          # DDL base de datos
 │   └── clean_database.sql        # Scripts de limpieza
 ├── scripts/                      # Scripts de automatización
-│   ├── analyze_tables.py         # Análisis de tablas
-│   ├── import_tables.bat         # Importación automática
-│   ├── clean_database.bat        # Limpieza de BD
-│   └── unlock_account.bat        # Gestión de cuentas
-├── generators/                   # Generadores adicionales
-│   └── fact_generators_fusion.py
 ├── docker-compose.yml            # Infraestructura Oracle
 ├── docker-oracle-config.md       # Configuración Docker
-├── schema.dbml                   # Modelo de datos
-└── requirements.txt              # Dependencias del proyecto
+├── requirements.txt              # ⭐ Dependencias del proyecto
+└── README.md                     # Este archivo
 ```
+
+## 📊 Métodos de Carga de Datos
+
+### Método 1: JDBC (Recomendado) ⭐
+
+**Ventajas:**
+- ✅ No requiere clientes nativos de base de datos
+- ✅ Multiplataforma (Windows, Linux, macOS)
+- ✅ Soporte para Oracle y PostgreSQL
+- ✅ Configuración flexible y automática
+
+```bash
+# Oracle
+python upload_to_db.py --db oracle
+
+# PostgreSQL
+python upload_to_db.py --db postgresql
+
+# Con opciones avanzadas
+python upload_to_db.py --db oracle --clean --batch-size 500
+```
+
+### Método 2: Cliente Nativo Oracle
+
+**Para máximo rendimiento con Oracle:**
+```bash
+python upload_to_oracle.py
+```
+
+**Requisitos adicionales:**
+- Oracle Instant Client instalado
+- cx_Oracle>=8.3.0
+
+### Configuración de PostgreSQL
+
+Si desea usar PostgreSQL en lugar de Oracle:
+
+1. **Instalar PostgreSQL** (si no está instalado)
+2. **Crear base de datos:**
+   ```sql
+   CREATE DATABASE dm_academico;
+   ```
+3. **Configurar variables de entorno** en `.env`
+4. **Ejecutar scripts de creación** (adaptar DDL de Oracle a PostgreSQL)
 
 ## Componentes del proyecto
 
@@ -70,29 +200,21 @@ MDX_LEARN/
 
 Genera datos sintéticos coherentes para todas las tablas del Data Mart Académico:
 
-**Tablas de dimensión implementadas (81 tablas):**
-- Básicas: D_SEXO, D_PAIS, D_TIEMPO, D_CURSO_ACADEMICO, D_CURSO_COHORTE
-- Académicas: D_TIPO_ESTUDIO, D_RAMA_CONOCIMIENTO, D_ESTUDIO, D_PLAN_ESTUDIO
-- Institucionales: D_CENTRO, D_CAMPUS, D_POBLACION, D_UNIVERSIDAD
-- Personas: D_PERSONA, D_CATEGORIA_CUERPO_PDI, D_DEDICACION_PROFESOR
-- Evaluación: D_CALIFICACION, D_CONVOCATORIA, D_TIPO_ACCESO
-- Movilidad: D_PROGRAMA_MOVILIDAD, D_IDIOMA_MOVILIDAD, D_ACUERDO_BILATERAL
-- Y muchas más...
+**Estadísticas:**
+- **86 tablas totales** (70 dimensiones + 16 hechos)
+- **Integridad referencial completa**
+- **Datos coherentes** usando Faker
+- **Soporte para múltiples idiomas** y regiones
 
-**Tablas de hechos implementadas (16 tablas):**
-- F_MATRICULA - Datos de matriculación
-- F_RENDIMIENTO - Rendimiento académico
-- F_COHORTE - Seguimiento de cohortes
-- F_DOCTORADO - Programas de doctorado
-- F_EGRESADO - Datos de egresados
-- F_ESTUDIANTES_MOVILIDAD_IN/OUT - Movilidad estudiantil
-- F_OFERTA_ADMISION - Procesos de admisión
-- F_TABLA_FUSION - Datos consolidados
-- Y más...
+**Tablas principales:**
+- **Dimensiones básicas:** D_SEXO, D_PAIS, D_TIEMPO, D_CURSO_ACADEMICO
+- **Dimensiones académicas:** D_TIPO_ESTUDIO, D_RAMA_CONOCIMIENTO, D_ESTUDIO
+- **Dimensiones institucionales:** D_CENTRO, D_CAMPUS, D_UNIVERSIDAD
+- **Tablas de hechos:** F_MATRICULA, F_RENDIMIENTO, F_COHORTE, F_DOCTORADO
 
 ### 📚 Notebooks educativos
 
-Secuencia progresiva de aprendizaje:
+Secuencia progresiva de aprendizaje de MDX:
 
 1. **01_introduccion_atoti.ipynb** - Fundamentos de Atoti y OLAP
 2. **02_consultas_mdx_basicas.ipynb** - Sintaxis básica MDX
@@ -103,110 +225,104 @@ Secuencia progresiva de aprendizaje:
 ### 🐳 Infraestructura
 
 - **Oracle Database XE** en Docker para análisis OLAP
-- **Esquemas XML** para configuración de cubos
+- **Esquemas XML** configurados para diferentes áreas de análisis
 - **Scripts automatizados** para gestión de datos
+- **Soporte multiplataforma** con drivers JDBC
 
-## Uso
+## 📋 Configuración Avanzada
 
-### 🚀 Inicio rápido
+### Variables de entorno completas
 
-1. **Configurar infraestructura:**
-   ```bash
-   # Levantar Oracle Database
-   docker-compose up -d
-   ```
-
-2. **Generar datos sintéticos:**
-   ```bash
-   cd dm_academico_faker
-   python main.py
-   ```
-
-3. **Cargar datos a Oracle:**
-   ```bash
-   python upload_to_oracle.py
-   ```
-
-4. **Explorar con notebooks:**
-   ```bash
-   jupyter notebook notebooks/
-   ```
-
-### 📊 Generación de datos específica
-
-Para generar solo ciertos tipos de datos:
-
-```python
-from dm_academico_faker.generators.dimension_generators import *
-from dm_academico_faker.generators.fact_generators import *
-
-# Generar solo dimensiones básicas
-d_sexo = generate_d_sexo()
-d_pais = generate_d_pais()
-
-# Generar tabla de hechos específica
-f_matricula = generate_f_matricula(d_personas, d_estudios, d_tiempo)
-```
-
-### 🔧 Scripts de utilidad
-
-```bash
-# Limpiar base de datos
-scripts/clean_database.bat
-
-# Importar tablas específicas
-scripts/import_tables.bat
-
-# Analizar estructura de tablas
-python scripts/analyze_tables.py
-```
-
-## Requisitos
-
-### Sistema base
-- Python 3.8+
-- Docker y Docker Compose
-- Jupyter Notebook
-
-### Dependencias Python
-```bash
-pip install -r requirements.txt
-```
-
-Principales librerías:
-- **pandas** - Manipulación de datos
-- **faker** - Generación de datos sintéticos
-- **atoti** - Análisis OLAP y MDX
-- **cx_Oracle** - Conexión a Oracle Database
-- **tqdm** - Barras de progreso
-
-## Configuración avanzada
-
-### 🔧 Variables de entorno
-
-```bash
-# Configuración Oracle
-ORACLE_USER=C##DM_ACADEMICO
-ORACLE_PASSWORD=YourPassword123
+```env
+# Oracle Database
 ORACLE_HOST=localhost
 ORACLE_PORT=1521
-ORACLE_SERVICE=XEPDB1
+ORACLE_SERVICE=XEPDB1           # O usar SID
+ORACLE_USER=C##DM_ACADEMICO
+ORACLE_PASSWORD=YourPassword123
+
+# PostgreSQL (alternativa)
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=dm_academico
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
 
 # Configuración Atoti
 ATOTI_MAXMEMORY=4G
 ATOTI_PORT=9090
 ```
 
-### 📊 Análisis de cubos OLAP
+### Opciones de línea de comandos
 
-El proyecto incluye esquemas XML configurados para diferentes áreas de análisis:
+```bash
+# Ver ayuda completa
+python upload_to_db.py --help
+
+# Limpiar y recargar
+python upload_to_db.py --db oracle --clean
+
+# Ajustar rendimiento
+python upload_to_db.py --batch-size 500
+
+# Combinar opciones
+python upload_to_db.py --db postgresql --clean --batch-size 2000
+```
+
+### Configuración en database.ini
+
+El archivo `dm_academico_faker/config/database.ini` permite:
+- Definir parámetros de conexión por tipo de BD
+- Configurar orden de carga de tablas
+- Ajustar tamaños de lote por tabla
+- Opciones avanzadas de rendimiento
+
+## 🛠️ Solución de Problemas
+
+### Problemas comunes y soluciones
+
+#### 1. Error: "No module named 'faker'"
+```bash
+pip install -r requirements.txt
+```
+
+#### 2. Error: "JayDeBeApi no está instalado"
+```bash
+pip install JayDeBeApi>=1.2.3
+```
+
+#### 3. Error: "Driver JDBC no encontrado"
+```bash
+cd dm_academico_faker
+python download_jdbc_drivers.py
+```
+
+#### 4. Error de conexión Oracle
+- Verificar que Docker esté ejecutándose: `docker ps`
+- Revisar variables de entorno en `.env`
+- Verificar puertos disponibles
+
+#### 5. Problemas de rendimiento
+- Reducir batch size: `--batch-size 500`
+- Verificar memoria disponible
+- Usar `--clean` solo cuando sea necesario
+
+### Logs y monitoreo
+
+- **Logs de carga:** `dm_academico_faker/upload.log`
+- **Trazas de generación:** `dm_academico_faker/trazas.txt`
+- **Progreso en tiempo real:** Barras de progreso durante la ejecución
+
+## 📊 Análisis de cubos OLAP
+
+### Esquemas XML configurados
 
 - **Academico.xml** - Cubo principal con matriculas, rendimiento, cohortes
-- **Movilidad.xml** - Análisis de movilidad estudiantil internacional
+- **Movilidad.xml** - Análisis de movilidad estudiantil internacional  
 - **EstudioPropio.xml** - Estudios propios y formación continua
 - **Admision.xml** - Procesos de admisión y preinscripción
 
-### 🎯 Casos de uso
+### Casos de uso implementados
 
 1. **Análisis de rendimiento académico**
    - Evolución temporal de calificaciones
@@ -228,5 +344,50 @@ El proyecto incluye esquemas XML configurados para diferentes áreas de análisi
    - Planificación de recursos
    - Indicadores de calidad
 
+## 📖 Documentación
 
-*Proyecto desarrollado como parte del Trabajo de Fin de Grado en Ingeniería Informática*
+### Guías específicas
+
+- **[Carga de datos](dm_academico_faker/README_UPLOAD.md)** - Guía completa de carga con JDBC
+- **[Drivers JDBC](dm_academico_faker/lib/README.md)** - Información sobre drivers
+- **[Configuración Docker](docker-oracle-config.md)** - Configuración detallada de Oracle
+
+### Scripts útiles
+
+```bash
+# Análisis de tablas generadas
+python scripts/analyze_tables.py
+
+# Limpieza de base de datos
+scripts/clean_database.bat   # Windows
+scripts/clean_database.sh    # Linux/macOS
+
+# Importación específica
+scripts/import_tables.bat
+```
+
+## 🤝 Contribución
+
+Para contribuir al proyecto:
+
+1. Fork el repositorio
+2. Cree una rama para su funcionalidad: `git checkout -b nueva-funcionalidad`
+3. Commit sus cambios: `git commit -am 'Añadir nueva funcionalidad'`
+4. Push a la rama: `git push origin nueva-funcionalidad`
+5. Envíe un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está desarrollado como parte del Trabajo de Fin de Grado en Ingeniería Informática.
+
+## 🎯 Próximas mejoras
+
+- [ ] Soporte para MySQL y SQL Server
+- [ ] Interfaz web para configuración
+- [ ] Métricas de calidad de datos
+- [ ] Exportación a diferentes formatos
+- [ ] Integración con herramientas BI adicionales
+
+---
+
+*Proyecto desarrollado para el aprendizaje de consultas MDX y análisis multidimensional en entornos educativos.*

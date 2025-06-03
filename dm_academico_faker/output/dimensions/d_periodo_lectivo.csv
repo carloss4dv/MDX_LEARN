@@ -1,11 +1,11 @@
 ID_PERIODO_LECTIVO,ID_PERIODO_LECTIVO_NK,NOMBRE_PERIODO_LECTIVO,FECHA_INICIO_ESTANDAR,FECHA_FIN_ESTANDAR,TIPO_PERIODO,ORDEN_PERIODO,ES_LECTIVO,ES_EXAMENES,ES_VACACIONES,SN_LECTIVO,SN_EXAMENES,SN_VACACIONES,FECHA_CARGA
-1,S1,Primer semestre,01/09,31/01,Regular,1,1,0,0,S,N,N,2023-08-30
-2,S2,Segundo semestre,01/02,30/06,Regular,2,1,0,0,S,N,N,2022-04-23
-3,E1,Exámenes primer semestre,15/01,31/01,Exámenes,3,0,1,0,N,S,N,2021-10-13
-4,E2,Exámenes segundo semestre,15/06,30/06,Exámenes,4,0,1,0,N,S,N,2021-07-02
-5,ER,Exámenes recuperación,01/07,15/07,Exámenes,5,0,1,0,N,S,N,2022-12-16
-6,EE,Exámenes extraordinarios,01/09,15/09,Exámenes,6,0,1,0,N,S,N,2023-07-22
-7,NL,No lectivo,16/07,31/08,No lectivo,7,0,0,0,N,N,N,2021-08-31
-8,NV,Navidad,23/12,07/01,Vacaciones,8,0,0,1,N,N,S,2020-03-17
-9,SS,Semana Santa,01/04,08/04,Vacaciones,9,0,0,1,N,N,S,2022-02-28
-10,VE,Verano,15/07,31/08,Vacaciones,10,0,0,1,N,N,S,2023-02-17
+1,S1,Primer semestre,01/09,31/01,Regular,1,1,0,0,S,N,N,2020-11-08
+2,S2,Segundo semestre,01/02,30/06,Regular,2,1,0,0,S,N,N,2023-12-17
+3,E1,Exámenes primer semestre,15/01,31/01,Exámenes,3,0,1,0,N,S,N,2021-03-14
+4,E2,Exámenes segundo semestre,15/06,30/06,Exámenes,4,0,1,0,N,S,N,2020-05-11
+5,ER,Exámenes recuperación,01/07,15/07,Exámenes,5,0,1,0,N,S,N,2022-04-29
+6,EE,Exámenes extraordinarios,01/09,15/09,Exámenes,6,0,1,0,N,S,N,2022-04-14
+7,NL,No lectivo,16/07,31/08,No lectivo,7,0,0,0,N,N,N,2021-11-08
+8,NV,Navidad,23/12,07/01,Vacaciones,8,0,0,1,N,N,S,2023-01-16
+9,SS,Semana Santa,01/04,08/04,Vacaciones,9,0,0,1,N,N,S,2022-08-12
+10,VE,Verano,15/07,31/08,Vacaciones,10,0,0,1,N,N,S,2022-05-01

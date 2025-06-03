@@ -1,229 +1,229 @@
-ID_POBLACION,NOMBRE_POBLACION,ID_PROVINCIA,NOMBRE_PROVINCIA,ID_CCAA,NOMBRE_CCAA,COD_POSTAL
-1,Jaén,1632,Álava,1070,País Vasco,46329
-2,Badajoz,1632,Álava,1070,País Vasco,16779
-3,Jaén,1632,Álava,1070,País Vasco,44402
-4,Ourense,1632,Álava,1070,País Vasco,32145
-5,Tarragona,1710,Albacete,1306,Castilla-La Mancha,37647
-6,Albacete,1710,Albacete,1306,Castilla-La Mancha,18642
-7,Cuenca,1710,Albacete,1306,Castilla-La Mancha,27384
-8,Ourense,1710,Albacete,1306,Castilla-La Mancha,29077
-9,Pontevedra,1579,Alicante,1698,Comunidad Valenciana,41813
-10,Girona,1579,Alicante,1698,Comunidad Valenciana,50095
-11,Pontevedra,1579,Alicante,1698,Comunidad Valenciana,26527
-12,Ceuta,1579,Alicante,1698,Comunidad Valenciana,48284
-13,Salamanca,1597,Almería,1146,Andalucía,45958
-14,Soria,1597,Almería,1146,Andalucía,24465
-15,Santa Cruz de Tenerife,1597,Almería,1146,Andalucía,32335
-16,Santa Cruz de Tenerife,1597,Almería,1146,Andalucía,38002
-17,Granada,1161,Asturias,1075,Principado de Asturias,50867
-18,Alicante,1161,Asturias,1075,Principado de Asturias,47095
-19,Toledo,1161,Asturias,1075,Principado de Asturias,47995
-20,Ávila,1161,Asturias,1075,Principado de Asturias,30650
-21,Guadalajara,1873,Ávila,1494,Castilla y León,43714
-22,Cádiz,1873,Ávila,1494,Castilla y León,23870
-23,Barcelona,1873,Ávila,1494,Castilla y León,05814
-24,Melilla,1873,Ávila,1494,Castilla y León,35407
-25,Cáceres,1579,Badajoz,1885,Extremadura,14991
-26,Lugo,1579,Badajoz,1885,Extremadura,28844
-27,Valencia,1579,Badajoz,1885,Extremadura,14506
-28,Zaragoza,1579,Badajoz,1885,Extremadura,18330
-29,Lleida,1194,Barcelona,1635,Cataluña,19345
-30,Burgos,1194,Barcelona,1635,Cataluña,36591
-31,Soria,1194,Barcelona,1635,Cataluña,09579
-32,Zaragoza,1194,Barcelona,1635,Cataluña,32807
-33,Ávila,1373,Burgos,1749,Castilla y León,22915
-34,Álava,1373,Burgos,1749,Castilla y León,44780
-35,Murcia,1373,Burgos,1749,Castilla y León,04047
-36,Lleida,1373,Burgos,1749,Castilla y León,07641
-37,Soria,1935,Cáceres,1279,Extremadura,51856
-38,Palencia,1935,Cáceres,1279,Extremadura,30016
-39,Santa Cruz de Tenerife,1935,Cáceres,1279,Extremadura,08951
-40,Badajoz,1935,Cáceres,1279,Extremadura,11451
-41,Lugo,1989,Cádiz,1231,Andalucía,30000
-42,Salamanca,1989,Cádiz,1231,Andalucía,28207
-43,Salamanca,1989,Cádiz,1231,Andalucía,45931
-44,Segovia,1989,Cádiz,1231,Andalucía,09903
-45,Santa Cruz de Tenerife,1766,Cantabria,1688,Cantabria,42309
-46,Tarragona,1766,Cantabria,1688,Cantabria,11895
-47,Segovia,1766,Cantabria,1688,Cantabria,18095
-48,Baleares,1766,Cantabria,1688,Cantabria,42369
-49,Alicante,1663,Castellón,1064,Comunidad Valenciana,17084
-50,Granada,1663,Castellón,1064,Comunidad Valenciana,24680
-51,Baleares,1663,Castellón,1064,Comunidad Valenciana,42169
-52,Ciudad,1663,Castellón,1064,Comunidad Valenciana,04405
-53,Jaén,1240,Ciudad Real,1908,Castilla-La Mancha,41312
-54,Huesca,1240,Ciudad Real,1908,Castilla-La Mancha,47716
-55,Palencia,1240,Ciudad Real,1908,Castilla-La Mancha,49239
-56,La Rioja,1240,Ciudad Real,1908,Castilla-La Mancha,28671
-57,Madrid,1101,Córdoba,1853,Andalucía,06720
-58,Cuenca,1101,Córdoba,1853,Andalucía,07001
-59,Tarragona,1101,Córdoba,1853,Andalucía,14488
-60,Castellón,1101,Córdoba,1853,Andalucía,05135
-61,León,1371,Cuenca,1101,Castilla-La Mancha,38231
-62,Huesca,1371,Cuenca,1101,Castilla-La Mancha,34696
-63,Soria,1371,Cuenca,1101,Castilla-La Mancha,29009
-64,Murcia,1371,Cuenca,1101,Castilla-La Mancha,01712
-65,Almería,1217,Gerona,1657,Cataluña,22836
-66,Cuenca,1217,Gerona,1657,Cataluña,08880
-67,Baleares,1217,Gerona,1657,Cataluña,28710
-68,Ávila,1217,Gerona,1657,Cataluña,09489
-69,Segovia,1832,Granada,1890,Andalucía,05234
-70,Almería,1832,Granada,1890,Andalucía,25091
-71,Ciudad,1832,Granada,1890,Andalucía,47825
-72,Zamora,1832,Granada,1890,Andalucía,07105
-73,Asturias,1676,Guadalajara,1887,Castilla-La Mancha,21376
-74,Palencia,1676,Guadalajara,1887,Castilla-La Mancha,20140
-75,Ceuta,1676,Guadalajara,1887,Castilla-La Mancha,25792
-76,Vizcaya,1676,Guadalajara,1887,Castilla-La Mancha,49895
-77,Zamora,1759,Guipúzcoa,1431,País Vasco,09656
-78,Cuenca,1759,Guipúzcoa,1431,País Vasco,44146
-79,Barcelona,1759,Guipúzcoa,1431,País Vasco,05543
-80,Zaragoza,1759,Guipúzcoa,1431,País Vasco,37008
-81,Baleares,1226,Huelva,1968,Andalucía,40665
-82,Barcelona,1226,Huelva,1968,Andalucía,11450
-83,Huelva,1226,Huelva,1968,Andalucía,23739
-84,Palencia,1226,Huelva,1968,Andalucía,14643
-85,Albacete,1110,Huesca,1502,Aragón,48155
-86,Córdoba,1110,Huesca,1502,Aragón,27630
-87,Barcelona,1110,Huesca,1502,Aragón,44453
-88,Melilla,1110,Huesca,1502,Aragón,14088
-89,Valencia,1543,Islas Baleares,1301,Islas Baleares,07143
-90,Lugo,1543,Islas Baleares,1301,Islas Baleares,49126
-91,Vizcaya,1543,Islas Baleares,1301,Islas Baleares,38747
-92,Málaga,1543,Islas Baleares,1301,Islas Baleares,25359
-93,León,1909,Jaén,1233,Andalucía,28322
-94,Salamanca,1909,Jaén,1233,Andalucía,51143
-95,Toledo,1909,Jaén,1233,Andalucía,16283
-96,Lleida,1909,Jaén,1233,Andalucía,42086
-97,Almería,1383,La Coruña,1976,Galicia,16566
-98,La Coruña,1383,La Coruña,1976,Galicia,39614
-99,Soria,1383,La Coruña,1976,Galicia,47622
-100,Madrid,1383,La Coruña,1976,Galicia,19797
-101,Asturias,1381,La Rioja,1831,La Rioja,45027
-102,Guadalajara,1381,La Rioja,1831,La Rioja,43896
-103,Asturias,1381,La Rioja,1831,La Rioja,20210
-104,Cuenca,1381,La Rioja,1831,La Rioja,34621
-105,Jaén,1991,Las Palmas,1294,Canarias,33193
-106,Lleida,1991,Las Palmas,1294,Canarias,48401
-107,Badajoz,1991,Las Palmas,1294,Canarias,19661
-108,Segovia,1991,Las Palmas,1294,Canarias,04802
-109,Las Palmas,1569,León,1376,Castilla y León,51977
-110,Ceuta,1569,León,1376,Castilla y León,16506
-111,Guipúzcoa,1569,León,1376,Castilla y León,25115
-112,La Coruña,1569,León,1376,Castilla y León,16511
-113,Toledo,1279,Lérida,1719,Cataluña,41608
-114,Guadalajara,1279,Lérida,1719,Cataluña,05540
-115,Guadalajara,1279,Lérida,1719,Cataluña,01369
-116,Huesca,1279,Lérida,1719,Cataluña,21135
-117,Soria,1758,Lugo,1648,Galicia,25881
-118,Asturias,1758,Lugo,1648,Galicia,37430
-119,Ávila,1758,Lugo,1648,Galicia,24559
-120,Las Palmas,1758,Lugo,1648,Galicia,44176
-121,Valencia,1332,Madrid,1795,Comunidad de Madrid,49482
-122,Zaragoza,1332,Madrid,1795,Comunidad de Madrid,50074
-123,Navarra,1332,Madrid,1795,Comunidad de Madrid,02601
-124,Palencia,1332,Madrid,1795,Comunidad de Madrid,05014
-125,Sevilla,1452,Málaga,1424,Andalucía,17220
-126,La Rioja,1452,Málaga,1424,Andalucía,03944
-127,Sevilla,1452,Málaga,1424,Andalucía,04971
-128,Toledo,1452,Málaga,1424,Andalucía,51407
-129,Girona,1315,Murcia,1046,Región de Murcia,33293
-130,Huelva,1315,Murcia,1046,Región de Murcia,41729
-131,Ourense,1315,Murcia,1046,Región de Murcia,33785
-132,Burgos,1315,Murcia,1046,Región de Murcia,27433
-133,Ceuta,1335,Navarra,1122,Comunidad Foral de Navarra,45411
-134,Huelva,1335,Navarra,1122,Comunidad Foral de Navarra,06655
-135,Baleares,1335,Navarra,1122,Comunidad Foral de Navarra,35550
-136,Ourense,1335,Navarra,1122,Comunidad Foral de Navarra,40156
-137,Zaragoza,1853,Orense,1684,Galicia,18085
-138,Navarra,1853,Orense,1684,Galicia,20080
-139,Pontevedra,1853,Orense,1684,Galicia,33943
-140,Albacete,1853,Orense,1684,Galicia,14997
-141,Cuenca,1587,Palencia,1414,Castilla y León,52159
-142,Guipúzcoa,1587,Palencia,1414,Castilla y León,35334
-143,Álava,1587,Palencia,1414,Castilla y León,26600
-144,Burgos,1587,Palencia,1414,Castilla y León,41781
-145,Asturias,1370,Pontevedra,1090,Galicia,42697
-146,Valencia,1370,Pontevedra,1090,Galicia,42067
-147,Ávila,1370,Pontevedra,1090,Galicia,20715
-148,Jaén,1370,Pontevedra,1090,Galicia,28747
-149,Lleida,1226,Salamanca,1341,Castilla y León,16059
-150,Cáceres,1226,Salamanca,1341,Castilla y León,16088
-151,Granada,1226,Salamanca,1341,Castilla y León,28118
-152,Vizcaya,1226,Salamanca,1341,Castilla y León,30626
-153,Almería,1149,Santa Cruz de Tenerife,1262,Canarias,39056
-154,Cáceres,1149,Santa Cruz de Tenerife,1262,Canarias,20682
-155,Soria,1149,Santa Cruz de Tenerife,1262,Canarias,48673
-156,Cuenca,1149,Santa Cruz de Tenerife,1262,Canarias,48179
-157,Sevilla,1593,Segovia,1459,Castilla y León,08012
-158,Madrid,1593,Segovia,1459,Castilla y León,46140
-159,La Rioja,1593,Segovia,1459,Castilla y León,45011
-160,Castellón,1593,Segovia,1459,Castilla y León,11508
-161,Huelva,1057,Sevilla,1360,Andalucía,23535
-162,Baleares,1057,Sevilla,1360,Andalucía,34801
-163,Soria,1057,Sevilla,1360,Andalucía,47265
-164,Melilla,1057,Sevilla,1360,Andalucía,11380
-165,Alicante,1519,Soria,1393,Castilla y León,09767
-166,La Coruña,1519,Soria,1393,Castilla y León,50894
-167,Álava,1519,Soria,1393,Castilla y León,18750
-168,Granada,1519,Soria,1393,Castilla y León,08789
-169,Vizcaya,1980,Tarragona,1063,Cataluña,02343
-170,Valladolid,1980,Tarragona,1063,Cataluña,52439
-171,Girona,1980,Tarragona,1063,Cataluña,18536
-172,Baleares,1980,Tarragona,1063,Cataluña,05269
-173,Madrid,1535,Teruel,1624,Aragón,46998
-174,Cádiz,1535,Teruel,1624,Aragón,37642
-175,Jaén,1535,Teruel,1624,Aragón,05508
-176,Málaga,1535,Teruel,1624,Aragón,30523
-177,Asturias,1342,Toledo,1067,Castilla-La Mancha,24056
-178,Valencia,1342,Toledo,1067,Castilla-La Mancha,32879
-179,Las Palmas,1342,Toledo,1067,Castilla-La Mancha,37170
-180,Lleida,1342,Toledo,1067,Castilla-La Mancha,24161
-181,Guadalajara,1990,Valencia,1671,Comunidad Valenciana,17791
-182,Ourense,1990,Valencia,1671,Comunidad Valenciana,07915
-183,Teruel,1990,Valencia,1671,Comunidad Valenciana,37690
-184,Girona,1990,Valencia,1671,Comunidad Valenciana,47118
-185,La Coruña,1719,Valladolid,1848,Castilla y León,15758
-186,Guadalajara,1719,Valladolid,1848,Castilla y León,33002
-187,Zaragoza,1719,Valladolid,1848,Castilla y León,03879
-188,Tarragona,1719,Valladolid,1848,Castilla y León,01250
-189,Ávila,1970,Vizcaya,1784,País Vasco,03483
-190,Badajoz,1970,Vizcaya,1784,País Vasco,24392
-191,Las Palmas,1970,Vizcaya,1784,País Vasco,10183
-192,Melilla,1970,Vizcaya,1784,País Vasco,03566
-193,La Coruña,1897,Zamora,1784,Castilla y León,52935
-194,Valencia,1897,Zamora,1784,Castilla y León,46758
-195,Ceuta,1897,Zamora,1784,Castilla y León,42429
-196,Vizcaya,1897,Zamora,1784,Castilla y León,15329
-197,Asturias,1692,Zaragoza,1736,Aragón,16426
-198,Melilla,1692,Zaragoza,1736,Aragón,47327
-199,Vizcaya,1692,Zaragoza,1736,Aragón,18845
-200,Huelva,1692,Zaragoza,1736,Aragón,05585
-201,Ciudad,1828,Ceuta,1803,Ceuta,24122
-202,Burgos,1828,Ceuta,1803,Ceuta,33689
-203,Cantabria,1828,Ceuta,1803,Ceuta,04183
-204,Pontevedra,1828,Ceuta,1803,Ceuta,15823
-205,Valladolid,1204,Melilla,1820,Melilla,34047
-206,Cádiz,1204,Melilla,1820,Melilla,26070
-207,Lleida,1204,Melilla,1820,Melilla,30886
-208,Soria,1204,Melilla,1820,Melilla,19792
-478,Almería,1119,Provincia de Estados Unidos de América,1187,Región de Estados Unidos de América,INT-6090
-416,Asturias,1033,Provincia de Afganistán,1183,Región de Afganistán,INT-6362
-299,Barcelona,1607,Provincia de República Popular Democrática de C...,1344,Región de República Popular Democrática de Corea,INT-2415
-474,Ávila,1611,Provincia de Bosnia y Herzegovina,1397,Región de Bosnia y Herzegovina,INT-8483
-359,Ávila,1459,Provincia de Mongolia,1890,Región de Mongolia,INT-1130
-273,Cantabria,1083,Provincia de Tailandia,1046,Región de Tailandia,INT-7044
-287,Málaga,1361,Provincia de Jordania,1049,Región de Jordania,INT-4287
-310,Ciudad,1934,Provincia de Camerún,1545,Región de Camerún,INT-5777
-423,León,1279,Provincia de Andorra,1802,Región de Andorra,INT-5979
-242,Guipúzcoa,1359,Provincia de República Democrática del Congo,1457,Región de República Democrática del Congo,INT-4974
-282,Huesca,1051,Provincia de Israel,1297,Región de Israel,INT-8600
-293,Ciudad,1696,Provincia de Belice,1625,Región de Belice,INT-7033
-405,Granada,1690,Provincia de Palau,1440,Región de Palau,INT-9083
-251,Málaga,1983,Provincia de Etiopía,1116,Región de Etiopía,INT-4201
-362,Guadalajara,1228,Provincia de República de Moldova,1854,Región de República de Moldova,INT-9954
-491,Málaga,1104,Provincia de Angola,1753,Región de Angola,INT-5016
-427,Las Palmas,1274,Provincia de Congo,1157,Región de Congo,INT-3466
-281,Segovia,1125,Provincia de República Centroafricana,1273,Región de República Centroafricana,INT-1104
-450,Granada,1142,Provincia de Suriname,1648,Región de Suriname,INT-7718
-459,Valladolid,1474,Provincia de Bulgaria,1790,Región de Bulgaria,INT-1391
+ID_POBLACION,NOMBRE_POBLACION
+1,Guipúzcoa
+2,Segovia
+3,Guipúzcoa
+4,Guadalajara
+5,Murcia
+6,Salamanca
+7,Ciudad
+8,Ceuta
+9,Las Palmas
+10,Valladolid
+11,León
+12,Tarragona
+13,Albacete
+14,Guadalajara
+15,Girona
+16,Huesca
+17,Burgos
+18,Melilla
+19,Ourense
+20,Cáceres
+21,Ávila
+22,Salamanca
+23,Madrid
+24,Ceuta
+25,Santa Cruz de Tenerife
+26,Lleida
+27,Sevilla
+28,Zaragoza
+29,Girona
+30,Asturias
+31,Huelva
+32,Santa Cruz de Tenerife
+33,Tarragona
+34,Lleida
+35,Cantabria
+36,Lugo
+37,Ciudad
+38,Ourense
+39,Ourense
+40,Tarragona
+41,Albacete
+42,Cuenca
+43,Ourense
+44,Pontevedra
+45,Girona
+46,Pontevedra
+47,Ceuta
+48,Salamanca
+49,Soria
+50,Santa Cruz de Tenerife
+51,Santa Cruz de Tenerife
+52,Granada
+53,Alicante
+54,Toledo
+55,Ávila
+56,Guadalajara
+57,Cádiz
+58,Barcelona
+59,Melilla
+60,Cáceres
+61,Lugo
+62,Valencia
+63,Zaragoza
+64,Lleida
+65,Burgos
+66,Soria
+67,Zaragoza
+68,Ávila
+69,Álava
+70,Murcia
+71,Lleida
+72,Soria
+73,Palencia
+74,Santa Cruz de Tenerife
+75,Badajoz
+76,Lugo
+77,Salamanca
+78,Salamanca
+79,Segovia
+80,Santa Cruz de Tenerife
+81,Tarragona
+82,Segovia
+83,Baleares
+84,Alicante
+85,Granada
+86,Baleares
+87,Ciudad
+88,Jaén
+89,Huesca
+90,Palencia
+91,La Rioja
+92,Madrid
+93,Cuenca
+94,Tarragona
+95,Castellón
+96,León
+97,Huesca
+98,Soria
+99,Murcia
+100,Almería
+101,Cuenca
+102,Baleares
+103,Ávila
+104,Segovia
+105,Almería
+106,Ciudad
+107,Zamora
+108,Asturias
+109,Palencia
+110,Ceuta
+111,Vizcaya
+112,Zamora
+113,Cuenca
+114,Barcelona
+115,Zaragoza
+116,Baleares
+117,Barcelona
+118,Huelva
+119,Palencia
+120,Albacete
+121,Córdoba
+122,Barcelona
+123,Melilla
+124,Valencia
+125,Lugo
+126,Vizcaya
+127,Málaga
+128,León
+129,Salamanca
+130,Toledo
+131,Lleida
+132,Almería
+133,La Coruña
+134,Soria
+135,Madrid
+136,Asturias
+137,Guadalajara
+138,Asturias
+139,Cuenca
+140,Jaén
+141,Lleida
+142,Badajoz
+143,Segovia
+144,Las Palmas
+145,Ceuta
+146,Guipúzcoa
+147,La Coruña
+148,Toledo
+149,Guadalajara
+150,Guadalajara
+151,Huesca
+152,Soria
+153,Asturias
+154,Ávila
+155,Las Palmas
+156,Valencia
+157,Zaragoza
+158,Navarra
+159,Palencia
+160,Sevilla
+161,La Rioja
+162,Sevilla
+163,Toledo
+164,Girona
+165,Huelva
+166,Ourense
+167,Burgos
+168,Ceuta
+169,Huelva
+170,Baleares
+171,Ourense
+172,Zaragoza
+173,Navarra
+174,Pontevedra
+175,Albacete
+176,Cuenca
+177,Guipúzcoa
+178,Álava
+179,Burgos
+180,Asturias
+181,Valencia
+182,Ávila
+183,Jaén
+184,Lleida
+185,Cáceres
+186,Granada
+187,Vizcaya
+188,Almería
+189,Cáceres
+190,Soria
+191,Cuenca
+192,Sevilla
+193,Madrid
+194,La Rioja
+195,Castellón
+196,Huelva
+197,Baleares
+198,Soria
+199,Melilla
+200,Alicante
+201,La Coruña
+202,Álava
+203,Granada
+204,Vizcaya
+205,Valladolid
+206,Girona
+207,Baleares
+208,Madrid
+478,Segovia
+416,Pontevedra
+299,Burgos
+474,Cáceres
+359,Huesca
+273,Asturias
+287,Albacete
+310,Lleida
+423,Segovia
+242,Lleida
+282,Granada
+293,Asturias
+405,Salamanca
+251,Granada
+362,Huelva
+491,Guadalajara
+427,Navarra
+281,Barcelona
+450,Salamanca
+459,Soria

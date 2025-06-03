@@ -1,101 +1,101 @@
 ID_UNIVERSIDAD,ID_UNIVERSIDAD_NK,ID_UNIVERSIDAD_DESCR,NOMBRE_UNIVERSIDAD,NOMBRE_UNIVERSIDAD_SIN_PAIS,ID_PAIS_NK,ID_UNIVERSIDAD_PIC_NK,ID_PAIS,NOMBRE_PAIS,SN_UNIVERSIDAD_UNITA,SN_UNIVERSIDAD_UNITA_GEMINAE
-1,10,100,Universidad Europea de Alicante (República Popular Democrática de Corea),Universidad Europea de Alicante,MOZ,E13840,41,República Popular Democrática de Corea,N,N
-2,20,200,Universidad Católica de Zaragoza (España),Universidad Católica de Zaragoza,HTI,R56849,8,España,S,N
-3,30,300,Universidad Humanidades de Vives (Congo),Universidad Humanidades de Vives,MCO,R41608,13,Congo,N,N
-4,40,400,Universidad Ciencias de Company (Antigua y Barbuda),Universidad Ciencias de Company,TZA,E85457,69,Antigua y Barbuda,N,N
-5,50,500,Universidad Autónoma de Salamanca (Barbados),Universidad Autónoma de Salamanca,MDV,E41005,46,Barbados,N,N
-6,60,600,Universidad Medicina de Cámara (San Vicente y las Granadinas),Universidad Medicina de Cámara,NLD,R13697,95,San Vicente y las Granadinas,N,N
-7,70,700,Universidad Tecnología de Martínez (Nigeria),Universidad Tecnología de Martínez,GHA,E83807,73,Nigeria,S,N
-8,80,800,Universidad Tecnología de Vendrell (Uzbekistán),Universidad Tecnología de Vendrell,FSM,P33010,64,Uzbekistán,N,N
-9,90,900,Universidad Ciencias de Marí (Tailandia),Universidad Ciencias de Marí,SWZ,E40490,5,Tailandia,S,S
-10,100,1000,Universidad Ciencias de Alegria (República Centroafricana),Universidad Ciencias de Alegria,DMA,P90495,62,República Centroafricana,S,N
-11,110,1100,Universidad Humanidades de Muñoz (Burkina Faso),Universidad Humanidades de Muñoz,YEM,P17806,44,Burkina Faso,S,S
-12,120,1200,Universidad Autónoma de Palencia (Irán),Universidad Autónoma de Palencia,QAT,E78982,91,Irán,N,N
-13,130,1300,Universidad Medicina de Amor (El Salvador),Universidad Medicina de Amor,VCT,R96787,10,El Salvador,N,N
-14,140,1400,Universidad Ciencias de Lara (Ecuador),Universidad Ciencias de Lara,COM,P49552,76,Ecuador,N,N
-15,150,1500,Universidad Autónoma de Palencia (Austria),Universidad Autónoma de Palencia,ZAF,R67261,18,Austria,N,N
-16,160,1600,Universidad Medicina de Donaire (Andorra),Universidad Medicina de Donaire,BWA,E83659,84,Andorra,N,N
-17,170,1700,Universidad Tecnología de Coloma (San Marino),Universidad Tecnología de Coloma,ZWE,E59595,29,San Marino,N,N
-18,180,1800,Universidad Complutense de Ourense (República Federal Democrática de Nepal),Universidad Complutense de Ourense,UGA,E33292,94,República Federal Democrática de Nepal,S,N
-19,190,1900,Universidad Estatal de Albacete (Canadá),Universidad Estatal de Albacete,SRB,R14244,74,Canadá,S,N
-20,200,2000,Universidad Humanidades de Mir (Bangladesh),Universidad Humanidades de Mir,NAM,R84127,79,Bangladesh,S,N
-21,210,2100,Universidad Medicina de Cordero (Qatar),Universidad Medicina de Cordero,CMR,R20198,19,Qatar,S,N
-22,220,2200,Universidad Humanidades de Frías (República Popular Democrática de Corea),Universidad Humanidades de Frías,MOZ,R21629,41,República Popular Democrática de Corea,N,N
-23,230,2300,Universidad Ciencias de Valls (Filipinas),Universidad Ciencias de Valls,BGR,P37483,58,Filipinas,S,N
-24,240,2400,Universidad Medicina de Barrios (Tayikistán),Universidad Medicina de Barrios,NOR,E10167,45,Tayikistán,S,N
-25,250,2500,Universidad Estatal de Navarra (República Federal Democrática de Nepal),Universidad Estatal de Navarra,UGA,E64266,94,República Federal Democrática de Nepal,N,N
-26,260,2600,Universidad Medicina de Tejera (Zimbabwe),Universidad Medicina de Tejera,BIH,R59197,49,Zimbabwe,S,N
-27,270,2700,Universidad Humanidades de Mir (Canadá),Universidad Humanidades de Mir,SRB,E69151,74,Canadá,S,N
-28,280,2800,Universidad Complutense de Murcia (Tailandia),Universidad Complutense de Murcia,SWZ,E51774,5,Tailandia,N,N
-29,290,2900,Universidad Ciencias de Pablo (Italia),Universidad Ciencias de Pablo,DEU,P32296,14,Italia,N,N
-30,300,3000,Universidad Ciencias de Tomé (Serbia),Universidad Ciencias de Tomé,VNM,R22203,21,Serbia,N,N
-31,310,3100,Universidad Europea de Cuenca (Jordania),Universidad Europea de Cuenca,NGA,P14062,77,Jordania,N,N
-32,320,3200,Universidad Humanidades de Gomila (Andorra),Universidad Humanidades de Gomila,BWA,R66911,84,Andorra,S,S
-33,330,3300,Universidad Humanidades de Malo (Bosnia y Herzegovina),Universidad Humanidades de Malo,TWN,E63645,43,Bosnia y Herzegovina,N,N
-34,340,3400,Universidad Complutense de Guadalajara (Côte d'Ivoire),Universidad Complutense de Guadalajara,NER,P41135,85,Côte d'Ivoire,S,S
-35,350,3500,Universidad Tecnología de Oller (Canadá),Universidad Tecnología de Oller,SRB,P30131,74,Canadá,S,N
-36,360,3600,Universidad Ciencias de Maestre (Reino Unido de Gran Bretaña e Irlanda del Norte),Universidad Ciencias de Maestre,SMR,P96772,55,Reino Unido de Gran Bretaña e Irlanda del Norte,N,N
-37,370,3700,Universidad Nacional de La Coruña (Costa Rica),Universidad Nacional de La Coruña,MNG,E37125,26,Costa Rica,S,N
-38,380,3800,Universidad Artes de Coll (Maldivas),Universidad Artes de Coll,GIN,E50416,11,Maldivas,N,N
-39,390,3900,Universidad Artes de Arnal (Camerún),Universidad Artes de Arnal,CHN,R44734,61,Camerún,S,N
-40,400,4000,Universidad Humanidades de Bermúdez (Haití),Universidad Humanidades de Bermúdez,NZL,P59996,50,Haití,N,N
-41,410,4100,Universidad Artes de Salamanca (Federación de Rusia),Universidad Artes de Salamanca,BLZ,E44510,24,Federación de Rusia,N,N
-42,420,4200,Universidad Medicina de Tello (Vanuatu),Universidad Medicina de Tello,RUS,E45200,60,Vanuatu,S,S
-43,430,4300,Universidad Nacional de Murcia (Bahrein),Universidad Nacional de Murcia,TTO,E97574,90,Bahrein,N,N
-44,440,4400,Universidad Artes de Llabrés (Albania),Universidad Artes de Llabrés,BRN,R39820,70,Albania,S,N
-45,450,4500,Universidad Estatal de Salamanca (Mauritania),Universidad Estatal de Salamanca,SVN,R72236,67,Mauritania,S,N
-46,460,4600,Universidad Estatal de Almería (Maldivas),Universidad Estatal de Almería,GIN,R14551,11,Maldivas,S,S
-47,470,4700,Universidad Católica de Almería (Georgia),Universidad Católica de Almería,GAB,E31910,97,Georgia,S,N
-48,480,4800,Universidad de Guipúzcoa (Jamaica),Universidad de Guipúzcoa,URY,P20271,17,Jamaica,N,N
-49,490,4900,Universidad Humanidades de Cabrera (Costa Rica),Universidad Humanidades de Cabrera,MNG,R43801,26,Costa Rica,N,N
-50,500,5000,Universidad Nacional de Navarra (República Federal Democrática de Nepal),Universidad Nacional de Navarra,UGA,E60868,94,República Federal Democrática de Nepal,N,N
-51,510,5100,Universidad Técnica de Segovia (Belarús),Universidad Técnica de Segovia,LSO,P78116,71,Belarús,N,N
-52,520,5200,Universidad Tecnología de Tejada (Singapur),Universidad Tecnología de Tejada,COG,R78493,2,Singapur,N,N
-53,530,5300,Universidad Estatal de Guadalajara (Israel),Universidad Estatal de Guadalajara,CAN,E29424,15,Israel,S,N
-54,540,5400,Universidad Ciencias de Barranco (Nigeria),Universidad Ciencias de Barranco,GHA,P80206,73,Nigeria,N,N
-55,550,5500,Universidad Complutense de Murcia (Bulgaria),Universidad Complutense de Murcia,KGZ,P95824,53,Bulgaria,N,N
-56,560,5600,Universidad Europea de La Rioja (Canadá),Universidad Europea de La Rioja,SRB,P14910,74,Canadá,S,S
-57,570,5700,Universidad Europea de La Coruña (Qatar),Universidad Europea de La Coruña,CMR,R99235,19,Qatar,N,N
-58,580,5800,Universidad Artes de Estrada (Tailandia),Universidad Artes de Estrada,SWZ,P41139,5,Tailandia,S,N
-59,590,5900,Universidad Medicina de Arcos (Lituania),Universidad Medicina de Arcos,IRQ,E54284,35,Lituania,N,N
-60,600,6000,Universidad Complutense de Ourense (Zambia),Universidad Complutense de Ourense,TUV,P99764,40,Zambia,S,N
-61,610,6100,Universidad Autónoma de Girona (Portugal),Universidad Autónoma de Girona,HND,P68079,30,Portugal,N,N
-62,620,6200,Universidad Artes de Zamora (Lituania),Universidad Artes de Zamora,IRQ,R94614,35,Lituania,S,S
-63,630,6300,Universidad Artes de Cañete (Túnez),Universidad Artes de Cañete,KAZ,R73499,28,Túnez,N,N
-64,640,6400,Universidad Tecnología de Llamas (España),Universidad Tecnología de Llamas,HTI,E18600,8,España,N,N
-65,650,6500,Universidad Internacional de Guipúzcoa (Irán),Universidad Internacional de Guipúzcoa,QAT,P27779,91,Irán,S,S
-66,660,6600,Universidad de Segovia (Costa Rica),Universidad de Segovia,MNG,E14334,26,Costa Rica,N,N
-67,670,6700,Universidad Medicina de Estrada (Argentina),Universidad Medicina de Estrada,AUT,R36097,7,Argentina,N,N
-68,680,6800,Universidad Católica de Zamora (Gabón),Universidad Católica de Zamora,ATG,R62028,48,Gabón,S,N
-69,690,6900,Universidad Medicina de Ferrando (Mozambique),Universidad Medicina de Ferrando,MUS,P87862,31,Mozambique,N,N
-70,700,7000,Universidad Católica de Las Palmas (Suecia),Universidad Católica de Las Palmas,GTM,R82264,23,Suecia,N,N
-71,710,7100,Universidad Humanidades de Bolaños (Tayikistán),Universidad Humanidades de Bolaños,NOR,P21847,45,Tayikistán,N,N
-72,720,7200,Universidad Artes de Bustos (Estonia),Universidad Artes de Bustos,CUB,E31352,4,Estonia,S,N
-73,730,7300,Universidad Politécnica de Lugo (Brasil),Universidad Politécnica de Lugo,BEL,R37096,83,Brasil,N,N
-74,740,7400,Universidad Artes de Hurtado (Andorra),Universidad Artes de Hurtado,BWA,R12628,84,Andorra,S,N
-75,750,7500,Universidad Autónoma de Jaén (Jamaica),Universidad Autónoma de Jaén,URY,R11109,17,Jamaica,S,S
-76,760,7600,Universidad Complutense de Valladolid (Zambia),Universidad Complutense de Valladolid,TUV,P59345,40,Zambia,N,N
-77,770,7700,Universidad Medicina de Murcia (República Democrática del Congo),Universidad Medicina de Murcia,BRA,E71171,59,República Democrática del Congo,N,N
-78,780,7800,Universidad Tecnología de Alberdi (Afganistán),Universidad Tecnología de Alberdi,MWI,R62055,87,Afganistán,S,S
-79,790,7900,Universidad Medicina de Palomares (Côte d'Ivoire),Universidad Medicina de Palomares,NER,R94848,85,Côte d'Ivoire,N,N
-80,800,8000,Universidad Nacional de Sevilla (Ghana),Universidad Nacional de Sevilla,HUN,P18367,39,Ghana,N,N
-81,810,8100,Universidad Técnica de Granada (Eslovenia),Universidad Técnica de Granada,TUN,P44229,36,Eslovenia,N,N
-82,820,8200,Universidad Autónoma de Soria (Guinea),Universidad Autónoma de Soria,PHL,R41496,25,Guinea,S,N
-83,830,8300,Universidad Artes de Carpio (Jordania),Universidad Artes de Carpio,NGA,R51888,77,Jordania,S,N
-84,840,8400,Universidad Artes de Pedrero (Andorra),Universidad Artes de Pedrero,BWA,P44003,84,Andorra,N,N
-85,850,8500,Universidad Estatal de Barcelona (Países Bajos),Universidad Estatal de Barcelona,EST,R14629,52,Países Bajos,S,N
-86,860,8600,Universidad Humanidades de Coronado (Palau),Universidad Humanidades de Coronado,ERI,R80075,92,Palau,N,N
-87,870,8700,Universidad Medicina de Pereira (Niger),Universidad Medicina de Pereira,BHR,R49347,86,Niger,S,N
-88,880,8800,Universidad Humanidades de Sotelo (Panamá),Universidad Humanidades de Sotelo,GNB,P22793,72,Panamá,N,N
-89,890,8900,Universidad Complutense de Soria (Jamaica),Universidad Complutense de Soria,URY,R83273,17,Jamaica,S,N
-90,900,9000,Universidad Nacional de Melilla (Bosnia y Herzegovina),Universidad Nacional de Melilla,TWN,E56567,43,Bosnia y Herzegovina,S,N
-91,910,9100,Universidad Artes de Bermejo (Zambia),Universidad Artes de Bermejo,TUV,P58717,40,Zambia,N,N
-92,920,9200,Universidad Complutense de Navarra (Nauru),Universidad Complutense de Navarra,PRY,P25437,75,Nauru,N,N
-93,930,9300,Universidad Europea de Cáceres (Argentina),Universidad Europea de Cáceres,AUT,R91350,7,Argentina,S,N
-94,940,9400,Universidad Tecnología de Viña (Guinea),Universidad Tecnología de Viña,PHL,E99220,25,Guinea,N,N
-95,950,9500,Universidad Medicina de Carnero (Cabo Verde),Universidad Medicina de Carnero,GRC,P17086,68,Cabo Verde,S,S
-96,960,9600,Universidad Técnica de Ávila (Costa Rica),Universidad Técnica de Ávila,MNG,P84632,26,Costa Rica,N,N
-97,970,9700,Universidad Medicina de Baquero (Qatar),Universidad Medicina de Baquero,CMR,R33639,19,Qatar,S,N
-98,980,9800,Universidad Humanidades de Catalán (Micronesia),Universidad Humanidades de Catalán,EGY,P93165,81,Micronesia,S,S
-99,990,9900,Universidad Humanidades de Saura (Eslovenia),Universidad Humanidades de Saura,TUN,E85534,36,Eslovenia,S,N
-100,1000,10000,Universidad Nacional de Soria (Liechtenstein),Universidad Nacional de Soria,COL,E90541,98,Liechtenstein,N,N
+1,10,100,Universidad Nacional de Jaén (España),Universidad Nacional de Jaén,HTI,R93560,8,España,N,N
+2,20,200,Universidad Tecnología de Hurtado (Rwanda),Universidad Tecnología de Hurtado,PRT,R99051,47,Rwanda,S,N
+3,30,300,Universidad Europea de Ourense (Qatar),Universidad Europea de Ourense,CMR,R67432,19,Qatar,S,S
+4,40,400,Universidad Medicina de Falcó (Mozambique),Universidad Medicina de Falcó,MUS,P60181,31,Mozambique,S,N
+5,50,500,Universidad Católica de Málaga (Afganistán),Universidad Católica de Málaga,MWI,P58760,87,Afganistán,N,N
+6,60,600,Universidad Ciencias de Valenzuela (Liechtenstein),Universidad Ciencias de Valenzuela,COL,R28047,98,Liechtenstein,N,N
+7,70,700,Universidad Medicina de Valencia (Mongolia),Universidad Medicina de Valencia,AND,R46528,51,Mongolia,S,N
+8,80,800,Universidad Autónoma de La Coruña (Estonia),Universidad Autónoma de La Coruña,CUB,P77861,4,Estonia,N,N
+9,90,900,Universidad Ciencias de Hernando (Panamá),Universidad Ciencias de Hernando,GNB,P44116,72,Panamá,N,N
+10,100,1000,Universidad Europea de Almería (Túnez),Universidad Europea de Almería,KAZ,P74382,28,Túnez,S,S
+11,110,1100,Universidad Católica de Madrid (El Salvador),Universidad Católica de Madrid,VCT,E68341,10,El Salvador,S,N
+12,120,1200,Universidad Medicina de Macias (República Popular Democrática de Corea),Universidad Medicina de Macias,MOZ,R18511,41,República Popular Democrática de Corea,N,N
+13,130,1300,Universidad Autónoma de Las Palmas (Ghana),Universidad Autónoma de Las Palmas,HUN,R93584,39,Ghana,S,N
+14,140,1400,Universidad Politécnica de Toledo (Suriname),Universidad Politécnica de Toledo,CAF,E36342,66,Suriname,S,S
+15,150,1500,Universidad Ciencias de Quintana (Uzbekistán),Universidad Ciencias de Quintana,FSM,P82616,64,Uzbekistán,N,N
+16,160,1600,Universidad Tecnología de Arrieta (Vanuatu),Universidad Tecnología de Arrieta,RUS,E90209,60,Vanuatu,S,S
+17,170,1700,Universidad Artes de Azcona (Mongolia),Universidad Artes de Azcona,AND,R63843,51,Mongolia,N,N
+18,180,1800,Universidad Nacional de Navarra (Canadá),Universidad Nacional de Navarra,SRB,E51553,74,Canadá,S,N
+19,190,1900,Universidad Tecnología de Beltrán (Guinea Ecuatorial),Universidad Tecnología de Beltrán,ESP,P26821,88,Guinea Ecuatorial,S,N
+20,200,2000,Universidad Artes de Varela (Jamaica),Universidad Artes de Varela,URY,R17263,17,Jamaica,S,N
+21,210,2100,Universidad Humanidades de Losa (Ghana),Universidad Humanidades de Losa,HUN,E52291,39,Ghana,S,N
+22,220,2200,Universidad Complutense de Badajoz (Mauritania),Universidad Complutense de Badajoz,SVN,E42847,67,Mauritania,S,N
+23,230,2300,Universidad Medicina de Perea (Belarús),Universidad Medicina de Perea,LSO,E91922,71,Belarús,N,N
+24,240,2400,Universidad Tecnología de Pavón (Bangladesh),Universidad Tecnología de Pavón,NAM,E75873,79,Bangladesh,S,N
+25,250,2500,Universidad Autónoma de Pontevedra (Nauru),Universidad Autónoma de Pontevedra,PRY,E96341,75,Nauru,N,N
+26,260,2600,Universidad Ciencias de Vall (Nigeria),Universidad Ciencias de Vall,GHA,E20646,73,Nigeria,S,N
+27,270,2700,Universidad Europea de Alicante (Montenegro),Universidad Europea de Alicante,KWT,P95344,99,Montenegro,S,N
+28,280,2800,Universidad Europea de Zaragoza (Comoras),Universidad Europea de Zaragoza,MRT,R13969,54,Comoras,N,N
+29,290,2900,Universidad Tecnología de Vives (Micronesia),Universidad Tecnología de Vives,EGY,P94136,81,Micronesia,N,N
+30,300,3000,Universidad Humanidades de Company (República Centroafricana),Universidad Humanidades de Company,DMA,R63227,62,República Centroafricana,N,N
+31,310,3100,Universidad Nacional de Salamanca (República Democrática del Congo),Universidad Nacional de Salamanca,BRA,R17852,59,República Democrática del Congo,S,N
+32,320,3200,Universidad Artes de Cámara (República Centroafricana),Universidad Artes de Cámara,DMA,E54589,62,República Centroafricana,S,N
+33,330,3300,Universidad Medicina de Martínez (Palau),Universidad Medicina de Martínez,ERI,R55268,92,Palau,N,N
+34,340,3400,Universidad Medicina de Vendrell (Jamaica),Universidad Medicina de Vendrell,URY,R83616,17,Jamaica,S,N
+35,350,3500,Universidad Ciencias de Marí (Vanuatu),Universidad Ciencias de Marí,RUS,P68929,60,Vanuatu,S,S
+36,360,3600,Universidad Medicina de Alegria (Argentina),Universidad Medicina de Alegria,AUT,P90658,7,Argentina,N,N
+37,370,3700,Universidad Humanidades de Muñoz (Togo),Universidad Humanidades de Muñoz,THA,P85718,32,Togo,N,N
+38,380,3800,Universidad Autónoma de Palencia (Guinea),Universidad Autónoma de Palencia,PHL,P77466,25,Guinea,N,N
+39,390,3900,Universidad Medicina de Amor (Uzbekistán),Universidad Medicina de Amor,FSM,P13037,64,Uzbekistán,S,N
+40,400,4000,Universidad Artes de Lara (Tuvalu),Universidad Artes de Lara,KOR,E38199,65,Tuvalu,N,N
+41,410,4100,Universidad de Palencia (Argentina),Universidad de Palencia,AUT,P74866,7,Argentina,N,N
+42,420,4200,Universidad Tecnología de Donaire (Sudán),Universidad Tecnología de Donaire,SLB,E24089,37,Sudán,N,N
+43,430,4300,Universidad Medicina de Coloma (Austria),Universidad Medicina de Coloma,ZAF,R57943,18,Austria,N,N
+44,440,4400,Universidad de Ourense (Rwanda),Universidad de Ourense,PRT,P16705,47,Rwanda,S,N
+45,450,4500,Universidad Nacional de Albacete (Sudán),Universidad Nacional de Albacete,SLB,P76093,37,Sudán,N,N
+46,460,4600,Universidad Tecnología de Mir (Liechtenstein),Universidad Tecnología de Mir,COL,P91689,98,Liechtenstein,S,S
+47,470,4700,Universidad Artes de Cordero (Congo),Universidad Artes de Cordero,MCO,P54444,13,Congo,N,N
+48,480,4800,Universidad Humanidades de Frías (Georgia),Universidad Humanidades de Frías,GAB,E88966,97,Georgia,N,N
+49,490,4900,Universidad Ciencias de Valls (Tuvalu),Universidad Ciencias de Valls,KOR,E15100,65,Tuvalu,S,N
+50,500,5000,Universidad Tecnología de Barrios (Camerún),Universidad Tecnología de Barrios,CHN,P29521,61,Camerún,S,N
+51,510,5100,Universidad Técnica de Navarra (Bangladesh),Universidad Técnica de Navarra,NAM,E61505,79,Bangladesh,N,N
+52,520,5200,Universidad Medicina de Tejera (Ecuador),Universidad Medicina de Tejera,COM,R76809,76,Ecuador,N,N
+53,530,5300,Universidad Tecnología de Mir (Irán),Universidad Tecnología de Mir,QAT,P72245,91,Irán,S,N
+54,540,5400,Universidad Nacional de Murcia (Afganistán),Universidad Nacional de Murcia,MWI,P86507,87,Afganistán,N,N
+55,550,5500,Universidad Ciencias de Pablo (Swazilandia),Universidad Ciencias de Pablo,CHL,R72205,93,Swazilandia,N,N
+56,560,5600,Universidad Tecnología de Tomé (Andorra),Universidad Tecnología de Tomé,BWA,R39824,84,Andorra,S,N
+57,570,5700,Universidad Internacional de Cuenca (República Dominicana),Universidad Internacional de Cuenca,FIN,R91230,22,República Dominicana,N,N
+58,580,5800,Universidad Humanidades de Gomila (Qatar),Universidad Humanidades de Gomila,CMR,E85047,19,Qatar,S,S
+59,590,5900,Universidad Medicina de Malo (Angola),Universidad Medicina de Malo,MLI,P29848,57,Angola,N,N
+60,600,6000,Universidad Politécnica de Guadalajara (Ucrania),Universidad Politécnica de Guadalajara,KEN,P75774,89,Ucrania,N,N
+61,610,6100,Universidad Ciencias de Oller (San Vicente y las Granadinas),Universidad Ciencias de Oller,NLD,R28098,95,San Vicente y las Granadinas,S,N
+62,620,6200,Universidad Artes de Maestre (Côte d'Ivoire),Universidad Artes de Maestre,NER,R59391,85,Côte d'Ivoire,N,N
+63,630,6300,Universidad Católica de La Coruña (Suecia),Universidad Católica de La Coruña,GTM,R54869,23,Suecia,N,N
+64,640,6400,Universidad Medicina de Coll (Afganistán),Universidad Medicina de Coll,MWI,R73462,87,Afganistán,S,N
+65,650,6500,Universidad Tecnología de Arnal (Eslovenia),Universidad Tecnología de Arnal,TUN,P39473,36,Eslovenia,N,N
+66,660,6600,Universidad Medicina de Bermúdez (Montenegro),Universidad Medicina de Bermúdez,KWT,R37168,99,Montenegro,N,N
+67,670,6700,Universidad Artes de Salamanca (República Popular Democrática de Corea),Universidad Artes de Salamanca,MOZ,P83464,41,República Popular Democrática de Corea,N,N
+68,680,6800,Universidad Ciencias de Tello (Sudán),Universidad Ciencias de Tello,SLB,R98686,37,Sudán,N,N
+69,690,6900,Universidad Técnica de Murcia (Mongolia),Universidad Técnica de Murcia,AND,E48070,51,Mongolia,S,S
+70,700,7000,Universidad Ciencias de Llabrés (Palau),Universidad Ciencias de Llabrés,ERI,P67983,92,Palau,N,N
+71,710,7100,Universidad Católica de Salamanca (República de Moldova),Universidad Católica de Salamanca,SVK,E36485,96,República de Moldova,N,N
+72,720,7200,Universidad Complutense de Almería (Panamá),Universidad Complutense de Almería,GNB,E24316,72,Panamá,S,S
+73,730,7300,Universidad Internacional de Almería (Niger),Universidad Internacional de Almería,BHR,E93616,86,Niger,S,S
+74,740,7400,Universidad Técnica de Guipúzcoa (Bulgaria),Universidad Técnica de Guipúzcoa,KGZ,R71918,53,Bulgaria,S,N
+75,750,7500,Universidad Ciencias de Cabrera (Austria),Universidad Ciencias de Cabrera,ZAF,R30701,18,Austria,N,N
+76,760,7600,Universidad Católica de Navarra (Andorra),Universidad Católica de Navarra,BWA,P95267,84,Andorra,S,N
+77,770,7700,Universidad Técnica de Segovia (Sudán),Universidad Técnica de Segovia,SLB,P94659,37,Sudán,S,N
+78,780,7800,Universidad Tecnología de Tejada (República Unida de Tanzanía),Universidad Tecnología de Tejada,ITA,E80143,12,República Unida de Tanzanía,S,N
+79,790,7900,Universidad Estatal de Guadalajara (Suecia),Universidad Estatal de Guadalajara,GTM,E14763,23,Suecia,N,N
+80,800,8000,Universidad Humanidades de Barranco (Uzbekistán),Universidad Humanidades de Barranco,FSM,R47941,64,Uzbekistán,S,S
+81,810,8100,Universidad Europea de Murcia (Nigeria),Universidad Europea de Murcia,GHA,E53914,73,Nigeria,N,N
+82,820,8200,Universidad Internacional de La Rioja (República Democrática del Congo),Universidad Internacional de La Rioja,BRA,R74738,59,República Democrática del Congo,S,N
+83,830,8300,Universidad Complutense de La Coruña (Vanuatu),Universidad Complutense de La Coruña,RUS,E24764,60,Vanuatu,N,N
+84,840,8400,Universidad Artes de Estrada (Serbia),Universidad Artes de Estrada,VNM,R43720,21,Serbia,S,S
+85,850,8500,Universidad Medicina de Arcos (Burkina Faso),Universidad Medicina de Arcos,YEM,R98395,44,Burkina Faso,S,S
+86,860,8600,Universidad Estatal de Ourense (Belice),Universidad Estatal de Ourense,PAN,P77538,82,Belice,N,N
+87,870,8700,Universidad Estatal de Girona (República Unida de Tanzanía),Universidad Estatal de Girona,ITA,R22502,12,República Unida de Tanzanía,S,N
+88,880,8800,Universidad Medicina de Zamora (República Centroafricana),Universidad Medicina de Zamora,DMA,E10895,62,República Centroafricana,N,N
+89,890,8900,Universidad Humanidades de Cañete (Haití),Universidad Humanidades de Cañete,NZL,P44995,50,Haití,N,N
+90,900,9000,Universidad Tecnología de Llamas (Ghana),Universidad Tecnología de Llamas,HUN,R85088,39,Ghana,S,S
+91,910,9100,Universidad Politécnica de Guipúzcoa (Rwanda),Universidad Politécnica de Guipúzcoa,PRT,E97528,47,Rwanda,S,N
+92,920,9200,Universidad Estatal de Segovia (Serbia),Universidad Estatal de Segovia,VNM,R75866,21,Serbia,N,N
+93,930,9300,Universidad Ciencias de Estrada (Ucrania),Universidad Ciencias de Estrada,KEN,R48671,89,Ucrania,N,N
+94,940,9400,Universidad Politécnica de Zamora (Bangladesh),Universidad Politécnica de Zamora,NAM,E27507,79,Bangladesh,N,N
+95,950,9500,Universidad Artes de Ferrando (Benin),Universidad Artes de Ferrando,TGO,R89395,20,Benin,N,N
+96,960,9600,Universidad Internacional de Las Palmas (Comoras),Universidad Internacional de Las Palmas,MRT,P80453,54,Comoras,S,N
+97,970,9700,Universidad Tecnología de Bolaños (Guinea Ecuatorial),Universidad Tecnología de Bolaños,ESP,E78879,88,Guinea Ecuatorial,N,N
+98,980,9800,Universidad Medicina de Bustos (Cabo Verde),Universidad Medicina de Bustos,GRC,E83946,68,Cabo Verde,S,S
+99,990,9900,Universidad Internacional de Lugo (Belarús),Universidad Internacional de Lugo,LSO,E85065,71,Belarús,S,S
+100,1000,10000,Universidad Artes de Hurtado (Mauritania),Universidad Artes de Hurtado,SVN,E99167,67,Mauritania,S,N

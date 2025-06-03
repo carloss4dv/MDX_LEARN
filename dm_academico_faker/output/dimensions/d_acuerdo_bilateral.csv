@@ -1,21 +1,21 @@
 ID_ACUERDO_BILATERAL,ID_ACUERDO_BILATERAL_NK,NOMBRE_ACUERDO_BILATERAL,ID_ACUERDO_BILATERAL_DESCR
-1,2017-2269,Acuerdo de Movilidad de Profesores entre Romero y asociados S.A. y Alberola y asociados S.L.L.,100
-2,2013-5451,Acuerdo de Movilidad de Profesores entre Suministros HRK S.Com. y Tecnologías Sola y asociados S.L.L.,200
-3,2015-9849,Acuerdo de Proyecto Erasmus+ entre Logística Higueras & Asociados S.C.P y Jose Francisco Sobrino Pinilla S.Com.,300
-4,2012-3471,Acuerdo de Investigación Conjunta entre Renata Morcillo Espada S.Coop. y Jordán y asociados S.C.P,400
-5,2016-3503,Acuerdo de Movilidad de Estudiantes entre Alimentación Villanueva & Asociados S.A. y Torres y Hernandez S.L.,500
-6,2011-7797,Acuerdo de Movilidad de Estudiantes entre Victorino Alemany Buendía S.Com. y Hervia y Medina S.L.,600
-7,2015-9890,Acuerdo de Cooperación Internacional entre Sáenz y asociados S.Com. y Ortiz y asociados S.C.P,700
-8,2016-2020,Acuerdo de Acuerdo Marco entre Hotel Carrillo & Asociados S.Com. y Finanzas Gascón S.L.,800
-9,2023-7883,Acuerdo de Movilidad de Estudiantes entre Instalaciones Cabrera & Asociados S.Com. y Escobar y asociados S.A.,900
-10,2022-1320,Acuerdo de Cooperación Internacional entre Inmobiliaria Arroyo S.L.N.E y Desarrollo Tudela & Asociados S.L.N.E,1000
-11,2017-1096,Acuerdo de Cooperación Internacional entre Tecnologías Tejero y asociados S.Com. y Hermanos Tejedor S.A.,1100
-12,2014-7389,Acuerdo de Proyecto Erasmus+ entre Servicios DGC S.A. y Compañía Hurtado & Asociados S.Coop.,1200
-13,2018-9947,Acuerdo de Cooperación Internacional entre Gonzalez y Yáñez S.Com. y Manuel Romeu Mayoral S.Coop.,1300
-14,2017-4595,Acuerdo de Movilidad de Estudiantes entre Familia Galiano S.L. y Compañía Crespo & Asociados S.A.,1400
-15,2016-8956,Acuerdo de Movilidad de Profesores entre Distribuciones VJ S.Coop. y Grupo Maldonado S.L.,1500
-16,2016-6507,Acuerdo de Intercambio Académico entre Calisto Guillen Lamas S.L. y Suministros Españolas S.Coop.,1600
-17,2021-3704,Acuerdo de Cooperación Internacional entre Inmobiliaria Cisneros S.A. y Inversiones Malo S.Com.,1700
-18,2012-9751,Acuerdo de Acuerdo Marco entre Jennifer Mateu Quevedo S.L.N.E y Urbano Bernat Ariño S.L.N.E,1800
-19,2016-1444,Acuerdo de Intercambio Académico entre Ibáñez & Asociados S.A. y Hermanos Arjona S.L.,1900
-20,2020-8022,Acuerdo de Investigación Conjunta entre Tecnologías Villena S.L. y Farmaceútica Ruano y asociados S.L.N.E,2000
+1,2012-4111,Acuerdo de Acuerdo Marco entre Tecnologías Sola y asociados S.L.L. y Logística Higueras & Asociados S.C.P,100
+2,2013-1958,Acuerdo de Movilidad de Profesores entre Jose Francisco Sobrino Pinilla S.Com. y Renata Morcillo Espada S.Coop.,200
+3,2021-6138,Acuerdo de Intercambio Académico entre Jordán y asociados S.C.P y Alimentación Villanueva & Asociados S.A.,300
+4,2010-8811,Acuerdo de Intercambio Académico entre Torres y Hernandez S.L. y Victorino Alemany Buendía S.Com.,400
+5,2010-9320,Acuerdo de Doble Titulación entre Hervia y Medina S.L. y Sáenz y asociados S.Com.,500
+6,2023-4044,Acuerdo de Investigación Conjunta entre Ortiz y asociados S.C.P y Hotel Carrillo & Asociados S.Com.,600
+7,2019-2113,Acuerdo de Investigación Conjunta entre Finanzas Gascón S.L. y Instalaciones Cabrera & Asociados S.Com.,700
+8,2016-2964,Acuerdo de Movilidad de Estudiantes entre Escobar y asociados S.A. y Inmobiliaria Arroyo S.L.N.E,800
+9,2019-1651,Acuerdo de Movilidad de Estudiantes entre Desarrollo Tudela & Asociados S.L.N.E y Tecnologías Tejero y asociados S.Com.,900
+10,2016-9565,Acuerdo de Investigación Conjunta entre Hermanos Tejedor S.A. y Servicios DGC S.A.,1000
+11,2014-4346,Acuerdo de Proyecto Erasmus+ entre Compañía Hurtado & Asociados S.Coop. y Gonzalez y Yáñez S.Com.,1100
+12,2013-5351,Acuerdo de Proyecto Erasmus+ entre Manuel Romeu Mayoral S.Coop. y Familia Galiano S.L.,1200
+13,2012-5915,Acuerdo de Cooperación Internacional entre Compañía Crespo & Asociados S.A. y Distribuciones VJ S.Coop.,1300
+14,2015-2188,Acuerdo de Acuerdo Marco entre Grupo Maldonado S.L. y Calisto Guillen Lamas S.L.,1400
+15,2017-2638,Acuerdo de Intercambio Académico entre Suministros Españolas S.Coop. y Inmobiliaria Cisneros S.A.,1500
+16,2018-4492,Acuerdo de Investigación Conjunta entre Inversiones Malo S.Com. y Jennifer Mateu Quevedo S.L.N.E,1600
+17,2012-6718,Acuerdo de Movilidad de Profesores entre Urbano Bernat Ariño S.L.N.E y Ibáñez & Asociados S.A.,1700
+18,2013-7054,Acuerdo de Investigación Conjunta entre Hermanos Arjona S.L. y Tecnologías Villena S.L.,1800
+19,2012-8179,Acuerdo de Movilidad de Profesores entre Farmaceútica Ruano y asociados S.L.N.E y Pablo Real Mínguez S.Com.,1900
+20,2019-9666,Acuerdo de Movilidad de Profesores entre Distribuciones VZI S.Com. y Hnos Borja S.Com.,2000

@@ -1,16 +1,16 @@
 ID_TIPO_CONTRATO,ID_TIPO_CONTRATO_NK,NOMBRE_TIPO_CONTRATO,DESCRIPCION_TIPO_CONTRATO,FECHA_CARGA
-1,FUN,Funcionario,Personal funcionario de carrera,2023-07-02
-2,LAB,Laboral,Personal laboral,2021-09-12
-3,LABF,Laboral fijo,Personal laboral fijo,2023-11-15
-4,LABI,Laboral indefinido,Personal laboral indefinido no fijo,2020-04-09
-5,LABT,Laboral temporal,Personal laboral temporal,2021-05-15
-6,INT,Interino,Personal funcionario interino,2023-02-01
-7,AYU,Ayudante,Profesor Ayudante,2021-12-06
-8,AYUD,Ayudante Doctor,Profesor Ayudante Doctor,2022-09-01
-9,ASO,Asociado,Profesor Asociado,2023-02-08
-10,COL,Colaborador,Profesor Colaborador,2020-08-31
-11,CD,Contratado Doctor,Profesor Contratado Doctor,2020-11-27
-12,SUP,Sustituto,Profesor Sustituto,2021-08-30
-13,EME,Emérito,Profesor Emérito,2022-09-23
-14,VIS,Visitante,Profesor Visitante,2022-07-27
-15,INV,Investigador,Personal investigador,2023-08-08
+1,FUN,Funcionario,Personal funcionario de carrera,2021-07-16
+2,LAB,Laboral,Personal laboral,2022-06-19
+3,LABF,Laboral fijo,Personal laboral fijo,2020-06-07
+4,LABI,Laboral indefinido,Personal laboral indefinido no fijo,2021-08-08
+5,LABT,Laboral temporal,Personal laboral temporal,2021-04-25
+6,INT,Interino,Personal funcionario interino,2021-07-10
+7,AYU,Ayudante,Profesor Ayudante,2021-11-18
+8,AYUD,Ayudante Doctor,Profesor Ayudante Doctor,2021-10-16
+9,ASO,Asociado,Profesor Asociado,2023-01-11
+10,COL,Colaborador,Profesor Colaborador,2020-06-14
+11,CD,Contratado Doctor,Profesor Contratado Doctor,2020-10-10
+12,SUP,Sustituto,Profesor Sustituto,2020-11-04
+13,EME,Emérito,Profesor Emérito,2021-04-18
+14,VIS,Visitante,Profesor Visitante,2022-02-23
+15,INV,Investigador,Personal investigador,2023-11-22

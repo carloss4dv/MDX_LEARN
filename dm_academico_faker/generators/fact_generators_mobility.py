@@ -1,10 +1,19 @@
+"""
+Generadores de tablas de hechos de movilidad del Data Mart Académico
+
+Este módulo contiene funciones para generar datos de hechos relacionados con movilidad:
+- F_ESTUDIANTES_MOVILIDAD_IN
+- F_ESTUDIANTES_MOVILIDAD_OUT  
+- F_SOLICITUDES_MOVILIDAD
+"""
+
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
 import random
 import datetime
 from faker import Faker
-from utils.helpers import generate_random_date
+from .date_helpers import generate_random_date
 
 # Inicializar Faker con locale español
 fake = Faker('es_ES')
@@ -111,7 +120,7 @@ def generate_f_estudiantes_movilidad_in(n=200, dimension_dfs=None):
             'ID_PROGRAMA_MOVILIDAD_NK': programa_movilidad['ID_PROGRAMA_MOVILIDAD_NK'] if 'ID_PROGRAMA_MOVILIDAD_NK' in programa_movilidad else None,
             'ID_PROGRAMA_MOVILIDAD': programa_movilidad['ID_PROGRAMA_MOVILIDAD'],
             'ID_ESTUDIO': estudio['ID_ESTUDIO'],
-            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_CONOCIMIENTO'],
+            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_MACROAREA'],
             'ID_FECHA_CARGA': int(generate_random_date(2022, 2023).replace('-', '')),
             'CREDITOS_MATRICULADOS': creditos_matriculados,
             'ID_CENTRO_NK': centro['ID_CENTRO_NK'] if 'ID_CENTRO_NK' in centro else None,
@@ -263,7 +272,7 @@ def generate_f_estudiantes_movilidad_out(n=300, dimension_dfs=None):
             'ID_PROGRAMA_MOVILIDAD_NK': programa_movilidad['ID_PROGRAMA_MOVILIDAD_NK'] if 'ID_PROGRAMA_MOVILIDAD_NK' in programa_movilidad else None,
             'ID_PROGRAMA_MOVILIDAD': programa_movilidad['ID_PROGRAMA_MOVILIDAD'],
             'ID_ESTUDIO': estudio['ID_ESTUDIO'],
-            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_CONOCIMIENTO'],
+            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_MACROAREA'],
             'ID_FECHA_CARGA': int(generate_random_date(2022, 2023).replace('-', '')),
             'FLG_NUM_ACCESO_DIRECTO_MOVI': flg_num_acceso_directo_movi,
             'ID_EDAD_EST': edad_est['ID_EDAD_EST']
@@ -391,7 +400,7 @@ def generate_f_solicitudes_movilidad(n=400, dimension_dfs=None):
             'ID_POBLACION_FAMILIAR': poblacion_familiar['ID_POBLACION'],
             'ID_PROGRAMA_MOVILIDAD': programa_movilidad['ID_PROGRAMA_MOVILIDAD'],
             'ID_ESTUDIO': estudio['ID_ESTUDIO'],
-            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_CONOCIMIENTO'],
+            'ID_RAMA_CONOCIMIENTO': rama_conocimiento['ID_RAMA_MACROAREA'],
             'ID_FECHA_CARGA': int(generate_random_date(2022, 2023).replace('-', '')),
             'ID_EDAD_EST': edad_est['ID_EDAD_EST'],
             'ID_UNIVERSIDAD_DESTINO': universidad_destino['ID_UNIVERSIDAD'],

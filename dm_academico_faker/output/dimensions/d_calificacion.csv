@@ -1,11 +1,11 @@
 ID_CALIFICACION,NOMBRE_CALIFICACION,FECHA_CARGA,ID_CALIFICACION_NK
-1,No Presentado,2020-03-23,NP
-2,Suspenso,2023-06-09,SS
-3,Aprobado,2021-04-25,AP
-4,Notable,2022-02-03,NT
-5,Sobresaliente,2023-02-12,SB
-6,Matrícula de Honor,2022-10-09,MH
-7,Convalidada,2020-12-15,CO
-8,Adaptada,2020-07-03,AD
-9,Reconocida,2022-11-20,RE
-10,Anulada,2022-10-07,AN
+1,No Presentado,2020-02-21,NP
+2,Suspenso,2021-07-17,SS
+3,Aprobado,2021-05-16,AP
+4,Notable,2021-04-02,NT
+5,Sobresaliente,2020-10-12,SB
+6,Matrícula de Honor,2020-07-28,MH
+7,Convalidada,2023-10-17,CO
+8,Adaptada,2023-01-21,AD
+9,Reconocida,2020-06-27,RE
+10,Anulada,2023-04-24,AN
