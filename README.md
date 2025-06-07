@@ -376,9 +376,6 @@ Para contribuir al proyecto:
 4. Push a la rama: `git push origin nueva-funcionalidad`
 5. Envíe un Pull Request
 
-## 📄 Licencia
-
-Este proyecto está desarrollado como parte del Trabajo de Fin de Grado en Ingeniería Informática.
 
 ## 🎯 Próximas mejoras
 
@@ -391,3 +388,4 @@ Este proyecto está desarrollado como parte del Trabajo de Fin de Grado en Ingen
 ---
 
 *Proyecto desarrollado para el aprendizaje de consultas MDX y análisis multidimensional en entornos educativos.*
+*Desarrollado como parte del Trabajo de Fin de Grado en Ingeniería Informática.*
