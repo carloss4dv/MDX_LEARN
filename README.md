@@ -38,19 +38,57 @@ pip install psycopg2-binary>=2.9.0
 
 ### 3. Configurar infraestructura de base de datos
 
-#### Opción A: Oracle con Docker (recomendado)
+#### Opción A: Oracle con Docker - Configuración Automática
+
+Para una configuración completamente automática de Oracle Database:
+
 ```bash
 # Levantar Oracle Database
 docker-compose up -d
+
+# Ejecutar script de configuración automática
+# En Windows (PowerShell):
+.\setup_oracle.ps1
+
+# En Linux/macOS (Bash):
+chmod +x setup_oracle.sh
+./setup_oracle.sh
 ```
 
-#### Opción B: PostgreSQL local
+El script automáticamente:
+- ✅ Espera a que Oracle esté listo
+- ✅ Crea el tablespace `DMACADEMICO_DAT`  
+- ✅ Crea el usuario `C##DM_ACADEMICO` con permisos completos
+- ✅ Configura las cuotas y privilegios necesarios
+- ✅ Muestra las variables de entorno para el archivo `.env`
+
+#### Opción B: Oracle con configuración manual
+```bash
+# Levantar Oracle Database
+docker-compose up -d
+
+# Configurar manualmente la base de datos
+# Ver sección "Configuración manual de Oracle" más abajo
+```
+
+#### Opción C: PostgreSQL local
 ```bash
 # Configurar PostgreSQL según sus preferencias
 # Ver sección "Configuración de PostgreSQL" más abajo
 ```
 
 ### 4. Configurar variables de entorno
+
+#### Configuración automática (recomendado)
+
+Si has usado los scripts de configuración automática (`setup_oracle.ps1` o `setup_oracle.sh`), las variables de entorno se muestran al final de la ejecución. También puedes copiar el archivo de ejemplo:
+
+```bash
+# Copiar archivo de ejemplo
+cp .env.example dm_academico_faker/.env
+```
+
+#### Configuración manual
 
 Crear archivo `.env` en `dm_academico_faker/`:
 
@@ -144,8 +182,16 @@ MDX_LEARN/
 │   ├── dm_academico.sql          # DDL base de datos
 │   └── clean_database.sql        # Scripts de limpieza
 ├── scripts/                      # Scripts de automatización
+├── init_scripts/                 # ⭐ Scripts SQL de configuración
+│   ├── create_tablespace.sql     # Creación de tablespace
+│   └── create_user.sql           # Creación de usuario Oracle
+├── setup_oracle.ps1              # ⭐ Configuración automática (Windows)
+├── setup_oracle.sh               # ⭐ Configuración automática (Linux/macOS)
+├── setup_oracle.bat              # ⭐ Configuración simple (Windows)
+├── .env.example                  # ⭐ Variables de entorno de ejemplo
 ├── docker-compose.yml            # Infraestructura Oracle
 ├── docker-oracle-config.md       # Configuración Docker
+├── ORACLE_SETUP_README.md        # ⭐ Guía de configuración automática
 ├── requirements.txt              # ⭐ Dependencias del proyecto
 └── README.md                     # Este archivo
 ```

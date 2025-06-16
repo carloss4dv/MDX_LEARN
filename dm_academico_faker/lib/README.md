@@ -13,11 +13,25 @@ Este directorio contiene los drivers JDBC necesarios para conectar con diferente
 
 ## Descarga automática
 
-Para descargar automáticamente los drivers:
+Para descargar automáticamente todos los drivers:
 
 ```bash
+cd dm_academico_faker
 python download_jdbc_drivers.py
 ```
+
+El script descargará automáticamente:
+- **ojdbc8.jar** desde Maven Central (Oracle JDBC para Java 8+)
+- **ojdbc11.jar** desde Maven Central (Oracle JDBC para Java 11+)
+- **ojdbc17.jar** desde Maven Central (Oracle JDBC para Java 17+)
+- **postgresql-42.5.0.jar** desde Maven Central (PostgreSQL JDBC)
+
+**Características del script:**
+- ✅ Verifica archivos existentes antes de descargar
+- ✅ Muestra progreso de descarga
+- ✅ Permite sobrescribir archivos existentes
+- ✅ Manejo de errores robusto
+- ✅ Descarga desde repositorios oficiales
 
 ## Descarga manual
 

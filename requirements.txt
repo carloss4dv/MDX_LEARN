@@ -21,7 +21,7 @@ python-dotenv>=0.19.0
 # Descomentar las líneas que necesites:
 
 # Para Oracle Database con cliente nativo:
-# cx_Oracle>=8.3.0
+cx_Oracle>=8.3.0
 
 # Para conexiones JDBC (recomendado):
 # JayDeBeApi>=1.2.3

@@ -7,62 +7,96 @@
 
 ## 2. Configuración del Contenedor
 
-### 2.1. Crear el archivo docker-compose.yml
-```yaml
-version: '3'
-services:
-  oracle:
-    image: container-registry.oracle.com/database/express:latest
-    container_name: oracle_db
-    environment:
-      - ORACLE_PWD=YourStrongPassword123
-      - ORACLE_CHARACTERSET=AL32UTF8
-    ports:
-      - "1521:1521"
-    volumes:
-      - oracle_data:/opt/oracle/oradata
-    shm_size: '2gb'
-    restart: unless-stopped
-
-volumes:
-  oracle_data:
-```
-
-### 2.2. Variables de Entorno
-- `ORACLE_PWD`: Contraseña para los usuarios SYS y SYSTEM
-- `ORACLE_CHARACTERSET`: Juego de caracteres de la base de datos
-- `shm_size`: Tamaño de la memoria compartida
-
-## 3. Iniciar el Contenedor
+### 2.1. Usar el archivo docker-compose.yml existente
+El proyecto incluye un archivo `docker-compose.yml` preconfigurado que puedes usar directamente:
 
 ```bash
 docker-compose up -d
 ```
 
-## 4. Configuración de la Base de Datos
+## 3. Configuración de la Base de Datos
 
-### 4.1. Conectar a la Base de Datos
+### 3.1. Configuración Automática (Recomendado)
+
+Usa los scripts de configuración automática incluidos:
+
+#### En Windows (PowerShell):
+```powershell
+.\setup_oracle.ps1
+```
+
+#### En Linux/macOS (Bash):
+```bash
+chmod +x setup_oracle.sh
+./setup_oracle.sh
+```
+
+**¿Qué hace el script automático?**
+- ✅ Espera a que Oracle esté completamente inicializado
+- ✅ Crea el tablespace `DMACADEMICO_DAT` automáticamente
+- ✅ Crea el usuario `C##DM_ACADEMICO` con todos los permisos necesarios
+- ✅ Configura cuotas y privilegios
+- ✅ Muestra las variables de entorno para usar en tu aplicación
+
+### 3.2. Configuración Manual (Avanzado)
+
+Si prefieres configurar manualmente o entender el proceso:
+
+#### 3.2.1. Conectar a la Base de Datos
 ```bash
 docker exec -it oracle_db sqlplus sys/YourStrongPassword123@//localhost:1521/XE as sysdba
 ```
 
-### 4.2. Crear el Esquema DM_ACADEMICO
+#### 3.2.2. Crear el Tablespace
+```sql
+CREATE TABLESPACE DMACADEMICO_DAT
+DATAFILE '/opt/oracle/oradata/XE/XEPDB1/dmacademico_dat01.dbf'
+SIZE 100M
+AUTOEXTEND ON
+NEXT 10M
+MAXSIZE UNLIMITED
+EXTENT MANAGEMENT LOCAL
+AUTOALLOCATE
+SEGMENT SPACE MANAGEMENT AUTO;
+```
+
+#### 3.2.3. Crear el Usuario DM_ACADEMICO
 ```sql
 ALTER SESSION SET CONTAINER = XEPDB1;
 
-CREATE USER C##dm_academico IDENTIFIED BY YourPassword123;
-GRANT CONNECT, RESOURCE, DBA TO C##dm_academico;
+CREATE USER C##DM_ACADEMICO IDENTIFIED BY YourPassword123;
+GRANT CONNECT, RESOURCE, DBA TO C##DM_ACADEMICO;
 
-ALTER USER C##dm_academico DEFAULT TABLESPACE DMACADEMICO_DAT;
-ALTER USER C##dm_academico QUOTA UNLIMITED ON DMACADEMICO_DAT;
+ALTER USER C##DM_ACADEMICO DEFAULT TABLESPACE DMACADEMICO_DAT;
+ALTER USER C##DM_ACADEMICO QUOTA UNLIMITED ON DMACADEMICO_DAT;
+
+-- Permisos adicionales
+GRANT CREATE SESSION TO C##DM_ACADEMICO;
+GRANT CREATE TABLE TO C##DM_ACADEMICO;
+GRANT CREATE VIEW TO C##DM_ACADEMICO;
+GRANT CREATE PROCEDURE TO C##DM_ACADEMICO;
+GRANT CREATE SEQUENCE TO C##DM_ACADEMICO;
 ```
 
-### 4.3. Configuración de JDBC
+## 4. Variables de Entorno y Configuración
+
+### 4.1. Variables para la aplicación
+Después de ejecutar el script de configuración automática, usa estas variables:
+
+```env
+ORACLE_HOST=localhost
+ORACLE_PORT=1521
+ORACLE_SERVICE=XEPDB1
+ORACLE_USER=C##DM_ACADEMICO
+ORACLE_PASSWORD=YourPassword123
+```
+
+### 4.2. Configuración de JDBC
 ```properties
-# Configuración de conexión JDBC para Atoti
+# Configuración de conexión JDBC
 jdbc.driver=oracle.jdbc.driver.OracleDriver
-jdbc.url=jdbc:oracle:thin:@//localhost:1521/XE
-jdbc.user=dm_academico
+jdbc.url=jdbc:oracle:thin:@//localhost:1521/XEPDB1
+jdbc.user=C##DM_ACADEMICO
 jdbc.password=YourPassword123
 ```
 
