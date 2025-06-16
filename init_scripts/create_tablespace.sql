@@ -1,0 +1,29 @@
+-- Switch to the pluggable database
+ALTER SESSION SET CONTAINER = XEPDB1;
+
+-- Drop tablespace if exists (to handle re-runs)
+BEGIN
+    EXECUTE IMMEDIATE 'DROP TABLESPACE DMACADEMICO_DAT INCLUDING CONTENTS AND DATAFILES';
+    DBMS_OUTPUT.PUT_LINE('Tablespace DMACADEMICO_DAT dropped successfully');
+EXCEPTION
+    WHEN OTHERS THEN
+        IF SQLCODE = -959 THEN
+            DBMS_OUTPUT.PUT_LINE('Tablespace DMACADEMICO_DAT does not exist, proceeding with creation');
+        ELSE
+            RAISE;
+        END IF;
+END;
+/
+
+-- Create tablespace for DM_ACADEMICO
+CREATE TABLESPACE DMACADEMICO_DAT
+DATAFILE '/opt/oracle/oradata/XE/XEPDB1/dmacademico_dat01.dbf'
+SIZE 100M
+AUTOEXTEND ON
+NEXT 10M
+MAXSIZE UNLIMITED
+EXTENT MANAGEMENT LOCAL
+AUTOALLOCATE
+SEGMENT SPACE MANAGEMENT AUTO;
+
+EXIT;
