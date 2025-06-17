@@ -55,6 +55,12 @@ chmod +x setup_oracle.sh
 ./setup_oracle.sh
 ```
 
+Una vez se haya configurado la base de datos ejecuta:
+
+```bash
+.\scripts\import_tables.bat
+```
+
 El script automáticamente:
 - ✅ Espera a que Oracle esté listo
 - ✅ Crea el tablespace `DMACADEMICO_DAT`  
@@ -81,12 +87,8 @@ docker-compose up -d
 
 #### Configuración automática (recomendado)
 
-Si has usado los scripts de configuración automática (`setup_oracle.ps1` o `setup_oracle.sh`), las variables de entorno se muestran al final de la ejecución. También puedes copiar el archivo de ejemplo:
+Si has usado los scripts de configuración automática (`setup_oracle.ps1` o `setup_oracle.sh`), las variables de entorno se muestran al final de la ejecución.
 
-```bash
-# Copiar archivo de ejemplo
-cp .env.example dm_academico_faker/.env
-```
 
 #### Configuración manual
 

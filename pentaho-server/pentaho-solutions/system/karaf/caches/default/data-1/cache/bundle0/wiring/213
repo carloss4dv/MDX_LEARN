@@ -1,0 +1,6 @@
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.osgi.api)
+0; version=9.4.0.0-343
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.platform.proxy.api)
+0; version=9.4.0.0-343
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.platform.proxy.impl)
+0; version=9.4.0.0-343

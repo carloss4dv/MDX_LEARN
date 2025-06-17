@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="pentaho-hadoop-shims-apache-kar-repo">
+    <feature name="pentaho-hadoop-shims-apache-kar" description="pentaho-hadoop-shims-apache-kar" version="9.4.2022.03_00-343">
+        <details>parent pom for Pentaho CE Java projects</details>
+        <bundle>mvn:org.pentaho.hadoop.shims/pentaho-hadoop-shims-common-dependencies-V1/9.4.2022.03.00-343</bundle>
+        <bundle>mvn:org.pentaho.hadoop.shims/pentaho-hadoop-shims-common-fragment-V1/9.4.2022.03.00-343</bundle>
+        <bundle>mvn:org.pentaho.hadoop.shims/pentaho-hadoop-shims-apache-driver/9.4.2022.03.00-343</bundle>
+    </feature>
+</features>

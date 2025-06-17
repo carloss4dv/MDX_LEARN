@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="DM_Academico">
+  <!-- Configuración de la conexión -->
+  <DataSource>
+    <DataSourceName>DM_Academico_Oracle</DataSourceName>
+    <!-- Para PostgreSQL cambiar a: DM_Academico_PostgreSQL -->
+  </DataSource>
+
+  <Cube name="CuboAcademico" table="F_MATRICULA">
+
+    <!-- 📅 DIMENSIÓN TEMPORAL -->
+    <Dimension name="Tiempo" foreignKey="ID_CURSO_ACADEMICO">
+      <Hierarchy hasAll="true" primaryKey="ID_CURSO_ACADEMICO">
+        <Table name="D_CURSO_ACADEMICO"/>
+        <Level name="CursoAcademico" column="NOMBRE_CURSO_ACADEMICO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+
+    <!-- 🏛️ DIMENSIÓN CENTRO -->
+    <Dimension name="Centro" foreignKey="ID_CENTRO">
+      <Hierarchy hasAll="true" primaryKey="ID_CENTRO">
+        <Table name="D_CENTRO"/>
+        <Level name="TipoCentro" column="NOMBRE_TIPO_CENTRO" uniqueMembers="false"/>
+        <Level name="Centro" column="NOMBRE_CENTRO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+
+    <!-- 📚 DIMENSIÓN ASIGNATURA -->
+    <Dimension name="Asignatura" foreignKey="ID_ASIGNATURA">
+      <Hierarchy hasAll="true" primaryKey="ID_ASIGNATURA">
+        <Table name="D_ASIGNATURA"/>
+        <Level name="Asignatura" column="NOMBRE_ASIGNATURA" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+
+    <!-- 👤 DIMENSIÓN SEXO -->
+    <Dimension name="Sexo" foreignKey="ID_SEXO">
+      <Hierarchy hasAll="true" primaryKey="ID_SEXO">
+        <Table name="D_SEXO"/>
+        <Level name="Sexo" column="NOMBRE_SEXO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+
+    <!-- 📊 MEDIDAS -->
+    <Measure name="NumeroMatriculas" column="ID_MATRICULA" aggregator="count" formatString="#,##0"/>
+    <Measure name="NumeroEstudiantes" column="ID_ALUMNO" aggregator="distinct-count" formatString="#,##0"/>
+    <Measure name="TotalCreditos" column="CREDITOS" aggregator="sum" formatString="#,##0.00"/>
+
+  </Cube>
+</Schema>

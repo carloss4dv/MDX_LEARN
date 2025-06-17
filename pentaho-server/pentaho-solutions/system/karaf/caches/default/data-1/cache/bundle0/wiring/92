@@ -1,0 +1,2 @@
+osgi.wiring.host; (&(osgi.wiring.host=org.springframework.osgi.extender)(bundle-version>=0.0.0))
+46

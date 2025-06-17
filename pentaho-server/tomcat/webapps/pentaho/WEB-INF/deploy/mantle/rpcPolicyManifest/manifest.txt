@@ -1,0 +1,3 @@
+# Module mantle
+# RPC service class, partial path of RPC policy file
+org.pentaho.ui.xul.gwt.service.XulLoaderService, D4A8C2230D7B9022403451C74EC183CB.gwt.rpc

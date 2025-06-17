@@ -193,6 +193,7 @@ class DatabaseUploader:
                 [user, password],
                 self.driver_path
             )
+            connection.setAutoCommit(False)
         except:
             # Intentar con service_name
             jdbc_url = f"jdbc:oracle:thin:@//{host}:{port}/{service}"

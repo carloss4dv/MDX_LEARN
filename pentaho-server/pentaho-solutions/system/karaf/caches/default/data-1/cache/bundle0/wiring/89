@@ -1,0 +1,16 @@
+osgi.wiring.package; (&(osgi.wiring.package=org.pentaho.caching.api)(version>=9.4.0)(!(version>=10.0.0)))
+88; version=9.4.0.0-343
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.service.blueprint)(version>=1.0.0)(!(version>=2.0.0)))
+23; version=1.0.0
+osgi.wiring.package; (&(osgi.wiring.package=net.sf.ehcache)(version>=2.8.0)(!(version>=3.0.0)))
+54; version=2.8.3
+osgi.wiring.package; (&(osgi.wiring.package=javax.cache)(version>=1.0.0)(!(version>=2.0.0)))
+88; version=1.0.0
+osgi.wiring.package; (osgi.wiring.package=org.ehcache.jcache)
+94; version=0.0.0
+osgi.wiring.package; (&(osgi.wiring.package=org.pentaho.caching.spi)(version>=9.4.0)(!(version>=10.0.0)))
+88; version=9.4.0.0-343
+osgi.wiring.package; (&(osgi.wiring.package=net.sf.ehcache.config)(version>=2.8.0)(!(version>=3.0.0)))
+54; version=2.8.3
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.framework)(version>=1.8.0)(!(version>=2.0.0)))
+0; version=1.8.0

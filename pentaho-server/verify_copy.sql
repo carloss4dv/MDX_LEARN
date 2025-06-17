@@ -1,0 +1,14 @@
+
+    -- Verificar desde CDB
+    CONNECT C##DM_ACADEMICO/dm_academico@localhost:1521/XE
+
+    -- Contar registros
+    SELECT TABLE_NAME, NUM_ROWS 
+    FROM USER_TABLES 
+    WHERE TABLE_NAME IN ('D_CURSO_ACADEMICO', 'D_CENTRO', 'D_ASIGNATURA', 'D_SEXO', 'F_MATRICULA');
+
+    -- Verificar integridad referencial
+    SELECT COUNT(*) AS MATRICULAS_HUERFANAS
+    FROM F_MATRICULA f
+    WHERE NOT EXISTS (SELECT 1 FROM D_CURSO_ACADEMICO d WHERE d.ID_CURSO_ACADEMICO = f.ID_CURSO_ACADEMICO);
+    

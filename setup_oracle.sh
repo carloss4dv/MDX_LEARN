@@ -111,6 +111,20 @@ main() {
         fi
     fi
     
+    # Execute database schema creation
+    DATA_DIR="$SCRIPT_DIR/data"
+    SCHEMA_SCRIPT="$DATA_DIR/dm_academico.sql"
+    if [[ -f "$SCHEMA_SCRIPT" ]]; then
+        echo -e "${YELLOW}Creating database schema and tables...${NC}"
+        if execute_oracle_sql "$SCHEMA_SCRIPT" "" "" "$ORACLE_SERVICE" "$ORACLE_PASSWORD"; then
+            echo -e "${GREEN}Database schema created successfully!${NC}"
+        else
+            echo -e "${YELLOW}Warning: Schema creation failed. Tables might already exist.${NC}"
+        fi
+    else
+        echo -e "${YELLOW}Warning: Schema file not found: $SCHEMA_SCRIPT${NC}"
+    fi
+    
     echo ""
     echo -e "${GREEN}=== Oracle Database Setup Complete ===${NC}"
     echo -e "${CYAN}You can now use the following connection details:${NC}"

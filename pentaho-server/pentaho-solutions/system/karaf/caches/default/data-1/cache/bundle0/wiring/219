@@ -1,0 +1,16 @@
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.platform.api.mt)
+0; version=0.0.0
+osgi.wiring.package; (osgi.wiring.package=org.springframework.security.core.userdetails.memory)
+0; version=5.4.2
+osgi.wiring.package; (osgi.wiring.package=org.springframework.security.authentication.dao)
+0; version=5.4.2
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.platform.api.engine)
+0; version=0.0.0
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.service.blueprint)(version>=1.0.0)(!(version>=2.0.0)))
+23; version=1.0.0
+osgi.wiring.package; (osgi.wiring.package=org.springframework.security.core.userdetails)
+0; version=5.4.2
+osgi.wiring.package; (&(osgi.wiring.package=org.springframework.security.authentication)(version>=5.0.0)(!(version>=5.5.0)))
+0; version=5.4.2
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.platform.security.userroledao)
+0; version=0.0.0

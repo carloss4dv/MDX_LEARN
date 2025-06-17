@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="pentaho-webpackage-9.4.0.0-343">
+    <repository>mvn:org.pentaho.webpackage/pentaho-webpackage-archive-deployer/9.4.0.0-343/xml/features</repository>
+    <feature name="pentaho-webpackage" description="pentaho-webpackage" version="9.4.0.0-343">
+        <details>Parent project for Pentaho OSGI Bundles</details>
+        <feature>http-whiteboard</feature>
+        <feature version="9.4.0.0-343" prerequisite="false" dependency="false">pentaho-webpackage-archive-deployer</feature>
+        <bundle>mvn:org.pentaho.webpackage/core-impl/9.4.0.0-343</bundle>
+        <bundle dependency="true">mvn:org.pentaho.webpackage/core-api/9.4.0.0-343</bundle>
+        <bundle dependency="true">mvn:com.googlecode.json-simple/json-simple/1.1.1</bundle>
+        <bundle>mvn:org.pentaho.webpackage/http-listener-impl/9.4.0.0-343</bundle>
+        <bundle>mvn:org.pentaho.webpackage/requirejs-listener-impl/9.4.0.0-343</bundle>
+        <bundle dependency="true">mvn:org.pentaho/requirejs-manager-api/9.4.0.0-343</bundle>
+    </feature>
+</features>

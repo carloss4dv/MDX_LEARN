@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="pentaho-dataservice-repo">
+    <repository>mvn:pentaho/pentaho-dataservice-client/9.4.0.0-343/xml/features</repository>
+    <feature name="pentaho-dataservice" description="Pentaho Community Edition Project: pentaho-dataservice" version="9.4.0.0-343">
+        <details>Pentaho Data Services Server and Client bundled</details>
+        <feature>pentaho-metaverse-core</feature>
+        <feature version="9.4.0.0-343" prerequisite="false" dependency="false">pentaho-dataservice-client</feature>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:pentaho/pdi-dataservice-server-plugin/9.4.0.0-343</bundle>
+        <bundle dependency="true">mvn:commons-io/commons-io/2.11.0</bundle>
+        <bundle>mvn:pentaho/pentaho-blueprint-collection-utils/9.4.0.0-343</bundle>
+        <bundle>wrap:mvn:pentaho/pentaho-modeler/9.4.0.0-343</bundle>
+    </feature>
+    <feature name="pentaho-metaverse-core" version="9.4.0.0-343">
+        <feature>pentaho-fasterxml</feature>
+        <feature>pentaho-tinkerpop-gremlin</feature>
+    </feature>
+</features>

@@ -1,0 +1,14 @@
+osgi.wiring.package; (&(osgi.wiring.package=com.google.common.base)(version>=17.0.0)(!(version>=18.0.0)))
+15; version=17.0.0
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.service.cm)(version>=1.5.0)(!(version>=2.0.0)))
+10; version=1.6.0
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.service.blueprint)(version>=1.0.0)(!(version>=2.0.0)))
+23; version=1.0.0
+osgi.wiring.package; (&(osgi.wiring.package=com.google.common.collect)(version>=17.0.0)(!(version>=18.0.0)))
+15; version=17.0.0
+osgi.wiring.package; (&(osgi.wiring.package=com.google.common.util.concurrent)(version>=17.0.0)(!(version>=18.0.0)))
+15; version=17.0.0
+osgi.wiring.package; (&(osgi.wiring.package=com.google.common.primitives)(version>=17.0.0)(!(version>=18.0.0)))
+15; version=17.0.0
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.framework)(version>=1.8.0)(!(version>=2.0.0)))
+0; version=1.8.0

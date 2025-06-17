@@ -1,6 +1,6 @@
 @echo off
 REM Copiar el archivo SQL al contenedor
-docker cp "data/dm_academico_modified.sql" oracle_db:/tmp/dm_academico.sql
+docker cp "data/dm_academico.sql" oracle_db:/tmp/dm_academico.sql
 
 REM Ejecutar el script SQL dentro del contenedor
 echo @/tmp/dm_academico.sql >> temp.sql

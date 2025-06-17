@@ -1,0 +1,10 @@
+osgi.wiring.package; (&(osgi.wiring.package=org.springframework.core.convert.support)(version>=3.2.18.RELEASE)(!(version>=3.3.0)))
+37; version=3.2.18.RELEASE
+osgi.wiring.package; (&(osgi.wiring.package=org.springframework.core)(version>=3.2.18.RELEASE)(!(version>=3.3.0)))
+37; version=3.2.18.RELEASE
+osgi.wiring.package; (&(osgi.wiring.package=org.springframework.util)(version>=3.2.18.RELEASE)(!(version>=3.3.0)))
+37; version=3.2.18.RELEASE
+osgi.wiring.package; (&(osgi.wiring.package=org.springframework.core.style)(version>=3.2.18.RELEASE)(!(version>=3.3.0)))
+37; version=3.2.18.RELEASE
+osgi.wiring.package; (&(osgi.wiring.package=org.springframework.core.convert)(version>=3.2.18.RELEASE)(!(version>=3.3.0)))
+37; version=3.2.18.RELEASE

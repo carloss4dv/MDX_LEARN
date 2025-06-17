@@ -107,8 +107,7 @@ try {
             Write-Host "Warning: Tablespace creation failed. It might already exist." -ForegroundColor Yellow
         }
     }
-    
-    # Execute user creation
+      # Execute user creation
     $userScript = Join-Path $initScriptsDir "create_user.sql"
     if (Test-Path $userScript) {        if (Invoke-OracleSql -SqlFile $userScript -OracleHostName $OracleHost -Port $OraclePort -Service $OracleService -SysPassword $OraclePassword) {
             Write-Host "User C##DM_ACADEMICO created successfully!" -ForegroundColor Green
@@ -116,6 +115,20 @@ try {
             Write-Host "Failed to create user C##DM_ACADEMICO" -ForegroundColor Red
             exit 1
         }
+    }
+    
+    # Execute database schema creation
+    $dataDir = Join-Path $scriptDir "data"
+    $schemaScript = Join-Path $dataDir "dm_academico.sql"
+    if (Test-Path $schemaScript) {
+        Write-Host "Creating database schema and tables..." -ForegroundColor Yellow
+        if (Invoke-OracleSql -SqlFile $schemaScript -OracleHostName $OracleHost -Port $OraclePort -Service $OracleService -SysPassword $OraclePassword) {
+            Write-Host "Database schema created successfully!" -ForegroundColor Green
+        } else {
+            Write-Host "Warning: Schema creation failed. Tables might already exist." -ForegroundColor Yellow
+        }
+    } else {
+        Write-Host "Warning: Schema file not found: $schemaScript" -ForegroundColor Yellow
     }
     
     Write-Host "" -ForegroundColor White

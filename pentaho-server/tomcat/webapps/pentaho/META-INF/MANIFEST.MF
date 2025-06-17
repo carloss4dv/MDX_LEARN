@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.6
+Built-By: buildguy
+Build-Jdk: 11.0.16.1
+Implementation-Title: Pentaho BI Platform Community Edition
+Implementation-Vendor: Hitachi Vantara
+Implementation-Version: 9.4.0.0-343
+

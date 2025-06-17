@@ -1,0 +1,2 @@
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.di.osgi)
+0; version=0.0.0

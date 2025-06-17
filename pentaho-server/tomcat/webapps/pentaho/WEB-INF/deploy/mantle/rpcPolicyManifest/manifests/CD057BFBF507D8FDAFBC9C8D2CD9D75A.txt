@@ -1,0 +1,2 @@
+serviceClass: org.pentaho.ui.xul.gwt.service.XulLoaderService
+path: D4A8C2230D7B9022403451C74EC183CB.gwt.rpc

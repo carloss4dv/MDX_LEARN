@@ -1,0 +1,12 @@
+{
+  "name": "@pentaho/config-deploy",
+  "version": "9.4.0.0-343",
+  "paths": {
+    "pentaho/config/deploy": "/"
+  },
+  "config": {
+    "pentaho/modules": {
+      "pentaho/config/deploy/config": {"type": "pentaho/config/spec/IRuleSet"}
+    }
+  }
+}

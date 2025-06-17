@@ -1,0 +1,12 @@
+osgi.wiring.package; (&(osgi.wiring.package=org.pentaho.runtime.test.action)(version>=9.4.0)(!(version>=10.0.0)))
+144; version=9.4.0.0-343
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.di.ui.core.dialog)
+0; version=0.0.0
+osgi.wiring.package; (&(osgi.wiring.package=org.pentaho.runtime.test.action.impl)(version>=9.4.0)(!(version>=10.0.0)))
+144; version=9.4.0.0-343
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.service.blueprint)(version>=1.0.0)(!(version>=2.0.0)))
+23; version=1.0.0
+osgi.wiring.package; (osgi.wiring.package=org.pentaho.di.ui.spoon)
+0; version=0.0.0
+osgi.wiring.package; (osgi.wiring.package=org.eclipse.swt.widgets)
+0; version=0.0.0
