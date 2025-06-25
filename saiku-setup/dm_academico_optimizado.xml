@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<!-- =================================================================================================================
+     ESQUEMA MONDRIAN OPTIMIZADO PARA SAIKU ANALYTICS
+     
+     AUTOR: Assistant  
+     FECHA: 26-06-2025
+     DESCRIPCIÓN: Esquema multidimensional optimizado que utiliza vistas SQL personalizadas
+                  para mejorar rendimiento y funcionalidad en Saiku Analytics
+     
+     CARACTERÍSTICAS:
+     - Usa vistas optimizadas (V_*) en lugar de tablas base
+     - Jerarquías claras y navegables
+     - Medidas calculadas avanzadas
+     - Campos calculados para análisis demográfico y académico
+     - Optimizado para drag & drop en Saiku
+     
+     USO:
+     1. Ejecutar create_saiku_views.sql primero
+     2. Copiar este archivo a: pentaho-server/pentaho-solutions/system/saiku/
+     3. Actualizar datasource para usar este esquema
+     4. Reiniciar Pentaho Server
+     ================================================================================================================= -->
+
+<Schema name="DM_Academico_Optimizado">
+  
+  <!-- ========================================================================================================= -->
+  <!-- CUBO PRINCIPAL: ANÁLISIS DE MATRÍCULAS ACADÉMICAS OPTIMIZADO -->
+  <!-- ========================================================================================================= -->
+  
+  <Cube name="Matriculas_Optimizadas" visible="true" description="Análisis multidimensional de matrículas con vistas optimizadas">
+    
+    <!-- TABLA DE HECHOS OPTIMIZADA -->
+    <Table name="V_HECHOS_MATRICULA"/>
+    
+    <!-- ========================================================================================================= -->
+    <!-- DIMENSIÓN: INFORMACIÓN TEMPORAL AVANZADA -->
+    <!-- ========================================================================================================= -->
+    
+    <Dimension name="Tiempo" visible="true" foreignKey="ID_CURSO_ACADEMICO" description="Análisis temporal de cursos académicos">
+      <Hierarchy hasAll="true" allMemberName="Todos los Períodos" primaryKey="ID_CURSO_ACADEMICO">
+        <Table name="V_DIM_CURSO_ACADEMICO"/>
+        <Level name="Clasificación" column="PERIODO_CLASIFICACION" uniqueMembers="true" 
+               description="Clasificación temporal (Actual, Reciente, Anterior, Histórico)"/>
+        <Level name="Año" column="ANNO_INICIO" uniqueMembers="true" type="Numeric"
+               description="Año de inicio del curso académico"/>
+        <Level name="Curso_Completo" column="NOMBRE_CURSO_ACADEMICO" uniqueMembers="true"
+               description="Nombre completo del curso académico"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- ========================================================================================================= -->
+    <!-- DIMENSIÓN: CENTROS ACADÉMICOS CON JERARQUÍA COMPLETA -->
+    <!-- ========================================================================================================= -->
+    
+    <Dimension name="Centro_Academico" visible="true" foreignKey="ID_CENTRO" description="Estructura organizativa de centros">
+      <Hierarchy hasAll="true" allMemberName="Todos los Centros" primaryKey="ID_CENTRO">
+        <Table name="V_DIM_CENTRO"/>
+        <Level name="Tipo_Centro" column="NIVEL_1_TIPO" uniqueMembers="true"
+               description="Tipo de centro (Facultad, Escuela, Instituto)"/>
+        <Level name="Campus" column="NIVEL_2_CAMPUS" uniqueMembers="false"
+               description="Campus universitario"/>
+        <Level name="Centro" column="NIVEL_3_CENTRO" uniqueMembers="true"
+               description="Centro específico"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- Jerarquía alternativa para análisis rápido -->
+    <Dimension name="Centro_Resumen" visible="true" foreignKey="ID_CENTRO" description="Vista simplificada de centros">
+      <Hierarchy hasAll="true" allMemberName="Todos" primaryKey="ID_CENTRO">
+        <Table name="V_DIM_CENTRO"/>
+        <Level name="Tipo_Campus" column="TIPO_CAMPUS" uniqueMembers="false"
+               description="Combinación Tipo - Campus"/>
+        <Level name="Centro" column="NOMBRE_CENTRO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- ========================================================================================================= -->
+    <!-- DIMENSIÓN: INFORMACIÓN DEMOGRÁFICA AVANZADA -->
+    <!-- ========================================================================================================= -->
+    
+    <Dimension name="Demografia" visible="true" foreignKey="ID_SEXO" description="Análisis demográfico de estudiantes">
+      <Hierarchy hasAll="true" allMemberName="Todos" primaryKey="ID_SEXO">
+        <Table name="V_DIM_SEXO"/>
+        <Level name="Género" column="GENERO_NORMALIZADO" uniqueMembers="true"
+               description="Género normalizado (Masculino, Femenino, No especificado)"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- Dimensión de grupos de edad (desde tabla de hechos) -->
+    <Dimension name="Grupos_Edad" visible="true" description="Clasificación por rangos de edad">
+      <Hierarchy hasAll="true" allMemberName="Todas las Edades">
+        <Level name="Grupo_Edad" table="V_HECHOS_MATRICULA" column="GRUPO_EDAD" uniqueMembers="true"
+               description="Grupos: Menor 20, 20-24, 25-29, 30-34, 35+"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- ========================================================================================================= -->
+    <!-- DIMENSIÓN: INFORMACIÓN ACADÉMICA COMPLETA -->
+    <!-- ========================================================================================================= -->
+    
+    <Dimension name="Plan_Estudio" visible="true" foreignKey="ID_PLAN_ESTUDIO" description="Jerarquía académica completa">
+      <Hierarchy hasAll="true" allMemberName="Todos los Planes" primaryKey="ID_PLAN_ESTUDIO">
+        <Table name="V_DIM_PLAN_ESTUDIO"/>
+        <Level name="Categoría" column="CATEGORIA_ESTUDIO" uniqueMembers="true"
+               description="Categoría general (Grado, Máster, Doctorado, Otro)"/>
+        <Level name="Tipo_Estudio" column="NIVEL_1_TIPO_ESTUDIO" uniqueMembers="true"
+               description="Tipo específico de estudio"/>
+        <Level name="Rama_Conocimiento" column="NIVEL_2_RAMA" uniqueMembers="false"
+               description="Rama de conocimiento"/>
+        <Level name="Estudio" column="NIVEL_3_ESTUDIO" uniqueMembers="false"
+               description="Estudio específico"/>
+        <Level name="Plan" column="NIVEL_4_PLAN" uniqueMembers="true"
+               description="Plan de estudios detallado"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- Jerarquía simplificada para análisis rápido -->
+    <Dimension name="Academico_Resumen" visible="true" foreignKey="ID_PLAN_ESTUDIO" description="Vista simplificada académica">
+      <Hierarchy hasAll="true" allMemberName="Todos" primaryKey="ID_PLAN_ESTUDIO">
+        <Table name="V_DIM_PLAN_ESTUDIO"/>
+        <Level name="Tipo_Rama" column="TIPO_RAMA" uniqueMembers="false"
+               description="Combinación Tipo - Rama de Conocimiento"/>
+        <Level name="Estudio" column="NOMBRE_ESTUDIO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- ========================================================================================================= -->
+    <!-- DIMENSIÓN: ANÁLISIS DE CARGA ACADÉMICA -->
+    <!-- ========================================================================================================= -->
+    
+    <Dimension name="Carga_Academica" visible="true" description="Análisis de dedicación y créditos">
+      <Hierarchy hasAll="true" allMemberName="Toda la Carga">
+        <Level name="Tipo_Dedicacion" table="V_HECHOS_MATRICULA" column="TIPO_DEDICACION" uniqueMembers="true"
+               description="Clasificación por dedicación (Tiempo Completo, Parcial, etc.)"/>
+        <Level name="Rango_Creditos" table="V_HECHOS_MATRICULA" column="RANGO_CREDITOS" uniqueMembers="true"
+               description="Rangos de créditos (0, 1-15, 16-30, etc.)"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- ========================================================================================================= -->
+    <!-- MEDIDAS PRINCIPALES Y CALCULADAS -->
+    <!-- ========================================================================================================= -->
+    
+    <!-- Medidas básicas de conteo -->
+    <Measure name="Total_Matriculas" column="CONTADOR_MATRICULAS" aggregator="sum" visible="true"
+             description="Número total de matrículas"/>
+    
+    <Measure name="Estudiantes_Unicos" column="ID_ALUMNO" aggregator="distinct-count" visible="true"
+             description="Número de estudiantes únicos"/>
+    
+    <!-- Medidas académicas -->
+    <Measure name="Total_Creditos" column="CREDITOS" aggregator="sum" visible="true"
+             description="Suma total de créditos matriculados"/>
+    
+    <Measure name="Promedio_Creditos" column="CREDITOS" aggregator="avg" visible="true" formatString="#,##0.00"
+             description="Promedio de créditos por matrícula"/>
+    
+    <Measure name="Promedio_Edad" column="EDAD" aggregator="avg" visible="true" formatString="#,##0.0"
+             description="Edad promedio de estudiantes"/>
+    
+    <!-- Medidas calculadas avanzadas -->
+    <Measure name="Estudiantes_Jovenes" column="ES_JOVEN" aggregator="sum" visible="true"
+             description="Número de estudiantes menores de 25 años"/>
+    
+    <Measure name="Estudiantes_Tiempo_Completo" column="ES_TIEMPO_COMPLETO" aggregator="sum" visible="true"
+             description="Estudiantes con 60+ créditos"/>
+    
+    <Measure name="Matriculas_Con_Creditos" column="TIENE_CREDITOS" aggregator="sum" visible="true"
+             description="Matrículas que tienen créditos asignados"/>
+    
+    <!-- ========================================================================================================= -->
+    <!-- MEDIDAS CALCULADAS CON MDX -->
+    <!-- ========================================================================================================= -->
+    
+    <!-- Porcentajes -->
+    <CalculatedMember name="Porcentaje_Jovenes" dimension="Measures" visible="true"
+                      description="Porcentaje de estudiantes jóvenes">
+      <Formula>[Measures].[Estudiantes_Jovenes] / [Measures].[Estudiantes_Unicos] * 100</Formula>
+      <CalculatedMemberProperty name="FORMAT_STRING" value="#,##0.0'%'"/>
+    </CalculatedMember>
+    
+    <CalculatedMember name="Porcentaje_Tiempo_Completo" dimension="Measures" visible="true"
+                      description="Porcentaje de estudiantes a tiempo completo">
+      <Formula>[Measures].[Estudiantes_Tiempo_Completo] / [Measures].[Estudiantes_Unicos] * 100</Formula>
+      <CalculatedMemberProperty name="FORMAT_STRING" value="#,##0.0'%'"/>
+    </CalculatedMember>
+    
+    <!-- Ratios académicos -->
+    <CalculatedMember name="Ratio_Matriculas_Estudiante" dimension="Measures" visible="true"
+                      description="Promedio de matrículas por estudiante">
+      <Formula>[Measures].[Total_Matriculas] / [Measures].[Estudiantes_Unicos]</Formula>
+      <CalculatedMemberProperty name="FORMAT_STRING" value="#,##0.00"/>
+    </CalculatedMember>
+    
+    <CalculatedMember name="Creditos_Por_Estudiante" dimension="Measures" visible="true"
+                      description="Promedio de créditos por estudiante">
+      <Formula>[Measures].[Total_Creditos] / [Measures].[Estudiantes_Unicos]</Formula>
+      <CalculatedMemberProperty name="FORMAT_STRING" value="#,##0.0"/>
+    </CalculatedMember>
+    
+    <!-- Índices de concentración -->
+    <CalculatedMember name="Indice_Concentracion_Centro" dimension="Measures" visible="true"
+                      description="Índice de concentración de estudiantes por centro">
+      <Formula>([Measures].[Estudiantes_Unicos] / ([Measures].[Estudiantes_Unicos], [Centro_Academico].DefaultMember)) * 100</Formula>
+      <CalculatedMemberProperty name="FORMAT_STRING" value="#,##0.0'%'"/>
+    </CalculatedMember>
+    
+  </Cube>
+  
+  <!-- ========================================================================================================= -->
+  <!-- CUBO ADICIONAL: RESUMEN EJECUTIVO PRE-AGREGADO -->
+  <!-- ========================================================================================================= -->
+  
+  <Cube name="Dashboard_Ejecutivo" visible="true" description="Resumen ejecutivo con datos pre-agregados para dashboards rápidos">
+    
+    <Table name="V_RESUMEN_EJECUTIVO"/>
+    
+    <!-- Dimensiones simplificadas para dashboard -->
+    <Dimension name="Curso" visible="true">
+      <Hierarchy hasAll="true" allMemberName="Todos los Cursos">
+        <Level name="Curso" column="CURSO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <Dimension name="Tipo_Centro" visible="true">
+      <Hierarchy hasAll="true" allMemberName="Todos los Tipos">
+        <Level name="Tipo" column="TIPO_CENTRO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <Dimension name="Campus" visible="true">
+      <Hierarchy hasAll="true" allMemberName="Todos los Campus">
+        <Level name="Campus" column="CAMPUS" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <Dimension name="Tipo_Estudio" visible="true">
+      <Hierarchy hasAll="true" allMemberName="Todos los Tipos">
+        <Level name="Tipo" column="TIPO_ESTUDIO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <Dimension name="Genero" visible="true">
+      <Hierarchy hasAll="true" allMemberName="Todos">
+        <Level name="Género" column="GENERO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- Medidas pre-calculadas para rendimiento máximo -->
+    <Measure name="Total_Matriculas" column="TOTAL_MATRICULAS" aggregator="sum"/>
+    <Measure name="Estudiantes_Unicos" column="ESTUDIANTES_UNICOS" aggregator="sum"/>
+    <Measure name="Total_Creditos" column="TOTAL_CREDITOS" aggregator="sum"/>
+    <Measure name="Promedio_Creditos" column="PROMEDIO_CREDITOS" aggregator="avg" formatString="#,##0.00"/>
+    <Measure name="Promedio_Edad" column="PROMEDIO_EDAD" aggregator="avg" formatString="#,##0.0"/>
+    <Measure name="Edad_Minima" column="EDAD_MINIMA" aggregator="min"/>
+    <Measure name="Edad_Maxima" column="EDAD_MAXIMA" aggregator="max"/>
+    <Measure name="Jovenes" column="JOVENES" aggregator="sum"/>
+    <Measure name="Adultos" column="ADULTOS" aggregator="sum"/>
+    <Measure name="Tiempo_Completo" column="TIEMPO_COMPLETO" aggregator="sum"/>
+    <Measure name="Tiempo_Parcial" column="TIEMPO_PARCIAL" aggregator="sum"/>
+    
+  </Cube>
+  
+</Schema> 

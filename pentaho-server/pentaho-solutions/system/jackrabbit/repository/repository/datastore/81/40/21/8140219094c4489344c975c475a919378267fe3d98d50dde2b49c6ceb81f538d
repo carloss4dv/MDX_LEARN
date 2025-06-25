@@ -1,0 +1,175 @@
+<Schema name="oracle_DAT">
+  <Dimension name="V DIM CENTRO">
+    <Hierarchy name="CAMPUS CENTRO" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="CAMPUS CENTRO" uniqueMembers="false" column="CAMPUS_CENTRO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="ID CENTRO" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="ID CENTRO" uniqueMembers="false" column="ID_CENTRO" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NIVEL 1 TIPO" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="NIVEL 1 TIPO" uniqueMembers="false" column="NIVEL_1_TIPO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NIVEL 2 CAMPUS" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="NIVEL 2 CAMPUS" uniqueMembers="false" column="NIVEL_2_CAMPUS" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NIVEL 3 CENTRO" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="NIVEL 3 CENTRO" uniqueMembers="false" column="NIVEL_3_CENTRO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE CAMPUS" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE CAMPUS" uniqueMembers="false" column="NOMBRE_CAMPUS" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE CENTRO" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE CENTRO" uniqueMembers="false" column="NOMBRE_CENTRO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE TIPO CENTRO" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE TIPO CENTRO" uniqueMembers="false" column="NOMBRE_TIPO_CENTRO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="ORDEN CENTRO" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="ORDEN CENTRO" uniqueMembers="false" column="ORDEN_CENTRO" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="TIPO CAMPUS" hasAll="true" primaryKey="ID_CENTRO">
+      <Table name="V_DIM_CENTRO" schema="C##SAIKU_USER"/>
+      <Level name="TIPO CAMPUS" uniqueMembers="false" column="TIPO_CAMPUS" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="V DIM CURSO ACADEMICO">
+    <Hierarchy name="ANNO INICIO" hasAll="true" primaryKey="ID_CURSO_ACADEMICO">
+      <Table name="V_DIM_CURSO_ACADEMICO" schema="C##SAIKU_USER"/>
+      <Level name="ANNO INICIO" uniqueMembers="false" column="ANNO_INICIO" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="ID CURSO ACADEMICO" hasAll="true" primaryKey="ID_CURSO_ACADEMICO">
+      <Table name="V_DIM_CURSO_ACADEMICO" schema="C##SAIKU_USER"/>
+      <Level name="ID CURSO ACADEMICO" uniqueMembers="false" column="ID_CURSO_ACADEMICO" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE CURSO ACADEMICO" hasAll="true" primaryKey="ID_CURSO_ACADEMICO">
+      <Table name="V_DIM_CURSO_ACADEMICO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE CURSO ACADEMICO" uniqueMembers="false" column="NOMBRE_CURSO_ACADEMICO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="PERIODO CLASIFICACION" hasAll="true" primaryKey="ID_CURSO_ACADEMICO">
+      <Table name="V_DIM_CURSO_ACADEMICO" schema="C##SAIKU_USER"/>
+      <Level name="PERIODO CLASIFICACION" uniqueMembers="false" column="PERIODO_CLASIFICACION" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="V DIM PLAN ESTUDIO">
+    <Hierarchy name="CATEGORIA ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="CATEGORIA ESTUDIO" uniqueMembers="false" column="CATEGORIA_ESTUDIO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="ID PLAN ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="ID PLAN ESTUDIO" uniqueMembers="false" column="ID_PLAN_ESTUDIO" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NIVEL 1 TIPO ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NIVEL 1 TIPO ESTUDIO" uniqueMembers="false" column="NIVEL_1_TIPO_ESTUDIO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NIVEL 2 RAMA" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NIVEL 2 RAMA" uniqueMembers="false" column="NIVEL_2_RAMA" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NIVEL 3 ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NIVEL 3 ESTUDIO" uniqueMembers="false" column="NIVEL_3_ESTUDIO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NIVEL 4 PLAN" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NIVEL 4 PLAN" uniqueMembers="false" column="NIVEL_4_PLAN" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE ESTUDIO" uniqueMembers="false" column="NOMBRE_ESTUDIO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE PLAN ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE PLAN ESTUDIO" uniqueMembers="false" column="NOMBRE_PLAN_ESTUDIO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE RAMA CONOCIMIENTO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE RAMA CONOCIMIENTO" uniqueMembers="false" column="NOMBRE_RAMA_CONOCIMIENTO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE TIPO ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE TIPO ESTUDIO" uniqueMembers="false" column="NOMBRE_TIPO_ESTUDIO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="RAMA ESTUDIO" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="RAMA ESTUDIO" uniqueMembers="false" column="RAMA_ESTUDIO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="TIPO RAMA" hasAll="true" primaryKey="ID_PLAN_ESTUDIO">
+      <Table name="V_DIM_PLAN_ESTUDIO" schema="C##SAIKU_USER"/>
+      <Level name="TIPO RAMA" uniqueMembers="false" column="TIPO_RAMA" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension name="V DIM SEXO">
+    <Hierarchy name="GENERO NORMALIZADO" hasAll="true" primaryKey="ID_SEXO">
+      <Table name="V_DIM_SEXO" schema="C##SAIKU_USER"/>
+      <Level name="GENERO NORMALIZADO" uniqueMembers="false" column="GENERO_NORMALIZADO" type="String">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="ID SEXO" hasAll="true" primaryKey="ID_SEXO">
+      <Table name="V_DIM_SEXO" schema="C##SAIKU_USER"/>
+      <Level name="ID SEXO" uniqueMembers="false" column="ID_SEXO" type="Numeric">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="NOMBRE SEXO" hasAll="true" primaryKey="ID_SEXO">
+      <Table name="V_DIM_SEXO" schema="C##SAIKU_USER"/>
+      <Level name="NOMBRE SEXO" uniqueMembers="false" column="NOMBRE_SEXO" type="String">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="oracle_DAT">
+    <Table name="V_HECHOS_MATRICULA" schema="C##SAIKU_USER"/>
+    <DimensionUsage name="V DIM CENTRO" source="V DIM CENTRO" foreignKey="ID_CENTRO"/>
+    <DimensionUsage name="V DIM CURSO ACADEMICO" source="V DIM CURSO ACADEMICO" foreignKey="ID_CURSO_ACADEMICO"/>
+    <DimensionUsage name="V DIM PLAN ESTUDIO" source="V DIM PLAN ESTUDIO" foreignKey="ID_PLAN_ESTUDIO"/>
+    <DimensionUsage name="V DIM SEXO" source="V DIM SEXO" foreignKey="ID_SEXO"/>
+    <Measure name="ANNO MATRICULA" column="ANNO_MATRICULA" aggregator="sum"/>
+    <Measure name="CONTADOR MATRICULAS" column="CONTADOR_MATRICULAS" aggregator="sum"/>
+    <Measure name="CREDITOS" column="CREDITOS" aggregator="sum"/>
+    <Measure name="EDAD" column="EDAD" aggregator="sum"/>
+    <Measure name="ES JOVEN" column="ES_JOVEN" aggregator="sum"/>
+    <Measure name="ES TIEMPO COMPLETO" column="ES_TIEMPO_COMPLETO" aggregator="sum"/>
+    <Measure name="ID ALUMNO" column="ID_ALUMNO" aggregator="sum"/>
+    <Measure name="ID CENTRO" column="ID_CENTRO" aggregator="sum"/>
+    <Measure name="ID CURSO ACADEMICO" column="ID_CURSO_ACADEMICO" aggregator="sum"/>
+    <Measure name="ID EXPEDIENTE ACADEMICO NK" column="ID_EXPEDIENTE_ACADEMICO_NK" aggregator="sum"/>
+    <Measure name="ID PLAN ESTUDIO" column="ID_PLAN_ESTUDIO" aggregator="sum"/>
+    <Measure name="ID SEXO" column="ID_SEXO" aggregator="sum"/>
+    <Measure name="TIENE CREDITOS" column="TIENE_CREDITOS" aggregator="sum"/>
+  </Cube>
+</Schema>

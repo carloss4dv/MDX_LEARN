@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSources>
+  <DataSource>
+    <DataSourceName>DM_Academico</DataSourceName>
+    <DataSourceDescription>Data Mart Académico</DataSourceDescription>
+    <URL>jdbc:oracle:thin:@localhost:1521:XE</URL>
+    <DataSourceInfo>Provider=mondrian;Jdbc=oracle.jdbc.OracleDriver;JdbcUser=C##SAIKU_USER;JdbcPassword=saiku_password</DataSourceInfo>
+    <ProviderName>Mondrian</ProviderName>
+    <ProviderType>MDP</ProviderType>
+    <AuthenticationMode>Unauthenticated</AuthenticationMode>
+    <Catalogs>
+      <Catalog name="DM_Academico">
+        <Definition>/system/saiku/dm_academico.xml</Definition>
+      </Catalog>
+    </Catalogs>
+  </DataSource>
+</DataSources>
