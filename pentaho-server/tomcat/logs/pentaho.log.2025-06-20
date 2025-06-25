@@ -1,0 +1,26 @@
+2025-06-20 16:52:58,100 INFO  [org.pentaho.platform.engine.core.system.status.PeriodicStatusLogger] Caution, the system is initializing. Do not shut down or restart the system at this time.
+2025-06-20 16:52:58,353 INFO  [org.pentaho.platform.osgi.OSGIBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+2025-06-20 16:52:58,623 INFO  [org.pentaho.platform.osgi.KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 1 at C:\INFORMATICA\TFG\mdx\MDX_LEARN\pentaho-se ***
+***   rver\pentaho-solutions\system\karaf\caches\default\data-1             ***
+*** Karaf Port:8802                                                         ***
+*** OSGI Service Port:9051                                                  ***
+*******************************************************************************
+2025-06-20 16:53:28,148 INFO  [org.pentaho.platform.engine.core.system.status.PeriodicStatusLogger] Caution, the system is initializing. Do not shut down or restart the system at this time.
+2025-06-20 16:53:29,121 DEBUG [org.pentaho.di.core.vfs.ConcurrentFileSystemManager] Using "C:\INFORMATICA\TFG\mdx\MDX_LEARN\pentaho-server\tomcat\temp\vfs_cache" as temporary files store.
+2025-06-20 16:53:29,295 DEBUG [org.pentaho.di.core.vfs.ConcurrentFileSystemManager] Skipping provider "org.apache.commons.vfs2.provider.webdav.WebdavFileProvider" because required class "org.apache.jackrabbit.webdav.client.methods.DavMethod" is not available.
+2025-06-20 16:53:58,151 INFO  [org.pentaho.platform.engine.core.system.status.PeriodicStatusLogger] Caution, the system is initializing. Do not shut down or restart the system at this time.
+2025-06-20 16:53:59,377 INFO  [org.pentaho.hadoop.shim.DriverManager] Installing driver kars.
+2025-06-20 16:53:59,379 INFO  [org.pentaho.hadoop.shim.DriverManager] 0 drivers will be installed.
+2025-06-20 16:53:59,380 INFO  [org.pentaho.hadoop.shim.DriverManager] Finished installing drivers kars.
+2025-06-20 16:54:28,164 INFO  [org.pentaho.platform.engine.core.system.status.PeriodicStatusLogger] Caution, the system is initializing. Do not shut down or restart the system at this time.
+2025-06-20 16:54:30,411 INFO  [org.pentaho.platform.engine.core.system.status.PeriodicStatusLogger] The system has finished initializing.
+2025-06-20 16:56:17,662 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties_supported_languages.properties not found in plugin saiku
+2025-06-20 16:56:17,690 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties.properties not found in plugin saiku
+2025-06-20 16:56:17,708 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties_es.properties not found in plugin saiku
+2025-06-20 16:56:17,731 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties_es_ES.properties not found in plugin saiku
+2025-06-20 17:03:20,109 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties_supported_languages.properties not found in plugin saiku
+2025-06-20 17:03:20,124 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties.properties not found in plugin saiku
+2025-06-20 17:03:20,136 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties_es.properties not found in plugin saiku
+2025-06-20 17:03:20,149 ERROR [org.pentaho.platform.web.servlet.GenericServlet] GenericServlet.ERROR_0004 - Resource /saiku-ui/saikuplugin.properties_es_ES.properties not found in plugin saiku

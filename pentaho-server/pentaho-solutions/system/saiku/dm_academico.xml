@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Schema name="DM_Academico">
+  
+  <!-- CUBO PRINCIPAL: MATRICULAS ACADÉMICAS -->
+  <Cube name="Matriculas_Academicas" visible="true">
+    <Table name="F_MATRICULA"/>
+    
+    <!-- DIMENSIÓN: INFORMACIÓN TEMPORAL -->
+    <Dimension name="Curso_Academico" visible="true" foreignKey="ID_CURSO_ACADEMICO">
+      <Hierarchy hasAll="true" allMemberName="Todos los Cursos" primaryKey="ID_CURSO_ACADEMICO">
+        <Table name="D_CURSO_ACADEMICO"/>
+        <Level name="Año_Academico" column="NOMBRE_CURSO_ACADEMICO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- DIMENSIÓN: INFORMACIÓN INSTITUCIONAL -->
+    <Dimension name="Centro_Academico" visible="true" foreignKey="ID_CENTRO">
+      <Hierarchy hasAll="true" allMemberName="Todos los Centros" primaryKey="ID_CENTRO">
+        <Table name="D_CENTRO"/>
+        <Level name="Tipo_Centro" column="NOMBRE_TIPO_CENTRO" uniqueMembers="true"/>
+        <Level name="Campus" column="NOMBRE_CAMPUS" uniqueMembers="false"/>
+        <Level name="Centro" column="NOMBRE_CENTRO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- DIMENSIÓN: INFORMACIÓN DEMOGRÁFICA -->
+    <Dimension name="Sexo" visible="true" foreignKey="ID_SEXO">
+      <Hierarchy hasAll="true" allMemberName="Todos" primaryKey="ID_SEXO">
+        <Table name="D_SEXO"/>
+        <Level name="Genero" column="NOMBRE_SEXO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- DIMENSIÓN: INFORMACIÓN ACADÉMICA -->
+    <Dimension name="Plan_Estudio" visible="true" foreignKey="ID_PLAN_ESTUDIO">
+      <Hierarchy hasAll="true" allMemberName="Todos los Planes" primaryKey="ID_PLAN_ESTUDIO">
+        <Table name="D_ESTUDIO_JERARQ"/>
+        <Level name="Tipo_Estudio" column="NOMBRE_TIPO_ESTUDIO" uniqueMembers="true"/>
+        <Level name="Rama_Conocimiento" column="NOMBRE_RAMA_CONOCIMIENTO" uniqueMembers="false"/>
+        <Level name="Estudio" column="NOMBRE_ESTUDIO" uniqueMembers="false"/>
+        <Level name="Plan" column="NOMBRE_PLAN_ESTUDIO" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    
+    <!-- MEDIDAS ACADÉMICAS -->
+    <Measure name="Total_Matriculas" column="ID_EXPEDIENTE_ACADEMICO_NK" aggregator="count" visible="true"/>
+    <Measure name="Total_Creditos" column="CREDITOS" aggregator="sum" visible="true"/>
+    <Measure name="Promedio_Creditos" column="CREDITOS" aggregator="avg" visible="true"/>
+    <Measure name="Estudiantes_Unicos" column="ID_ALUMNO" aggregator="distinct-count" visible="true"/>
+    <Measure name="Promedio_Edad" column="EDAD" aggregator="avg" visible="true"/>
+    
+  </Cube>
+  
+</Schema>

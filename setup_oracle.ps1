@@ -44,6 +44,34 @@ function Wait-ForOracle {
     return $false
 }
 
+# Function to execute SQL script in Oracle as a specific user
+function Invoke-OracleSqlAsUser {
+    param(
+        [string]$SqlFile,
+        [string]$OracleHostName,
+        [string]$Port,
+        [string]$Service,
+        [string]$User,
+        [string]$Password
+    )
+    
+    Write-Host "Executing SQL script: $SqlFile as user $User" -ForegroundColor Cyan
+    
+    # Copy SQL file to container
+    docker cp "$SqlFile" oracle_db:/tmp/$(Split-Path $SqlFile -Leaf)
+      # Execute SQL script
+    $scriptName = Split-Path $SqlFile -Leaf
+    docker exec oracle_db sqlplus -s "$User/$Password@${OracleHostName}:${Port}/$Service" "@//tmp/$scriptName"
+    
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "SQL script executed successfully: $SqlFile" -ForegroundColor Green
+        return $true
+    } else {
+        Write-Host "Error executing SQL script: $SqlFile" -ForegroundColor Red
+        return $false
+    }
+}
+
 # Function to execute SQL script in Oracle
 function Invoke-OracleSql {
     param(
@@ -60,7 +88,7 @@ function Invoke-OracleSql {
     docker cp "$SqlFile" oracle_db:/tmp/$(Split-Path $SqlFile -Leaf)
       # Execute SQL script
     $scriptName = Split-Path $SqlFile -Leaf
-    docker exec oracle_db sqlplus -s sys/$SysPassword@XE as sysdba "@/tmp/$scriptName"
+    docker exec oracle_db sqlplus -s "sys/$SysPassword@${OracleHostName}:${Port}/$Service as sysdba" "@//tmp/$scriptName"
     
     if ($LASTEXITCODE -eq 0) {
         Write-Host "SQL script executed successfully: $SqlFile" -ForegroundColor Green
@@ -109,7 +137,7 @@ try {
     }
       # Execute user creation
     $userScript = Join-Path $initScriptsDir "create_user.sql"
-    if (Test-Path $userScript) {        if (Invoke-OracleSql -SqlFile $userScript -OracleHostName $OracleHost -Port $OraclePort -Service $OracleService -SysPassword $OraclePassword) {
+    if (Test-Path $userScript) {        if (Invoke-OracleSql -SqlFile $userScript -OracleHostName $OracleHost -Port $OraclePort -Service "XE" -SysPassword $OraclePassword) {
             Write-Host "User C##DM_ACADEMICO created successfully!" -ForegroundColor Green
         } else {
             Write-Host "Failed to create user C##DM_ACADEMICO" -ForegroundColor Red
@@ -122,7 +150,7 @@ try {
     $schemaScript = Join-Path $dataDir "dm_academico.sql"
     if (Test-Path $schemaScript) {
         Write-Host "Creating database schema and tables..." -ForegroundColor Yellow
-        if (Invoke-OracleSql -SqlFile $schemaScript -OracleHostName $OracleHost -Port $OraclePort -Service $OracleService -SysPassword $OraclePassword) {
+        if (Invoke-OracleSqlAsUser -SqlFile $schemaScript -OracleHostName $OracleHost -Port $OraclePort -Service $OracleService -User "C##DM_ACADEMICO" -Password "YourPassword123") {
             Write-Host "Database schema created successfully!" -ForegroundColor Green
         } else {
             Write-Host "Warning: Schema creation failed. Tables might already exist." -ForegroundColor Yellow

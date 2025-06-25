@@ -61,6 +61,12 @@ Una vez se haya configurado la base de datos ejecuta:
 .\scripts\import_tables.bat
 ```
 
+o
+
+```bash
+.\scripts\import_tables.sh
+```
+
 El script automáticamente:
 - ✅ Espera a que Oracle esté listo
 - ✅ Crea el tablespace `DMACADEMICO_DAT`  
@@ -269,6 +275,32 @@ Secuencia progresiva de aprendizaje de MDX:
 3. **03_cubos_multidimensionales.ipynb** - Construcción y análisis de cubos
 4. **04_consultas_mdx_avanzadas.ipynb** - Consultas complejas y optimización
 5. **05_consultas_sql_analiticas.ipynb** - SQL analítico vs MDX
+
+### 5.3 Desarrollo del entorno MDX LEARN: ¿Qué puede hacer un estudiante?
+
+El entorno **MDX LEARN** está diseñado para que un estudiante o cualquier persona interesada en el análisis de datos pueda:
+
+1.  **Aprender MDX de forma práctica y guiada:**
+    *   **Ejemplo:** Abrir el notebook `02_consultas_mdx_basicas.ipynb` para aprender a escribir sus primeras consultas `SELECT ... ON COLUMNS` y `SELECT ... ON ROWS`.
+    *   **Ejemplo:** Progresar al notebook `04_consultas_mdx_avanzadas.ipynb` para dominar funciones complejas como `YTD` (Year-to-Date) para analizar el rendimiento académico a lo largo del año.
+
+2.  **Experimentar con un Data Mart realista:**
+    *   **Ejemplo:** Generar un conjunto de datos de 10,000 estudiantes con el script `main.py` y cargarlo en la base de datos Oracle para tener un entorno poblado y listo para analizar.
+    *   **Ejemplo:** Explorar las 86 tablas generadas (dimensiones y hechos) para entender la estructura de un Data Mart académico real.
+
+3.  **Analizar datos multidimensionales desde diferentes perspectivas:**
+    *   **Ejemplo:** Utilizar el esquema `Movilidad.xml` para investigar cuántos estudiantes de un país específico vienen a una universidad determinada y en qué programas se matriculan.
+    *   **Ejemplo:** Cambiar al esquema `Academico.xml` para analizar la tasa de éxito (aprobados vs. presentados) por asignatura, profesor o rama de conocimiento.
+
+4.  **Realizar análisis complejos y obtener insights:**
+    *   **Ejemplo:** Identificar las asignaturas con mayor tasa de abandono a través de una consulta MDX que cruce las tablas de hechos de matrícula y rendimiento.
+    *   **Ejemplo:** Crear un ranking de los programas de movilidad más populares, analizando el flujo de estudiantes entrantes y salientes por convenio.
+
+5.  **Comprender la tecnología detrás de un sistema de Business Intelligence:**
+    *   **Ejemplo:** Levantar todo el entorno con `docker-compose up`, observando cómo se orquesta un servicio de base de datos Oracle.
+    *   **Ejemplo:** Revisar los scripts `setup_oracle.ps1` o `upload_to_db.py` para entender cómo se automatizan las tareas de configuración y carga de datos (ETL).
+
+En resumen, el estudiante no solo aprende la sintaxis de MDX, sino que también desarrolla una comprensión profunda de cómo se diseña, implementa y explota un sistema de análisis de datos multidimensional en un contexto académico.
 
 ### 🐳 Infraestructura
 
